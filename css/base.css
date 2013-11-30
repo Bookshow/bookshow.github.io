@@ -1,0 +1,28 @@
+body {
+	background-image: url(../subtle_white_feathers.png);
+}
+
+img {
+	box-shadow: 5px 5px 2px 0 gray;
+}
+
+#index-body {
+	width: 600px;
+	margin: 0 auto;
+}
+
+#temp-header-0 {
+	height: 120px;
+	background: url(../BOOKSHOW-where-knowledge-comes-alive_600.png);
+}
+
+#temp-header-1 {
+	background: url(../3subject.png) 150px no-repeat;
+	height: 50px;
+}
+
+#google-map {
+	width: 600px;
+	height: 450px;
+	box-shadow: 5px 5px 2px 0 gray;
+}
