@@ -1,10 +1,9 @@
-name: Broken Hero
-author: pushknocker
+name: Bookshow 說書會
+author: Bookshow
 category_dir: /
 permalink: pretty
 exclude: [README.md]
+encoding: UTF-8
 
-root_url: brokenhero.github.io
-version: 1.0.0
-
+root_url: bookshow.tw
 #dev: true

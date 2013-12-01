@@ -1,28 +1,76 @@
+/* base setting */
 body {
-	background-image: url(../subtle_white_feathers.png);
+	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;;
 }
 
-img {
-	box-shadow: 5px 5px 2px 0 gray;
+
+
+/* layout */
+html, body {
+	height: 100%;
+}
+#wrap {
+	height: auto !important;
+	margin: 0 auto -160px; /* footer height */
+	min-height: 100%;
+}
+#push, #footer {
+	height: 160px; /* footer height */
+}
+#body {
+	padding-top: 64px; /* header height */
+}
+#header {
+	position: fixed !important;
+	margin-bottom: 0 !important;
+	height: 64px; /* header height */
+}
+#header > .container {
+	height: 100%;
+}
+#footer {
+	position: relative;
+}
+#footer > .container {
+	position: relative;
+	height: 100%;
 }
 
-#index-body {
-	width: 600px;
-	margin: 0 auto;
+
+
+/* header */
+#header {
+	background: #FFF;
+}
+#header .page-link {
+	display: inline-block;
+	float: left;
+	height: 64px; /* header height */
+	line-height: 64px; /* header height */
+	padding: 0 8px;
+	font-size: 20px;
+}
+#header-logo {
+	display: inline-block;
+	float: left;
+	height: 48px;
+	width: 64px;
+	margin: 8px 8px 0 0;
+	background: transparent no-repeat 0 0;
+	background-image: url('../img/header-logo.png');
 }
 
-#temp-header-0 {
-	height: 120px;
-	background: url(../BOOKSHOW-where-knowledge-comes-alive_600.png);
-}
 
-#temp-header-1 {
-	background: url(../3subject.png) 150px no-repeat;
-	height: 50px;
-}
 
-#google-map {
-	width: 600px;
-	height: 450px;
-	box-shadow: 5px 5px 2px 0 gray;
+/* footer */
+#footer .footer-column {
+	display: inline-block;
+	height: 100%;
+	padding: 8px;
+	float: left;
+}
+#footer #google-map {
+	height: 100%;
+	width: 240px;
+	border: none;
 }
