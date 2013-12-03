@@ -18,7 +18,7 @@ html, body {
 	height: 160px; /* footer height */
 }
 #body {
-	padding-top: 64px; /* header height */
+	padding-top: 96px; /* header height */
 }
 #header {
 	position: fixed !important;
@@ -45,17 +45,17 @@ html, body {
 #header .page-link {
 	display: inline-block;
 	float: left;
-	height: 64px; /* header height */
-	line-height: 64px; /* header height */
+	height: 96px; /* header height */
+	line-height: 96px; /* header height */
 	padding: 0 8px;
 	font-size: 20px;
 }
 #header-logo {
 	display: inline-block;
 	float: left;
-	height: 48px;
-	width: 64px;
-	margin: 8px 8px 0 0;
+	height: 72px;
+	width: 456px;
+	margin: 12px 8px 0 0;
 	background: transparent no-repeat 0 0;
 	background-image: url('../img/header-logo.png');
 }
