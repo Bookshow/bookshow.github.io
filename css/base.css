@@ -40,7 +40,7 @@ body {
 	height: 100%;
 }
 .container {
-	width: 640px !important; /* fixed 640px, including mobile */
+	width: 640px; /* !important;  fixed 640px, including mobile */
 }
 
 
