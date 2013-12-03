@@ -23,7 +23,7 @@ html, body {
 #header {
 	position: fixed !important;
 	margin-bottom: 0 !important;
-	height: 64px; /* header height */
+	height: 96px; /* header height */
 }
 #header > .container {
 	height: 100%;
@@ -34,6 +34,9 @@ html, body {
 #footer > .container {
 	position: relative;
 	height: 100%;
+}
+.container {
+	width: 640px !important; /* fixed 640px, including mobile */
 }
 
 
