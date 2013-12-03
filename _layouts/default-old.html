@@ -6,7 +6,7 @@
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width" /><!--定義給手機看-->
-	<title>{{ site.name }}{% if page.title %} / {{ page.title }} {% endif %}</title>
+	<title>{{ site.name }}{% if page.title %}{% if page.title != "index" %} / {{ page.title }} {% endif %}{% endif %}</title>
 
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/default.css">
@@ -26,6 +26,19 @@
     </div></div>
 
     <div id="body" class="container" >
+    	{% if page.title != "index" %} 
+    	<div>
+			<img src="/img/menu.png" class="img-4col"/>
+			<img src="/img/menu.png" class="img-4col"/>
+			<img src="/img/menu.png" class="img-4col"/>
+			<img src="/img/menu.png" class="img-4col"/>
+			<img src="/img/menu.png" class="img-4col"/>
+			<img src="/img/menu.png" class="img-4col"/>
+			<img src="/img/menu.png" class="img-4col"/>
+			<img src="/img/menu.png" class="img-4col"/>
+		</div>
+		<div style="clear:both;"></div>
+		{% endif %}
 		{{ content }}
 	</div>  
 

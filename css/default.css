@@ -25,14 +25,13 @@ h1, h2, h3 {
 
 /* Body
 ----------------------------------------------*/
-span.titles {
-	font-size:25px;
-	color:red;
-}
 
-.half-column {
-	width:300px;
+
+.aaa {
 	float:left;
+	width:200px;
+	border:1px solid red;
+	margin-right:5px;
 }
 
 /*圖片
@@ -61,6 +60,9 @@ img.noshadow {
 	width:145px;
     float:left;
 	margin:5px 5px 0 0;
+}
+img.small {
+	width:75%;
 }
 
 
