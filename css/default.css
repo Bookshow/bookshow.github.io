@@ -30,6 +30,10 @@ span.titles {
 	color:red;
 }
 
+.half-column {
+	width:300px;
+	float:left;
+}
 
 /*圖片
 ----------------------------------------------*/
@@ -37,9 +41,33 @@ span.titles {
 img {
 	box-shadow: 5px 5px 2px 0 gray;
 }
-
-
 img.noshadow {
 	box-shadow:none;
+}
+
+.img-2col {
+	width:288px;
+	height:162px;
+    float:left;
+	margin:5px 15px 0 0;
+}
+.img-3col {
+	width:192px;
+	height:108px;
+    float:left;
+	margin:5px 10px 0 0;
+}
+.img-4col {
+	width:145px;
+    float:left;
+	margin:5px 5px 0 0;
+}
+
+
+/*測試
+----------------------------------------------*/
+.border {
+	border:1px solid red;
+	background-color:#FCC;
 }
 
