@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html debug="ture" lang="zh_tw">
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" /><!--定義給手機看-->
+	<title>{{ site.name }}{% if page.title %} / {{ page.title }} {% endif %}</title>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/default.css">
+</head>
+
+<body>
+<div id="wrap">
+    <div id="header"><div class="container">
+    	<div style="background:url('/img/BOOKSHOW-where-knowledge-comes-alive_600.png') no-repeat;height:120px;"></div>
+		<div style="background:url('/img/3subject.png') 150px no-repeat;height:50px;"></div>
+    </div></div>
+
+    <div id="body" class="container">
+		{{ content }}
+	</div>  
+
+	<div id="footer"><div class="container">
+<!--			{% include footer.html %}
+-->
+	</div></div>
+<!--	{% include ga.html %}
+-->
+</div>
+</body>
+</html>

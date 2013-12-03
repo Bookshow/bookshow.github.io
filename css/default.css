@@ -1,0 +1,21 @@
+
+
+
+body {
+	background-image:url('/img/subtle_white_feathers.png');
+	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;;
+	font-size:16px;
+}
+
+#wrap {
+	width:640px;
+	margin:auto;
+	padding:0 15px;
+}
+
+
+IMG {
+	box-shadow: 5px 5px 2px 0 gray;
+}
+
+
