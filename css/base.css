@@ -59,6 +59,8 @@ html, body {
 	height: 72px;
 	width: 456px;
 	margin: 12px 8px 0 0;
+	width: 500px;
+	margin: 8px 8px 0 0;
 	background: transparent no-repeat 0 0;
 	background-image: url('../img/header-logo.png');
 }
