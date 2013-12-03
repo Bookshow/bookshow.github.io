@@ -41,6 +41,7 @@ body {
 }
 .container {
 	width: 640px; /* !important;  fixed 640px, including mobile */
+	background-color: #ccc;
 }
 
 
