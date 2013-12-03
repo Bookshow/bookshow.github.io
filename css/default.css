@@ -10,7 +10,11 @@ body {
 #wrap {
 	width:640px;
 	margin:auto;
-	padding:0 15px;
+	padding:0;
+    /*
+	background-color:#fcc;
+	border:1px solid black;
+	*/
 }
 
 
