@@ -14,8 +14,14 @@ body {
 }
 
 
-IMG {
+#google-map, IMG {
 	box-shadow: 5px 5px 2px 0 gray;
 }
 
 
+#google-map {
+	width:600px;
+	height:300px;
+	border:none;
+
+}
