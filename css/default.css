@@ -95,6 +95,10 @@ h1, h2, h3 {
 	padding-top:30px;
 }
 
+p {
+	margin: 10px 0;
+}
+
 /*圖片
 ----------------------------------------------*/
 
@@ -138,12 +142,12 @@ img.small {
 
 /*測試
 ----------------------------------------------*/
-.footer-column {
-	background-color: #FFF;
-	border-top:2px solid #CCC;
-}
-
 #footer  {
 	clear:both;
+}
+
+.footer-column {
+	border-top:2px solid #CCC;
+	text-align:center;
 }
 
