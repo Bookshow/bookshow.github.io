@@ -2,7 +2,7 @@
 
 
 body {
-	background-image:url('/img/subtle_white_feathers.png');
+	background:url('/img/subtle_white_feathers.png') ;
 	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;;
 	font-size:25px;
 }
@@ -26,12 +26,37 @@ h1, h2, h3 {
 /* Body
 ----------------------------------------------*/
 
+.index-menu {
+	clear:both;
+	float:left;
+	margin:20px 20px 20px 0;
+
+	width:140px;
+	height:140px;
+
+	line-height:240px;
+	text-align: center;
+}
+#space {
+	background:url('/img/icon_event-space.png') no-repeat;
+}
+#studio {
+	background:url('/img/icon_event-space.png') no-repeat;	
+}
 
 .aaa {
 	float:left;
 	width:200px;
 	border:1px solid red;
 	margin-right:5px;
+}
+.clear {
+	clear:both;
+}
+
+.menu-des {
+	 line-height:40px;
+	 margin:30px 20px 20px 20px;
 }
 
 /*圖片
