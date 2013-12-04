@@ -1,6 +1,11 @@
 /* base setting */
+body, h1, h2, h3 {
+	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;
+}
 body {
-	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;;
+	background: transparent center 0 repeat;
+	background-image: url('/img/subtle_white_feathers.png');
+	font-size: 20px;
 }
 
 
@@ -10,7 +15,6 @@ html, body {
 	height: 100%;
 }
 body {
-	width:640px;
 	margin: 0 auto;
 }
 #wrap {
@@ -40,34 +44,51 @@ body {
 	height: 100%;
 }
 .container {
-	width: 640px; /* !important;  fixed 640px, including mobile */
-	background-color: #ccc;
+	/*width: 640px;*/ /* !important;  fixed 640px, including mobile */
 }
 
 
 
 /* header */
-#header {
-	background: #FFF;
+#banner {
+	position: relative;
+	height: 96px; /* banner height */
+	background: transparent no-repeat 12px 12px;
+	background-image: url('/img/header-logo.png');
 }
-#header .page-link {
+#banner-logo {
 	display: inline-block;
-	float: left;
-	height: 96px; /* header height */
-	line-height: 96px; /* header height */
-	padding: 0 8px;
-	font-size: 20px;
-}
-#header-logo {
-	display: inline-block;
-	float: left;
+	position: absolute;
+	left: 12px;
+	top: 12px;
 	height: 72px;
-	width: 456px;
-	margin: 12px 8px 0 0;
-	width: 500px;
-	margin: 8px 8px 0 0;
+	width: 120px;
+}
+#social-menu {
+	display: inline-block;
+	position: absolute;
+	right: 12px;
+	bottom: 12px;
+}
+.social-link {
+	display: inline-block;
+	float: right;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
 	background: transparent no-repeat 0 0;
-	background-image: url('../img/header-logo.png');
+}
+.social-link.facebook {
+	background-image: url('/img/icon_facebook.png');
+}
+.social-link.google-plus {
+	background-image: url('/img/icon_google+.png');
+}
+.social-link.youtube {
+	background-image: url('/img/icon_youtube.png');
+}
+#page-menu {
+	height: 96px; /* page menu height */
 }
 
 
@@ -84,3 +105,16 @@ body {
 	width: 240px;
 	border: none;
 }
+
+
+
+.photo-grid {
+	margin: 16px;
+}
+.photo-grid > img {
+	padding: 15px;
+	height: auto;
+}
+
+/* mobile phone */
+
