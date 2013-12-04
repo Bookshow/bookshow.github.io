@@ -1,5 +1,6 @@
 
-
+/* frame
+----------------------------------------------*/
 
 body {
 	background:url('/img/bg_fabric_plaid_@2X.png') ;
@@ -10,19 +11,27 @@ h1, h2, h3 {
 	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;;
 }
 
-#wrap, #body  {
+#wrap {
 	width:640px;
 	margin:auto;
-	padding:0;
+	padding:0 10px;
 	/*
 	background-color:#CCC;
 	border:1px solid black;
 	*/
 }
-#body  {
-	padding-left:13px;
-}
 
+/* Content
+----------------------------------------------*/
+a {
+	color:#AA1919;
+}
+a:hover {
+	color:#CC3333;
+}
+a:visited {
+	color:#E35A28;
+}
 
 /* header
 ----------------------------------------------*/
@@ -31,7 +40,7 @@ h1, h2, h3 {
 	height:80px;
 	margin-top:15px;
     padding-right:10px;
-    background:url('/img/header-logo.png') 10px 0 no-repeat;
+    background:url('/img/header-logo.png') no-repeat;
 
 }
 
@@ -49,21 +58,23 @@ h1, h2, h3 {
 
 .index-menu {
 	float:left;
-	margin:20px 10px 20px 0;
+	margin:20px 15px 20px 0;
 
 	width:140px;
 	height:140px;
 
 	line-height:240px;
 	text-align: center;
+    font-weight:bold;
+}
+h2.index-menu {
+    margin-right:20px;
 }
 #space {
 	background:url('/img/icon_space.png') no-repeat;
-    margin-right:20px;
 }
 #studio {
 	background:url('/img/icon_studio.png') no-repeat;	
-    margin-right:20px;
 }
 #schedule {
 	background:url('/img/icon_space.png') no-repeat;	
@@ -83,10 +94,6 @@ h1, h2, h3 {
 }
 .clear {
 	clear:both;
-}
-.border {
-	border:1px solid red;
-	background-color:#FCC;
 }
 
 
@@ -134,8 +141,10 @@ img.small {
 /*測試
 ----------------------------------------------*/
 .border {
+	/*
 	border:1px solid red;
 	background-color:#FCC;
+	*/
 }
 
 

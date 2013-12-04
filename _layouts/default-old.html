@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div id="wrap">
+<div id="wrap" class="border">
     <div id="header">
     	<div id="header-sns">
     		<img src="../img/icon_youtube.png"  class="sns noshadow"/>
@@ -25,13 +25,14 @@
     	</div>
     </div>
 
-    <div id="body">
+    <div id="body" class="border">
     	{% if page.title != "index" %} 
-		<a href="/space"   ><h2 id="space"    class="index-menu">活動場地</h2></a>
-		<a href="/studio"  ><h2 id="studio"   class="index-menu">影音製作</h2></a>
-		<a href="/schedule"><h2 id="schedule" class="index-menu">預約日曆</h2></a>
-		<a href="/traffic" ><h2 id="traffic"  class="index-menu">交通指南</h2></a>
-		<a href="/about"   ><h2 id="about"    class="index-menu">關於我們</h2></a>
+		<a href="/space"   ><h3 id="space"    class="index-menu">活動場地</h2></a>
+		<a href="/studio"  ><h3 id="studio"   class="index-menu">影音製作</h2></a>
+		<a href="/schedule"><h3 id="schedule" class="index-menu">預約日曆</h2></a>
+		<a href="/traffic" ><h3 id="traffic"  class="index-menu">交通指南</h2></a>
+		<a href="/about"   ><h3 id="about"    class="index-menu">關於我們</h2></a>
+		<a href=""><h3 class="index-menu" style="background:#c8c0b8;border-radius:10px;">測試圖樣</h3></a>
 		<div class="wraps"></div>
 		{% endif %}
 		{{ content }}
@@ -39,7 +40,7 @@
 
 	<div id="push"></div>
 
-	<div id="footer">
+	<div id="footer" class="border">
 			{% include footer-old.html %}
 	</div>
 	{% include ga.html %}
