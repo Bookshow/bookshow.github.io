@@ -30,16 +30,11 @@
 
     <div id="body">
     	{% if page.title != "index" %} 
-    	<div>
-			<img src="/img/menu.png" class="img-4col"/>
-			<img src="/img/menu.png" class="img-4col"/>
-			<img src="/img/menu.png" class="img-4col"/>
-			<img src="/img/menu.png" class="img-4col"/>
-			<img src="/img/menu.png" class="img-4col"/>
-			<img src="/img/menu.png" class="img-4col"/>
-			<img src="/img/menu.png" class="img-4col"/>
-			<img src="/img/menu.png" class="img-4col"/>
-		</div>
+		<a href="/space"   ><h2 id="space"    class="index-menu">活動場地</h2></a>
+		<a href="/studio"  ><h2 id="studio"   class="index-menu">影音製作</h2></a>
+		<a href="/schedule"><h2 id="schedule" class="index-menu">預約日曆</h2></a>
+		<a href="/traffic" ><h2 id="traffic"  class="index-menu">交通指南</h2></a>
+		<a href="/about"   ><h2 id="about"    class="index-menu">關於我們</h2></a>
 		<div class="wraps"></div>
 		{% endif %}
 		{{ content }}
