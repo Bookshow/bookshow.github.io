@@ -109,9 +109,9 @@ body {
 
 
 .photo-grid {
-	padding: 16px;
+	margin: 16px;
 }
-.photo-grid > .row > img {
+.photo-grid > img {
 	padding: 15px;
 	height: auto;
 }
