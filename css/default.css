@@ -29,8 +29,11 @@ a {
 a:hover {
 	color:#CC3333;
 }
+
 a:visited {
-	color:#E35A28;
+	/* 
+	color:#E35A28; 
+	*/
 }
 
 /* header
@@ -113,7 +116,6 @@ h2.index-menu {
 }
 .sub-des {
 	font-size:20px;
-	color:#993333;
 }
 p {
 	margin: 10px 0;
