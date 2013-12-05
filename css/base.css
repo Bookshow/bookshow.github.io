@@ -113,16 +113,23 @@ body {
 
 
 /* footer */
-#footer .footer-column {
-	display: inline-block;
-	height: 100%;
-	padding: 8px;
-	float: left;
+#footer {
+	text-align: center;
 }
-#footer #google-map {
-	height: 100%;
-	width: 240px;
-	border: none;
+#footer hr {
+	margin: 0;
+	margin-bottom: 10px;
+	border-color: #C8C0B8;
+}
+#footer > .container > div {
+	padding-bottom: 5px;
+}
+#map {
+	display: inline-block;
+	width: 600px;
+	height: 300px;
+	background: transparent 0 0 no-repeat;
+	background-image: url('/img/map.jpg');
 }
 
 
@@ -130,6 +137,9 @@ body {
 /* index */
 #body-header > * {
 	margin-bottom: 16px;
+}
+#body-header > :last-child {
+	margin-bottom: 0;
 }
 #soapbox {
 	position: relative;
