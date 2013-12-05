@@ -5,7 +5,7 @@
 body {
 	background:url('/img/bg_fabric_plaid_@2X.png') ;
 	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;;
-	font-size:25px;
+	font-size:24px;
 }
 h1, h2, h3 {
 	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;;
@@ -68,7 +68,9 @@ a:visited {
     font-size:30px;
 }
 h2.index-menu {
+	/*
     margin-right:20px;
+    */
 }
 .menu-space {
 	float:left;
@@ -76,8 +78,14 @@ h2.index-menu {
 }
 
 #space {
-	background:url('/img/icon_space.png') no-repeat;
+	background:#C8C0B8;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 }
+#space .index-menu{
+	background:url('/img/icon_space_white.png') 30px 10px no-repeat;
+}
+
 #studio {
 	background:url('/img/icon_studio.png') no-repeat;	
 }
@@ -91,20 +99,17 @@ h2.index-menu {
 	background:url('/img/icon_space.png') no-repeat;	
 }
 
-.aaa {
-	float:left;
-	width:200px;
-	border:1px solid red;
-	margin-right:5px;
-}
-.clear {
-	clear:both;
-}
-
-
 .menu-des {
-    line-height:40px;
-	padding-top:30px;
+	float:right;
+	width:465px;
+
+	background-color:#ddd;
+    border-radius:10px;
+
+	padding:10px 15px 10px 15px;
+	margin:15px 15px 0 0;
+
+    line-height:32px;
 }
 .sub-des {
 	font-size:20px;
@@ -127,9 +132,8 @@ img.noshadow {
 }
 
 .img-2col {
-	width:310px;
+	width:308px;
 	height:180px;
-    float:left;
 }
 .img-3col {
 	width:206px;
