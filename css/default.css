@@ -62,6 +62,7 @@ a:visited {
 	float:left;
 	margin:20px 0;
 
+	border-radius: 10px;
 	width:140px;
 	height:140px;
 
@@ -70,36 +71,31 @@ a:visited {
     font-weight:bold;
     font-size:30px;
 }
-h2.index-menu {
-	/*
-    margin-right:20px;
-    */
-}
 .menu-space {
 	float:left;
 	width:20px;
 }
 
-#space {
+.menu {
 	background:#C8C0B8;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 }
-#space .index-menu{
-	background:url('/img/icon_space_white.png') 30px 10px no-repeat;
+#space {
+	background:url('/img/icon_space_white.png') 30px 10px #C8C0B8 no-repeat;
 }
 
 #studio {
-	background:url('/img/icon_studio.png') no-repeat;	
+	background:url('/img/icon_studio_white.png') 35px 15px #C8C0B8 no-repeat;	
 }
 #schedule {
-	background:url('/img/icon_space.png') no-repeat;	
+	background:url('/img/icon_space_white.png') 30px 10px #C8C0B8 no-repeat;	
 }
 #traffic {
-	background:url('/img/icon_space.png') no-repeat;	
+	background:url('/img/icon_space_white.png') 30px 10px #C8C0B8 no-repeat;	
 }
 #about {
-	background:url('/img/icon_space.png') no-repeat;	
+	background:url('/img/icon_space_white.png') 30px 10px #C8C0B8 no-repeat;	
 }
 
 .menu-des {
