@@ -254,6 +254,13 @@ body {
 	padding-top: 20px;
 	font-size: 24px;
 }
+.page-section h1,
+.page-section h2 {
+	font-weight: bold;
+}
+.page-section .table-container {
+	padding: 0 16px;
+}
 .page-summary {
 	text-align: center;
 	font-size: 20px;
