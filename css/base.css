@@ -287,6 +287,38 @@ body {
 #google-form {
 	height: 535px;
 }
+#business-flow {
+	font-size: 20px;
+}
+#business-flow .box {
+	padding: 12px;
+}
+#business-flow .box > * {
+	text-align: center;
+	padding: 8px;
+	border-radius: 10px;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+	background: transparent 0 0 no-repeat;
+}
+#business-flow .box.visit > * {
+	background-color: #C2DBF3;
+}
+#business-flow .box.event > * {
+	background-color: #F2C2DA;
+}
+#business-flow .box.studio > * {
+	background-color: #DAF2C2;
+}
+#business-flow .box.payment > * {
+	background-color: #C8C0B8;
+}
+#business-flow .box.all > * {
+	background-color: #F8F8F8;
+}
+#business-flow .box.comment > * {
+	border: none;
+	padding: 0;
+}
 
 
 
