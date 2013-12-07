@@ -18,6 +18,10 @@ a:hover {
 a:visited {
 	/* color:#E35A28; */
 }
+iframe {
+	border: none;
+	width: 100%;
+}
 
 
 
@@ -277,6 +281,16 @@ body {
 	font-size: 20px;
 	padding-right: 0;
 }
+#google-calendar {
+	height: 440px;
+}
+#google-form {
+	height: 535px;
+}
+
+
+
+/* photo flow */
 .photo-flow {
 	position: relative;
 }
@@ -320,8 +334,6 @@ body {
 .photo-flow.col-5 > .col-4 {
 	width: 80%;
 }
-
-
 
 /* icon */
 .fa-cus-ul {
