@@ -22,6 +22,9 @@ iframe {
 	border: none;
 	width: 100%;
 }
+.small {
+	font-size: 20px;
+}
 
 
 
@@ -217,7 +220,7 @@ body {
 #footer > .container > div {
 	padding-bottom: 5px;
 }
-#map {
+#footer #google-maps {
 	display: inline-block;
 	width: 600px;
 	height: 300px;
@@ -280,6 +283,10 @@ body {
 	clear: both;
 	font-size: 20px;
 	padding-right: 0;
+}
+.page-section #google-maps {
+	width: 600px;
+	height: 350px;
 }
 #google-calendar {
 	height: 440px;
