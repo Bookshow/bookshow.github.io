@@ -90,31 +90,29 @@ body {
 	right: 0;
 	bottom: 0;
 }
-.social-link {
+#social-menu a {
 	display: inline-block;
 	float: right;
-	width: 48px;
-	height: 48px;
-	border-radius: 50%;
+	width: 44px;
+	height: 44px;
 	background: transparent no-repeat 0 0;
+	font-size: 40px;
+	line-height: 44px;
+	color: #AAA;
 }
-.social-link.facebook {
-	background-image: url('/img/icon_facebook_gray.png');
+#social-menu a:hover,
+#social-menu a:focus {
+	color: #AAA;
+	text-decoration: none;
 }
-.social-link.facebook:hover {
-	background-image: url('/img/icon_facebook.png');
+#social-menu a.facebook:hover {
+	color: #3A589B;
 }
-.social-link.google-plus {
-	background-image: url('/img/icon_google+_gray.png');
+#social-menu a.google-plus:hover {
+	color: #D6492F;
 }
-.social-link.google-plus:hover {
-	background-image: url('/img/icon_google+.png');
-}
-.social-link.youtube {
-	background-image: url('/img/icon_youtube_gray.png');
-}
-.social-link.youtube:hover {
-	background-image: url('/img/icon_youtube.png');
+#social-menu a.youtube:hover {
+	color: #CF3427;
 }
 
 
