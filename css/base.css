@@ -330,16 +330,16 @@ body {
 	height: 535px;
 }
 #business-flow {
-	font-size: 20px;
+	font-size: 24px;
 }
 #business-flow .box {
 	padding: 12px;
 }
 #business-flow .box > * {
 	text-align: center;
-	padding: 8px;
+	padding: 5px 4px 3px 4px;
 	border-radius: 10px;
-	border: 2px solid rgba(0, 0, 0, 0.3);
+	border: 2px solid rgba(0, 0, 0, 0.2);
 	background: transparent 0 0 no-repeat;
 }
 #business-flow .box.visit > * {
@@ -352,7 +352,7 @@ body {
 	background-color: #DAF2C2;
 }
 #business-flow .box.payment > * {
-	background-color: #C8C0B8;
+	background-color: #F2EAC2;
 }
 #business-flow .box.all > * {
 	background-color: #F8F8F8;
