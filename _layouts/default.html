@@ -13,7 +13,7 @@
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/js/app.js" type="text/javascript"></script>
 </head>
-<body{% if page.name %} class="page-{{ page.name }}"{% endif %}>
+<body{% if page.name %} class="page page-{{ page.name }}"{% endif %}>
 	{{ content }}
 	{% include ga.html %}
 	{% include photo-display.html %}

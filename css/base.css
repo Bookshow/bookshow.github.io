@@ -9,6 +9,9 @@ body, #header {
 body {
 	font-size: 24px;
 }
+h1, h2, h3 {
+	font-weight: bold;
+}
 a {
 	color: #AA1919;
 }
@@ -24,9 +27,6 @@ iframe {
 }
 .table-like > * {
 	display: table-cell;
-}
-.small {
-	font-size: 20px;
 }
 
 
@@ -276,13 +276,28 @@ body {
 
 
 /* subpage */
-.page-section {
-	padding-top: 20px;
+.page {
+	font-size: 24px;
+	line-height: 150%;
+	letter-spacing: 1px;
+}
+.page h2 {
+	margin: 5px 0;
+	font-size: 30px;
+}
+.page h3 {
+	margin: 5px 0;
+	padding-top: 12px;
 	font-size: 24px;
 }
-.page-section h1,
-.page-section h2 {
-	font-weight: bold;
+.page h3:first-child {
+	padding-top: 0;
+}
+.page .small {
+	font-size: 20px;
+}
+.page-section {
+	padding-top: 24px;
 }
 .page-section .table-container {
 	padding: 0 16px;
@@ -297,11 +312,6 @@ body {
 }
 .page-desc {
 	font-weight: bold;
-}
-.page-sub-desc {
-	clear: both;
-	font-size: 20px;
-	padding-right: 0;
 }
 .page-section #google-maps {
 	width: 600px;
@@ -351,6 +361,10 @@ body {
 /* photo flow */
 .photo-flow {
 	position: relative;
+	padding: 5px 0;
+}
+.photo-flow + * {
+	clear: both;
 }
 .photo-flow > * {
 	float: left;
@@ -408,19 +422,12 @@ body {
 
 /* icon */
 .fa-cus-ul {
-	padding-left: 0;
+	padding-left: 12px;
 	list-style: none;
 }
 .fa-cus-ul > li {
 	position: relative;
-}
-.fa-cus-ul.x16 > li {
-	padding-left: 24px;
-}
-.fa-cus-ul.x16 > li:before {
-	left: 2px;
-	top: 6px;
-	font-size: 16px;
+	padding-left: 25px;
 }
 .fa-cus-ul > li:before {
 	position: absolute;
@@ -429,6 +436,9 @@ body {
 	font-style: normal;
 	font-weight: normal;
 	line-height: 1;
+	left: 2px;
+	top: 10px;
+	font-size: 16px;
 }
 .fa-cus-sun-o:before {
 	content: "\f185";
