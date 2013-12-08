@@ -454,3 +454,8 @@ body {
 .fa-cus-heart:before {
 	content: "\f004";
 }
+.fa-cus-check-circle:before {
+	content: "\f058";
+}
+
+
