@@ -236,6 +236,9 @@ body {
 	margin: 0 -5px 10px -5px;
 	border-color: #C8C0B8;
 }
+#footer .fa {
+	color: #666;
+}
 #footer > .container > div {
 	padding-bottom: 5px;
 }
@@ -296,6 +299,10 @@ body {
 .page .small {
 	font-size: 24px;
 }
+.page .table th,
+.page .table td {
+	padding: 5px 8px;
+}
 .page-section {
 	padding-top: 24px;
 }
@@ -323,16 +330,17 @@ body {
 	height: 535px;
 }
 #business-flow {
-	font-size: 20px;
+	font-size: 24px;
+	padding: 0 24px;
 }
 #business-flow .box {
 	padding: 12px;
 }
 #business-flow .box > * {
 	text-align: center;
-	padding: 8px;
+	padding: 5px 4px 3px 4px;
 	border-radius: 10px;
-	border: 2px solid rgba(0, 0, 0, 0.3);
+	border: 2px solid rgba(0, 0, 0, 0.2);
 	background: transparent 0 0 no-repeat;
 }
 #business-flow .box.visit > * {
@@ -345,7 +353,7 @@ body {
 	background-color: #DAF2C2;
 }
 #business-flow .box.payment > * {
-	background-color: #C8C0B8;
+	background-color: #F2EAC2;
 }
 #business-flow .box.all > * {
 	background-color: #F8F8F8;
@@ -438,12 +446,13 @@ body {
 	left: 2px;
 	top: 10px;
 	font-size: 16px;
+	color: #666;
 }
 .fa-cus-sun-o:before {
 	content: "\f185";
 }
-.fa-cus-users:before {
-	content: "\f0c0"
+.fa-cus-user:before {
+	content: "\f007";
 }
 .fa-cus-magic:before {
 	content: "\f0d0";
@@ -454,3 +463,11 @@ body {
 .fa-cus-heart:before {
 	content: "\f004";
 }
+.fa-cus-check-circle:before {
+	content: "\f058";
+}
+.fa-cus-location-arrow:before {
+	content: "\f124";
+}
+
+
