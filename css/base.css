@@ -475,5 +475,8 @@ body {
 .fa-cus-location-arrow:before {
 	content: "\f124";
 }
+.fa-cus-video-camara:before {
+	content: "\f03d";
+}
 
 
