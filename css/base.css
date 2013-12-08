@@ -296,6 +296,10 @@ body {
 .page .small {
 	font-size: 24px;
 }
+.page .table th,
+.page .table td {
+	padding: 5px 8px;
+}
 .page-section {
 	padding-top: 24px;
 }
