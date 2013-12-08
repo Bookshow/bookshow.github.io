@@ -421,7 +421,7 @@ body {
 
 /* icon */
 .fa-cus-ul {
-	padding-left: 24px;
+	padding: 5px 0 5px 24px;
 	list-style: none;
 }
 .fa-cus-ul > li {
