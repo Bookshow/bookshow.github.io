@@ -2,17 +2,19 @@ function PhotoDisplay(modal) {
 	var self = this,
 		$elem = this.$elem = $(modal),
 		dialog = $elem.find('.modal-dialog')[0];
-	this.image = $elem.find('#photo-display-image')[0];
+		image = this.image = $elem.find('#photo-display-image')[0];
 	
-	function resize() {
-		dialog.style.maxWidth = $(window).width() + 'px';
-		dialog.style.maxHeight = $(window).height() + 'px';
+	function syncSize() {
+		var winw = $(window).width(),
+			winh = $(window).height(),
+			maxw = winw > 800 ? Math.floor(winw * 0.9) : winw - 80,
+			maxh = winh > 800 ? Math.floor(winh * 0.9) : winh - 80;
+		image.style.maxWidth = maxw + 'px';
+		image.style.maxHeight = maxh + 'px';
 	}
 	
-	resize();
-	
-	// TODO: smarter sizing
-	// TODO: on browser window resize call it
+	syncSize();
+	$(window).resize(syncSize);
 	
 	$elem.on('click', function () {
 		self.hide();
