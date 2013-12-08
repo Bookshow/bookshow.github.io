@@ -294,7 +294,7 @@ body {
 	padding-top: 0;
 }
 .page .small {
-	font-size: 20px;
+	font-size: 24px;
 }
 .page-section {
 	padding-top: 24px;
@@ -304,7 +304,6 @@ body {
 }
 .page-summary {
 	text-align: center;
-	font-size: 20px;
 }
 .page-summary > span {
 	display: inline-block;
