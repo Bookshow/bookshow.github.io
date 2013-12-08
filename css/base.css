@@ -147,6 +147,10 @@ body {
 	background-position: 35px 15px;
 	background-image: url('/img/icon_studio_white.png');
 }
+.menu-link.presentation {
+	background-position: 35px 15px;
+	background-image: url('/img/icon_studio_white.png');
+}
 .menu-link.schedule {
 	background-position: 30px 10px;
 	background-image: url('/img/icon_space_white.png');
@@ -199,11 +203,12 @@ body {
 	width: 80px;
 	height: 80px;
 	margin-right:10px;
-	padding: 12px 10px;
+	padding: 12px 0 12px 2px;
 	border-radius: 10px;
-	font-size: 30px;
+	font-size: 28px;
 	line-height:30px;
 	background-image: none;
+	letter-spacing:2px;
 }
 #page-menu .menu-link:last-child {
 	margin-right: 0;
