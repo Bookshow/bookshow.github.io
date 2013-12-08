@@ -236,6 +236,9 @@ body {
 	margin: 0 -5px 10px -5px;
 	border-color: #C8C0B8;
 }
+#footer .fa {
+	color: #666;
+}
 #footer > .container > div {
 	padding-bottom: 5px;
 }
@@ -442,6 +445,7 @@ body {
 	left: 2px;
 	top: 10px;
 	font-size: 16px;
+	color: #666;
 }
 .fa-cus-sun-o:before {
 	content: "\f185";
