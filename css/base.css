@@ -450,8 +450,8 @@ body {
 .fa-cus-sun-o:before {
 	content: "\f185";
 }
-.fa-cus-users:before {
-	content: "\f0c0"
+.fa-cus-user:before {
+	content: "\f007";
 }
 .fa-cus-magic:before {
 	content: "\f0d0";
