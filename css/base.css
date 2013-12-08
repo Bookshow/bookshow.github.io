@@ -47,12 +47,12 @@ body {
 	height: 160px; /* footer height */
 }
 #body {
-	padding-top: 160px !important; /* header height */
+	padding-top: 200px !important; /* header height */
 }
 #header {
 	position: fixed !important;
 	margin-bottom: 0 !important;
-	height: 160px; /* header height */
+	height: 200px; /* header height */
 }
 #header > .container {
 	height: 100%;
@@ -189,19 +189,20 @@ body {
 }
 #page-menu {
 	text-align: center;
-	height: 40px;
+	height: 70px;
 }
 #page-menu > div {
 	display: inline-block;
 }
 #page-menu .menu-link {
 	float: left;
-	width: 110px;
-	height: 40px;
-	margin-right: 6px;
-	padding-top: 4px;
+	width: 80px;
+	height: 75px;
+	margin-right:10px;
+	padding: 10px;
 	border-radius: 10px;
-	font-size: 24px;
+	font-size: 28px;
+	line-height:30px;
 	background-image: none;
 }
 #page-menu .menu-link:last-child {
