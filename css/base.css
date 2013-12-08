@@ -189,7 +189,7 @@ body {
 }
 #page-menu {
 	text-align: center;
-	height: 70px;
+	height: 80px;
 }
 #page-menu > div {
 	display: inline-block;
@@ -197,11 +197,11 @@ body {
 #page-menu .menu-link {
 	float: left;
 	width: 80px;
-	height: 75px;
+	height: 80px;
 	margin-right:10px;
-	padding: 10px;
+	padding: 12px 10px;
 	border-radius: 10px;
-	font-size: 28px;
+	font-size: 30px;
 	line-height:30px;
 	background-image: none;
 }
