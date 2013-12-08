@@ -331,6 +331,7 @@ body {
 }
 #business-flow {
 	font-size: 24px;
+	padding: 0 24px;
 }
 #business-flow .box {
 	padding: 12px;
