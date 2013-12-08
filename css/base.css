@@ -302,6 +302,7 @@ body {
 .page .table th,
 .page .table td {
 	padding: 5px 8px;
+	font-weight: normal;
 }
 .page-section {
 	padding-top: 24px;
