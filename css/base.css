@@ -22,6 +22,10 @@ iframe {
 	border: none;
 	width: 100%;
 }
+.table th,
+.table td { /* lazy way, as we don't put table inside table */
+	border-color: #BBB !important;
+}
 .table-like {
 	display: table;
 }
@@ -311,6 +315,7 @@ body {
 	font-weight: normal;
 }
 .page-section {
+	clear: both;
 	padding-top: 24px;
 }
 .page-section .table-container {
@@ -368,6 +373,53 @@ body {
 #business-flow .box.comment > * {
 	border: none;
 	padding: 0;
+}
+#studio-spec-table {
+	width: 100%;
+	background: #F8F8F8;
+}
+#studio-spec-table,
+#studio-spec-table th {
+	text-align: center;
+}
+#studio-spec-table th,
+#studio-spec-table td {
+	vertical-align: middle;
+	padding: 4px 0 2px 0;
+}
+#studio-spec-table tr > :first-child {
+	background: #EEE;
+}
+#studio-spec-table .blue {
+	background: #CFE2F3;
+}
+#studio-spec-table .dark.blue {
+	background: #9FC5E8;
+}
+#studio-spec-table .orange {
+	background: #FFF2CC;
+}
+#studio-spec-table .dark.orange {
+	background: #FCE5CD;
+}
+#studio-spec-table .yes::after,
+#studio-spec-table .no::after {
+	display: inline;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 22px;
+	font-size: 22px;
+	color: #555;
+}
+#studio-spec-table .yes::after {
+	content: "\f00c";
+}
+#studio-spec-table .no::after {
+	content: "\f00d";
+}
+#studio-spec-table .no {
+	background: #EEE;
 }
 
 
