@@ -137,6 +137,10 @@ body {
 	font-weight: bold;
 	font-size: 30px;
 }
+.menu-link.disabled {
+	background: none;
+	color: #523816;
+}
 .menu-link:hover {
 	text-decoration: none;
 }

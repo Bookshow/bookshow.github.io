@@ -1,0 +1,5 @@
+{% if page.name == include.name %}
+<div class="menu-link disabled {{ include.name }}">{{ include.title }}</div>
+{% else %}
+<a href="{{ include.url }}" class="menu-link {{ include.name }}">{{ include.title }}</a>
+{% endif %}

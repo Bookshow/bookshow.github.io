@@ -1,10 +1,10 @@
 <div id="page-menu">
 	<div>
-		<a href="/space"        class="menu-link space"       >活動場地</a>
-		<a href="/studio"       class="menu-link studio"      >活動錄影</a>
-		<a href="/presentation" class="menu-link presentation">簡報錄影</a>
-		<a href="/schedule"     class="menu-link schedule"    >預約日曆</a>
-		<a href="/traffic"      class="menu-link traffic"     >交通指南</a>
-		<a href="/about"        class="menu-link about"       >關於我們</a>
+		{% include page-menu-item.html title="活動場地" url="/space"        name="space" %}
+		{% include page-menu-item.html title="活動錄影" url="/studio"       name="studio" %}
+		{% include page-menu-item.html title="簡報錄影" url="/presentation" name="presentation" %}
+		{% include page-menu-item.html title="預約日曆" url="/schedule"     name="schedule" %}
+		{% include page-menu-item.html title="交通指南" url="/traffic"      name="traffic" %}
+		{% include page-menu-item.html title="關於我們" url="/about"        name="about" %}
 	</div>
 </div>
