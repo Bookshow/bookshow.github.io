@@ -15,8 +15,13 @@ h1, h2, h3 {
 a {
 	color: #AA1919;
 }
-a:hover {
+a:hover, 
+a:focus:hover {
 	color: #CC3333;
+}
+a:focus {
+	color: #AA1919;
+	text-decoration: none;
 }
 iframe {
 	border: none;
