@@ -242,6 +242,7 @@ body {
 }
 .related-page > .table-like > * {
 	padding: 0 16px;
+	margin: 0;
 	vertical-align: middle;
 }
 
@@ -352,6 +353,13 @@ body {
 .page-summary > span {
 	display: inline-block;
 	text-align: left;
+}
+.page-summary  > span > p {
+	margin: 0;
+	margin-top: 12px;
+}
+.page-summary  > span > p:first-child {
+	margin-top: 0;
 }
 .page-desc {
 	font-weight: bold;
