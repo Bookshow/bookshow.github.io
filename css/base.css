@@ -318,7 +318,7 @@ body {
 }
 .page-section {
 	clear: both;
-	padding-top: 36px;
+	padding-top: 32px;
 }
 .page-section > * {
 	clear: both;
@@ -332,7 +332,7 @@ body {
 	margin-top: 0;
 }
 .page-section > h2 {
-	margin-top: 36px;
+	margin-top: 32px;
 }
 .page-section > h3 {
 	margin-top: 24px;
