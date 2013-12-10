@@ -405,6 +405,12 @@ body {
 #studio-spec-table .dark.blue {
 	background: #9FC5E8;
 }
+#studio-spec-table .green {
+	background: #D9EAD3;
+}
+#studio-spec-table .dark.green {
+	background: #B6D7A8;
+}
 #studio-spec-table .orange {
 	background: #FFF2CC;
 }
