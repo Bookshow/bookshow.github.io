@@ -327,7 +327,7 @@ body {
 }
 .page-section > *,
 .page-section > h2 + h3 {
-	margin-top: 8px;
+	margin-top: 12px;
 }
 .page-section > :first-child {
 	margin-top: 0;
@@ -338,8 +338,9 @@ body {
 .page-section > h3 {
 	margin-top: 24px;
 }
-.page-section > .photo-flow {
-	margin-top: 12px;
+.page-section > p + p,
+.page-summary > span > p + p {
+	margin-top: 20px;
 }
 .page-section > .related-page {
 	margin-top: 16px;
@@ -356,10 +357,6 @@ body {
 }
 .page-summary  > span > p {
 	margin: 0;
-	margin-top: 20px;
-}
-.page-summary  > span > p:first-child {
-	margin-top: 0;
 }
 .page-desc {
 	font-weight: bold;
