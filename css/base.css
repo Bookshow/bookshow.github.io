@@ -56,12 +56,12 @@ body {
 	height: 160px; /* footer height */
 }
 #body {
-	padding-top: 200px !important; /* header height */
+	padding-top: 192px !important; /* header height */
 }
 #header {
 	position: fixed !important;
 	margin-bottom: 0 !important;
-	height: 200px; /* header height */
+	height: 192px; /* header height */
 }
 #header > .container {
 	height: 100%;
