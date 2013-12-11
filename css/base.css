@@ -372,8 +372,27 @@ body {
 	height: 535px;
 }
 #business-flow {
+	position: relative;
 	font-size: 24px;
-	padding: 0 24px;
+}
+#business-flow,
+#business-flow .layer {
+	padding: 0 10px;
+}
+#business-flow .layer {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0; 
+	right: 0;
+}
+#business-flow .row {
+	margin: 0;
+}
+#business-flow .row.full-height, 
+#business-flow .row.full-height > * {
+	height: 100%;
 }
 #business-flow .box {
 	padding: 12px;
@@ -403,6 +422,38 @@ body {
 #business-flow .box.comment > * {
 	border: none;
 	padding: 0;
+}
+#business-flow .layer.background {
+	z-index: -1;
+}
+#business-flow .flow-arrow {
+	position: relative;
+	height: 100%;
+	width: 96px;
+	margin: 0 auto;
+	padding-bottom: 60px;
+	text-align: center;
+}
+#business-flow .flow-arrow::before,
+#business-flow .flow-arrow::after {
+	content: ' ';
+	display: block;
+}
+#business-flow .flow-arrow::before {
+	width: 48px;
+	height: 100%;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.1);
+}
+#business-flow .flow-arrow::after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 12px;
+	border: 48px solid transparent;
+	border-bottom: none;
+	border-top: 48px solid rgba(0, 0, 0, 0.1);
+	height: 48px;
 }
 #studio-spec-table {
 	width: 100%;
