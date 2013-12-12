@@ -142,10 +142,12 @@ body {
 	text-align: center;
 	font-weight: bold;
 	font-size: 30px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 .menu-link.disabled {
 	background-color: #D9D9D9;
 	color: #523816;
+	box-shadow: none;
 }
 .menu-link:hover {
 	text-decoration: none;
@@ -181,6 +183,7 @@ body {
 	position: absolute;
 	top: 15px;
 	left: 0;
+	box-shadow: none;
 }
 .menu-desc {
 	margin: 0 15px 15px 140px;
@@ -210,13 +213,13 @@ body {
 	float: left;
 	width: 80px;
 	height: 80px;
-	margin-right:10px;
+	margin-right: 10px;
 	padding: 12px 0 12px 2px;
 	border-radius: 10px;
 	font-size: 28px;
-	line-height:30px;
+	line-height: 30px;
 	background-image: none;
-	letter-spacing:2px;
+	letter-spacing: 2px;
 }
 #page-menu .menu-link:last-child {
 	margin-right: 0;
