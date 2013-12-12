@@ -55,6 +55,13 @@ body {
 #push, #footer {
 	height: 170px; /* footer height */
 }
+body.home #wrap {
+	margin-bottom: -480px; /* footer height (home) */
+}
+body.home #push, 
+body.home #footer {
+	height: 480px; /* footer height (home) */
+}
 #body {
 	padding-top: 192px !important; /* header height */
 }
