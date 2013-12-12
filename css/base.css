@@ -138,6 +138,7 @@ body {
 	padding-top: 100px;
 	border-radius: 15px;
 	background: #C8C0B8 0 0 no-repeat;
+	background-image: url('/img/menu-icon.png');
 	text-align: center;
 	font-weight: bold;
 	font-size: 30px;
@@ -153,28 +154,22 @@ body {
 	margin-left: 10px;
 }
 .menu-link.space {
-	background-position: 30px 10px;
-	background-image: url('/img/icon_space_white.png');
+	background-position: 0 0;
 }
 .menu-link.studio {
-	background-position: 35px 15px;
-	background-image: url('/img/icon_studio_white.png');
+	background-position: -140px 0;
 }
 .menu-link.presentation {
-	background-position: 35px 15px;
-	background-image: url('/img/icon_studio_white.png');
+	background-position: -280px 0;
 }
 .menu-link.schedule {
-	background-position: 30px 10px;
-	background-image: url('/img/icon_space_white.png');
+	background-position: 0 -140px;
 }
 .menu-link.traffic {
-	background-position: 30px 10px;
-	background-image: url('/img/icon_space_white.png');
+	background-position: -140px -140px;
 }
 .menu-link.about {
-	background-position: 30px 10px;
-	background-image: url('/img/icon_space_white.png');
+	background-position: -280px -140px;
 }
 .menu-panel {
 	position: relative;
