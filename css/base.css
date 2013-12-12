@@ -49,11 +49,11 @@ body {
 }
 #wrap {
 	height: auto !important;
-	margin: 0 auto -160px; /* footer height */
+	margin: 0 auto -170px; /* footer height */
 	min-height: 100%;
 }
 #push, #footer {
-	height: 160px; /* footer height */
+	height: 170px; /* footer height */
 }
 #body {
 	padding-top: 192px !important; /* header height */
