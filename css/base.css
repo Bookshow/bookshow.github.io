@@ -535,6 +535,8 @@ body.home #footer {
 	height: auto;
 	cursor: pointer;
 }
+
+/*
 .photo-flow.col-2 > .col-2,
 .photo-flow.col-3 > .col-3,
 .photo-flow.col-4 > .col-4,
@@ -551,14 +553,6 @@ body.home #footer {
 .photo-flow.col-4 > .col-3 {
 	width: 75%;
 }
-.photo-flow.col-3 > * {
-	width:  200px;
-	height: 112px;
-}
-.photo-flow.col-3 > *:first-child {
-	width:  400px;
-	height: 224px;
-}
 .photo-flow.col-5 > * {
 	width: 20%;
 }
@@ -571,6 +565,32 @@ body.home #footer {
 .photo-flow.col-5 > .col-4 {
 	width: 80%;
 }
+*/
+.photo-flow.col-2 > * {
+	width:  304px;
+	height: 171px;
+}
+.photo-flow.col-2 > *:first-child {
+	width:  608px;
+	height: 342px;
+}
+.photo-flow.col-3 > * {
+	width:  202px;
+	height: 114px;
+}
+.photo-flow.col-3 > *:first-child {
+	width:  404px;
+	height: 228px;
+}
+.photo-flow.col-4 > * {
+	width:  152px;
+	height:  85px;
+}
+.photo-flow.col-4 > *:first-child {
+	width:  456px;
+	height: 255px;
+}
+
 
 /* photo display */
 #photo-display .table-like {
