@@ -552,10 +552,12 @@ body.home #footer {
 	width: 75%;
 }
 .photo-flow.col-3 > * {
-	width: 33.33333%;
+	width:  192px;
+	height: 108px;
 }
-.photo-flow.col-3 > .col-2 {
-	width: 66.66667%;
+.photo-flow.col-3 > *:first-child {
+	width:  384px;
+	height: 216px;
 }
 .photo-flow.col-5 > * {
 	width: 20%;
