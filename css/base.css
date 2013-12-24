@@ -570,10 +570,12 @@ body.home #footer {
 	width:  304px;
 	height: 171px;
 }
+/*
 .photo-flow.col-2 > *:first-child {
 	width:  608px;
 	height: 342px;
 }
+*/
 .photo-flow.col-3 > * {
 	width:  202px;
 	height: 114px;
