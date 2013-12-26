@@ -46,7 +46,7 @@ function getOriginalURL(src) {
 	if      (matches_1){return matches_1[1] +"_1920"+ matches_1[2];}
 	else if (matches_2){return matches_2[1] +"_1920"+ matches_2[2];}
 	else if (matches_3){return matches_3[1] +"_1920"+ matches_3[2];}
-	else return returnURL;
+	else return src;
 
 	/*
 	var returnURL = matches ? matches[1] +"_1920"+ matches[2] : src;
