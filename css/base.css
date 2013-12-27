@@ -289,10 +289,6 @@ body.home #footer {
 #soapbox {
 	position: relative;
 }
-#soapbox > img {
-	width: 100%;
-	height: auto;
-}
 #soapbox > span {
 	display: inline-block;
 	position: absolute;
@@ -556,7 +552,7 @@ body.home #footer {
 .photo-flow.col-3 > *:first-child {
 	width:  404px;
 	height: 228px;
-	border: 2px solid #CCC;
+	border: 1px solid #CCC;
 }
 .photo-flow.col-4 > * {
 	width:  152px;
@@ -566,7 +562,7 @@ body.home #footer {
 .photo-flow.col-4 > *:first-child {
 	width:  456px;
 	height: 255px;
-	border: 3px solid #CCC;
+	border: 1px solid #CCC;
 }
 
 
