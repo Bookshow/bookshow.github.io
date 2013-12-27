@@ -208,6 +208,7 @@ body.home #footer {
 .menu-panel .photo-grid > img {
 	padding: 0;
 	height: auto;
+	border:1px solid #CCC;
 }
 #page-menu {
 	text-align: center;
@@ -522,6 +523,8 @@ body.home #footer {
 /* photo flow */
 .photo-flow {
 	position: relative;
+	margin-top:30px;
+	margin-bottom:20px;
 }
 .photo-flow::after {
 	display: block;
@@ -535,62 +538,35 @@ body.home #footer {
 	height: auto;
 	cursor: pointer;
 }
-
-/*
-.photo-flow.col-2 > .col-2,
-.photo-flow.col-3 > .col-3,
-.photo-flow.col-4 > .col-4,
-.photo-flow.col-5 > .col-5 {
-	width: 100%;
+.photo-flow.col-1 > * {
+	width:  620px;
+	border: 1px solid #C8C0B8;
+	border-radius: 10px;
 }
-.photo-flow.col-4 > * {
-	width: 25%;
-}
-.photo-flow.col-2 > *,
-.photo-flow.col-4 > .col-2 {
-	width: 50%;
-}
-.photo-flow.col-4 > .col-3 {
-	width: 75%;
-}
-.photo-flow.col-5 > * {
-	width: 20%;
-}
-.photo-flow.col-5 > .col-2 {
-	width: 40%;
-}
-.photo-flow.col-5 > .col-3 {
-	width: 60%;
-}
-.photo-flow.col-5 > .col-4 {
-	width: 80%;
-}
-*/
 .photo-flow.col-2 > * {
 	width:  304px;
 	height: 171px;
+	border: 1px solid #CCC;
 }
-/*
-.photo-flow.col-2 > *:first-child {
-	width:  608px;
-	height: 342px;
-}
-*/
 .photo-flow.col-3 > * {
 	width:  202px;
 	height: 114px;
+	border: 1px solid #CCC;
 }
 .photo-flow.col-3 > *:first-child {
 	width:  404px;
 	height: 228px;
+	border: 2px solid #CCC;
 }
 .photo-flow.col-4 > * {
 	width:  152px;
 	height:  85px;
+	border: 1px solid #CCC;
 }
 .photo-flow.col-4 > *:first-child {
 	width:  456px;
 	height: 255px;
+	border: 3px solid #CCC;
 }
 
 
@@ -660,3 +636,8 @@ body.home #footer {
 }
 
 
+/* video embed */
+iframe.youtube {
+	width: 620px;
+	height:380px;
+}
