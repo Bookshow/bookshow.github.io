@@ -111,7 +111,7 @@ body.home #footer {
 	margin: 0;
 	border-radius: 0;
 	color: #AA1919;
-	background: #FFF; /* TODO: redesign */
+	background: #C8C0B8;
 }
 #header .navbar-toggle.collapsed {
 	background: none;
@@ -135,7 +135,8 @@ body.home #footer {
 		margin-left: 8px;
 	}
 	#header .navbar-collapse {
-		background: #FFF; /* TODO: redesign */
+		border-bottom: 1px solid #FFF;
+		background: #C8C0B8;
 	}
 	#header .navbar-collapse .navbar-nav {
 		margin-top: 0;
