@@ -126,35 +126,20 @@ body.home #footer {
 #header .header-menu-link:focus {
 	background: none !important;
 }
-@media (max-width: 767px) {
-	#header .container {
-		padding: 0 16px;
-	}
-	#header .navbar-brand {
-		margin-top: 7px;
-		margin-left: 8px;
-	}
-	#header .navbar-collapse {
-		border-bottom: 1px solid #FFF;
-		background: #C8C0B8;
-	}
-	#header .navbar-collapse .navbar-nav {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-}
-
 #social-menu {
-	display: inline-block;
+	display: none;
 	position: absolute;
-	right: 0;
-	bottom: 0;
+	right: 64px;
+	top: 0;
+	padding: 10px;
 }
-#social-menu a {
+#social-menu > a {
 	display: inline-block;
 	float: right;
 	width: 44px;
 	height: 44px;
+	padding-left: 4px;
+	padding-top: 2px;
 	background: transparent no-repeat 0 0;
 	font-size: 40px;
 	line-height: 44px;
@@ -173,6 +158,26 @@ body.home #footer {
 }
 #social-menu a.youtube:hover {
 	color: #CF3427;
+}
+@media (max-width: 767px) {
+	#header .container {
+		padding: 0 16px;
+	}
+	#header .navbar-brand {
+		margin-top: 7px;
+		margin-left: 8px;
+	}
+	#header .navbar-collapse {
+		border-bottom: 1px solid #FFF;
+		background: #C8C0B8;
+	}
+	#header .navbar-collapse .navbar-nav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	#social-menu {
+		display: inline-block;
+	}
 }
 
 
