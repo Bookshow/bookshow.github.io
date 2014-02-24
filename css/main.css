@@ -5,6 +5,7 @@ body, h1, h2, h3 {
 body, #header {
 	background: transparent center 0 repeat;
 	background-image: url('/img/bg_fabric_plaid_@2X.png');
+	background-size: 200px auto;
 }
 body {
 	font-size: 20px;
