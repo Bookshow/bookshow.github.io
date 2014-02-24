@@ -253,7 +253,7 @@ body.home #footer {
 .menu-panel .photo-grid {
 	margin: 0 15px;
 }
-.menu-panel .photo-grid > img {
+.menu-panel .photo-grid img {
 	padding: 0;
 	height: auto;
 	border:1px solid #CCC;
