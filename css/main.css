@@ -54,6 +54,9 @@ iframe {
 .table-like > * {
 	display: table-cell;
 }
+.nowrap {
+	white-space: nowrap;
+}
 
 
 
@@ -310,11 +313,15 @@ body.home #footer {
 #footer > .container > div {
 	padding-bottom: 5px;
 }
-#footer #google-maps {
+#footer .footer-item {
+	margin: 0 16px;
+}
+#google-maps-image {
 	display: inline-block;
-	width: 600px;
+	width: 100%;
 	height: 300px;
-	background: transparent 0 0 no-repeat;
+	max-width: 600px;
+	background: transparent right center no-repeat;
 	background-image: url('/img/map.jpg');
 }
 
