@@ -209,8 +209,6 @@ body.home #footer {
 	height: 140px;
 	padding: 0;
 	padding-top: 100px;
-	margin-right: 10px;
-	margin-bottom: 17px;
 	border-radius: 15px;
 	background: #C8C0B8 0 0 no-repeat;
 	background-image: url('/img/menu-icon.png');
@@ -340,6 +338,10 @@ body.home #body > * {
 	bottom: 16px;
 	color: #FFF;
 	text-shadow: 0 0 3px #000;
+}
+#other-pages .menu-link {
+	margin-right: 10px;
+	margin-bottom: 17px;
 }
 
 
