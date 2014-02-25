@@ -556,6 +556,15 @@ body.home #body > * {
 	background: #EEE;
 }
 
+#qr-code > img {
+	display: inline-block;
+}
+#qr-code > ul {
+	display: inline-block;
+	padding: 10px;
+	max-width: 370px;
+}
+
 
 
 /* photo flow */
