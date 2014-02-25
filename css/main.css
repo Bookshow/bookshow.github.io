@@ -28,6 +28,22 @@ iframe {
 	border: none;
 	width: 100%;
 }
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 .table th,
 .table td { /* lazy way, as we don't put table inside table */
 	border-color: #BBB !important;
@@ -531,9 +547,6 @@ body.home #body > * {
 #studio-spec-table .no {
 	background: #EEE;
 }
-.youtube-container {
-	text-align: center;
-}
 
 
 
@@ -647,18 +660,6 @@ body.home #body > * {
 .fa-cus-video-camara:before {
 	content: "\f03d";
 }
-
-
-/* video embed */
-iframe.youtube {
-	width: 620px;
-	height: 380px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
-
-
 
 /* responsive */
 @media (min-width: 768px) {
