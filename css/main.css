@@ -209,6 +209,8 @@ body.home #footer {
 	height: 140px;
 	padding: 0;
 	padding-top: 100px;
+	margin-right: 10px;
+	margin-bottom: 17px;
 	border-radius: 15px;
 	background: #C8C0B8 0 0 no-repeat;
 	background-image: url('/img/menu-icon.png');
@@ -224,9 +226,6 @@ body.home #footer {
 }
 .menu-link:hover {
 	text-decoration: none;
-}
-.menu-link + .menu-link {
-	margin-left: 10px;
 }
 .menu-link.space {
 	background-position: 0 0;
