@@ -603,7 +603,8 @@ body.home #body > * {
 }
 @media (max-width: 440px) {
 	#space-pricing,
-	#studio-spec-table {
+	#studio-spec-table,
+	#business-flow {
 		font-size: 18px;
 	}
 }
