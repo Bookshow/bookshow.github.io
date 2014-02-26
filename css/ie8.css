@@ -1,0 +1,4 @@
+#header .navbar-brand {
+	/* Only IE 9+ supports background-size. */
+	background-image: url('/img/bookshow-logo-ss.png');
+}
