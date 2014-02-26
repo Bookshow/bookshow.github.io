@@ -33,11 +33,29 @@ PhotoDisplay.prototype = {
 	}
 };
 
-var thumbnail_pattern = /(.+)_[sml](\.\w+)/;
+var thumbnail_pattern_1 = /(.+)_s(\.\w+)/;
+var thumbnail_pattern_2 = /(.+)_m(\.\w+)/;
+var thumbnail_pattern_3 = /(.+)_l(\.\w+)/;
 
-var getOriginalURL = function (src) {
-	var matches = thumbnail_pattern.exec(src);
-	return matches ? matches[1] +"_1920"+ matches[2] : src;
+
+function getOriginalURL(src) {
+	var matches_1 = thumbnail_pattern_1.exec(src);
+	var matches_2 = thumbnail_pattern_2.exec(src);
+	var matches_3 = thumbnail_pattern_3.exec(src);
+	// return matches ? matches[1] + matches[2] : src;
+	if      (matches_1){return matches_1[1] +"_1920"+ matches_1[2];}
+	else if (matches_2){return matches_2[1] +"_1920"+ matches_2[2];}
+	else if (matches_3){return matches_3[1] +"_1920"+ matches_3[2];}
+	else return src;
+
+	/*
+	var returnURL = matches ? matches[1] +"_1920"+ matches[2] : src;
+	var matches = thumbnail_pattern_2.exec(returnURL);
+	var returnURL = matches ? matches[1] +"_1920"+ matches[2] : returnURL;
+	var matches = thumbnail_pattern_3.exec(returnURL);
+	var returnURL = matches ? matches[1] +"_1920"+ matches[2] : returnURL;
+    return returnURL;
+    */
 }
 
 $(function () {

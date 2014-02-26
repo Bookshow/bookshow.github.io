@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html debug="ture" lang="zh_tw">
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
+	<link rel="bookmark"      href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width" /><!--定義給手機看-->
+	<title>{{ site.name }}{% if page.title %}{% if page.title != "index" %} / {{ page.title }} {% endif %}{% endif %}</title>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/default.css">
+</head>
+
+<body>
+<div id="wrap">
+
+
+    <div id="header">
+    	<div id="header-sns">
+    		<img src="../img/icon_youtube_gray.png"  class="sns noshadow"/>
+    		<img src="../img/icon_google+_gray.png"  class="sns noshadow"/>
+    		<img src="../img/icon_facebook_gray.png" class="sns noshadow"/>
+    	</div>
+    </div>
+
+
+    <div id="content">
+    	{% if page.title != "index" %} 
+		<a href="/space"   ><h3 id="space"    class="index-menu">活動場地</h2></a><div class="menu-space">　</div>
+		<a href="/studio"  ><h3 id="studio"   class="index-menu">影音製作</h2></a><div class="menu-space">　</div>
+		<a href="/schedule"><h3 id="schedule" class="index-menu">預約日曆</h2></a><div class="menu-space">　</div>
+		<a href="/traffic" ><h3 id="traffic"  class="index-menu">交通指南</h2></a>
+		<a href="/about"   ><h3 id="about"    class="index-menu">關於我們</h2></a><div class="menu-space">　</div>
+		<div class="wraps"></div>
+		{% endif %}
+		{{ content }}
+	</div>  
+
+
+	<div id="push"></div>
+
+	<div id="footer">
+		{% include footer-old.html %}
+	</div>
+
+	{% include ga.html %}
+
+</div>
+</body>
+</html>

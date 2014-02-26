@@ -3,12 +3,8 @@ layout: default
 ---
 
 <div id="wrap">
-	<div id="header" class="navbar navbar-fixed-top">
-		<div class="container">
-			{% include header.html %}
-		</div>
-	</div>
-	<div id="body" class="container">
+	<div id="body-header" class="container">
+		{% include banner.html %}
 		{{ content }}
 	</div>
 	<div id="push"></div>
