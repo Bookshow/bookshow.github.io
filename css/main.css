@@ -312,6 +312,25 @@ body.home #footer {
 	margin: 0;
 	vertical-align: middle;
 }
+@media (max-width: 400px) {
+	.menu-link {
+		position: static !important;
+		display: block;
+		height: auto;
+		width: auto;
+		padding-top: 4px;
+		background-image: none !important;
+	}
+	.menu-desc {
+		margin: 15px;
+	}
+	.related-page {
+		padding-left: 0;
+	}
+	.related-page > .menu-link + * {
+		margin-top: 8px;
+	}
+}
 
 
 
@@ -648,7 +667,6 @@ body.home #body > * {
 .photo-flow.col-4 > *:first-child {
 	width: 75%;
 }
-
 
 /* photo display */
 #photo-display .table-like {
