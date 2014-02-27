@@ -385,6 +385,9 @@ body.home #body > * {
 	margin-right: 10px;
 	margin-bottom: 17px;
 }
+#value-proposition {
+	pointer-events: none;
+}
 
 
 
