@@ -55,7 +55,8 @@ iframe {
 	display: table-cell;
 }
 .nowrap {
-	white-space: nowrap;
+	display: inline-block; /* nowrap doesn't work in WebKit */
+	/* white-space: nowrap; */
 }
 
 
