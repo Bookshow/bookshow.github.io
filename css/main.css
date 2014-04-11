@@ -137,12 +137,25 @@ body.home #footer {
 	padding: 20px 16px;
 }
 #header .navbar-brand {
-	width: 72px;
+	position: relative;
+	width: 220px;
 	margin-right: 8px;
 	margin-left: -7px;
-	background: center center transparent no-repeat;
+	background: 0 center transparent no-repeat;
 	background-image: url('/img/bookshow-logo@2x.png');
 	background-size: auto 48px;
+}
+#header .navbar-brand::before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background: right center transparent no-repeat;
+	background-image: url('/img/bookshow-title@2x.png');
+	background-size: auto 16px;
 }
 #header .navbar-toggle {
 	width: 64px;
@@ -229,6 +242,9 @@ body.home #footer {
 		background-size: auto 32px;
 		margin-top: 7px;
 		margin-left: 8px;
+	}
+	#header .navbar-brand::before {
+		display: none;
 	}
 	#header .navbar-collapse {
 		max-height: none;
