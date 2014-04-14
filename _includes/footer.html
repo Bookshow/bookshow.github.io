@@ -1,16 +1,28 @@
 <hr>
 <div>
-	<i class="fa fa-phone-square"></i> (02) 27639627 &nbsp;&nbsp;&nbsp;&nbsp; 
-	<i class="fa fa-envelope"></i> <a href="mailto:hello@bookshow.tw">hello@bookshow.tw</a>
+	<span class="nowrap footer-item">
+		<i class="fa fa-phone-square"></i>
+		(02) 27639627
+	</span>
+	<span class="nowrap footer-item">
+		<i class="fa fa-envelope"></i>
+		<a href="mailto:hello@bookshow.tw">hello@bookshow.tw</a>
+	</span>
 </div>
 <div>
-	<i class="fa fa-map-marker"></i> <a href="{{ site.google_map_url }}" target="_blank">110 台北市信義區基隆路一段141號6樓之7</a>
+	<i class="fa fa-map-marker"></i>
+	<a href="{{ site.google_map_url }}" target="_blank">
+		<span class="nowrap">
+			110 台北市信義區</span><span class="nowrap">基隆路一段141號6樓之7
+		</span>
+	</a>
 </div>
 {% unless page.title %}
 <div>
-	<a id="google-maps" href="{{ site.google_map_url }}" target="_blank"></a>
+	<a id="google-maps-image" href="{{ site.google_map_url }}" target="_blank"></a>
 </div>
 {% endunless %}
 <div>
-	BOOKSHOW © 2014 奧石數位文創
+	<span class="nowrap">BOOKSHOW ©</span>
+	<span class="nowrap">2014 奧石數位文創</span>
 </div>
