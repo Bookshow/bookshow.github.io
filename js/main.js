@@ -1,7 +1,11 @@
+(function (window) {
+
+'use strict';
+var $ = window.jQuery;
+
 function PhotoDisplay(modal) {
 	var self = this,
 		$elem = this.$elem = $(modal),
-		dialog = $elem.find('.modal-dialog')[0];
 		image = this.image = $elem.find('#photo-display-image')[0];
 	
 	function syncSize() {
@@ -37,8 +41,8 @@ var thumbnail_pattern = /(.+)_[sml](\.\w+)/;
 
 var getOriginalURL = function (src) {
 	var matches = thumbnail_pattern.exec(src);
-	return matches ? matches[1] +"_1920"+ matches[2] : src;
-}
+	return matches ? matches[1] + '_1920' + matches[2] : src;
+};
 
 $(function () {
 	
@@ -54,3 +58,5 @@ $(function () {
 	});
 	
 });
+
+})(this);
