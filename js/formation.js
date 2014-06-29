@@ -8,21 +8,58 @@ var catalog = {
 		width: 60,
 		height: 20,
 		cost: { desk: 1 },
-		rotation: 0,
 		ghost: '<span class="desk ghost hide"></span>'
 	},
 	chair: {
-		width: 20,
-		height: 20,
+		width: 22,
+		height: 22,
 		cost: { chair: 1 },
-		rotation: 0,
 		ghost: '<span class="chair ghost hide"></span>'
 	}
 };
 
-var warehouse = {
+var storage = {
 	desk: 16,
 	chair: 50
+};
+
+
+
+function setElementRotation(elem, degree) {
+	var r = 'rotate(' + (degree || 0) + 'deg)';
+	$(elem).css({
+		transform: r,
+		'-webkit-transform': r
+	});
+}
+
+function Warehouse(element, catalog, storage) {
+	this.catalog = catalog;
+	this.storage = storage;
+	this.$element = $(element);
+	this.element = this.$element[0];
+	this.rotations = {};
+	this.trays = {};
+	this.counts = {};
+	
+	// render
+	var self = this, 
+		c, pool, tray, count;
+	Object.keys(catalog).forEach(function (type) {
+		c = catalog[type];
+		pool = $('<div data-type="' + type + '" class="pool"></div>')[0];
+		self.trays[type] = tray = $('<div class="tray draggable"><span class="' + 
+			type + ' symbol"></span></div>')[0];
+		self.counts[type] = count = $('<div class="count"></div>')[0];
+		pool.appendChild(tray);
+		pool.appendChild(count);
+		self.element.appendChild(pool);
+	});
+}
+
+Warehouse.prototype.rotate = function (type, degree, add) {
+	setElementRotation(this.trays[type], this.rotations[type] = 
+		add ? ((this.rotations[type] || 0) + degree) % 360 : degree);
 };
 
 
@@ -160,25 +197,17 @@ function syncGhostPosition(ghost, offset, e) {
 	});
 }
 
-function setElementRotation(elem, degree) {
-	var r = 'rotate(' + (degree || 0) + 'deg)';
-	$(elem).css({
-		transform: r,
-		'-webkit-transform': r
-	});
-}
-
-function syncRotation($pool, degree, add) {
-	var type = $pool.data('type'),
-		c = catalog[type];
-	if (!c)
-		return;
-	c.rotation = add ? (c.rotation + degree) % 360 : degree;
-	setElementRotation($pool.find('.symbol')[0], c.rotation);
+function offsetFromCenter(target, e) {
+	var rect = target.getBoundingClientRect();
+	return {
+		x: e.clientX - (rect.left + rect.right) / 2,
+		y: e.clientY - (rect.top + rect.bottom) / 2
+	};
 }
 
 $(function () {
-	var room = new Room('#room'),
+	var warehouse = new Warehouse('#warehouse', catalog, storage),
+		room = new Room('#room'),
 		dragger = new Dragger(),
 		roomRect, 
 		cursorOffset,
@@ -186,25 +215,23 @@ $(function () {
 		fromPool, 
 		ghost;
 	
-	$('#warehouse').on('mousewheel DOMMouseScroll', '.pool .symbol',  function (e) {
+	$('#warehouse').on('mousewheel DOMMouseScroll', '.tray',  function (e) {
 		// each tick is 15 degrees
 		var oe = e.originalEvent,
 			delta = oe.wheelDelta ? oe.wheelDelta / 8 : -5 * oe.detail;
-		syncRotation($(e.currentTarget.parentNode), delta, true);
+		warehouse.rotate($(e.currentTarget.parentNode).data('type'), delta, true);
 		e.preventDefault();
 	});
 	
 	dragger.onStart = function (e) {
-		var target = e.currentTarget,
-			$tarp = $(target.parentNode),
-			toff = $(target).offset();
-		cursorOffset = { x: e.pageX - toff.left, y: e.pageY - toff.top };
-		fromPool = $tarp.hasClass('pool');
+		var target = e.currentTarget;
+		fromPool = $(target).hasClass('tray');
+		cursorOffset = offsetFromCenter(target, e);
 		roomRect = room.getBound();
 		
 		if (fromPool) {
-			var type = $tarp.data('type');
-			dragged = { type: type, rotation: catalog[type].rotation };
+			var type = $(target.parentNode).data('type');
+			dragged = { type: type, rotation: warehouse.rotations[type] || 0 };
 			// TODO: subtract item count
 		} else {
 			dragged = target._obj;
