@@ -1,0 +1,95 @@
+---
+layout: subpage
+title: 陣型兵推
+name: formation
+js: [
+	'/js/formation.js'
+]
+---
+
+<style>
+body {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+.formation-container {
+	position: relative;
+	margin: 0 -120px;
+	padding: 64px 240px;
+}
+.room-container {
+	text-align: center;
+}
+#room {
+	display: inline-block;
+	position: relative;
+	width: 320px;
+	height: 360px;
+	background: rgba(144, 164, 174, 0.25);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+}
+#room > * {
+	position: absolute;
+}
+#warehouse {
+	position: absolute;
+	top: 64px;
+	bottom: 64px;
+	right: 0;
+	width: 240px;
+}
+.pool {
+	padding: 64px 0;
+	text-align: center;
+}
+.pool .symbol {
+	display: inline-block;
+	margin: 0 !important;
+}
+.desk, 
+.chair {
+	background: #d7ccc8;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.desk {
+	width: 60px;
+	height: 20px;
+	margin-top: -10px;
+	margin-left: -30px;
+	border: 2px solid #795548;
+	border-radius: 3px;
+	z-index: 10;
+}
+.chair {
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	margin-left: -10px;
+	border: 1px solid #795548;
+	border-bottom-width: 2px;
+	border-radius: 5px 5px 0 0;
+	z-index: 5;
+}
+.ghost {
+	position: absolute;
+	z-index: 50;
+	border-style: dashed;
+	opacity: 0.5
+}
+</style>
+<div class="formation-container">
+	<div class="room-container">
+		<div id="room"></div>
+	</div>
+	<div id="warehouse">
+		<div data-type="desk" class="pool">
+			<span class="desk symbol draggable"></span>
+			<span class="count"></span>
+		</div>
+		<div data-type="chair" class="pool">
+			<span class="chair symbol draggable"></span>
+			<span class="count"></span>
+		</div>
+	</div>
+</div>
