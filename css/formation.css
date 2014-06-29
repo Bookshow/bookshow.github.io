@@ -65,6 +65,7 @@ body.dragging {
 	z-index: 5;
 }
 .ghost {
+	pointer-events: none;
 	position: absolute;
 	z-index: 50;
 	border-style: dashed;

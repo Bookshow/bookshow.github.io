@@ -8,12 +8,14 @@ var catalog = {
 		width: 60,
 		height: 20,
 		cost: { desk: 1 },
+		rotation: 0,
 		ghost: '<span class="desk ghost hide"></span>'
 	},
 	chair: {
 		width: 20,
 		height: 20,
 		cost: { chair: 1 },
+		rotation: 0,
 		ghost: '<span class="chair ghost hide"></span>'
 	}
 };
@@ -39,7 +41,7 @@ Room.prototype.checkCollision = function (obj) {
 	// TODO
 };
 
-Room.prototype.set = function (obj, x, y, rotation) {
+Room.prototype.set = function (obj, x, y) {
 	obj = _normalize(obj);
 	var elem = obj._elem,
 		$elem = $(elem),
@@ -52,13 +54,11 @@ Room.prototype.set = function (obj, x, y, rotation) {
 	}
 	$elem.addClass('hide');
 	
-	var r = 'rotate(' + rotation + 'deg)';
 	$elem.css({
 		left: x + 'px',
-		top: y + 'px',
-		transform: r,
-		'-webkit-transform': r
+		top: y + 'px'
 	});
+	setElementRotation(elem, obj.rotation);
 	
 	if (isNew)
 		this.element.appendChild(elem);
@@ -160,6 +160,23 @@ function syncGhostPosition(ghost, offset, e) {
 	});
 }
 
+function setElementRotation(elem, degree) {
+	var r = 'rotate(' + (degree || 0) + 'deg)';
+	$(elem).css({
+		transform: r,
+		'-webkit-transform': r
+	});
+}
+
+function syncRotation($pool, degree, add) {
+	var type = $pool.data('type'),
+		c = catalog[type];
+	if (!c)
+		return;
+	c.rotation = add ? (c.rotation + degree) % 360 : degree;
+	setElementRotation($pool.find('.symbol')[0], c.rotation);
+}
+
 $(function () {
 	var room = new Room('#room'),
 		dragger = new Dragger(),
@@ -169,19 +186,32 @@ $(function () {
 		fromPool, 
 		ghost;
 	
+	$('#warehouse').on('mousewheel DOMMouseScroll', '.pool .symbol',  function (e) {
+		// each tick is 15 degrees
+		var oe = e.originalEvent,
+			delta = oe.wheelDelta ? oe.wheelDelta / 8 : -5 * oe.detail;
+		syncRotation($(e.currentTarget.parentNode), delta, true);
+		e.preventDefault();
+	});
+	
 	dragger.onStart = function (e) {
 		var target = e.currentTarget,
+			$tarp = $(target.parentNode),
 			toff = $(target).offset();
 		cursorOffset = { x: e.pageX - toff.left, y: e.pageY - toff.top };
-		fromPool = $(target.parentNode).hasClass('pool');
+		fromPool = $tarp.hasClass('pool');
 		roomRect = room.getBound();
-		dragged = fromPool ? { type: $(target.parentNode).data('type') } : target._obj;
+		
 		if (fromPool) {
+			var type = $tarp.data('type');
+			dragged = { type: type, rotation: catalog[type].rotation };
 			// TODO: subtract item count
 		} else {
+			dragged = target._obj;
 			room.hide(dragged);
 		}
 		ghost = $(catalog[dragged.type].ghost)[0];
+		setElementRotation(ghost, dragged.rotation);
 		syncGhostPosition(ghost, cursorOffset, e);
 		document.body.appendChild(ghost);
 		$(ghost).removeClass('hide');
