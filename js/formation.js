@@ -7,11 +7,13 @@ var catalog = {
 	desk: {
 		width: 60,
 		height: 20,
+		cost: { desk: 1 },
 		ghost: '<span class="desk ghost hide"></span>'
 	},
 	chair: {
 		width: 20,
 		height: 20,
+		cost: { chair: 1 },
 		ghost: '<span class="chair ghost hide"></span>'
 	}
 };
@@ -151,20 +153,26 @@ function inRoom(rect, e) {
 		rect.top < e.pageY && e.pageY < rect.bottom;
 }
 
-function syncGhostPosition(ghost, e) {
+function syncGhostPosition(ghost, offset, e) {
 	$(ghost).css({
-		left: e.pageX + 'px',
-		top: e.pageY + 'px'
+		left: (e.pageX - offset.x) + 'px',
+		top: (e.pageY - offset.y) + 'px'
 	});
 }
 
 $(function () {
 	var room = new Room('#room'),
 		dragger = new Dragger(),
-		roomRect, dragged, fromPool, ghost;
+		roomRect, 
+		cursorOffset,
+		dragged, 
+		fromPool, 
+		ghost;
 	
 	dragger.onStart = function (e) {
-		var target = e.currentTarget;
+		var target = e.currentTarget,
+			toff = $(target).offset();
+		cursorOffset = { x: e.pageX - toff.left, y: e.pageY - toff.top };
 		fromPool = $(target.parentNode).hasClass('pool');
 		roomRect = room.getBound();
 		dragged = fromPool ? { type: $(target.parentNode).data('type') } : target._obj;
@@ -174,12 +182,12 @@ $(function () {
 			room.hide(dragged);
 		}
 		ghost = $(catalog[dragged.type].ghost)[0];
-		syncGhostPosition(ghost, e);
+		syncGhostPosition(ghost, cursorOffset, e);
 		document.body.appendChild(ghost);
 		$(ghost).removeClass('hide');
 	};
 	dragger.onMove = function (e) {
-		syncGhostPosition(ghost, e);
+		syncGhostPosition(ghost, cursorOffset, e);
 	};
 	dragger.onStop = function (e) {
 		$(ghost).addClass('hide');
@@ -189,7 +197,9 @@ $(function () {
 				room.remove(dragged);
 			return;
 		}
-		room.set(dragged, e.pageX - roomRect.left, e.pageY - roomRect.top);
+		room.set(dragged, 
+			e.pageX - cursorOffset.x - roomRect.left, 
+			e.pageY - cursorOffset.y - roomRect.top);
 	};
 	
 });

@@ -52,8 +52,6 @@ body.dragging {
 .desk {
 	width: 60px;
 	height: 20px;
-	margin-top: -10px;
-	margin-left: -30px;
 	border: 2px solid #795548;
 	border-radius: 3px;
 	z-index: 10;
@@ -61,8 +59,6 @@ body.dragging {
 .chair {
 	width: 20px;
 	height: 20px;
-	margin-top: -10px;
-	margin-left: -10px;
 	border: 1px solid #795548;
 	border-bottom-width: 2px;
 	border-radius: 5px 5px 0 0;
