@@ -3,6 +3,13 @@ body {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
+.draggable {
+	cursor: url('/img/cur-openhand.cur'), pointer;
+}
+body.dragging {
+	cursor: url('/img/cur-closedhand.cur'), pointer !important;
+}
+
 .formation-container {
 	position: relative;
 	margin: 0 -120px;
