@@ -5,14 +5,32 @@ var $ = window.jQuery;
 
 var catalog = {
 	desk: {
-		width: 60,
-		height: 20,
 		cost: { desk: 1 }
 	},
 	chair: {
-		width: 22,
-		height: 22,
 		cost: { chair: 1 }
+	},
+	d1c2: {
+		subs: [
+			{ type: 'desk', x: -10 },
+			{ type: 'chair', x: 13, y: 15 },
+			{ type: 'chair', x: 13, y: -15 }
+		],
+		cost: { desk: 1, chair: 2 }
+	},
+	c2: {
+		subs: [
+			{ type: 'chair', y: 15 },
+			{ type: 'chair', y: -15 }
+		],
+		cost: { chair: 2 }
+	},
+	d2c4: {
+		subs: [
+			{ type: 'd1c2', y: -20, rotation: -90 },
+			{ type: 'd1c2', y: 20, rotation: 90 }
+		],
+		cost: { desk: 2, chair: 4 }
 	}
 };
 
@@ -46,9 +64,10 @@ function Warehouse(element, catalog, storage) {
 	Object.keys(catalog).forEach(function (type) {
 		c = catalog[type];
 		pool = $('<div data-type="' + type + '" class="pool"></div>')[0];
-		self.trays[type] = tray = $('<div class="tray draggable"><span class="' + 
-			type + ' symbol"></span></div>')[0];
+		self.trays[type] = tray = $('<div class="tray draggable"></div>')[0];
 		self.counts[type] = count = $('<div class="count"></div>')[0];
+		$(tray).tooltip({ placement: 'bottom', title: 'Scroll to rotate.' });
+		tray.appendChild(self.create(type, 'symbol'));
 		pool.appendChild(tray);
 		pool.appendChild(count);
 		self.element.appendChild(pool);
@@ -60,8 +79,23 @@ Warehouse.prototype.rotate = function (type, degree, add) {
 		add ? ((this.rotations[type] || 0) + degree) % 360 : degree);
 };
 
-Warehouse.prototype.create = function (type) {
-	var elem = $('<span class="' + type + '"></span>')[0];
+// TODO: may also take care of rotation
+Warehouse.prototype.create = function (type, classes) {
+	if (classes && typeof classes !== 'string') classes = classes.join(' ');
+	classes = !classes || !classes.length ? '' : ' ' + classes;
+	var elem = $('<span class="' + type + classes + '"></span>')[0],
+		subs = (this.catalog[type] && this.catalog[type].subs) || [];
+	for (var i = 0, sub, c, len = subs.length; i < len; i++) {
+		sub = subs[i];
+		c = this.create(sub.type, 'sub');
+		$(c).css({
+			left: (sub.x || 0) + 'px',
+			top: (sub.y || 0) + 'px'
+		});
+		if (sub.rotation)
+			setElementRotation(c, sub.rotation);
+		elem.appendChild(c);
+	}
 	return elem;
 };
 
@@ -241,8 +275,7 @@ $(function () {
 			dragged = target._obj;
 			room.hide(dragged);
 		}
-		ghost = warehouse.create(dragged.type);
-		$(ghost).addClass('ghost').addClass('hide');
+		ghost = warehouse.create(dragged.type, 'ghost hide');
 		setElementRotation(ghost, dragged.rotation);
 		syncGhostPosition(ghost, cursorOffset, e);
 		document.body.appendChild(ghost);
