@@ -14,13 +14,16 @@ body.dragging {
 	position: relative;
 	margin: 0 -120px;
 	padding: 64px 240px;
+	text-align: center;
 }
 .room-container {
-	text-align: center;
+	display: inline-block;
+	padding: 80px 0 80px 71px;
 }
 #room {
 	display: inline-block;
 	position: relative;
+	float: left;
 	width: 300px;
 	height: 267px;
 	background: rgba(144, 164, 174, 0.25);
