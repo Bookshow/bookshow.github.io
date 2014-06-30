@@ -180,7 +180,8 @@ Room.prototype.getBound = function () {
 
 function Dragger() {
 	
-	var _dragging = false;
+	var self = this, 
+		_dragging = false;
 	Object.defineProperty(this, 'dragging', {
 		get: function () {
 			return _dragging;
@@ -190,10 +191,11 @@ function Dragger() {
 				return;
 			_dragging = value;
 			$(window.document.body)[value ? 'addClass' : 'removeClass']('dragging');
+			if (self.onState)
+				self.onState(value);
 		}
 	});
 	
-	var self = this;
 	$(window.document)
 	.on('mousedown', '.draggable', function (e) {
 		if (self.dragging)
@@ -228,10 +230,25 @@ function inRoom(rect, e) {
 		rect.top < e.pageY && e.pageY < rect.bottom;
 }
 
-function syncGhostPosition(ghost, offset, e) {
+function alignToGridLine(offset, p) {
+	var gridSize = 10,
+		offx = offset.x || offset.left,
+		offy = offset.y || offset.top;
+	return {
+		x: Math.round((p.x - offx) / gridSize) * gridSize + offx,
+		y: Math.round((p.y - offy) / gridSize) * gridSize + offy
+	};
+}
+
+function getPatchedPosition(offset, center, e) {
+	var pos = { x: e.pageX - offset.x, y: e.pageY - offset.y };
+	return e.originalEvent.shiftKey ? alignToGridLine(center, pos) : pos;
+}
+
+function syncGhostPosition(ghost, position) {
 	$(ghost).css({
-		left: (e.pageX - offset.x) + 'px',
-		top: (e.pageY - offset.y) + 'px'
+		left: position.x + 'px',
+		top: position.y + 'px'
 	});
 }
 
@@ -248,12 +265,13 @@ $(function () {
 		room = new Room('#room', warehouse),
 		dragger = new Dragger(),
 		roomRect, 
+		roomCenter,
 		cursorOffset,
 		dragged, 
 		fromPool, 
 		ghost;
 	
-	$('#warehouse').on('mousewheel DOMMouseScroll', '.tray',  function (e) {
+	warehouse.$element.on('mousewheel DOMMouseScroll', '.tray',  function (e) {
 		// each tick is 15 degrees
 		var oe = e.originalEvent,
 			delta = oe.wheelDelta ? oe.wheelDelta / 8 : -5 * oe.detail;
@@ -261,11 +279,24 @@ $(function () {
 		e.preventDefault();
 	});
 	
+	room.$element.tooltip({
+		trigger: 'manual', 
+		placement: 'bottom', 
+		title: 'Hold SHIFT to align.'
+	});
+	
+	dragger.onState = function (value) {
+		room.$element.tooltip(value ? 'show' : 'hide');
+	};
 	dragger.onStart = function (e) {
 		var target = e.currentTarget;
 		fromPool = $(target).hasClass('tray');
 		cursorOffset = offsetFromCenter(target, e);
 		roomRect = room.getBound();
+		roomCenter = {
+			x: Math.round((roomRect.left + roomRect.right) / 2),
+			y: Math.round((roomRect.top + roomRect.bottom) / 2)
+		};
 		
 		if (fromPool) {
 			var type = $(target.parentNode).data('type');
@@ -277,12 +308,12 @@ $(function () {
 		}
 		ghost = warehouse.create(dragged.type, 'ghost hide');
 		setElementRotation(ghost, dragged.rotation);
-		syncGhostPosition(ghost, cursorOffset, e);
+		syncGhostPosition(ghost, getPatchedPosition(cursorOffset, roomCenter, e));
 		document.body.appendChild(ghost);
 		$(ghost).removeClass('hide');
 	};
 	dragger.onMove = function (e) {
-		syncGhostPosition(ghost, cursorOffset, e);
+		syncGhostPosition(ghost, getPatchedPosition(cursorOffset, roomCenter, e));
 	};
 	dragger.onStop = function (e) {
 		$(ghost).addClass('hide');
@@ -292,9 +323,9 @@ $(function () {
 				room.remove(dragged);
 			return;
 		}
-		room.set(dragged, 
-			e.pageX - cursorOffset.x - roomRect.left, 
-			e.pageY - cursorOffset.y - roomRect.top);
+		// TODO: extract common logic with syncGhostPosition
+		var pos = getPatchedPosition(cursorOffset, roomCenter, e);
+		room.set(dragged, pos.x - roomRect.left, pos.y - roomRect.top);
 	};
 	
 });
