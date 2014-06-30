@@ -34,11 +34,13 @@ body.dragging {
 	top: 64px;
 	bottom: 64px;
 	right: 0;
-	width: 200px;
+	width: 240px;
 }
 .pool {
+	display: inline-block;
 	position: relative;
 	padding: 10px;
+	width: 120px;
 }
 .pool .tray {
 	position: relative;
@@ -55,12 +57,12 @@ body.dragging {
 }
 .pool .count {
 	position: absolute;
-	top: 0;
 	bottom: 0;
 	right: 0;
-	width: 80px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
 	text-align: center;
-	line-height: 120px;
 }
 .desk, 
 .chair {
