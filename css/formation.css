@@ -59,6 +59,16 @@ body.dragging {
 	left: 50%;
 	top: 50%;
 }
+.pool .symbol,
+.pool .symbol .sub {
+	background-color: rgba(0, 0, 0, 0.05);
+	border-color: rgba(0, 0, 0, 0.5);
+}
+.pool .tray:hover .symbol,
+.pool .tray:hover .symbol .sub {
+	background-color: #d7ccc8;
+	border-color: #795548;
+}
 .pool .count {
 	position: absolute;
 	bottom: 0;
