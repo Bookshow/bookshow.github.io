@@ -7,14 +7,12 @@ var catalog = {
 	desk: {
 		width: 60,
 		height: 20,
-		cost: { desk: 1 },
-		ghost: '<span class="desk ghost hide"></span>'
+		cost: { desk: 1 }
 	},
 	chair: {
 		width: 22,
 		height: 22,
-		cost: { chair: 1 },
-		ghost: '<span class="chair ghost hide"></span>'
+		cost: { chair: 1 }
 	}
 };
 
@@ -62,9 +60,15 @@ Warehouse.prototype.rotate = function (type, degree, add) {
 		add ? ((this.rotations[type] || 0) + degree) % 360 : degree);
 };
 
+Warehouse.prototype.create = function (type) {
+	var elem = $('<span class="' + type + '"></span>')[0];
+	return elem;
+};
 
 
-function Room(element) {
+
+function Room(element, warehouse) {
+	this.warehouse = warehouse;
 	this.$element = $(element);
 	this.element = this.$element[0];
 }
@@ -84,10 +88,10 @@ Room.prototype.set = function (obj, x, y) {
 		$elem = $(elem),
 		isNew = elem === undefined;
 	if (isNew) {
-		elem = obj._elem = document.createElement('span');
+		elem = obj._elem = this.warehouse.create(obj.type);
 		elem._obj = obj;
 		$elem = $(elem);
-		elem.className = obj.type + ' draggable';
+		$elem.addClass('draggable');
 	}
 	$elem.addClass('hide');
 	
@@ -207,7 +211,7 @@ function offsetFromCenter(target, e) {
 
 $(function () {
 	var warehouse = new Warehouse('#warehouse', catalog, storage),
-		room = new Room('#room'),
+		room = new Room('#room', warehouse),
 		dragger = new Dragger(),
 		roomRect, 
 		cursorOffset,
@@ -237,7 +241,8 @@ $(function () {
 			dragged = target._obj;
 			room.hide(dragged);
 		}
-		ghost = $(catalog[dragged.type].ghost)[0];
+		ghost = warehouse.create(dragged.type);
+		$(ghost).addClass('ghost').addClass('hide');
 		setElementRotation(ghost, dragged.rotation);
 		syncGhostPosition(ghost, cursorOffset, e);
 		document.body.appendChild(ghost);
