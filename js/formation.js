@@ -34,6 +34,8 @@ var catalog = {
 	}
 };
 
+var types = Object.keys(catalog);
+
 var storage = {
 	desk: 16,
 	chair: 50
@@ -105,67 +107,76 @@ function Room(element, warehouse) {
 	this.warehouse = warehouse;
 	this.$element = $(element);
 	this.element = this.$element[0];
+	this.objects = [];
+	this.elems = {};
 }
 
-function _normalize(obj) {
+var _uuid = 0;
+function uuid() {
+	return _uuid++;
+}
+
+function normalize(obj) {
 	return typeof obj === 'string' ? { type: obj } : obj._obj ? obj._obj : obj;
 }
 
-Room.prototype.checkCollision = function (obj) {
-	obj = _normalize(obj);
-	// TODO
-};
-
-Room.prototype.set = function (obj, x, y) {
-	obj = _normalize(obj);
-	var elem = obj._elem,
-		$elem = $(elem),
-		isNew = elem === undefined;
-	if (isNew) {
-		elem = obj._elem = this.warehouse.create(obj.type);
-		elem._obj = obj;
+Room.prototype.set = function (obj) {
+	obj = normalize(obj);
+	var id = obj._id,
+		isNew = !id,
+		elem = isNew ? (this.elems[id = obj._id = uuid()] = 
+			this.warehouse.create(obj.type, 'draggable hide')) : this.elems[id], 
 		$elem = $(elem);
-		$elem.addClass('draggable');
-	}
-	$elem.addClass('hide');
 	
-	$elem.css({
-		left: x + 'px',
-		top: y + 'px'
-	});
+	$elem.css({ left: (obj.x || 0) + 'px', top: (obj.y || 0) + 'px' });
 	setElementRotation(elem, obj.rotation);
 	
-	if (isNew)
+	if (isNew) {
+		this.objects.push(elem._obj = obj);
 		this.element.appendChild(elem);
-	
+	}
 	$elem.removeClass('hide');
 };
 
 Room.prototype.remove = function (obj) {
-	obj = _normalize(obj);
-	if (!obj)
+	var i = this.objects.indexOf(obj = normalize(obj)),
+		elem;
+	if (i < 0)
 		return;
-	var elem = obj._elem;
-	if (elem) {
-		elem.remove();
+	this.objects.splice(i, 1);
+	// jshint boss: true
+	if (elem = this.elems[obj._id]) {
 		delete elem._obj;
+		elem.remove();
 	}
-	delete obj._elem;
+	delete this.elems[obj._id];
 };
 
-function setVisibility(obj, value) {
-	obj = _normalize(obj);
-	var elem = obj._elem;
-	if (elem)
-		$(elem)[value ? 'removeClass' : 'addClass']('hide');
+Room.prototype.clear = function () {
+	this.$element.empty();
+	this.objects = [];
+	this.elems = {};
+};
+
+Room.prototype.load = function (state) {
+	this.clear();
+	var self = this;
+	(state || []).forEach(function (obj) {
+		delete obj._id; // TODO: better to remove when retrieving state
+		self.set(obj);
+	});
+};
+
+function setVisibility(room, obj, value) {
+	$(room.elems[normalize(obj)._id])[value ? 'removeClass' : 'addClass']('hide');
 }
 
 Room.prototype.hide = function (obj) {
-	setVisibility(obj, false);
+	setVisibility(this, obj, false);
 };
 
 Room.prototype.show = function (obj) {
-	setVisibility(obj, true);
+	setVisibility(this, obj, true);
 };
 
 Room.prototype.getBound = function () {
@@ -260,8 +271,43 @@ function offsetFromCenter(target, e) {
 	};
 }
 
+function encodeURL(state) {
+	var str = '', 
+		t, x, y, r;
+	(state || []).forEach(function (obj) {
+		t = types.indexOf(obj.type) + 1; // lazy way to force heading digit
+		x = obj.x || 0;
+		y = obj.y || 0;
+		r = Math.round((obj.rotation || 0) / 15);
+		str += window.Radix64.fromNumber((((t << 10) + x << 10) + y << 4) + r);
+	});
+	return str ? '?f=' + str : '';
+}
+
+function decodeLocation(location) {
+	var m = /[?&]f=([^&]+)/.exec(location.search),
+		str = m && m[1],
+		state = [];
+	if (!str || str.length % 5 !== 0)
+		return [];
+	for (var i = 0, j, obj; i < str.length; i += 5) {
+		obj = {};
+		j = window.Radix64.toNumber(str.substring(i, i + 5));
+		obj.rotation = (j % 16) * 15;
+		j >>= 4;
+		obj.y = j % 1024;
+		j >>= 10;
+		obj.x = j % 1024;
+		j >>= 10;
+		obj.type = types[j - 1];
+		state.push(obj);
+	}
+	return state;
+}
+
 $(function () {
-	var warehouse = new Warehouse('#warehouse', catalog, storage),
+	var manager = new window.StateManager(encodeURL, decodeLocation),
+		warehouse = new Warehouse('#warehouse', catalog, storage),
 		room = new Room('#room', warehouse),
 		dragger = new Dragger(),
 		roomRect, 
@@ -270,6 +316,10 @@ $(function () {
 		dragged, 
 		fromPool, 
 		ghost;
+	
+	manager.onChangeState = function (state) {
+		room.load(state);
+	};
 	
 	warehouse.$element.on('mousewheel DOMMouseScroll', '.tray',  function (e) {
 		// each tick is 15 degrees
@@ -319,14 +369,20 @@ $(function () {
 		$(ghost).addClass('hide');
 		ghost.remove();
 		if (!inRoom(roomRect, e)) {
-			if (!fromPool)
+			if (!fromPool) {
 				room.remove(dragged);
+				manager.push(room.objects, true);
+			}
 			return;
 		}
-		// TODO: extract common logic with syncGhostPosition
 		var pos = getPatchedPosition(cursorOffset, roomCenter, e);
-		room.set(dragged, pos.x - roomRect.left, pos.y - roomRect.top);
+		dragged.x = pos.x - roomRect.left;
+		dragged.y = pos.y - roomRect.top;
+		room.set(dragged);
+		manager.push(room.objects, true);
 	};
+	
+	manager.ready();
 	
 });
 
