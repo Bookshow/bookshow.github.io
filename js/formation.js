@@ -123,7 +123,7 @@ function normalize(obj) {
 Room.prototype.set = function (obj) {
 	obj = normalize(obj);
 	var id = obj._id,
-		isNew = !id,
+		isNew = id === undefined,
 		elem = isNew ? (this.elems[id = obj._id = uuid()] = 
 			this.warehouse.create(obj.type, 'draggable hide')) : this.elems[id], 
 		$elem = $(elem);
