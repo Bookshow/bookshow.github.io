@@ -13,15 +13,15 @@ var catalog = {
 	d1c2: {
 		subs: [
 			{ type: 'desk', x: -10 },
-			{ type: 'chair', x: 13, y: 15 },
-			{ type: 'chair', x: 13, y: -15 }
+			{ type: 'chair', x: 15, y: 15 },
+			{ type: 'chair', x: 15, y: -15 }
 		],
 		cost: { desk: 1, chair: 2 }
 	},
 	c2: {
 		subs: [
-			{ type: 'chair', y: 15 },
-			{ type: 'chair', y: -15 }
+			{ type: 'chair', x: 5, y: 15 },
+			{ type: 'chair', x: 5, y: -15 }
 		],
 		cost: { chair: 2 }
 	},
@@ -241,19 +241,19 @@ function inRoom(rect, e) {
 		rect.top < e.pageY && e.pageY < rect.bottom;
 }
 
-function alignToGridLine(offset, p) {
-	var gridSize = 10,
+function alignToGridLine(offset, pos, gridSize) {
+	var gridSize = gridSize || 10,
 		offx = offset.x || offset.left,
 		offy = offset.y || offset.top;
 	return {
-		x: Math.round((p.x - offx) / gridSize) * gridSize + offx,
-		y: Math.round((p.y - offy) / gridSize) * gridSize + offy
+		x: Math.round((pos.x - offx) / gridSize) * gridSize + offx,
+		y: Math.round((pos.y - offy) / gridSize) * gridSize + offy
 	};
 }
 
-function getPatchedPosition(offset, center, e) {
+function getPatchedPosition(offset, center, e, gridSize) {
 	var pos = { x: e.pageX - offset.x, y: e.pageY - offset.y };
-	return e.originalEvent.shiftKey ? alignToGridLine(center, pos) : pos;
+	return e.originalEvent.shiftKey ? alignToGridLine(center, pos, gridSize) : pos;
 }
 
 function syncGhostPosition(ghost, position) {
@@ -314,6 +314,7 @@ $(function () {
 		roomCenter,
 		cursorOffset,
 		dragged, 
+		gridSize,
 		fromPool, 
 		ghost;
 	
@@ -356,14 +357,15 @@ $(function () {
 			dragged = target._obj;
 			room.hide(dragged);
 		}
+		gridSize = dragged.type == 'chair' ? 5 : 10;
 		ghost = warehouse.create(dragged.type, 'ghost hide');
 		setElementRotation(ghost, dragged.rotation);
-		syncGhostPosition(ghost, getPatchedPosition(cursorOffset, roomCenter, e));
+		syncGhostPosition(ghost, getPatchedPosition(cursorOffset, roomCenter, e, gridSize));
 		document.body.appendChild(ghost);
 		$(ghost).removeClass('hide');
 	};
 	dragger.onMove = function (e) {
-		syncGhostPosition(ghost, getPatchedPosition(cursorOffset, roomCenter, e));
+		syncGhostPosition(ghost, getPatchedPosition(cursorOffset, roomCenter, e, gridSize));
 	};
 	dragger.onStop = function (e) {
 		$(ghost).addClass('hide');
@@ -375,7 +377,7 @@ $(function () {
 			}
 			return;
 		}
-		var pos = getPatchedPosition(cursorOffset, roomCenter, e);
+		var pos = getPatchedPosition(cursorOffset, roomCenter, e, gridSize);
 		dragged.x = pos.x - roomRect.left;
 		dragged.y = pos.y - roomRect.top;
 		room.set(dragged);
