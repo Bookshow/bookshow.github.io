@@ -51,9 +51,19 @@ function setElementRotation(elem, degree) {
 	});
 }
 
+function updateCount(elem, value) {
+	if (!elem)
+		return;
+	elem.innerHTML = value;
+	$(elem)[value < 0 ? 'addClass' : 'removeClass']('negative');
+}
+
 function Warehouse(element, catalog, storage) {
 	this.catalog = catalog;
-	this.storage = storage;
+	this.storage = {
+		desk: storage.desk,
+		chair: storage.chair
+	};
 	this.$element = $(element);
 	this.element = this.$element[0];
 	this.rotations = {};
@@ -75,6 +85,11 @@ function Warehouse(element, catalog, storage) {
 		self.element.appendChild(pool);
 	});
 }
+
+Warehouse.prototype.updateCounts = function () {
+	updateCount(this.counts.desk, this.storage.desk);
+	updateCount(this.counts.chair, this.storage.chair);
+};
 
 Warehouse.prototype.rotate = function (type, degree, add) {
 	setElementRotation(this.trays[type], this.rotations[type] = 
@@ -99,6 +114,13 @@ Warehouse.prototype.create = function (type, classes) {
 		elem.appendChild(c);
 	}
 	return elem;
+};
+
+Warehouse.prototype.addCount = function (desk, chair) {
+	if (desk)
+		updateCount(this.counts.desk, this.storage.desk = this.storage.desk + desk);
+	if (chair)
+		updateCount(this.counts.chair, this.storage.chair = this.storage.chair + chair);
 };
 
 
@@ -328,6 +350,17 @@ $(function () {
 	
 	manager.onChangeState = function (state) {
 		room.load(state);
+		var desk = storage.desk,
+			chair = storage.chair,
+			cost;
+		state.forEach(function (obj) {
+			cost = catalog[obj.type].cost;
+			desk -= cost.desk || 0;
+			chair -= cost.chair || 0;
+		});
+		warehouse.storage.desk = desk;
+		warehouse.storage.chair = chair;
+		warehouse.updateCounts();
 	};
 	
 	warehouse.$element.on('mousewheel DOMMouseScroll', '.tray',  function (e) {
@@ -354,7 +387,6 @@ $(function () {
 		if (fromPool) {
 			var type = $(target.parentNode).data('type');
 			dragged = { type: type, rotation: warehouse.rotations[type] || 0 };
-			// TODO: subtract item count
 		} else {
 			dragged = target._obj;
 			room.hide(dragged);
@@ -369,12 +401,14 @@ $(function () {
 		syncGhostPosition(ghost, getPatchedPosition(cursorOffset, roomCenter, e, gridSize));
 	};
 	dragger.onStop = function (e) {
+		var cost = catalog[dragged.type].cost;
 		$(ghost).addClass('hide');
 		ghost.remove();
 		if (!inRoom(roomRect, e)) {
 			if (!fromPool) {
 				room.remove(dragged);
 				manager.push(room.objects, true);
+				warehouse.addCount(cost.desk, cost.chair);
 			}
 			return;
 		}
@@ -383,6 +417,8 @@ $(function () {
 		dragged.y = pos.y - roomRect.top;
 		room.set(dragged);
 		manager.push(room.objects, true);
+		if (fromPool)
+			warehouse.addCount(-cost.desk, -cost.chair);
 	};
 	
 	manager.ready();
