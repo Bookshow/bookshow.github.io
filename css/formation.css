@@ -42,19 +42,54 @@ body.dragging {
 #room > * {
 	position: absolute;
 }
+#presets,
 #warehouse {
 	position: absolute;
 	text-align: left;
 	top: 64px;
 	bottom: 64px;
-	right: 0;
 	width: 240px;
+}
+#presets {
+	left: 0;
+}
+#presets > * {
+	display: block;
+	position: relative;
+	padding: 10px;
+}
+.preset {
+	display: block;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+	font-size: 48px;
+	border: 2px solid rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.03);
+}
+.preset,
+.preset:focus {
+	color: rgba(0, 0, 0, 0.5);
+}
+.preset:hover {
+	text-decoration: none;
+	border-color: #795548;
+	background-color: rgba(215, 204, 200, 0.6);
+}
+.preset:hover,
+.preset:hover:focus {
+	color: #795548;
+}
+#warehouse {
+	right: 0;
 }
 .pool {
 	display: inline-block;
 	position: relative;
 	padding: 10px;
 	width: 120px;
+	float: left;
 }
 .pool .tray {
 	position: relative;

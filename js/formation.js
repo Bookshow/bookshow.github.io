@@ -283,8 +283,8 @@ function encodeURL(state) {
 	return str ? '?f=' + str : '.';
 }
 
-function decodeLocation(location) {
-	var m = /[?&]f=([^&]+)/.exec(location.search),
+function decodeURL(url) {
+	var m = /[?&]f=([^&]+)/.exec(url),
 		str = m && m[1],
 		state = [];
 	if (!str || str.length % 5 !== 0)
@@ -304,6 +304,10 @@ function decodeLocation(location) {
 	return state;
 }
 
+function decodeLocation(location) {
+	return decodeURL(location.search);
+}
+
 $(function () {
 	var manager = new window.StateManager(encodeURL, decodeLocation),
 		warehouse = new Warehouse('#warehouse', catalog, storage),
@@ -316,6 +320,11 @@ $(function () {
 		gridSize = 5,
 		fromPool, 
 		ghost;
+	
+	$(window.document).on('click', 'a.preset', function (e) {
+		manager.push(decodeURL(e.currentTarget.href));
+		e.preventDefault();
+	});
 	
 	manager.onChangeState = function (state) {
 		room.load(state);
