@@ -152,7 +152,7 @@ body.dragging {
 	margin-top: -11px;
 	border: 1px solid #795548;
 	border-right-width: 2px;
-	border-radius: 5px 0 0 5px;
+	border-radius: 5px 3px 3px 5px;
 	z-index: 5;
 }
 .ghost {
