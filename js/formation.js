@@ -314,7 +314,7 @@ $(function () {
 		roomCenter,
 		cursorOffset,
 		dragged, 
-		gridSize,
+		gridSize = 5,
 		fromPool, 
 		ghost;
 	
@@ -357,7 +357,6 @@ $(function () {
 			dragged = target._obj;
 			room.hide(dragged);
 		}
-		gridSize = dragged.type == 'chair' ? 5 : 10;
 		ghost = warehouse.create(dragged.type, 'ghost hide');
 		setElementRotation(ghost, dragged.rotation);
 		syncGhostPosition(ghost, getPatchedPosition(cursorOffset, roomCenter, e, gridSize));
