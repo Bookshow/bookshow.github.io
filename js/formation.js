@@ -13,8 +13,8 @@ var catalog = {
 	d1c2: {
 		subs: [
 			{ type: 'desk', x: -10 },
-			{ type: 'chair', x: 15, y: 15 },
-			{ type: 'chair', x: 15, y: -15 }
+			{ type: 'chair', x: 17, y: 15 },
+			{ type: 'chair', x: 17, y: -15 }
 		],
 		cost: { desk: 1, chair: 2 }
 	},
