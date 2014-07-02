@@ -31,6 +31,15 @@ var catalog = {
 			{ type: 'd1c2', y: 20, rotation: 90 }
 		],
 		cost: { desk: 2, chair: 4 }
+	},
+	c4: {
+		subs: [
+			{ type: 'chair', y:  33 },
+			{ type: 'chair', y:  11 },
+			{ type: 'chair', y: -11 },
+			{ type: 'chair', y: -33 }
+		],
+		cost: { chair: 4 }
 	}
 };
 
