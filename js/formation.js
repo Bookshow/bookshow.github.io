@@ -242,9 +242,9 @@ function inRoom(rect, e) {
 }
 
 function alignToGridLine(offset, pos, gridSize) {
-	var gridSize = gridSize || 10,
-		offx = offset.x || offset.left,
+	var offx = offset.x || offset.left,
 		offy = offset.y || offset.top;
+	gridSize = gridSize || 10;
 	return {
 		x: Math.round((pos.x - offx) / gridSize) * gridSize + offx,
 		y: Math.round((pos.y - offy) / gridSize) * gridSize + offy
