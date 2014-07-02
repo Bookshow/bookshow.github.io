@@ -281,7 +281,7 @@ function encodeURL(state) {
 		r = Math.round((obj.rotation || 0) / 15);
 		str += window.Radix64.fromNumber((((t << 10) + x << 10) + y << 4) + r);
 	});
-	return str ? '?f=' + str : '';
+	return str ? '?f=' + str : '.';
 }
 
 function decodeLocation(location) {
