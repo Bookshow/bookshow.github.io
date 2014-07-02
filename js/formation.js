@@ -78,7 +78,7 @@ function Warehouse(element, catalog, storage) {
 
 Warehouse.prototype.rotate = function (type, degree, add) {
 	setElementRotation(this.trays[type], this.rotations[type] = 
-		add ? ((this.rotations[type] || 0) + degree) % 360 : degree);
+		(360 + degree + ((add && this.rotations[type]) || 0)) % 360);
 };
 
 // TODO: may also take care of rotation
@@ -279,7 +279,7 @@ function encodeURL(state) {
 		x = obj.x || 0;
 		y = obj.y || 0;
 		r = Math.round((obj.rotation || 0) / 15);
-		str += window.Radix64.fromNumber((((t << 10) + x << 10) + y << 4) + r);
+		str += window.Radix64.fromNumber((((t << 10) + x << 10) + y << 5) + r);
 	});
 	return str ? '?f=' + str : '.';
 }
@@ -293,8 +293,8 @@ function decodeLocation(location) {
 	for (var i = 0, j, obj; i < str.length; i += 5) {
 		obj = {};
 		j = window.Radix64.toNumber(str.substring(i, i + 5));
-		obj.rotation = (j % 16) * 15;
-		j >>= 4;
+		obj.rotation = (j % 32) * 15;
+		j >>= 5;
 		obj.y = j % 1024;
 		j >>= 10;
 		obj.x = j % 1024;
