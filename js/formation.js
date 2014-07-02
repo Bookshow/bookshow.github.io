@@ -201,7 +201,6 @@ function Dragger() {
 			if (value == _dragging)
 				return;
 			_dragging = value;
-			$(window.document.body)[value ? 'addClass' : 'removeClass']('dragging');
 			if (self.onState)
 				self.onState(value);
 		}
@@ -252,8 +251,8 @@ function alignToGridLine(offset, pos, gridSize) {
 }
 
 function getPatchedPosition(offset, center, e, gridSize) {
-	var pos = { x: e.pageX - offset.x, y: e.pageY - offset.y };
-	return e.originalEvent.shiftKey ? alignToGridLine(center, pos, gridSize) : pos;
+	return alignToGridLine(center, {x: e.pageX - offset.x, 
+		y: e.pageY - offset.y }, gridSize);
 }
 
 function syncGhostPosition(ghost, position) {
@@ -330,14 +329,8 @@ $(function () {
 		e.preventDefault();
 	});
 	
-	room.$element.tooltip({
-		trigger: 'manual', 
-		placement: 'bottom', 
-		title: 'Hold SHIFT to align.'
-	});
-	
 	dragger.onState = function (value) {
-		room.$element.tooltip(value ? 'show' : 'hide');
+		$(window.document.body)[value ? 'addClass' : 'removeClass']('dragging');
 	};
 	dragger.onStart = function (e) {
 		var target = e.currentTarget;
