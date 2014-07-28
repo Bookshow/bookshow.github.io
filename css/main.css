@@ -109,9 +109,6 @@ body.home #footer {
 }
 
 @media (min-width: 768px) {
-	#header .header-menu-link {
-		padding: 15px 10px !important;
-	}
 	#body {
 		padding-top: 90px !important; /* header height */
 	}
@@ -174,7 +171,7 @@ body.home #footer {
 }
 #header .header-menu-link {
 	display: block;
-	padding: 10px;
+	padding: 15px 10px;
 	line-height: 20px;
 	font-size: 20px;
 	text-decoration: none;
@@ -198,10 +195,30 @@ body.home #footer {
 #header .dropdown-menu .header-menu-link:focus:hover {
 	color: #CC3333;
 }
+#header .dropdown-menu hr {
+	margin: 8px;
+}
 #header .header-menu-link:hover,
 #header .header-menu-link:focus {
 	background: none !important;
 }
+#header #social-icons {
+	text-align: center;
+}
+#header #social-icons > .header-menu-link {
+	display: inline-block;
+	font-size: 28px;
+}
+#header #social-icons a.facebook {
+	color: #3A589B;
+}
+#header #social-icons a.google-plus {
+	color: #D6492F;
+}
+#header #social-icons a.youtube {
+	color: #CF3427;
+}
+/*
 #social-menu {
 	display: none;
 	position: absolute;
@@ -235,9 +252,19 @@ body.home #footer {
 #social-menu a.youtube:hover {
 	color: #CF3427;
 }
+*/
 @media (max-width: 767px) {
 	#header .container {
 		padding: 0 16px;
+	}
+	#header .dropdown-menu hr {
+		display: none;
+	}
+	#header .header-menu-link {
+		padding: 10px !important;
+	}
+	#header #social-icons {
+		text-align: left;
 	}
 	#header .navbar-brand {
 		width: 238px;
