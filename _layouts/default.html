@@ -3,6 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:url" content="http://{{ site.root_url }}{{ page.url }}" />
+	<meta property="og:title" content="{{ site.name }}{% if page.title %} / {{ page.title }} {% endif %}" />
+{% if page.fb.image %}
+	<meta property="og:image" content="http://{{ site.root_url }}{{ page.fb.image }}" />
+{% elsif site.fb.image %}
+	<meta property="og:image" content="http://{{ site.root_url }}{{ site.fb.image }}" />
+{% endif %}
+{% if page.fb.desc %}
+	<meta property="og:description" content="{{ page.fb.desc }}" />
+{% elsif site.fb.desc %}
+	<meta property="og:description" content="{{ site.fb.desc }}" />
+{% endif %}
 	<title>{{ site.name }}{% if page.title %} / {{ page.title }} {% endif %}</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
