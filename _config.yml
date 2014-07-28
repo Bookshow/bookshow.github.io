@@ -13,7 +13,7 @@ google_form_url:     https://docs.google.com/forms/d/1pBnEsLkPB_ANrAWtLTBvude4QA
 
 fb: {
 	image: /img/photo/space_00_l.jpg,
-	desc: 分享有溫度的知識<br>向世界溝通創新理念<br>把活動帶到每個人眼前
+	desc: 分享有溫度的知識\n向世界溝通創新理念\n把活動帶到每個人眼前
 }
 
 #dev: true
