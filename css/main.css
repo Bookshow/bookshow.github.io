@@ -109,6 +109,9 @@ body.home #footer {
 }
 
 @media (min-width: 768px) {
+	#header .header-menu-link {
+		padding: 15px 10px !important;
+	}
 	#body {
 		padding-top: 90px !important; /* header height */
 	}
@@ -171,7 +174,7 @@ body.home #footer {
 }
 #header .header-menu-link {
 	display: block;
-	padding: 15px 10px !important;
+	padding: 10px;
 	line-height: 20px;
 	font-size: 20px;
 	text-decoration: none;

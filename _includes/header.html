@@ -29,6 +29,17 @@
 		<li>{% include page-menu-item.html type="header" title="交通" url="/traffic" name="traffic" %}</li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
-		<li>{% include page-menu-item.html type="header" title="關於" url="/about" name="about" %}</li>
+		<li>
+			<div class="dropdown">
+				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+					關於<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<li>{% include page-menu-item.html type="header" title="關於我們" url="/about" name="about" %}</li>
+					<li>{% include page-menu-item.html type="header" title="部落格"   url="http://blog.bookshow.tw" name="blog" %}</li>
+				</ul>
+			</div>
+		</li>
+		
 	</ul>
 </nav>
