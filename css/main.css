@@ -197,7 +197,7 @@ body.home #footer {
 }
 #header .dropdown-menu hr {
 	margin: 8px;
-	border-color: rgba(170, 25, 25, 0.5);
+	border-color: #DDD;
 }
 #header .header-menu-link:hover,
 #header .header-menu-link:focus {
