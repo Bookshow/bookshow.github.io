@@ -1,3 +1,6 @@
+---
+---
+
 body {
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -29,18 +32,19 @@ body.dragging {
 	float: left;
 	width: 360px;
 	height: 268px;
-}
-#room::before {
-	content: ' ';
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	border: 2px dashed rgba(0, 0, 0, 0.5);
-}
-#room > * {
-	position: absolute;
+	
+	&::before {
+		content: ' ';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border: 2px dashed rgba(0, 0, 0, 0.5);
+	}
+	> * {
+		position: absolute;
+	}
 }
 #presets,
 #warehouse {
@@ -52,11 +56,12 @@ body.dragging {
 }
 #presets {
 	left: 0;
-}
-#presets > * {
-	display: block;
-	position: relative;
-	padding: 10px;
+	
+	> * {
+		display: block;
+		position: relative;
+		padding: 10px;
+	}
 }
 .preset {
 	display: block;
@@ -67,19 +72,20 @@ body.dragging {
 	border: 2px solid rgba(0, 0, 0, 0.5);
 	border-radius: 20px;
 	background-color: rgba(0, 0, 0, 0.03);
-}
-.preset,
-.preset:focus {
-	color: rgba(0, 0, 0, 0.5);
-}
-.preset:hover {
-	text-decoration: none;
-	border-color: #795548;
-	background-color: rgba(215, 204, 200, 0.6);
-}
-.preset:hover,
-.preset:hover:focus {
-	color: #795548;
+	
+	&,
+	&:focus {
+		color: rgba(0, 0, 0, 0.5);
+	}
+	&:hover {
+		text-decoration: none;
+		border-color: #795548;
+		background-color: rgba(215, 204, 200, 0.6);
+	}
+	&:hover,
+	&:hover:focus {
+		color: #795548;
+	}
 }
 #warehouse {
 	right: 0;
@@ -90,43 +96,48 @@ body.dragging {
 	padding: 10px;
 	width: 120px;
 	float: left;
-}
-.pool .tray {
-	position: relative;
-	width: 110px;
-	height: 110px;
-	border: 2px solid rgba(0, 0, 0, 0.3);
-	border-radius: 50%;
-}
-.pool .symbol {
-	display: inline-block;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-}
-.pool .symbol,
-.pool .symbol .sub {
-	background-color: rgba(0, 0, 0, 0.05);
-	border-color: rgba(0, 0, 0, 0.5);
-}
-.pool .tray:hover .symbol,
-.pool .tray:hover .symbol .sub {
-	background-color: #d7ccc8;
-	border-color: #795548;
-}
-.pool .count {
-	position: absolute;
-	bottom: 0;
-	right: -5px;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: right;
-	color: #666;
-	text-shadow: 0 0 3px #FFF;
-}
-.pool .count.negative {
-	color: #DD2222;
+	
+	.tray {
+		position: relative;
+		width: 110px;
+		height: 110px;
+		border: 2px solid rgba(0, 0, 0, 0.3);
+		border-radius: 50%;
+	}
+	.symbol {
+		display: inline-block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		
+		&,
+		.sub {
+			background-color: rgba(0, 0, 0, 0.05);
+			border-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+	.tray:hover .symbol {
+		&,
+		.sub {
+			background-color: #d7ccc8;
+			border-color: #795548;
+		}
+	}
+	.count {
+		position: absolute;
+		bottom: 0;
+		right: -5px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: right;
+		color: #666;
+		text-shadow: 0 0 3px #FFF;
+		
+		&.negative {
+			color: #DD2222;
+		}
+	}
 }
 .sub {
 	position: absolute;
@@ -159,11 +170,13 @@ body.dragging {
 	pointer-events: none;
 	position: absolute;
 	z-index: 50;
-	opacity: 0.5
-}
-.ghost .sub.desk,
-.ghost .sub.chair,
-.ghost.desk,
-.ghost.chair {
-	border-style: dashed;
+	opacity: 0.5;
+	
+	&,
+	.sub {
+		&.desk,
+		&.chair {
+			border-style: dashed;
+		}
+	}
 }
