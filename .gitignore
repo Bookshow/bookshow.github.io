@@ -1,3 +1,4 @@
 _site/
+_data/local.yml
 *.sublime-project
 *.sublime-workspace

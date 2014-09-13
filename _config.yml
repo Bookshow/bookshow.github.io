@@ -15,5 +15,3 @@ fb: {
 	image: /img/photo/space_00_l.jpg,
 	desc: 分享有溫度的知識 / 向世界溝通創新理念 / 把活動帶到每個人眼前
 }
-
-#dev: true
