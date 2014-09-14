@@ -439,6 +439,8 @@ body.home {
 
 /* full-screen section */
 body.full-screen-sections {
+	position: relative;
+	
 	#header {
 		position: absolute;
 		left: 0;
