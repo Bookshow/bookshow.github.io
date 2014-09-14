@@ -106,17 +106,11 @@ body.home {
 	}
 }
 #body {
-	padding-top: $header-height !important;
-	
-	@media #{$media-w-mobile-minus} {
-		padding-top: $header-height-mobile !important;
-	}
 	> :last-child {
 		margin-bottom: 0;
 	}
 }
 #header {
-	position: fixed !important;
 	margin-bottom: 0 !important;
 	height: $header-height;
 	
