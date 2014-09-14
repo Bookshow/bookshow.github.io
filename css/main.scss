@@ -437,28 +437,57 @@ body.home {
 
 
 
-/* index */
-body.home #body > * {
-	margin-bottom: 16px;
-}
-#soapbox {
-	position: relative;
-	
-	> span {
-		display: inline-block;
+/* full-screen section */
+body.full-screen-sections {
+	#header {
 		position: absolute;
-		left: 16px;
-		bottom: 16px;
-		color: #FFF;
-		text-shadow: 0 0 3px #000;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 5;
+		background: none;
+	}
+	section {
+		position: relative;
+		overflow: hidden;
+		height: 100vh;
+		min-height: 700px;
+		max-height: 1400px;
+		margin-bottom: 0;
+		
+		&.container {
+			padding: 0;
+		}
+		&:not(.container) {
+			width: 100%;
+		}
+		&.vertical-center {
+			> div {
+				height: 100%;
+				width: 100%;
+				
+				> div {
+					height: 100%;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+
+
+/* index */
+body.home {
+	#first {
+		background: no-repeat center center transparent;
+		background-image: url("/img/photo/space_00_l.jpg");
+		background-size: cover;
 	}
 }
 #other-pages .menu-link {
 	margin-right: 10px;
 	margin-bottom: 17px;
-}
-#value-proposition {
-	pointer-events: none;
 }
 
 

@@ -48,6 +48,9 @@ $(function () {
 	
 	var display = new PhotoDisplay('#photo-display');
 	
+	$('body.full-screen-sections section.vertical-center')
+		.wrapInner('<div class="table-like"><div></div></div>');
+	
 	// scan over page to inject href on thumbnail
 	// TODO
 	

@@ -1,17 +1,15 @@
 ---
 layout: default
+full-screen-sections: true
 ---
 
-<div id="wrap">
-	<div id="header" class="navbar">
-		<div class="container">
-			{% include header.html %}
-		</div>
+<div id="header" class="navbar">
+	<div class="container">
+		{% include header.html %}
 	</div>
-	<div id="body" class="container">
-		{{ content }}
-	</div>
-	<div id="push"></div>
+</div>
+<div id="body">
+	{{ content }}
 </div>
 <div id="footer">
 	<div class="container">
