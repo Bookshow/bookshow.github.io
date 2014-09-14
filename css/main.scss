@@ -1,7 +1,11 @@
 ---
 ---
 
-/* base setting */
+$color-link: #AA1919;
+$color-link-hover: #CC3333;
+$color-gray-brown: #C8C0B8;
+
+/* reset */
 body, h1, h2, h3, h4, h5, h6 {
 	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;
 }
@@ -18,14 +22,14 @@ h1, h2, h3 {
 	font-weight: bold;
 }
 a {
-	color: #AA1919;
+	color: $color-link;
 	
 	&:hover, 
 	&:focus:hover {
-		color: #CC3333;
+		color: $color-link-hover;
 	}
 	&:focus {
-		color: #AA1919;
+		color: $color-link;
 		text-decoration: none;
 	}
 }
@@ -34,8 +38,9 @@ iframe {
 	width: 100%;
 }
 .table {
+	// lazy way, as we don't put table inside table
 	th,
-	td { /* lazy way, as we don't put table inside table */
+	td {
 		border-color: #BBB !important;
 	}
 }
@@ -47,12 +52,17 @@ iframe {
 	}
 }
 .nowrap {
-	display: inline-block; /* nowrap doesn't work in WebKit */
+	display: inline-block; // nowrap doesn't work in WebKit
 }
 
 
 
 /* layout */
+$header-height: 64px;
+$header-height-mobile: 90px;
+$footer-height: 170px;
+$footer-height-home: 480px;
+
 html, body {
 	height: 100%;
 }
@@ -61,23 +71,24 @@ body {
 }
 #wrap {
 	height: auto !important;
-	margin: 0 auto -170px; /* footer height */
+	margin: 0 auto $footer-height * -1;
 	min-height: 100%;
 }
-#push, #footer {
-	height: 170px; /* footer height */
+#push, 
+#footer {
+	height: $footer-height;
 }
 body.home {
 	#wrap {
-		margin-bottom: -480px; /* footer height (home) */
+		margin-bottom: $footer-height-home * -1;
 	}
 	#push, 
 	#footer {
-		height: 480px; /* footer height (home) */
+		height: $footer-height-home;
 	}
 }
 #body {
-	padding-top: 64px !important; /* header height */
+	padding-top: $header-height !important;
 	
 	> :last-child {
 		margin-bottom: 0;
@@ -86,7 +97,7 @@ body.home {
 #header {
 	position: fixed !important;
 	margin-bottom: 0 !important;
-	height: 64px; /* header height */
+	height: $header-height;
 	
 	> .container {
 		height: 100%;
@@ -106,10 +117,10 @@ body.home {
 
 @media (min-width: 768px) {
 	#body {
-		padding-top: 90px !important; /* header height */
+		padding-top: $header-height-mobile !important;
 	}
 	#header {
-		height: 90px; /* header height */
+		height: $header-height-mobile;
 	}
 }
 @media (min-width: 992px) {
@@ -160,8 +171,8 @@ body.home {
 		padding: 14px 20px 12px 21px;
 		margin: 0;
 		border-radius: 0;
-		color: #AA1919;
-		background: #C8C0B8;
+		color: $color-link;
+		background: $color-gray-brown;
 		
 		&.collapsed {
 			background: none;
@@ -193,11 +204,11 @@ body.home {
 	.dropdown-menu {
 		.header-menu-link,
 		.header-menu-link:focus {
-			color: #AA1919;
+			color: $color-link;
 		}
 		.header-menu-link:hover,
 		.header-menu-link:focus:hover {
-			color: #CC3333;
+			color: $color-link-hover;
 		}
 		hr {
 			margin: 8px;
@@ -248,7 +259,7 @@ body.home {
 	#header .navbar-collapse {
 		max-height: none;
 		border-bottom: 1px solid #FFF;
-		background: #C8C0B8;
+		background: $color-gray-brown;
 	}
 	#header .navbar-collapse .navbar-nav {
 		margin-top: 0;
@@ -284,7 +295,7 @@ body.home {
 	padding: 0;
 	padding-top: 100px;
 	border-radius: 15px;
-	background: #C8C0B8 0 0 no-repeat;
+	background: $color-gray-brown 0 0 no-repeat;
 	background-image: url('/img/menu-icon.png');
 	text-align: center;
 	font-weight: bold;
@@ -320,7 +331,7 @@ body.home {
 }
 .menu-panel {
 	position: relative;
-	background: #C8C0B8 0 0 no-repeat;
+	background: $color-gray-brown 0 0 no-repeat;
 	border-radius: 15px;
 	padding: 15px 0;
 	
@@ -348,7 +359,7 @@ body.home {
 	img {
 		padding: 0;
 		height: auto;
-		border:1px solid #CCC;
+		border: 1px solid #CCC;
 	}
 }
 .related-page {
@@ -400,7 +411,7 @@ body.home {
 	
 	hr {
 		margin: 0 -5px 10px -5px;
-		border-color: #C8C0B8;
+		border-color: $color-gray-brown;
 	}
 	.fa {
 		color: #666;
