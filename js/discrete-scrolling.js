@@ -189,8 +189,6 @@ $doc
 	}
 });
 
-// aggregate syncSize
-
 $(function () {
 	
 	// body is not ready earlier
@@ -198,7 +196,15 @@ $(function () {
 	
 	syncSection();
 	syncSize();
-	$win.resize(syncSize);
+	
+	var resizeRequest = 0;
+	$win.resize(function () {
+		resizeRequest++;
+		setTimeout(function () {
+			if (!--resizeRequest)
+				syncSize();
+		}, 200);
+	});
 });
 
 })(this);
