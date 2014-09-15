@@ -442,6 +442,7 @@ body.home {
 /* full-screen section */
 body.full-screen-sections {
 	position: relative;
+	transform-style: preserve-3d;
 	
 	#header {
 		position: absolute;
