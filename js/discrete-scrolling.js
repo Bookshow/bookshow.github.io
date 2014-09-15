@@ -58,8 +58,6 @@ var $ = window.jQuery,
 	$doc = $(window.document),
 	$body;
 
-// TODO: check IE 8
-
 var noSwipe = false,
 	sections = [];
 
@@ -97,8 +95,8 @@ function scrollTo(offset, current) {
 		'transition': 'none'
 	});
 	$win.scrollTop(offset);
-	//$body.css('transition', '1000ms ease');
 	window.document.offsetWidth; // jshint ignore:line, reflow
+	
 	// this triggers transition
 	$body.css({
 		'margin-top': 0,
