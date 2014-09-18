@@ -9,27 +9,28 @@
 		<li>
 			<div class="dropdown">
 				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
-					辦活動<span class="caret"></span>
+					錄活動<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" role="menu">
 					<li>{% include page-menu-item.html type="header" title="活動場地" url="/space" name="space" %}</li>
-					<li>{% include page-menu-item.html type="header" title="活動錄影" url="/studio" name="studio" %}</li>
-					<li>{% include page-menu-item.html type="header" title="網路直播" url="/streaming" name="streaming" %}</li>
+					<li>{% include page-menu-item.html type="header" title="棚內直播" url="/studio" name="studio" %}</li>
+					<li>{% include page-menu-item.html type="header" title="外場直播" url="/streaming" name="streaming" %}</li>
 				</ul>
 			</div>
 		</li>
 		<li>
 			<div class="dropdown">
 				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
-					錄影片<span class="caret"></span>
+					錄節目<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" role="menu">
-					<li>{% include page-menu-item.html type="header" title="訪談宣傳" url="/interview" name="interview" %}</li>
+					<li>{% include page-menu-item.html type="header" title="主題訪談" url="/interview" name="interview" %}</li>
 					<li>{% include page-menu-item.html type="header" title="電梯簡報" url="/presentation" name="presentation" %}</li>
-					<li>{% include page-menu-item.html type="header" title="數位課程" url="/e-learning" name="e-learning" %}</li>
+					<li>{% include page-menu-item.html type="header" title="網路課程" url="/webcourse" name="e-learning" %}</li>
 				</ul>
 			</div>
 		</li>
+		<li>{% include page-menu-item.html type="header" title="顧問" url="/consulting" name="consulting" %}</li>
 		<li>{% include page-menu-item.html type="header" title="預約" url="/schedule" name="schedule" %}</li>
 		<li>{% include page-menu-item.html type="header" title="交通" url="/traffic" name="traffic" %}</li>
 	</ul>
