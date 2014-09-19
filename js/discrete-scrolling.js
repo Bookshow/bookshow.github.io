@@ -10,10 +10,14 @@ var $doc = $(window.document),
 	startX, startY, 
 	moving = false;
 
+window.swipe = {
+	disabled: false
+};
+
 $doc
 .on('touchstart', function (e) {
 	var touches = e.originalEvent.touches;
-	if (!touches || touches.length != 1)
+	if (window.swipe.disabled || !touches || touches.length != 1)
 		return;
 	
 	e.preventDefault();
@@ -59,8 +63,7 @@ var $ = window.jQuery,
 	$doc = $(window.document),
 	$body;
 
-var noSwipe = false,
-	sections = [];
+var sections = [];
 
 function syncSection() {
 	for (var i = 0, $secs = $('section'), len = $secs.length; i < len; i++) {
@@ -84,7 +87,7 @@ function syncSectionPosition() {
 function syncSize() {
 	var winw = $(window).width(),
 		winh = $(window).height();
-	noSwipe = winh < 650 || winh >= 1300 || winw < 700 ||
+	window.swipe.disabled = winh < 650 || winh >= 1300 || winw < 700 ||
 		(winh < 880 && winw < 992);
 	syncSectionSize();
 	syncSectionPosition();
@@ -149,16 +152,8 @@ function last() {
 }
 
 $doc
-.on('swipeup', function () {
-	if (noSwipe)
-		return;
-	down();
-})
-.on('swipedown', function () {
-	if (noSwipe)
-		return;
-	up();
-})
+.on('swipeup', down)
+.on('swipedown', up)
 .on('keydown', function (e) {
 	var tagName = e.target.tagName.toLowerCase();
 	if (tagName == 'input' || tagName == 'textarea')
