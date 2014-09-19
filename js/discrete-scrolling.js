@@ -99,7 +99,7 @@ function scrollTo(offset, current) {
 	current = current || $win.scrollTop(); // be robust
 	
 	$body.css({
-		'transform': 'translate(0, ' + (offset - current) + 'px)',
+		'transform': 'translate3d(0, ' + (offset - current) + 'px, 0)',
 		'transition': 'none'
 	});
 	$win.scrollTop(offset);
@@ -107,7 +107,7 @@ function scrollTo(offset, current) {
 	
 	// this triggers transition
 	$body.css({
-		'transform': 'translate(0, 0)',
+		'transform': 'translate3d(0, 0, 0)',
 		'transition': '1000ms ease'
 	});
 }

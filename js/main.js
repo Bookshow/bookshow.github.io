@@ -2,8 +2,14 @@
 (function (window) {
 
 'use strict';
+
+var ios = /(iPad|iPhone|iPod)/g.test(window.navigator.userAgent);
+
+if (ios)
+	window.document.classList.add('ios');
+
 window.browser = {
-	ios: /(iPad|iPhone|iPod)/g.test(window.navigator.userAgent)
+	ios: ios
 };
 
 })(this);
