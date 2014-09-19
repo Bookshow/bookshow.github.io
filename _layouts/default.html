@@ -26,15 +26,12 @@
 	<script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/js/main.js" type="text/javascript"></script>
-	{% if page['full-screen-sections'] %}
-	<script src="/js/discrete-scrolling.js" type="text/javascript"></script>
-	{% endif %}
 	{% for path in page.js %}
 	<script src="{{ path }}" type="text/javascript"></script>
 	{% endfor %}
 	{% include zopim.html %}
 </head>
-<body class="{% if page.class %}page page-{{ page.class }}{% else %}home{% endif %}{% if page['full-screen-sections'] %} full-screen-sections{% endif %}">
+<body class="{% if page.class %}page page-{{ page.class }}{% else %}home{% endif %}">
 	{{ content }}
 	{% include ga.html %}
 	{% include photo-display.html %}
