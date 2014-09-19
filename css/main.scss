@@ -68,14 +68,6 @@ $media-w-992-minus: "(max-width: 991px)";
 $media-w-mobile-minus: "(max-width: 767px)";
 $media-w-716-minus: "(max-width: 715px)";
 
-$media-h-1400-plus: "(min-height: 1400px)";
-$media-h-970-plus: "(min-height: 970px)";
-$media-h-700-plus: "(min-height: 700px)";
-
-$media-h-1400-minus: "(max-height: 1199px)";
-$media-h-970-minus: "(max-height: 969px)";
-$media-h-700-minus: "(max-height: 699px)";
-
 $header-height: 90px;
 $header-height-mobile: 64px;
 $footer-height: 170px;
@@ -439,10 +431,9 @@ body.home {
 
 
 
-/* full-screen section */
-body.full-screen-sections {
+/* index */
+body.home {
 	position: relative;
-	transform-style: preserve-3d;
 	
 	#header {
 		position: absolute;
@@ -452,14 +443,12 @@ body.full-screen-sections {
 		z-index: 5;
 		background: none;
 	}
-	section {
+	section.full {
 		position: relative;
 		overflow: hidden;
+		height: 100vh;
 		margin-bottom: 0;
 
-        &#first	{
-        	height: 100vh;
-        }
 		&.container {
 			padding: 0;
 		}
@@ -478,12 +467,6 @@ body.full-screen-sections {
 			}
 		}
 	}
-}
-
-
-
-/* index */
-body.home {
 	#first {
 		background: no-repeat center center transparent;
 		background-image: url("/img/photo/space_00_1920.jpg");
