@@ -2,23 +2,30 @@
 (function (window) {
 
 'use strict';
+var $ = window.jQuery;
 
 var ios = /(iPad|iPhone|iPod)/g.test(window.navigator.userAgent);
-
-if (ios)
-	window.document.classList.add('ios');
 
 window.browser = {
 	ios: ios
 };
 
+$(function () {
+	if (ios)
+		window.document.body.classList.add('ios');
+});
+
 })(this);
+
+
 
 // main //
 (function (window) {
 
 'use strict';
 var $ = window.jQuery;
+
+// TODO: extract photo display component
 
 function PhotoDisplay(modal) {
 	var self = this,
@@ -61,15 +68,25 @@ var getOriginalURL = function (src) {
 	return matches ? matches[1] + '_1920' + matches[2] : src;
 };
 
+function syncSize() {
+	if (!window.browser || !window.browser.ios)
+		return; 
+	var winh = $(window).height();
+	$('section.full').css('height', winh + 'px');
+}
+
 $(function () {
 	
 	var display = new PhotoDisplay('#photo-display');
 	
-	$('body.full-screen-sections section.vertical-center')
+	$('section.vertical-center')
 		.wrapInner('<div class="table-like"><div></div></div>');
 	
 	// scan over page to inject href on thumbnail
 	// TODO
+	
+	syncSize();
+	$(window).resize(syncSize);
 	
 	// intercept thumbnail image click
 	$(document).on('click', '.photo-flow > *', function (e) {
