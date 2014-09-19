@@ -16,6 +16,7 @@ $doc
 	if (!touches || touches.length != 1)
 		return;
 	
+	e.preventDefault();
 	startX = touches[0].pageX;
 	startY = touches[0].pageY;
 	moving = true;
@@ -67,6 +68,12 @@ function syncSection() {
 	}
 }
 
+function syncSectionSize() {
+	var winh = $(window).height();
+	if (window.browser && window.browser.ios)
+		$('section').css('height', winh + 'px');
+}
+
 function syncSectionPosition() {
 	for (var i = 0, len = sections.length, sec; i < len; i++) {
 		sec = sections[i];
@@ -77,8 +84,9 @@ function syncSectionPosition() {
 function syncSize() {
 	var winw = $(window).width(),
 		winh = $(window).height();
-	noSwipe = winh < 700 || winh >= 1400 || winw < 700 ||
-		(winh < 970 && winw < 992);
+	noSwipe = winh < 650 || winh >= 1300 || winw < 700 ||
+		(winh < 880 && winw < 992);
+	syncSectionSize();
 	syncSectionPosition();
 }
 
@@ -144,12 +152,12 @@ $doc
 .on('swipeup', function () {
 	if (noSwipe)
 		return;
-	up();
+	down();
 })
 .on('swipedown', function () {
 	if (noSwipe)
 		return;
-	down();
+	up();
 })
 .on('keydown', function (e) {
 	var tagName = e.target.tagName.toLowerCase();

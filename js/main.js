@@ -1,3 +1,14 @@
+// browser //
+(function (window) {
+
+'use strict';
+window.browser = {
+	ios: /(iPad|iPhone|iPod)/g.test(window.navigator.userAgent)
+};
+
+})(this);
+
+// main //
 (function (window) {
 
 'use strict';
