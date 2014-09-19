@@ -68,13 +68,13 @@ $media-w-992-minus: "(max-width: 991px)";
 $media-w-mobile-minus: "(max-width: 767px)";
 $media-w-716-minus: "(max-width: 715px)";
 
-$media-h-1300-plus: "(min-height: 1300px)";
-$media-h-880-plus: "(min-height: 880px)";
-$media-h-650-plus: "(min-height: 650px)";
+$media-h-1400-plus: "(min-height: 1400px)";
+$media-h-970-plus: "(min-height: 970px)";
+$media-h-700-plus: "(min-height: 700px)";
 
-$media-h-1300-minus: "(max-height: 1299px)";
-$media-h-880-minus: "(max-height: 879px)";
-$media-h-650-minus: "(max-height: 649px)";
+$media-h-1400-minus: "(max-height: 1199px)";
+$media-h-970-minus: "(max-height: 969px)";
+$media-h-700-minus: "(max-height: 699px)";
 
 $header-height: 90px;
 $header-height-mobile: 64px;
@@ -455,11 +455,11 @@ body.full-screen-sections {
 	section {
 		position: relative;
 		overflow: hidden;
-		height: 100vh;
-		min-height: 650px;
-		max-height: 1300px;
 		margin-bottom: 0;
-		
+
+        &#first	{
+        	height: 100vh;
+        }
 		&.container {
 			padding: 0;
 		}
