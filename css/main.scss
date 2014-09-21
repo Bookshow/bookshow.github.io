@@ -54,6 +54,9 @@ iframe {
 .nowrap {
 	display: inline-block; // nowrap doesn't work in WebKit
 }
+body.scrolling .void-on-scrolling {
+	pointer-events: none;
+}
 
 
 
