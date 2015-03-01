@@ -30,6 +30,9 @@
 	<script src="{{ path }}" type="text/javascript"></script>
 	{% endfor %}
 	{% include zopim.html %}
+<!--
+	<script>window.scrollback = {"room":"bpwhite","form":"canvas","minimize":false};(function(d,s,h,e){e=d.createElement(s);e.async=1;e.src=(location.protocol === "https:" ? "https:" : "http:") + "//scrollback.io/client.min.js";d.getElementsByTagName(s)[0].parentNode.appendChild(e);}(document,"script"));</script>
+-->
 </head>
 <body class="{% if page.class %}page page-{{ page.class }}{% else %}home{% endif %}">
 	{{ content }}
