@@ -1,4 +1,4 @@
-// browser //
+// browser agent //
 (function (window) {
 
 'use strict';

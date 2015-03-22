@@ -12,7 +12,7 @@ body, h1, h2, h3, h4, h5, h6 {
 body, 
 #header {
 	background: transparent center 0 repeat;
-	background-image: url('/img/bg_fabric_plaid_@2X.png');
+	//background-image: url('/img/bg_fabric_plaid_@2X.png');
 	background-size: 200px auto;
 }
 body {
@@ -101,6 +101,8 @@ body.home {
 	}
 }
 #body {
+	padding-top: $header-height;
+	
 	> :last-child {
 		margin-bottom: 0;
 	}
@@ -456,8 +458,6 @@ body.home {
 		z-index: 5;
 		background: none;
 	}
-	section.bgblue  {background:#3cf;}
-	section.bgyellow {background:#fc3;}
 	section {
 		position: relative;
 		overflow: hidden;
@@ -487,7 +487,7 @@ body.home {
 	}
 	#first {
 		background: no-repeat center center transparent;
-		background-image: url("/img/photo/space_00_1920.jpg");
+		//background-image: url("/img/photo/space_00_1920.jpg");
 		background-size: cover;
 	}
 }

@@ -2,7 +2,7 @@
 author: Bookshow
 category_dir: /
 permalink: pretty
-exclude: [README.md]
+exclude: [README.md, _ignored]
 encoding: UTF-8
 
 root_url: bookshow.tw
