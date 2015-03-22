@@ -9,10 +9,21 @@
 		<li>
 			<div class="dropdown">
 				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
-					錄活動<span class="caret"></span>
+					活動場地<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" role="menu">
-					<li>{% include page-menu-item.html type="header" title="活動場地" url="/space" name="space" %}</li>
+					<li>{% include page-menu-item.html type="header" title="Overview" url="/space" name="space" %}</li>
+					<li>{% include page-menu-item.html type="header" title="formation" url="/studio" name="studio" %}</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+					活動直播<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<li>{% include page-menu-item.html type="header" title="Overview" url="/studio" name="studio" %}</li>
 					<li>{% include page-menu-item.html type="header" title="棚內直播" url="/studio" name="studio" %}</li>
 					<li>{% include page-menu-item.html type="header" title="外場直播" url="/streaming" name="streaming" %}</li>
 				</ul>
@@ -21,20 +32,44 @@
 		<li>
 			<div class="dropdown">
 				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
-					錄節目<span class="caret"></span>
+					節目製作<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" role="menu">
+					<li>{% include page-menu-item.html type="header" title="Overview" url="/studio" name="studio" %}</li>
 					<li>{% include page-menu-item.html type="header" title="主題訪談" url="/interview" name="interview" %}</li>
 					<li>{% include page-menu-item.html type="header" title="電梯簡報" url="/presentation" name="presentation" %}</li>
 					<li>{% include page-menu-item.html type="header" title="網路課程" url="/webcourse" name="e-learning" %}</li>
 				</ul>
 			</div>
 		</li>
-		<li>{% include page-menu-item.html type="header" title="顧問" url="/consulting" name="consulting" %}</li>
-		<li>{% include page-menu-item.html type="header" title="預約" url="/schedule" name="schedule" %}</li>
-		<li>{% include page-menu-item.html type="header" title="交通" url="/traffic" name="traffic" %}</li>
+		<li>
+			<div class="dropdown">
+				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+					擴大效果<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<li>{% include page-menu-item.html type="header" title="Overview" url="/studio" name="studio" %}</li>
+					<li>{% include page-menu-item.html type="header" title="影音顧問" url="/interview" name="interview" %}</li>
+					<li>{% include page-menu-item.html type="header" title="行銷顧問" url="/presentation" name="presentation" %}</li>
+					<li>{% include page-menu-item.html type="header" title="內容顧問" url="/webcourse" name="e-learning" %}</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+					估價預約<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<li>{% include page-menu-item.html type="header" title="估價單" url="/interview" name="interview" %}</li>
+					<li>{% include page-menu-item.html type="header" title="檔期查詢" url="/presentation" name="presentation" %}</li>
+					<li>{% include page-menu-item.html type="header" title="預約洽談" url="/webcourse" name="e-learning" %}</li>
+				</ul>
+			</div>
+		</li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
+		<li>{% include page-menu-item.html type="header" title="交通" url="/schedule" name="schedule" %}</li>
 		<li>
 			<div class="dropdown">
 				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
@@ -42,6 +77,7 @@
 				</a>
 				<ul class="dropdown-menu" role="menu">
 					<li>{% include page-menu-item.html type="header" title="關於我們" url="/about" name="about" %}</li>
+					<li>{% include page-menu-item.html type="header" title="品牌合作" url="/consulting" name="consulting" %}</li>
 					<li>{% include page-menu-item.html type="header" title="部落格"   url="http://blog.bookshow.tw" name="blog" %}</li>
 					<hr>
 					<li id="social-icons">
