@@ -17,6 +17,8 @@ $(function () {
 
 })(this);
 
+
+
 // scrolling //
 (function (window) {
 
@@ -46,13 +48,39 @@ $(window.document).on('scroll', function () {
 })(this);
 
 
-// main //
+
+// sync window size //
+/*
 (function (window) {
 
 'use strict';
 var $ = window.jQuery;
 
-// TODO: extract photo display component
+function syncSize() {
+	if (!window.browser || !window.browser.ios)
+		return; 
+	var winh = $(window).height();
+	$('section.full').css('height', winh + 'px');
+}
+
+$(function () {
+	$('section.vertical-center')
+		.wrapInner('<div class="table-like"><div></div></div>');
+	
+	syncSize();
+	$(window).resize(syncSize);
+});
+
+})(this);
+*/
+
+
+
+// photo display //
+(function (window) {
+
+'use strict';
+var $ = window.jQuery;
 
 function PhotoDisplay(modal) {
 	var self = this,
@@ -95,31 +123,92 @@ var getOriginalURL = function (src) {
 	return matches ? matches[1] + '_1920' + matches[2] : src;
 };
 
-function syncSize() {
-	if (!window.browser || !window.browser.ios)
-		return; 
-	var winh = $(window).height();
-	$('section.full').css('height', winh + 'px');
-}
-
 $(function () {
 	
-	var display = new PhotoDisplay('#photo-display');
-	
-	$('section.vertical-center')
-		.wrapInner('<div class="table-like"><div></div></div>');
+	var display = new PhotoDisplay('#photo-display-modal');
 	
 	// scan over page to inject href on thumbnail
 	// TODO
 	
-	syncSize();
-	$(window).resize(syncSize);
-	
 	// intercept thumbnail image click
-	$(document).on('click', '.photo-flow > *', function (e) {
+	$(window.document).on('click', '.photo-flow > *', function (e) {
 		display.show(e.currentTarget);
 		e.preventDefault();
 	});
+	
+});
+
+})(this);
+
+
+
+// contact us //
+(function (window) {
+
+'use strict';
+var $ = window.jQuery,
+	POST_URL = 'https://docs.google.com/forms/d/1z-40GH2UeMEyx8koeGtv-rdTc_pmEZ1dk-JOJUC4I28/formResponse',
+	PRICING_ENTRY_NAME = 'entry.2022360728';
+
+function ContactUsModal(modal) {
+	var self = this,
+		$elem = this.$elem = $(modal);
+	
+	this.pricingInfoContainer = $elem.find('.u-pricing')[0];
+	
+	$elem
+	.on('click', 'input[type=submit]', function (e) {
+		post(self);
+		e.preventDefault();
+		setTimeout(function () {
+			self.hide();
+		}, 500);
+	})
+	.on('click', '.modal-body', function (e) {
+		e.stopPropagation();
+	})
+	.on('click', function () {
+		self.hide();
+	});
+}
+
+function post(modal) {
+	var pricing = window.pricingModel,
+		data = {};
+	modal.$elem.find('[name^="entry."]').each(function () {
+		data[this.name] = this.value;
+	});
+	if (pricing)
+		data[PRICING_ENTRY_NAME] = pricing.confirmedCriteriaSummary;
+	$.post(POST_URL, data);
+}
+
+ContactUsModal.prototype.show = function () {
+	this.$elem.modal('show');
+};
+
+ContactUsModal.prototype.hide = function () {
+	this.$elem.modal('hide');
+};
+
+$(function () {
+	
+	var modal = window.contactUsModal = new ContactUsModal('#contact-us-modal');
+	
+	window.contactUs = function () {
+		modal.show();
+	};
+	
+	// intercept contact-us page link
+	/*
+	$(window.document).on('click', function (e) {
+		if (e.currentTarget.ahref != '/contact')
+			return;
+		
+		modal.show();
+		e.preventDefault();
+	});
+	*/
 	
 });
 
