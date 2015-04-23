@@ -1,8 +1,48 @@
 ---
 ---
 
+$fa-square-o: "\f096";
+$fa-check-square-o: "\f046";
+$fa-caret-left: "\f0d9";
+$fa-caret-right: "\f0da";
+
 #pricing {
-	.u-criterion.selected {
-		background-color: #CCC;
+	._btn {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		text-align: center;
+		cursor: pointer;
+		
+		&::before {
+			display: inline;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 19px;
+			font-size: 19px;
+			color: #555;
+		}
+	}
+	.u-checkbox,
+	.u-minus,
+	.u-plus {
+		@extend ._btn;
+	}
+	.u-checkbox::before {
+		content: $fa-square-o;
+	}
+	.u-criterion.selected > .u-checkbox::before {
+		content: $fa-check-square-o;
+	}
+	.u-minus::before {
+		content: $fa-caret-left;
+	}
+	.u-plus::before {
+		content: $fa-caret-right;
+	}
+	.u-criterion.lower-bounded .u-minus::before,
+	.u-criterion.upper-bounded .u-plus::before {
+		visibility: hidden;
 	}
 }
