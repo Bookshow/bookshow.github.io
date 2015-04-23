@@ -1,6 +1,7 @@
 ---
 ---
 
+$fa-check: "\f00c";
 $fa-square-o: "\f096";
 $fa-check-square-o: "\f046";
 $fa-caret-left: "\f0d9";
@@ -24,10 +25,17 @@ $fa-caret-right: "\f0da";
 			color: #555;
 		}
 	}
+	.u-checked,
 	.u-checkbox,
 	.u-minus,
 	.u-plus {
 		@extend ._btn;
+	}
+	.u-checked {
+		cursor: default;
+		&::before {
+			content: $fa-check;
+		}
 	}
 	.u-checkbox::before {
 		content: $fa-square-o;

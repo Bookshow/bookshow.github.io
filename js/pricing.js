@@ -4,10 +4,9 @@
 var $ = window.jQuery;
 
 // model //
-var _scheme = {
-	'單機': {
-		base: 20000
-	}, 
+var _scheme, keys, 
+	_defaultBase = 20000; // 單機
+_scheme = {
 	'副機': {
 		base: 8000
 	}, 
@@ -18,15 +17,19 @@ var _scheme = {
 		base: 10000
 	}, 
 	'十場': {
+		exclusives: ['五場'],
 		multiplier: -0.1
 	}, 
 	'五場': {
+		exclusives: ['十場'],
 		multiplier: -0.05
 	}, 
 	'預付': {
+		exclusives: ['後付'],
 		multiplier: -0.05
 	}, 
 	'後付': {
+		exclusives: ['預付'],
 		multiplier: 0.1
 	}, 
 	'急件': {
@@ -38,20 +41,17 @@ var _scheme = {
 	'網路': {
 		addon: 8000
 	}, 
-	'延日': {
-		unit: true,
-		addon: 200
-	}, 
 	'順稿': {
-		unit: true,
+		incremental: true,
 		addon: 3000
 	}, 
 	'字幕': {
-		unit: true,
+		incremental: true,
 		addon: 5000
 	}
 };
-var keys = Object.keys(_scheme);
+keys = Object.keys(_scheme);
+
 var PricingModel = window.PricingModel = function () {
 	var sw = this.switches = {},
 		val = this.values = {};
@@ -71,7 +71,7 @@ function summarize(model) {
 		crs = [], 
 		v;
 	keys.forEach(function (k) {
-		if (sch[k].unit) {
+		if (sch[k].incremental) {
 			if (sw[k] && (v = val[k]) > 0)
 				crs.push(k + 'x' + v);
 		} else {
@@ -86,17 +86,18 @@ PricingModel.prototype.recalculate = function () {
 	var sch = PricingModel.scheme,
 		sw = this.switches,
 		val = this.values,
-		bases = 0,
+		bases = _defaultBase,
 		multipliers = 1,
 		addons = 0,
-		m, v, total;
+		m, total;
 	
 	keys.forEach(function (k) {
 		m = sch[k];
-		v = !sw[k]? 0 : m.unit ? val[k] : 1;
-		bases += (m.base || 0) * v;
-		multipliers += (m.multiplier || 0) * v;
-		addons += (m.addon || 0) * v;
+		if (!sw[k])
+			return;
+		bases += m.base || 0;
+		multipliers += m.multiplier || 0;
+		addons += (m.addon || 0) * (m.incremental ? val[k] : 1);
 	});
 	total = bases * multipliers + addons;
 	
@@ -115,6 +116,16 @@ PricingModel.prototype.setSwitch = function (key, value) {
 		return;
 	this.switches[key] = value;
 	this.trigger('switch', { key: key, value: value });
+	
+	if (!value)
+		return;
+	var exclusives = PricingModel.scheme[key].exclusives,
+		self = this;
+	if (exclusives) {
+		exclusives.forEach(function (d) {
+			self.setSwitch(d, false);
+		});
+	}
 	//this.recalculate();
 };
 
@@ -198,5 +209,5 @@ $(function () {
 	var model = window.pricingModel = new PricingModel();
 	new PricingForm('#pricing', model);
 });
-	
+
 })(this);
