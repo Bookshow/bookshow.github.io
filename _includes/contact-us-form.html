@@ -1,14 +1,47 @@
 <h1>聯絡我們</h1>
-<div>
-	<label for="entry_1085887891">Question 1*</label>
-	<input name="entry.1085887891" type="text">
+<div class="u-field">
+	<label>您對哪些服務有興趣*</label>
+	<ul>
+		<li>
+			<input name="products" type="checkbox" value="直播">
+			<label>網路直播</label>
+		</li>
+		<li>
+			<input name="products" type="checkbox" value="講座">
+			<label>會議講座</label>
+		</li>
+		<li>
+			<input name="products" type="checkbox" value="課程">
+			<label>數位課程</label>
+		</li>
+		<li>
+			<input name="products" type="checkbox" value="訪談">
+			<label>人物訪談</label>
+		</li>
+		<li>
+			<input name="products" type="checkbox" value="場地">
+			<label>場地租用</label>
+		</li>
+		<li>
+			<input name="products" type="checkbox" value="其他">
+			<label>其他</label>
+		</li>
+	</ul>
 </div>
-<div>
-	<label for="entry_2139636067">Question 2</label>
-	<input name="entry.2139636067" type="text">
+<div class="u-field">
+	<label>單位/姓名*</label>
+	<input name="title" type="text">
 </div>
-<div>
-	<label for="entry_1779758370">TextArea 1*</label>
-	<textarea name="entry.1779758370" type="textarea"></textarea>
+<div class="u-field">
+	<label>信箱</label>
+	<input name="email" type="text">
 </div>
-<input name="submit" type="submit" value="Submit">
+<div class="u-field">
+	<label>電話</label>
+	<input name="phone" type="text">
+</div>
+<div class="u-field">
+	<label>想問的問題</label>
+	<textarea name"question" type="textarea"></textarea>
+</div>
+<input class="u-submit" type="submit" value="送出">
