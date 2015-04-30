@@ -3,12 +3,12 @@ layout: base
 ---
 
 <div id="wrap">
-	<div id="header" class="navbar">
+	<div id="header" class="navbar navbar-fixed-top">
 		<div class="container">
 			{% include header.html %}
 		</div>
 	</div>
-	<div id="body" class="container">
+	<div id="body" {% if page.width != 'full' %}class="container"{% endif %}>
 		{{ content }}
 	</div>
 	<div id="push"></div>
