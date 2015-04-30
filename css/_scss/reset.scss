@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;
+}
+body, 
+#header {
+	background: transparent center 0 repeat;
+	//background-image: url('/img/bg_fabric_plaid_@2X.png');
+	background-size: 200px auto;
+}
+body {
+	font-size: 20px;
+}
+h1, h2, h3 {
+	font-weight: bold;
+}
+a {
+	color: $color-link;
+	
+	&:hover, 
+	&:focus:hover {
+		color: $color-link-hover;
+	}
+	&:focus {
+		color: $color-link;
+		text-decoration: none;
+	}
+}
+iframe {
+	border: none;
+	width: 100%;
+}
+.table {
+	// lazy way, as we don't put table inside table
+	th,
+	td {
+		border-color: #BBB !important;
+	}
+}
+.table-like {
+	display: table;
+	
+	> * {
+		display: table-cell;
+	}
+}
+.nowrap {
+	display: inline-block; // nowrap doesn't work in WebKit
+}
+body.scrolling .void-on-scrolling {
+	pointer-events: none;
+}
+
+

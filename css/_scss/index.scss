@@ -1,0 +1,52 @@
+/*
+body.home {
+	position: relative;
+	
+	#header {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 5;
+		background: none;
+	}
+	section {
+		position: relative;
+		overflow: hidden;
+		margin: 0;
+		//padding: 50px 0;
+		
+		&.container {
+			padding: 0;
+		}
+		&:not(.container) {
+			width: 100%;
+		}
+        &.full {
+			height: 100vh;
+        }
+		&.vertical-center {
+			> div {
+				height: 100%;
+				width: 100%;
+				
+				> div {
+					height: 100%;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+	#first {
+		background: no-repeat center center transparent;
+		//background-image: url("/img/photo/space_00_1920.jpg");
+		background-size: cover;
+	}
+}
+#other-pages .menu-link {
+	margin-right: 10px;
+	margin-bottom: 17px;
+}
+*/
+
+
