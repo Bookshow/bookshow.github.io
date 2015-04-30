@@ -1,19 +1,38 @@
 #footer {
 	text-align: center;
+	background-color: #4A4A4A;
 	
+	&, 
+	.fa, 
+	a {
+		color: #FFF;
+	}
+	
+	.u-row {
+		position: relative;
+		display: block;
+		padding-left: 32px;
+		
+		&, .u-icon {
+			height: 32px;
+			line-height: 32px;
+		}
+		.u-icon {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	
+	/*
 	hr {
 		margin: 0 -5px 10px -5px;
 		border-color: $color-gray-brown;
 	}
-	.fa {
-		color: #666;
-	}
 	> .container > div {
 		padding-bottom: 5px;
 	}
-	.footer-item {
-		margin: 0 16px;
-	}
+	*/
 }
 /*
 #google-maps-image {

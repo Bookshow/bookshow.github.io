@@ -10,6 +10,14 @@ $color-gray-brown: #C8C0B8;
 @import 'layout';
 @import 'icon';
 
+.compact {
+	margin: 0 auto;
+	display: inline-block;
+}
+.left-aligned {
+	text-align: left;
+}
+
 @import 'header';
 @import 'footer';
 
