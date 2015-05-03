@@ -26,6 +26,9 @@ a {
 		color: $color-link;
 		text-decoration: none;
 	}
+	&[role="tab"] {
+		cursor: pointer;
+	}
 }
 section {
 	position: relative;
