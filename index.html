@@ -65,23 +65,25 @@ class: index
 </section>
 
 <section id="products">
-	<ul class="nav nav-tabs container">
-		<li role="presentation" class="active">
-			<a role="tab" data-toggle="tab" aria-controls="livestream">會議直播</a>
-		</li>
-		<li role="presentation">
-			<a role="tab" data-toggle="tab" aria-controls="presentation">演講簡報</a>
-		</li>
-		<li role="presentation">
-			<a role="tab" data-toggle="tab" aria-controls="webcourse">數位課程</a>
-		</li>
-		<li role="presentation">
-			<a role="tab" data-toggle="tab" aria-controls="interview">訪談節目</a>
-		</li>
-		<li role="presentation">
-			<a role="tab" data-toggle="tab" aria-controls="space">活動場地</a>
-		</li>
-	</ul>
+	<div class="container">
+		<ul id="product-tabs" class="nav nav-tabs">
+			<li role="presentation" class="active">
+				<a role="tab" data-toggle="tab" data-target="#livestream" aria-controls="livestream">會議直播</a>
+			</li>
+			<li role="presentation">
+				<a role="tab" data-toggle="tab" data-target="#presentation" aria-controls="presentation">演講簡報</a>
+			</li>
+			<li role="presentation">
+				<a role="tab" data-toggle="tab" data-target="#webcourse" aria-controls="webcourse">數位課程</a>
+			</li>
+			<li role="presentation">
+				<a role="tab" data-toggle="tab" data-target="#interview" aria-controls="interview">訪談節目</a>
+			</li>
+			<li role="presentation">
+				<a role="tab" data-toggle="tab" data-target="#space" aria-controls="space">活動場地</a>
+			</li>
+		</ul>
+	</div>
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="livestream">
 		</div>
@@ -93,6 +95,10 @@ class: index
 		</div>
 		<div role="tabpanel" class="tab-pane" id="space">
 		</div>
+	</div>
+	<div class="container">
+		<a role="page-flip" data-toggle="previous" data-target="#product-tabs"></a>
+		<a role="page-flip" data-toggle="next" data-target="#product-tabs"></a>
 	</div>
 </section>
 
