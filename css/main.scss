@@ -1,11 +1,14 @@
 ---
 ---
 
-// TODO
-$color-link: #AA1919;
-$color-link-hover: #CC3333;
-$color-link-disabled: #AAA;
-$color-gray-brown: #C8C0B8;
+// TODO: move to somewhere else?
+$color-turquoise: #216F9B;
+$color-gray-4a: #4A4A4A;
+$color-gray-brown: #C8C0B8; // TODO: unused
+
+$color-link: $color-turquoise;
+$color-link-hover: $color-turquoise;
+//$color-link-disabled: #AAA;
 
 @import 'reset';
 @import 'layout';
