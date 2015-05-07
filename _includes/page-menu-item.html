@@ -1,5 +1,5 @@
-{% if page.name == include.name %}
-<span class="{% if include.type %}{{include.type}}-{% endif %}menu-link disabled {{ include.name }}">{{ include.title }}</span>
+{% if page.id == include.id %}
+<span class="{% if include.type %}{{include.type}}-{% endif %}menu-link disabled {{ include.id }}">{{ include.title }}</span>
 {% else %}
-<a{% if include.url %} href="{{ include.url }}"{% endif %} class="{% if include.type %}{{include.type}}-{% endif %}menu-link {{ include.name }}">{{ include.title }}</a>
+<a{% if include.url %} href="{{ include.url }}"{% endif %} class="{% if include.type %}{{include.type}}-{% endif %}menu-link {{ include.id }}">{{ include.title }}</a>
 {% endif %}
