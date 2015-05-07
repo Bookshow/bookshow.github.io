@@ -8,26 +8,26 @@
 	<ul class="nav navbar-nav">
 		<li>
 			<div class="dropdown">
-				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
 					服務<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" role="menu">
-					<li>{% include page-menu-item.html type="header" title="會議直播" url="/livestream" id="livestream" %}</li>
-					<li>{% include page-menu-item.html type="header" title="演講簡報" url="/presentation" id="presentation" %}</li>
-					<li>{% include page-menu-item.html type="header" title="數位課程" url="/webcourse" id="webcourse" %}</li>
-					<li>{% include page-menu-item.html type="header" title="訪談節目" url="/interview" id="interview" %}</li>
-					<li>{% include page-menu-item.html type="header" title="活動場地" url="/space" id="space" %}</li>
+					<li>{% include menu-link.html type="header" title="會議直播" url="/livestream" id="livestream" %}</li>
+					<li>{% include menu-link.html type="header" title="演講簡報" url="/presentation" id="presentation" %}</li>
+					<li>{% include menu-link.html type="header" title="數位課程" url="/webcourse" id="webcourse" %}</li>
+					<li>{% include menu-link.html type="header" title="訪談節目" url="/interview" id="interview" %}</li>
+					<li>{% include menu-link.html type="header" title="活動場地" url="/space" id="space" %}</li>
 				</ul>
 			</div>
 		</li>
-		<li>{% include page-menu-item.html type="header" title="價格" url="/pricing" id="pricing" %}</li>
+		<li>{% include menu-link.html type="header" title="價格" url="/pricing" id="pricing" %}</li>
 		<li>
 			<div class="dropdown">
-				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
 					資訊<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" role="menu">
-					<li>{% include page-menu-item.html type="header" title="交通" url="/traffic" id="traffic" %}</li>
+					<li>{% include menu-link.html type="header" title="交通" url="/traffic" id="traffic" %}</li>
 				</ul>
 			</div>
 		</li>
@@ -39,8 +39,8 @@
 					關於<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" role="menu">
-					<li>{% include page-menu-item.html type="header" title="關於我們" url="/about" name="about" %}</li>
-					<li>{% include page-menu-item.html type="header" title="部落格"   url="http://blog.bookshow.tw" name="blog" %}</li>
+					<li>{% include menu-link.html type="header" title="關於我們" url="/about" name="about" %}</li>
+					<li>{% include menu-link.html type="header" title="部落格"   url="http://blog.bookshow.tw" name="blog" %}</li>
 					<hr>
 					<li id="social-icons">
 						<a class="header-menu-link fa fa-youtube-square youtube" href="http://www.youtube.com/BookshowTW" target="_blank"></a>

@@ -1,5 +1,0 @@
-{% if page.id == include.id %}
-<span class="{% if include.type %}{{include.type}}-{% endif %}menu-link disabled {{ include.id }}">{{ include.title }}</span>
-{% else %}
-<a{% if include.url %} href="{{ include.url }}"{% endif %} class="{% if include.type %}{{include.type}}-{% endif %}menu-link {{ include.id }}">{{ include.title }}</a>
-{% endif %}
