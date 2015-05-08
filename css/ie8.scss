@@ -7,3 +7,10 @@
 		background-image: url('/img/bookshow-logo-header.png');
 	}
 }
+body.index section.heading h1 {
+	&::before,
+	&::after {
+		// https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
+		overflow: hidden; // IE 8
+	}
+}

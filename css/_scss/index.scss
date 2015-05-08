@@ -33,8 +33,6 @@ body.index {
 				position: absolute;
 				height: 1px;
 				width: 50%;
-				// https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
-				overflow: hidden; // IE 8
 				background-clip: padding-box;
 				background-color: #A2A2A2; // TODO
 			}
