@@ -12,11 +12,12 @@
 					服務<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu" role="menu">
-					<li>{% include menu-link.html type="header" title="會議直播" url="/livestream" id="livestream" %}</li>
-					<li>{% include menu-link.html type="header" title="演講簡報" url="/presentation" id="presentation" %}</li>
-					<li>{% include menu-link.html type="header" title="數位課程" url="/webcourse" id="webcourse" %}</li>
-					<li>{% include menu-link.html type="header" title="訪談節目" url="/interview" id="interview" %}</li>
-					<li>{% include menu-link.html type="header" title="活動場地" url="/space" id="space" %}</li>
+					{% for p in site.data.labels.products %}
+						{% assign id = p[0] %}
+						{% assign title = p[1] %}
+						{% capture url %}/{{id}}{% endcapture %}
+					<li>{% include menu-link.html type="header" title=title url=url id=id %}</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</li>

@@ -4,6 +4,8 @@ width: full
 id: index
 ---
 
+{% assign labels = site.data.labels %}
+
 <section class="intro">
 	<div class=""></div>
 	<div class=""></div>
@@ -12,21 +14,11 @@ id: index
 <section id="product-summary">
 	<div class="container">
 		<ul class="unstyled">
+			{% for p in labels.products %}
 			<li>
-				<span class="u-title">網路直播</span>
+				<span class="u-title">{{ p[1] }}</span>
 			</li>
-			<li>
-				<span class="u-title">會議講座</span>
-			</li>
-			<li>
-				<span class="u-title">數位課程</span>
-			</li>
-			<li>
-				<span class="u-title">人物訪談</span>
-			</li>
-			<li>
-				<span class="u-title">場地租用</span>
-			</li>
+			{% endfor %}
 		</ul>
 	</div>
 </section>
@@ -67,35 +59,37 @@ id: index
 <section id="products">
 	<div class="container">
 		<ul id="product-tabs" class="nav nav-tabs">
+			{% for p in labels.products limit:1 %}
 			<li role="presentation" class="active">
-				<a role="tab" data-toggle="tab" data-target="#livestream" aria-controls="livestream">會議直播</a>
+				<a role="tab" data-toggle="tab" data-target="#{{ p[0] }}" aria-controls="{{ p[0] }}">{{ p[1] }}</a>
 			</li>
+			{% endfor %}
+			{% for p in labels.products offset:1 %}
 			<li role="presentation">
-				<a role="tab" data-toggle="tab" data-target="#presentation" aria-controls="presentation">演講簡報</a>
+				<a role="tab" data-toggle="tab" data-target="#{{ p[0] }}" aria-controls="{{ p[0] }}">{{ p[1] }}</a>
 			</li>
-			<li role="presentation">
-				<a role="tab" data-toggle="tab" data-target="#webcourse" aria-controls="webcourse">數位課程</a>
-			</li>
-			<li role="presentation">
-				<a role="tab" data-toggle="tab" data-target="#interview" aria-controls="interview">訪談節目</a>
-			</li>
-			<li role="presentation">
-				<a role="tab" data-toggle="tab" data-target="#space" aria-controls="space">活動場地</a>
-			</li>
+			{% endfor %}
 		</ul>
 	</div>
+	<!-- TODO: may want to use includes -->
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="livestream">
+			<div class="u-title">{{ labels.products.livestream }}</div>
 		</div>
-		<div role="tabpanel" class="tab-pane" id="presentation">
+		<div role="tabpanel" class="tab-pane" id="conference">
+			<div class="u-title">{{ labels.products.conference }}</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="webcourse">
+			<div class="u-title">{{ labels.products.webcourse }}</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="interview">
+			<div class="u-title">{{ labels.products.interview }}</div>
 		</div>
 		<div role="tabpanel" class="tab-pane" id="space">
+			<div class="u-title">{{ labels.products.space }}</div>
 		</div>
 	</div>
+	<!-- TODO: just put copies inside tab-panes? -->
 	<div class="container">
 		<a role="page-flip" data-toggle="previous" data-target="#product-tabs"></a>
 		<a role="page-flip" data-toggle="next" data-target="#product-tabs"></a>
@@ -108,21 +102,12 @@ id: index
 
 <section id="customers">
 	<ul>
+		<!-- TODO: generate from labels -->
 	</ul>
 </section>
 
 <section class="call-to-action">
 	
 </section>
-
-<!--
-<section id="first" class="full">
-	<span id="slogan">
-		分享有溫度的知識<br>
-		向世界溝通創新理念<br>
-		把活動帶到每個人眼前
-	</span>
-</section>
--->
 
 
