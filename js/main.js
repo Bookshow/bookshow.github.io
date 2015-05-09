@@ -20,6 +20,7 @@ $(function () {
 
 
 // scrolling //
+/*
 (function (window) {
 
 'use strict';
@@ -46,6 +47,7 @@ $(window.document).on('scroll', function () {
 });
 
 })(this);
+*/
 
 
 
