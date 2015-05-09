@@ -59,40 +59,37 @@ id: index
 <section id="products">
 	<div class="container">
 		<ul id="product-tabs" class="nav nav-tabs">
-			{% for p in labels.products limit:1 %}
-			<li role="presentation" class="active">
-				<a role="tab" data-toggle="tab" data-target="#{{ p[0] }}" aria-controls="{{ p[0] }}">{{ p[1] }}</a>
-			</li>
-			{% endfor %}
-			{% for p in labels.products offset:1 %}
-			<li role="presentation">
+			{% for p in labels.products %}
+			<li role="presentation"{% if forloop.first %} class="active"{% endif %}>
 				<a role="tab" data-toggle="tab" data-target="#{{ p[0] }}" aria-controls="{{ p[0] }}">{{ p[1] }}</a>
 			</li>
 			{% endfor %}
 		</ul>
 	</div>
-	<!-- TODO: may want to use includes -->
 	<div class="tab-content">
-		<div role="tabpanel" class="tab-pane active" id="livestream">
-			<div class="u-title">{{ labels.products.livestream }}</div>
+		{% capture contents_str %}
+content A
+====
+content B
+====
+content C
+====
+content D
+====
+content E
+		{% endcapture %}
+		{% assign contents = contents_str | split: '====' %}
+		{% for p in labels.products %}
+			{% capture path %}panels/{{ p[0] }}.html{% endcapture %}
+		<div role="tabpanel" class="tab-pane{% if forloop.first %} active{% endif %}" id="{{ p[0] }}">
+			<div class="container">
+				<div class="u-title">{{ p[1] }}</div>
+				<div class="u-content">{{ contents[forloop.index0] }}</div>
+				<a role="navigator" data-toggle="previous" data-target="#product-tabs"></a>
+				<a role="navigator" data-toggle="next" data-target="#product-tabs"></a>
+			</div>
 		</div>
-		<div role="tabpanel" class="tab-pane" id="conference">
-			<div class="u-title">{{ labels.products.conference }}</div>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="webcourse">
-			<div class="u-title">{{ labels.products.webcourse }}</div>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="interview">
-			<div class="u-title">{{ labels.products.interview }}</div>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="space">
-			<div class="u-title">{{ labels.products.space }}</div>
-		</div>
-	</div>
-	<!-- TODO: just put copies inside tab-panes? -->
-	<div class="container">
-		<a role="page-flip" data-toggle="previous" data-target="#product-tabs"></a>
-		<a role="page-flip" data-toggle="next" data-target="#product-tabs"></a>
+		{% endfor %}
 	</div>
 </section>
 
