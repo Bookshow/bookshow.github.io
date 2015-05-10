@@ -58,7 +58,7 @@ id: index
 
 <section id="products">
 	<div class="container">
-		<ul id="product-tabs" class="nav nav-tabs">
+		<ul id="product-tabs" class="nav nav-tabs nav-justified">
 			{% for p in labels.products %}
 			<li role="presentation"{% if forloop.first %} class="active"{% endif %}>
 				<a role="tab" data-toggle="tab" data-target="#{{ p[0] }}" aria-controls="{{ p[0] }}">{{ p[1] }}</a>
