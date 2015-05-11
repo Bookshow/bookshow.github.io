@@ -1,6 +1,7 @@
 // Pulled icons
 // -------------------------
-[class^="#{$md-css-prefix}-"], [class*=" #{$md-css-prefix}-"] {
+//[class^="#{$md-css-prefix}-"], [class*=" #{$md-css-prefix}-"] {
+.#{$md-css-prefix} { // performance
   &.pull-left {
     float: left;
     margin-right: .3em;
