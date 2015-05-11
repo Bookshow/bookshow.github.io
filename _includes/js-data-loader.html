@@ -1,0 +1,9 @@
+<script type="text/javascript">
+	/* jshint ignore:start */
+	var labels = window.labels = {},
+		products = labels.products = {};
+	{% for p in site.data.labels.products %}
+	products['{{ p[0] }}'] = '{{ p[1] }}';
+	{% endfor %}
+	/* jshint ignore:end */
+</script>
