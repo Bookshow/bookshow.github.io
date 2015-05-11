@@ -225,7 +225,11 @@ $(function () {
 		modal.show();
 	};
 	
-	// intercept contact-us page link
+	$(window.document).on('click', '[data-function="contact-us"]', function (e) {
+		modal.show();
+		e.preventDefault();
+	});
+	// intercept contact-us page link?
 	/*
 	$(window.document).on('click', function (e) {
 		if (e.currentTarget.ahref != '/contact')

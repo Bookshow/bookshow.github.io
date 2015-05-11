@@ -40,6 +40,21 @@ $color-link-hover: $color-turquoise;
 		}
 	}
 }
+.btn-turquoise {
+	color: #FFF;
+	background-color: $color-turquoise;
+	//border-color: #2E6DA4;
+}
+.btn-turquoise.active, 
+.btn-turquoise.focus, 
+.btn-turquoise:active, 
+.btn-turquoise:focus, 
+.btn-turquoise:hover, 
+.open > .dropdown-toggle.btn-turquoise {
+	color: #FFF;
+	background-color: $color-turquoise; // TODO
+	//border-color: #204D74;
+}
 
 @import 'header';
 @import 'footer';
