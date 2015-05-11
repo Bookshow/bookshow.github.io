@@ -21,6 +21,25 @@ $color-link-hover: $color-turquoise;
 .left-aligned {
 	text-align: left;
 }
+.tab-pane {
+	.navigator {
+		cursor: pointer;
+		
+		&.previous,
+		&.next {
+			display: inline-block;
+			position: relative;
+			width: 28px;
+			height: 56px;
+		}
+		&.previous::before {
+			content: '<';
+		}
+		&.next::after {
+			content: '>';
+		}
+	}
+}
 
 @import 'header';
 @import 'footer';

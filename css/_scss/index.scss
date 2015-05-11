@@ -50,6 +50,13 @@ body.index {
 	#product-tabs > li > a {
 		border-color: transparent;
 	}
+	#products {
+		.tab-pane {
+			.container {
+				position: relative;
+			}
+		}
+	}
 }
 /*
 body.home {
