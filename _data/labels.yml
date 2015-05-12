@@ -1,6 +1,21 @@
 products:
-  livestream: 網路直播
-  conference: 會議演講
-  webcourse: 數位課程
-  interview: 人物訪談
-  space: 場地租用
+  livestream: 
+    title: 網路直播
+    summary: 擺脫場地限制，讓更多人一起聽講提問。
+    description: xx
+  conference: 
+    title: 會議演講
+    summary: 秀出清晰簡報、講者神采，百分百傳達。
+    description: xx
+  webcourse: 
+    title: 數位課程
+    summary: 提升學習、銷售成效的知識影音化服務。
+    description: xx
+  interview: 
+    title: 人物訪談
+    summary: 分享動人故事經驗，宣揚您的創新理念。
+    description: xx
+  space: 
+    title: 場地租用
+    summary: 專為「錄影直播」精心打造的舒適空間。
+    description: xx

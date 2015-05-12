@@ -3,7 +3,7 @@
 	var labels = window.labels = {},
 		products = labels.products = {};
 	{% for p in site.data.labels.products %}
-	products['{{ p[0] }}'] = '{{ p[1] }}';
+	products['{{ p[0] }}'] = '{{ p[1].title }}';
 	{% endfor %}
 	/* jshint ignore:end */
 </script>

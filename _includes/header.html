@@ -14,7 +14,7 @@
 				<ul class="dropdown-menu" role="menu">
 					{% for p in site.data.labels.products %}
 						{% assign id = p[0] %}
-						{% assign title = p[1] %}
+						{% assign title = p[1].title %}
 						{% capture url %}/{{ id }}{% endcapture %}
 					<li>{% include menu-link.html type="header" title=title url=url id=id %}</li>
 					{% endfor %}
