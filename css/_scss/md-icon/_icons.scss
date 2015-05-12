@@ -24,7 +24,15 @@
 //@import "icons/_hardware";
 //@import "icons/_image";
 //@import "icons/_maps";
+
 //@import "icons/_navigation";
+.#{$md-css-prefix}-chevron-left:before {
+	content: "\f29b";
+}
+.#{$md-css-prefix}-chevron-right:before {
+	content: "\f29c";
+}
+
 //@import "icons/_notification";
 //@import "icons/_social";
 //@import "icons/_toggle";
