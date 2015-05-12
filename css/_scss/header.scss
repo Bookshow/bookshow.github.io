@@ -85,7 +85,9 @@
 		background: none;
 	}
 	.dropdown-menu {
-		background: #EEE;
+		//border-color: transparent;
+		border-radius: 0;
+		margin: 0;
 		
 		.menu-link,
 		.menu-link:focus {
