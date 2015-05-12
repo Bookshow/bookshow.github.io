@@ -5,7 +5,18 @@
 //@import "icons/_actions";
 //@import "icons/_alert";
 //@import "icons/_audio-video";
+
 //@import "icons/_communication";
+.#{$md-css-prefix}-call:before {
+	content: "\f0d5";
+}
+.#{$md-css-prefix}-email:before {
+	content: "\f0e3";
+}
+.#{$md-css-prefix}-location-on:before {
+	content: "\f0ea";
+}
+
 //@import "icons/_content";
 //@import "icons/_device";
 //@import "icons/_editor";

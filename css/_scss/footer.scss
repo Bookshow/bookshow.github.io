@@ -7,23 +7,35 @@
 	a {
 		color: #FFF;
 	}
-	
-	.u-row {
-		position: relative;
-		display: block;
-		padding-left: 32px;
+	#footer-information {
+		padding-top: 16px;
 		
-		&, .u-icon {
+		.u-row {
+			position: relative;
+			display: block;
 			height: 32px;
 			line-height: 32px;
-		}
-		.u-icon {
-			position: absolute;
-			left: 0;
-			top: 0;
+			padding-left: 40px;
+			margin: 3px 0;
+			font-size: 18px;
+			
+			.u-icon {
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				font-size: 20px;
+			}
 		}
 	}
-	
+	#copyright {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding-bottom: 12px;
+		font-size: 15px;
+	}
 	/*
 	hr {
 		margin: 0 -5px 10px -5px;
