@@ -60,6 +60,7 @@ var PricingModel = window.PricingModel = function () {
 		val[k] = 1;
 	});
 	this._total = 0;
+	this.recalculate({ ga: false });
 };
 window.inherit(PricingModel, window.DataModel);
 PricingModel.scheme = _scheme;
@@ -82,7 +83,7 @@ function summarize(model) {
 	return crs.join();
 }
 
-PricingModel.prototype.recalculate = function () {
+PricingModel.prototype.recalculate = function (options) {
 	var sch = PricingModel.scheme,
 		sw = this.switches,
 		val = this.values,
@@ -104,6 +105,9 @@ PricingModel.prototype.recalculate = function () {
 	this.confirmedCriteriaSummary = summarize(this);
 	if (total == this._total)
 		return;
+	if (!options || options.ga !== false) {
+		// TODO: GA
+	}
 	this.trigger('total', this._total = total);
 };
 
@@ -186,6 +190,10 @@ var PricingForm = function (element, model) {
 		model.recalculate();
 	});
 	
+	function updateTotal(value) {
+		totalElem.innerHTML = '' + value;
+	}
+	
 	model
 	.on('switch', function (data) {
 		var elem = criterionElems[data.key];
@@ -200,9 +208,10 @@ var PricingForm = function (element, model) {
 		elem.innerHTML = '' + data.value;
 		$(criterionElems[data.key])[data.value == 1 ? 'addClass' : 'removeClass']('lower-bounded');
 	})
-	.on('total', function (value) {
-		totalElem.innerHTML = '' + value;
-	});
+	.on('total', updateTotal);
+	
+	// init
+	updateTotal(model._total);
 };
 
 $(function () {
