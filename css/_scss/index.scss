@@ -45,6 +45,15 @@ body.index {
 	section#differentiators {
 		li {
 			text-align: center;
+			
+			.u-title {
+				font-size: 24px;
+			}
+			.u-description {
+				padding: 16px;
+				font-size: 16px;
+				text-align: left;
+			}
 		}
 	}
 	#product-tabs > li > a {
