@@ -1,47 +1,44 @@
-<h1>聯絡我們</h1>
-<div class="u-field">
-	<label>您對哪些服務有興趣*</label>
-	<ul>
-		<li>
-			<input name="products" type="checkbox" value="直播">
-			<label>網路直播</label>
-		</li>
-		<li>
-			<input name="products" type="checkbox" value="講座">
-			<label>會議講座</label>
-		</li>
-		<li>
-			<input name="products" type="checkbox" value="課程">
-			<label>數位課程</label>
-		</li>
-		<li>
-			<input name="products" type="checkbox" value="訪談">
-			<label>人物訪談</label>
-		</li>
-		<li>
-			<input name="products" type="checkbox" value="場地">
-			<label>活動場地</label>
-		</li>
-		<li>
-			<input name="products" type="checkbox" value="其他">
-			<label>其他</label>
-		</li>
-	</ul>
+<div class="u-header">
+	<h2>聯絡我們</h2>
 </div>
-<div class="u-field">
-	<label>單位/姓名*</label>
-	<input name="title" type="text">
+<div class="u-body">
+	<div class="u-field form-group">
+		<label class="u-title">您對哪些服務有興趣*</label>
+		<ul class="unstyled clearfix">
+			{% for p in site.data.labels.products %}
+				{% assign i = forloop.index0 %}
+				{% assign cnt = p[1] %}
+			<li class="u-option">
+				<input id="p-{{ i }}" name="products" type="checkbox" value="{{ cnt.abbreviation }}">
+				<label for="p-{{ i }}" class="btn btn-default">{{ cnt.title }}</label>
+				<i class="u-check md md-check turquoise-text"></i>
+			</li>
+			{% endfor %}
+			<li class="u-option">
+				<input id="p-x" name="products" type="checkbox" value="其他">
+				<label for="p-x" class="btn btn-default">其他</label>
+				<i class="u-check md md-check turquoise-text"></i>
+			</li>
+		</ul>
+	</div>
+	<div class="u-field form-group">
+		<label class="u-title">單位/姓名*</label>
+		<input class="form-control" name="title" type="text">
+	</div>
+	<div class="u-field form-group">
+		<label class="u-title">信箱</label>
+		<input class="form-control" name="email" type="email">
+	</div>
+	<div class="u-field form-group">
+		<label class="u-title">電話</label>
+		<input class="form-control" name="phone" type="text">
+	</div>
+	<div class="u-field form-group">
+		<label class="u-title">想問的問題</label>
+		<textarea class="form-control" name"question" type="textarea"></textarea>
+	</div>
+	<div>
+		<button class="btn btn-default u-cancel">取消</button>
+		<button class="btn btn-turquoise u-submit">送出</button>
+	</div>
 </div>
-<div class="u-field">
-	<label>信箱</label>
-	<input name="email" type="text">
-</div>
-<div class="u-field">
-	<label>電話</label>
-	<input name="phone" type="text">
-</div>
-<div class="u-field">
-	<label>想問的問題</label>
-	<textarea name"question" type="textarea"></textarea>
-</div>
-<input class="u-submit" type="submit" value="送出">

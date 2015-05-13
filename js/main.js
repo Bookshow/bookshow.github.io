@@ -166,13 +166,17 @@ function ContactUsModal(modal) {
 		$elem = this.$elem = $(modal);
 	
 	$elem
-	.on('click', 'input[type=submit]', function (e) {
+	.on('click', 'u-submit', function (e) {
 		post(self);
 		e.preventDefault();
 		// TODO: effect
 		setTimeout(function () {
 			self.hide();
 		}, 500);
+	})
+	.on('click', '.u-cancel', function (e) {
+		e.stopPropagation();
+		self.hide();
 	})
 	.on('click', '.modal-body', function (e) {
 		e.stopPropagation();

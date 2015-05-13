@@ -60,6 +60,9 @@
 		display: none;
 	}
 }
+.turquoise-text {
+	color: $color-turquoise;
+}
 .btn-turquoise {
 	color: #FFF;
 	background-color: $color-turquoise;
@@ -81,6 +84,7 @@ section.cta {
 
 @import 'header';
 @import 'footer';
+@import 'contact-us';
 
 @import 'index';
 

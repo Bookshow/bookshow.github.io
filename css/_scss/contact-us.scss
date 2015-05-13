@@ -1,0 +1,44 @@
+#contact-us-form {
+	padding: 0;
+	
+	.u-header {
+		border-bottom: 1px solid #CCC;
+	}
+	.u-body {
+		padding: 16px 32px;
+		
+		.u-field {
+			width: 360px;
+			text-align: left;
+		}
+		.u-option {
+			width: 50%;
+			float: left;
+			margin-bottom: 6px;
+			
+			.u-check,
+			input[type=checkbox] {
+				display: none;
+			}
+			.u-check {
+				padding: 4px 0;
+				font-size: 20px;
+			}
+			label[for] {
+				font-size: 16px;
+			}
+			input:checked {
+				& + label {
+					background: #F5F5F5;
+				}
+				& ~ .u-check {
+					display: inline-block;
+				}
+			}
+		}
+		.u-submit, 
+		.u-cancel {
+			font-size: 16px;
+		}
+	}
+}
