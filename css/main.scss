@@ -1,23 +1,19 @@
 ---
 ---
 
-// TODO: move to somewhere else?
-$color-turquoise: #216F9B;
-$color-gray-4a: #4A4A4A;
-$color-gray-brown: #C8C0B8; // TODO: unused
-
-$color-link: $color-turquoise;
-$color-link-hover: $color-turquoise;
-//$color-link-disabled: #AAA;
-
+@import 'variable';
 @import 'reset';
 @import 'layout';
 @import 'icon';
 @import 'md-icon/material-design-iconic-font';
 
+// component //
 .compact {
 	margin: 0 auto;
 	display: inline-block;
+}
+.center-aligned {
+	text-align: center;
 }
 .left-aligned {
 	text-align: left;
@@ -78,6 +74,9 @@ $color-link-hover: $color-turquoise;
 	color: #FFF;
 	background-color: $color-turquoise; // TODO
 	//border-color: #204D74;
+}
+section.cta {
+	
 }
 
 @import 'header';

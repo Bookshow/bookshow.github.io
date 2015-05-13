@@ -11,73 +11,88 @@ css: [
 ]
 ---
 
-<section id="pricing">
-	<div>
-		<div class="u-criterion" data-value="單機">
-			<span class="u-checked"></span>
-			<span class="u-label">標準單機錄影</span>
+<section class="center-aligned">
+	<h1>價格試算</h1>
+</section>
+<section id="form">
+	<div class="u-block">
+		<div class="u-criterion disabled selected" data-value="單機">
+			<span class="btn btn-default u-button">標準單機錄影</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		<div class="u-criterion" data-value="副機">
-			<span class="u-checkbox"></span>
-			<span class="u-label">增加副攝影機</span>
+			<span class="btn btn-default u-button">增加副攝影機</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		<div class="u-criterion" data-value="擷取">
-			<span class="u-checkbox"></span>
-			<span class="u-label">擷取投影機畫面</span>
+			<span class="btn btn-default u-button">擷取投影機畫面</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		<div class="u-criterion" data-value="直播">
-			<span class="u-checkbox"></span>
-			<span class="u-label">多畫面合成直播、影音串流技術人員</span>
+			<span class="btn btn-default u-button">多畫面合成直播、影音串流技術人員</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		
 		<div class="u-criterion" data-value="十場">
-			<span class="u-checkbox"></span>
-			<span class="u-label">同規格滿十場</span>
+			<span class="btn btn-default u-button">同規格滿十場</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		<div class="u-criterion" data-value="五場">
-			<span class="u-checkbox"></span>
-			<span class="u-label">同規格滿五場</span>
+			<span class="btn btn-default u-button">同規格滿五場</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		<div class="u-criterion" data-value="預付">
-			<span class="u-checkbox"></span>
-			<span class="u-label">全額預付</span>
+			<span class="btn btn-default u-button">全額預付</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		<div class="u-criterion" data-value="後付">
-			<span class="u-checkbox"></span>
-			<span class="u-label">交件一月內驗收付款</span>
+			<span class="btn btn-default u-button">交件一月內驗收付款</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		
 		<div class="u-criterion" data-value="急件">
-			<span class="u-checkbox"></span>
-			<span class="u-label">兩週內開拍急件</span>
+			<span class="btn btn-default u-button">兩週內開拍急件</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		<div class="u-criterion" data-value="檢勘">
-			<span class="u-checkbox"></span>
-			<span class="u-label">現場檢測勘察</span>
+			<span class="btn btn-default u-button">現場檢測勘察</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		<div class="u-criterion" data-value="網路">
-			<span class="u-checkbox"></span>
-			<span class="u-label">代申請臨時光纖</span>
+			<span class="btn btn-default u-button">代申請臨時光纖</span>
+			<i class="u-check md md-check"></i>
 		</div>
 		
-		<div class="u-criterion lower-bounded" data-value="順稿">
-			<span class="u-checkbox"></span>
-			<span class="u-label">通順稿</span>
-			<span class="u-minus"></span>
-			<span class="u-value">1</span>小時
-			<span class="u-plus"></span>
+		<div class="u-criterion per-unit lower-bounded" data-value="順稿">
+			<span class="btn btn-default u-button">通順稿</span>
+			<span class="u-intbox">
+				<span class="md md-chevron-left u-minus"></span>
+				<span class="u-value">1</span>小時
+				<span class="md md-chevron-right u-plus"></span>
+			</span>
+			<i class="u-check md md-check"></i>
 		</div>
-		<div class="u-criterion lower-bounded" data-value="字幕">
-			<span class="u-checkbox"></span>
-			<span class="u-label">字幕與壓制</span>
-			<span class="u-minus"></span>
-			<span class="u-value">1</span>小時
-			<span class="u-plus"></span>
+		<div class="u-criterion per-unit lower-bounded" data-value="字幕">
+			<span class="btn btn-default u-button">字幕與壓制</span>
+			<span class="u-intbox">
+				<span class="md md-chevron-left u-minus"></span>
+				<span class="u-value">1</span>小時
+				<span class="md md-chevron-right u-plus"></span>
+			</span>
+			<i class="u-check md md-check"></i>
 		</div>
 	</div>
-	<button class="u-submit btn btn-info">確認</button>
-	<div>
-		<span class="u-total">0</span> 元起
+	<div class="u-block">
+		<span class="u-block-title">NTD</span>
+		<div class="u-total"></div>
+		<span class="u-suffix">起</span>
 	</div>
-	<button class="btn btn-primary" onclick="contactUs();">聯絡我們</button>
+	<div class="u-block">
+		<button class="u-submit btn btn-info">試算</button>
+	</div>
+</section>
+<section class="cta">
+	<div class="u-block">
+		<button class="btn btn-turquoise contact-us-btn" data-function="contact-us">聯絡我們</button>
+	</div>
 </section>

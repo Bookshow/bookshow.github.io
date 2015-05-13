@@ -26,6 +26,9 @@
 //@import "icons/_maps";
 
 //@import "icons/_navigation";
+.#{$md-css-prefix}-check:before {
+	content: "\f299";
+}
 .#{$md-css-prefix}-chevron-left:before {
 	content: "\f29b";
 }

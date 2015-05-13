@@ -177,7 +177,7 @@ var PricingForm = function (element, model) {
 	});
 	
 	$element
-	.on('click', '.u-criterion > .u-checkbox', function () {
+	.on('click', '.u-criterion > .u-button', function () {
 		model.toggle(getCriterionKey(this));
 	})
 	.on('click', '.u-criterion .u-plus', function () {
@@ -216,7 +216,7 @@ var PricingForm = function (element, model) {
 
 $(function () {
 	var model = window.pricingModel = new PricingModel();
-	new PricingForm('#pricing', model);
+	new PricingForm('#form', model);
 });
 
 })(this);
