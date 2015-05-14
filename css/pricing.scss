@@ -108,8 +108,8 @@ body.pricing {
 					display: inline-block;
 				}
 			}
-			&.lower-bounded .u-minus,
-			&.upper-bounded .u-plus {
+			&.min .u-minus,
+			&.max .u-plus {
 				visibility: hidden;
 			}
 		}	

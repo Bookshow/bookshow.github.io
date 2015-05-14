@@ -206,7 +206,7 @@ var PricingForm = function (element, model) {
 		if (!elem)
 			return;
 		elem.innerHTML = '' + data.value;
-		$(criterionElems[data.key])[data.value == 1 ? 'addClass' : 'removeClass']('lower-bounded');
+		$(criterionElems[data.key])[data.value == 1 ? 'addClass' : 'removeClass']('min');
 	})
 	.on('total', updateTotal);
 	

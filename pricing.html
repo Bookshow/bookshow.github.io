@@ -16,71 +16,19 @@ css: [
 </section>
 <section id="form">
 	<div class="u-block">
-		<div class="u-criterion disabled selected" data-value="單機">
-			<span class="btn btn-default u-button">標準單機錄影</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion" data-value="副機">
-			<span class="btn btn-default u-button">增加副攝影機</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion" data-value="擷取">
-			<span class="btn btn-default u-button">擷取投影機畫面</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion" data-value="直播">
-			<span class="btn btn-default u-button">多畫面合成直播、影音串流技術人員</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		
-		<div class="u-criterion" data-value="十場">
-			<span class="btn btn-default u-button">同規格滿十場</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion" data-value="五場">
-			<span class="btn btn-default u-button">同規格滿五場</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion" data-value="預付">
-			<span class="btn btn-default u-button">全額預付</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion" data-value="後付">
-			<span class="btn btn-default u-button">交件一月內驗收付款</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		
-		<div class="u-criterion" data-value="急件">
-			<span class="btn btn-default u-button">兩週內開拍急件</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion" data-value="檢勘">
-			<span class="btn btn-default u-button">現場檢測勘察</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion" data-value="網路">
-			<span class="btn btn-default u-button">代申請臨時光纖</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		
-		<div class="u-criterion per-unit lower-bounded" data-value="順稿">
-			<span class="btn btn-default u-button">通順稿</span>
-			<span class="u-intbox">
-				<span class="md md-chevron-left u-minus"></span>
-				<span class="u-value">1</span>小時
-				<span class="md md-chevron-right u-plus"></span>
-			</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
-		<div class="u-criterion per-unit lower-bounded" data-value="字幕">
-			<span class="btn btn-default u-button">字幕與壓制</span>
-			<span class="u-intbox">
-				<span class="md md-chevron-left u-minus"></span>
-				<span class="u-value">1</span>小時
-				<span class="md md-chevron-right u-plus"></span>
-			</span>
-			<i class="u-check md md-check turquoise-text"></i>
-		</div>
+		{% include pricing-criterion.html key="單機" title="標準單機錄影" disabled="true" selected="true" %}
+		{% include pricing-criterion.html key="副機" title="增加副攝影機" %}
+		{% include pricing-criterion.html key="擷取" title="擷取投影機畫面" %}
+		{% include pricing-criterion.html key="直播" title="多畫面合成直播、影音串流技術人員" %}
+		{% include pricing-criterion.html key="十場" title="同規格滿十場" %}
+		{% include pricing-criterion.html key="五場" title="同規格滿五場" %}
+		{% include pricing-criterion.html key="預付" title="全額預付" %}
+		{% include pricing-criterion.html key="後付" title="交件一月內驗收付款" %}
+		{% include pricing-criterion.html key="急件" title="兩週內開拍急件" %}
+		{% include pricing-criterion.html key="檢勘" title="現場檢測勘察" %}
+		{% include pricing-criterion.html key="網路" title="代申請臨時光纖" %}
+		{% include pricing-criterion.html key="順稿" title="通順稿" unit="小時" value="1" %}
+		{% include pricing-criterion.html key="字幕" title="字幕與壓制" unit="小時" value="1" %}
 	</div>
 	<div class="u-block">
 		<span class="u-block-title">NTD</span>
