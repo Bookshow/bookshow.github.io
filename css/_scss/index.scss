@@ -1,14 +1,5 @@
 body.index {
 	
-	#header {
-		.menu-link {
-			&,
-			&:hover,
-			&:focus {
-				color: $color-gray-4a;
-			}
-		}
-	}
 	section.heading {
 		$section-padding: 48px;
 		

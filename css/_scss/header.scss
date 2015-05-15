@@ -1,5 +1,6 @@
 #header {
-	border-bottom: none;
+	border-bottom: 1px solid #CCC;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 	
 	.container {
 		padding: 11px 16px;
@@ -64,8 +65,10 @@
 		@media #{$media-w-mobile-minus} {
 			padding: 10px !important;
 		}
+		&,
 		&:hover,
 		&:focus {
+			color: $color-gray-4a;
 			background: none !important;
 		}
 		&.dropdown-toggle {
@@ -85,18 +88,12 @@
 		background: none;
 	}
 	.dropdown-menu {
-		//border-color: transparent;
 		border-radius: 0;
 		margin: 0;
+		margin-top: 10px;
+		border-color: #CCC;
+		border-top-color: #FFF;
 		
-		.menu-link,
-		.menu-link:focus {
-			color: $color-link;
-		}
-		.menu-link:hover,
-		.menu-link:focus:hover {
-			color: $color-link-hover;
-		}
 		hr {
 			margin: 8px;
 			border-color: #DDD;
