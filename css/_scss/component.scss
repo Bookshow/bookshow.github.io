@@ -1,0 +1,73 @@
+.compact {
+	margin: 0 auto;
+	display: inline-block;
+}
+.center-aligned {
+	text-align: center;
+}
+.left-aligned {
+	text-align: left;
+}
+.tab-pane {
+	.navigator {
+		cursor: pointer;
+		
+		&.previous,
+		&.next {
+			display: inline-block;
+			position: relative;
+		}
+		&.md {
+			overflow: hidden;
+			font-size: 108px;
+			color: #FFF;
+			text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+			
+			&::before {
+				position: absolute;
+			}
+		}
+		&.md-chevron-left,
+		&.md-chevron-right {
+			width: 40px;
+			height: 64px;
+		}
+		&.md-chevron-left {
+			&::before {
+				top: -37px;
+				left: -34px;
+			}
+		}
+		&.md-chevron-right {
+			&::before {
+				top: -37px;
+				left: -36px;
+			}
+		}
+	}
+	&:first-child .navigator.previous,
+	&:last-child .navigator.next {
+		display: none;
+	}
+}
+.turquoise-text {
+	color: $color-turquoise;
+}
+.btn-turquoise {
+	color: #FFF;
+	background-color: $color-turquoise;
+	//border-color: #2E6DA4;
+}
+.btn-turquoise.active, 
+.btn-turquoise.focus, 
+.btn-turquoise:active, 
+.btn-turquoise:focus, 
+.btn-turquoise:hover, 
+.open > .dropdown-toggle.btn-turquoise {
+	color: #FFF;
+	background-color: $color-turquoise; // TODO
+	//border-color: #204D74;
+}
+section.cta {
+	
+}
