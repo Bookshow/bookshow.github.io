@@ -23,15 +23,17 @@ id: index
 			<div class="u-value">{{ labels.value }}</div>
 			<div class="u-subtitle">{{ labels.subtitle }}</div>
 		</div>
-		<ul class="u-summaries unstyled">
-			{% for p in labels.products %}
-				{% assign cnt = p[1] %}
-			<li>
-				<span class="u-title">{{ cnt.title }}</span>
-				<div class="u-summary">{{ cnt.summary }}</div>
-			</li>
-			{% endfor %}
-		</ul>
+		<div class="u-summaries pull-right">
+			<ul class="unstyled compact">
+				{% for p in labels.products %}
+					{% assign cnt = p[1] %}
+				<li>
+					<span class="u-title">{{ cnt.title }}</span>
+					<div class="u-summary">{{ cnt.summary }}</div>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 </section>
 
