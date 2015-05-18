@@ -65,7 +65,7 @@ id: index
 
 <section id="videos">
 	<div class="container center-aligned">
-		<a href="/about" class="btn btn-default">認識 BOOKSHOW</a>
+		<a href="/about" class="btn btn-ghost">認識 BOOKSHOW</a>
 	</div>
 </section>
 
@@ -89,10 +89,10 @@ id: index
 			{% assign cnt = p[1] %}
 		<div role="tabpanel" class="tab-pane{% if forloop.first %} active{% endif %}" id="{{ p[0] }}">
 			<div class="container">
-				<div>
+				<div class="u-block">
 					<div class="u-title">{{ cnt.title }}</div>
 					<div class="u-description">{{ cnt.description }}</div>
-					<a href="/{{ cnt.id }}" class="btn btn-default">瞭解更多</a>
+					<a href="/{{ p[0] }}" class="btn btn-ghost">瞭解更多</a>
 				</div>
 				<i class="navigator previous md md-chevron-left" role="navigator" data-toggle="previous" data-target="#product-tabs"></i>
 				<i class="navigator next md md-chevron-right" role="navigator" data-toggle="next" data-target="#product-tabs"></i>
@@ -115,11 +115,11 @@ id: index
 	</ul>
 </section>
 
-<section class="call-to-action">
+<section class="cta">
 	<div class="container center-aligned">
 		<div class="compact">
-			<a href="/pricing" class="btn btn-default">價格試算</a>
-			<a href="/contact" class="btn btn-default">聯絡我們</a>
+			<a href="/pricing" class="btn btn-secondary">價格試算</a>
+			<a href="/contact" class="btn btn-primary">聯絡我們</a>
 		</div>
 	</div>
 </section>

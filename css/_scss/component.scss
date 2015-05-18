@@ -53,20 +53,47 @@
 .turquoise-text {
 	color: $color-turquoise;
 }
-.btn-turquoise {
-	color: #FFF;
-	background-color: $color-turquoise;
-	//border-color: #2E6DA4;
+.btn {
+	font-size: 18px;
 }
-.btn-turquoise.active, 
-.btn-turquoise.focus, 
-.btn-turquoise:active, 
-.btn-turquoise:focus, 
-.btn-turquoise:hover, 
-.open > .dropdown-toggle.btn-turquoise {
-	color: #FFF;
-	background-color: $color-turquoise; // TODO
-	//border-color: #204D74;
+.btn-ghost {
+	&,
+	&.active,
+	&.focus,
+	&:active,
+	&:focus,
+	&:hover,
+	&:focus:hover {
+		border-color: #FFF;
+		color: #FFF;
+		background: none;
+	}
+}
+.btn-secondary {
+	&,
+	&.active,
+	&.focus,
+	&:active,
+	&:focus,
+	&:hover,
+	&:focus:hover {
+		border-color: $color-turquoise;
+		color: $color-turquoise;
+		background: #FFF;
+	}
+}
+.btn-primary {
+	&,
+	&.active,
+	&.focus,
+	&:active,
+	&:focus,
+	&:hover,
+	&:focus:hover {
+		border-color: transparent;
+		color: #FFF;
+		background: $color-turquoise;
+	}
 }
 .black-out {
 	position: relative;
@@ -91,8 +118,13 @@
 	}
 }
 section.cta {
+	padding: 56px 0;
+	
+	.btn {
+		margin: 0px 32px;
+		padding: 8px 48px;
+	}
 }
-
 .gallery {
 }
 

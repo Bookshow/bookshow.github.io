@@ -92,9 +92,24 @@ body.index {
 			border-color: transparent;
 		}
 		.tab-pane {
+			background: #000;
+			
 			.container {
 				position: relative;
-				height: 500px;
+				height: 600px;
+			}
+			.u-block {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				min-width: 300px;
+				width: 40%;
+				padding: 64px;
+			}
+			.u-title,
+			.u-description {
+				color: #FFF;
+				text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 			}
 			.navigator {
 				position: absolute;
