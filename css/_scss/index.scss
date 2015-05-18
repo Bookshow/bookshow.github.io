@@ -33,11 +33,44 @@ body.index {
 			}
 		}
 	}
-	section#summaries {
-		.u-title {
+	section#entrance {
+		background: #000;
+		
+		.u-video-container {
+			height: 600px;
+			overflow: hidden;
+			background: #FFF;	
 		}
-		.u-summary {
-			font-size: 16px;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 120px;
+			z-index: 50;
+			background: linear-gradient(to bottom, rgba(15, 30, 40, 0), rgb(15, 30, 40));
+		}
+	}
+	section#introduction {
+		color: #FFF;
+		background: linear-gradient(to bottom, rgb(15, 30, 40), #2E7485);
+		
+		.u-taglines {
+			text-align: center;
+			.u-value {
+				font-size: 48px;
+			}
+			.u-subtitle {
+				
+			}
+		}
+		.u-summaries {
+			.u-title {
+			}
+			.u-summary {
+				font-size: 16px;
+			}
 		}
 	}
 	section#differentiators {

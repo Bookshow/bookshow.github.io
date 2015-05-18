@@ -68,6 +68,28 @@
 	background-color: $color-turquoise; // TODO
 	//border-color: #204D74;
 }
+.black-out {
+	position: relative;
+	
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 48px;
+		z-index: 50;
+		pointer-events: none;
+	}
+	&::before {
+		left: 0;
+		background: linear-gradient(to left, rgba(0, 0, 0, 0), #000);
+	}
+	&::after {
+		right: 0;
+		background: linear-gradient(to right, rgba(0, 0, 0, 0), #000);
+	}
+}
 section.cta {
 }
 

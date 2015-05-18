@@ -6,14 +6,24 @@ id: index
 
 {% assign labels = site.data.labels %}
 
-<section class="intro">
-	<div class=""></div>
-	<div class=""></div>
+<section id="entrance">
+	<div class="container">
+		<div class="u-video-container black-out">
+			<video autoplay loop>
+				<source src="/img/soapbox.ogg" type="video/ogg">
+				<source src="/img/soapbox.mp4" type="video/ogg">
+			</video>
+		</div>
+	</div>
 </section>
 
-<section id="summaries">
+<section id="introduction">
 	<div class="container">
-		<ul class="unstyled">
+		<div class="u-taglines">
+			<div class="u-value">{{ labels.value }}</div>
+			<div class="u-subtitle">{{ labels.subtitle }}</div>
+		</div>
+		<ul class="u-summaries unstyled">
 			{% for p in labels.products %}
 				{% assign cnt = p[1] %}
 			<li>
