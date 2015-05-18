@@ -1,10 +1,10 @@
 #header .navbar-brand {
 	/* Only IE 9+ supports background-size. */
-	background-image: url('/img/bookshow-logo.png');
+	background-image: url('/img/logo.png');
 }
 @media (max-width: 767px) {
 	#header .navbar-brand {
-		background-image: url('/img/bookshow-logo-header.png');
+		background-image: url('/img/logo-header.png');
 	}
 }
 body.index section.heading h1 {
