@@ -87,13 +87,26 @@ body.index {
 			}
 		}
 	}
-	#product-tabs > li > a {
-		border-color: transparent;
-	}
 	#products {
+		.nav-tabs > li > a {
+			border-color: transparent;
+		}
 		.tab-pane {
 			.container {
 				position: relative;
+				height: 500px;
+			}
+			.navigator {
+				position: absolute;
+				top: 50%;
+				margin-top: -32px;
+				
+				&.previous {
+					left: 16px;
+				}
+				&.next {
+					right: 16px;
+				}
 			}
 		}
 	}
