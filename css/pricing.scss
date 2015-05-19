@@ -17,9 +17,12 @@ body.pricing {
 		&.u-submit-container {
 			padding-top: 45px; // TODO: ad-hoc
 		}
-		&.u-total-container,
-		&.u-contact-us-container {
+		&.u-total-container {
 			padding-top: 5px;
+		}
+		&.u-contact-us-container,
+		&.u-contact-us-note {
+			padding-top: 24px;
 		}
 	}
 	section {
@@ -32,6 +35,10 @@ body.pricing {
 			.u-block-title,
 			.u-suffix {
 				font-size: 16px;
+				color: #8D8D8D;
+			}
+			.u-note {
+				font-size: 14px;
 				color: #8D8D8D;
 			}
 			.u-block-title {

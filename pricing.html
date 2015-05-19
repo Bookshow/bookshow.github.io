@@ -14,6 +14,10 @@ css: pricing.css
 		<div class="u-block pull-left">
 			<span class="u-block-title">影音服務</span>
 			{% include pricing-criterion.html key="單機" title="標準單機錄影" disabled="true" selected="true" %}
+			<div class="u-note">
+				大台北市區外拍或使用 Bookshow 場地<br>
+				錄影 4 小時內，含燈光收音及技術人員
+			</div>
 			{% include pricing-criterion.html key="副機" title="增加副攝影機畫面" %}
 			{% include pricing-criterion.html key="擷取" title="增加投影電腦畫面" %}
 			{% include pricing-criterion.html key="直播" title="網路直播導播" %}
@@ -30,12 +34,18 @@ css: pricing.css
 		<div class="u-block pull-left">
 			<span class="u-block-title">交付條件</span>
 			{% include pricing-criterion.html key="標付" title="標準付款規則" %}
+			<div class="u-note">
+				預約檔期時支付全案50%<br>
+				確認定稿交件時結清尾款
+			</div>
 			{% include pricing-criterion.html key="預付" title="全額預付優惠" %}
 			{% include pricing-criterion.html key="後付" title="驗收後再付款" %}
+			<div class="u-note">
+				須於交件後 30 日內完成付款
+			</div>
 		</div>
 		<div class="u-block pull-left">
 			<span class="u-block-title"></span>
-			{% include pricing-criterion.html key="急件" title="專案急件加價" %}
 			{% include pricing-criterion.html key="五場" title="同規格滿五場" %}
 			{% include pricing-criterion.html key="十場" title="同規格滿十場" %}
 		</div>
@@ -57,7 +67,9 @@ css: pricing.css
 		<div class="u-block u-contact-us-container pull-left">
 			<button class="btn btn-primary contact-us-btn" data-function="contact-us">聯絡我們</button>
 		</div>
-		<div class="u-block pull-left">
+		<div class="u-block u-contact-us-note pull-left">
+			我們將竭誠提供詳細說明，<br>
+			在目標預算內客製最佳服務方案。
 		</div>
 	</div>
 </section>

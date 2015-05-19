@@ -35,9 +35,6 @@ _scheme = {
 		exclusives: ['標付', '預付'],
 		multiplier: 0.1
 	}, 
-	'急件': {
-		addon: 5000
-	}, 
 	'檢勘': {
 		addon: 12000
 	}, 
