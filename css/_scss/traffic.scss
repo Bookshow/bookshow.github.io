@@ -1,0 +1,15 @@
+body.traffic {
+	
+	#address {
+		text-align: center;
+	}
+	#map {
+		iframe {
+			height: 480px;
+			
+			&.scrolling {
+				pointer-events: none;
+			}
+		}
+	}
+}

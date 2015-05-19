@@ -5,22 +5,30 @@ var $ = window.jQuery,
 	scrolling = false,
 	i = 0;
 
-function setScrolling(value) {
+function setScrolling(value, callback) {
 	if (scrolling == value)
 		return;
-	window.scrolling = scrolling = value;
-	$(window.document.body)[value ? 'addClass' : 'removeClass']('scrolling');
+	callback(window.scrolling = scrolling = value);
 }
 
-setScrolling(false);
+function listen(callback) {
+	$(window.document).on('scroll', function () {
+		setScrolling(true, callback);
+		i++;
+		setTimeout(function () {
+			if (!--i)
+				setScrolling(false, callback);
+		}, window.scrollingCoolDown || 300);
+	});
+}
 
-$(window.document).on('scroll', function () {
-	setScrolling(true);
-	i++;
-	setTimeout(function () {
-		if (!--i)
-			setScrolling(false);
-	}, window.scrollingCoolDown || 300);
+$(function () {
+	var $markings = $('[data-spy="scrolling"]');
+	if ($markings.length) {
+		listen(function (scrolling) {
+			$markings[scrolling ? 'addClass' : 'removeClass']('scrolling');
+		});
+	}
 });
 
 })(this);

@@ -4,13 +4,20 @@ title: 交通
 id: traffic
 ---
 
+<section class="heading">
+	<h1>地址</h1>
+</section>
 <section id="address">
-	<h2>地址</h2>
-	<div>台北市信義區基隆路一段 141 號 6 樓之 7</div>
+	<div class="compact">台北市信義區基隆路一段 141 號 6 樓之 7</div>
 	<a href="{{ site.google_map_url }}" class="btn btn-secondary" target="_blank">詳細地圖路線</a><br>
 </section>
+<section id="map">
+	<iframe src="{{ site.google_map_embedded }}" data-spy="scrolling"></iframe>
+</section>
+<section class="heading">
+	<h1>地標</h1>
+</section>
 <section id="landmarks">
-	<h2>鄰近地標</h2>
 	<div>松山高中對面，7-11 樓上；新寶信義大樓中。</div>
 	<ul class="row unstyled gallery">
 		<li class="col-md-4 center-aligned">
@@ -27,11 +34,10 @@ id: traffic
 		</li>
 	</ul>
 </section>
-<section id="map">
-	<iframe id="google-maps" src="{{ site.google_map_embedded }}"></iframe>
+<section class="heading">
+	<h1>交通方式</h1>
 </section>
 <section id="methods">
-	<h2>交通方式</h2>
 	<div class="u-block">
 		<h3>【捷運】市政府站 2 號出口</h3>
 		<ul class="unstyled">

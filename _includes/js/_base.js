@@ -1,6 +1,6 @@
 /* jshint ignore:start */
 {% include js/browser.js %}
-{% comment %}{% include js/scrolling.js %}{% endcomment %}
+{% include js/scrolling.js %}
 {% comment %}{% include js/window-size.js %}{% endcomment %}
 {% include js/photo.js %}
 {% include js/contact-us.js %}
