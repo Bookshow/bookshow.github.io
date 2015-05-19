@@ -69,6 +69,19 @@
 		background: none;
 	}
 }
+.btn-plain {
+	&,
+	&.active,
+	&.focus,
+	&:active,
+	&:focus,
+	&:hover,
+	&:focus:hover {
+		border-color: $color-turquoise;
+		color: $color-turquoise;
+		background: #FFF;
+	}
+}
 .btn-secondary {
 	&,
 	&.active,
