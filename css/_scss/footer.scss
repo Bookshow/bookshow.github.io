@@ -1,4 +1,5 @@
 #footer {
+	padding-top: 16px;
 	text-align: center;
 	background-color: #4A4A4A;
 	
@@ -7,9 +8,26 @@
 	a {
 		color: #FFF;
 	}
-	#footer-information {
+	#social-media,
+	#footer-information,
+	#copyright {
 		padding-top: 16px;
-		
+	}
+	#social-media {
+		> ul {
+			> li {
+				display: inline;
+				
+				a {
+					margin: 0 8px;
+				}
+				&:nth-child(n+2)::before {
+					content: '|';
+				}
+			}
+		}
+	}
+	#footer-information {
 		.u-row {
 			position: relative;
 			display: block;
@@ -29,11 +47,7 @@
 		}
 	}
 	#copyright {
-		position: absolute;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		padding-bottom: 12px;
+		padding-bottom: 16px;
 		font-size: 15px;
 	}
 	/*
