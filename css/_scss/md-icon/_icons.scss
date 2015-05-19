@@ -18,6 +18,13 @@
 }
 
 //@import "icons/_content";
+.#{$md-css-prefix}-add:before {
+	content: "\f0fb";
+}
+.#{$md-css-prefix}-remove:before {
+	content: "\f111";
+}
+
 //@import "icons/_device";
 //@import "icons/_editor";
 //@import "icons/_file";

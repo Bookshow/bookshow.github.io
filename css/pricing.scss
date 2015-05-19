@@ -7,12 +7,23 @@ body.pricing {
 	
 	.u-block {
 		width: 270px;
-		margin: 0 auto;
+		margin: 0 48px;
 		padding-top: 24px;
+		text-align: left;
 		
 		.btn {
 			width: 100%;
 		}
+		&.u-submit-container {
+			padding-top: 45px; // TODO: ad-hoc
+		}
+		&.u-total-container,
+		&.u-contact-us-container {
+			padding-top: 5px;
+		}
+	}
+	section {
+		text-align: center;
 	}
 	#form {
 		.u-block {

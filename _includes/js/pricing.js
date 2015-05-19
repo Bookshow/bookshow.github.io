@@ -24,12 +24,15 @@ _scheme = {
 		exclusives: ['十場'],
 		multiplier: -0.05
 	}, 
+	'標付': {
+		exclusives: ['預付', '後付']
+	}, 
 	'預付': {
-		exclusives: ['後付'],
+		exclusives: ['標付', '後付'],
 		multiplier: -0.05
 	}, 
 	'後付': {
-		exclusives: ['預付'],
+		exclusives: ['標付', '預付'],
 		multiplier: 0.1
 	}, 
 	'急件': {
@@ -60,7 +63,7 @@ var PricingModel = window.PricingModel = function () {
 		val[k] = 1;
 	});
 	this._total = 0;
-	this.recalculate({ ga: false });
+	//this.recalculate({ ga: false });
 };
 window.inherit(PricingModel, window.DataModel);
 PricingModel.scheme = _scheme;
@@ -211,7 +214,8 @@ var PricingForm = function (element, model) {
 	.on('total', updateTotal);
 	
 	// init
-	updateTotal(model._total);
+	model.setSwitch('標付', true);
+	//updateTotal(model._total);
 };
 
 $(function () {

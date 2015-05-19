@@ -6,36 +6,58 @@ js: pricing.js
 css: pricing.css
 ---
 
-<section class="center-aligned">
-	<h1>價格試算</h1>
+<section class="heading">
+	<h1>請點選您需要的服務</h1>
 </section>
 <section id="form">
-	<div class="u-block">
-		{% include pricing-criterion.html key="單機" title="標準單機錄影" disabled="true" selected="true" %}
-		{% include pricing-criterion.html key="副機" title="增加副攝影機" %}
-		{% include pricing-criterion.html key="擷取" title="擷取投影機畫面" %}
-		{% include pricing-criterion.html key="直播" title="多畫面合成直播、影音串流技術人員" %}
-		{% include pricing-criterion.html key="十場" title="同規格滿十場" %}
-		{% include pricing-criterion.html key="五場" title="同規格滿五場" %}
-		{% include pricing-criterion.html key="預付" title="全額預付" %}
-		{% include pricing-criterion.html key="後付" title="交件一月內驗收付款" %}
-		{% include pricing-criterion.html key="急件" title="兩週內開拍急件" %}
-		{% include pricing-criterion.html key="檢勘" title="現場檢測勘察" %}
-		{% include pricing-criterion.html key="網路" title="代申請臨時光纖" %}
-		{% include pricing-criterion.html key="順稿" title="通順稿" unit="小時" value="1" %}
-		{% include pricing-criterion.html key="字幕" title="字幕與壓制" unit="小時" value="1" %}
+	<div class="compact clearfix">
+		<div class="u-block pull-left">
+			<span class="u-block-title">影音服務</span>
+			{% include pricing-criterion.html key="單機" title="標準單機錄影" disabled="true" selected="true" %}
+			{% include pricing-criterion.html key="副機" title="增加副攝影機畫面" %}
+			{% include pricing-criterion.html key="擷取" title="增加投影電腦畫面" %}
+			{% include pricing-criterion.html key="直播" title="網路直播導播" %}
+		</div>
+		<div class="u-block pull-left">
+			<span class="u-block-title">週邊服務</span>
+			{% include pricing-criterion.html key="檢勘" title="實地勘測與系統規劃" %}
+			{% include pricing-criterion.html key="網路" title="申辦臨時網路" %}
+			{% include pricing-criterion.html key="順稿" title="逐字稿文件" unit="小時" value="1" %}
+			{% include pricing-criterion.html key="字幕" title="字幕壓制" unit="小時" value="1" %}
+		</div>
 	</div>
-	<div class="u-block">
-		<span class="u-block-title">NTD</span>
-		<div class="u-total"></div>
-		<span class="u-suffix">起</span>
+	<div class="compact clearfix">
+		<div class="u-block pull-left">
+			<span class="u-block-title">交付條件</span>
+			{% include pricing-criterion.html key="標付" title="標準付款規則" %}
+			{% include pricing-criterion.html key="預付" title="全額預付優惠" %}
+			{% include pricing-criterion.html key="後付" title="驗收後再付款" %}
+		</div>
+		<div class="u-block pull-left">
+			<span class="u-block-title"></span>
+			{% include pricing-criterion.html key="急件" title="專案急件加價" %}
+			{% include pricing-criterion.html key="五場" title="同規格滿五場" %}
+			{% include pricing-criterion.html key="十場" title="同規格滿十場" %}
+		</div>
 	</div>
-	<div class="u-block">
-		<button class="u-submit btn btn-info">試算</button>
+	<hr>
+	<div class="compact clearfix">
+		<div class="u-block u-submit-container pull-left">
+			<button class="u-submit btn btn-secondary">試算</button>
+		</div>
+		<div class="u-block u-total-container pull-left">
+			<span class="u-block-title">NTD</span>
+			<div class="u-total">&nbsp;</div>
+			<span class="u-suffix">起</span>
+		</div>
 	</div>
 </section>
-<section class="cta">
-	<div class="u-block">
-		<button class="btn btn-primary contact-us-btn" data-function="contact-us">聯絡我們</button>
+<section class="push">
+	<div class="compact clearfix">
+		<div class="u-block u-contact-us-container pull-left">
+			<button class="btn btn-primary contact-us-btn" data-function="contact-us">聯絡我們</button>
+		</div>
+		<div class="u-block pull-left">
+		</div>
 	</div>
 </section>

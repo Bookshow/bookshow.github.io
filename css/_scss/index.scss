@@ -3,15 +3,12 @@ body.index {
 	section.heading {
 		$section-padding: 56px;
 		
-		text-align: center;
 		padding-top: $section-padding;
 		padding-bottom: $section-padding;
-		color: $color-turquoise;
 		
 		h1 {
 			margin: 0 auto;
 			line-height: 160px;
-			font-size: 48px;
 			
 			&::before,
 			&::after {

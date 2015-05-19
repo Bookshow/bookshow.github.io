@@ -41,10 +41,6 @@ body.home {
 */
 #body {
 	padding-top: $header-height;
-	
-	> :last-child {
-		margin-bottom: 0;
-	}
 }
 #header {
 	margin-bottom: 0 !important;
