@@ -20,9 +20,12 @@ body.pricing {
 		&.u-total-container {
 			padding-top: 5px;
 		}
-		&.u-contact-us-container,
-		&.u-contact-us-note {
+		&.u-contact-us-container {
 			padding-top: 24px;
+			
+			.u-note {
+				margin: 0 -16px;
+			}
 		}
 	}
 	section {
@@ -33,24 +36,26 @@ body.pricing {
 			position: relative;
 			
 			.u-block-title,
-			.u-suffix {
-				font-size: 16px;
+			.u-suffix,
+			.u-note {
 				color: #8D8D8D;
 			}
 			.u-note {
-				font-size: 14px;
-				color: #8D8D8D;
+				font-size: 15px;
+				text-align: center;
 			}
 			.u-block-title {
 				display: block;
 				height: 24px;
-				margin-left: -16px;
+				margin-left: -18px;
+				font-size: 18px;
 			}
 			.u-suffix {
 				position: absolute;
 				left: 100%;
 				bottom: -4px;
 				padding-left: 12px;
+				font-size: 16px;
 			}
 			.u-total {
 				font-size: 48px;
@@ -131,10 +136,5 @@ body.pricing {
 				visibility: hidden;
 			}
 		}	
-	}
-	section.cta {
-		.btn {
-			margin: 0;
-		}
 	}
 }
