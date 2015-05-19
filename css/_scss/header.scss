@@ -87,6 +87,12 @@
 	.open > .menu-link.dropdown-toggle {
 		background: none;
 	}
+	.nav > li {
+		> .menu-link,
+		> .dropdown {
+			margin-left: 24px;
+		}
+	} 
 	.dropdown-menu {
 		border-radius: 0;
 		margin: 0;
@@ -109,6 +115,7 @@
 		font-size: 18px;
 		line-height: 26px;
 	}
+	/*
 	#social-icons {
 		text-align: center;
 		
@@ -129,6 +136,7 @@
 			color: #CF3427;
 		}
 	}
+	*/
 	.navbar-collapse {
 		@media #{$media-w-mobile-minus} {
 			max-height: none;
