@@ -56,8 +56,19 @@ body.index {
 		color: #FFF;
 		background: linear-gradient(to bottom, rgb(15, 30, 40), #2E7485);
 		
+		.container {
+			position: relative;
+		}
 		.u-logo-container {
-			
+			position: absolute;
+			left: -360px;
+			right: 50%;
+			top: 0;
+			bottom: 0;
+			// TODO: IE 8 fallback
+			background: 0 center no-repeat transparent;
+			background-size: auto 640px;
+			background-image: url('/img/logo-ext.svg');
 		}
 		.u-taglines {
 			text-align: center;
@@ -69,6 +80,11 @@ body.index {
 			}
 		}
 		.u-summaries {
+			padding: 32px 0;
+			
+			.u-product {
+				padding: 32px;
+			}
 			.u-title {
 			}
 			.u-summary {
