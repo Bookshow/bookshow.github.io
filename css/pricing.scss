@@ -5,14 +5,30 @@
 
 body.pricing {
 	
+	.u-left,
+	.u-right {
+		padding-left: 48px;
+		padding-right: 48px;
+	}
+	.u-left {
+		text-align: right;
+	}
+	.u-right {
+		text-align: left;
+	}
 	.u-block {
-		width: 270px;
-		margin: 0 48px;
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		max-width: 270px;
 		padding-top: 24px;
 		text-align: left;
 		
 		.btn {
 			width: 100%;
+		}
+		&.continued {
+			padding-top: 48px;
 		}
 		&.u-submit-container {
 			padding-top: 45px; // TODO: ad-hoc
@@ -28,17 +44,12 @@ body.pricing {
 			}
 		}
 	}
-	section {
-		text-align: center;
-	}
-	#form {
+	#form { // TODO: pull some rules out of this
 		.u-block {
-			position: relative;
-			
 			.u-block-title,
 			.u-suffix,
 			.u-note {
-				color: #8D8D8D;
+				color: #8D8D8D; // TODO
 			}
 			.u-note {
 				font-size: 15px;
@@ -136,5 +147,15 @@ body.pricing {
 				visibility: hidden;
 			}
 		}	
+	}
+	@media #{$media-w-716-minus} {
+		.u-left,
+		.u-right {
+			width: 100%;
+			text-align: center;
+		}
+		.u-block.continued {
+			padding-top: 0;
+		}
 	}
 }
