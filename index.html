@@ -24,14 +24,13 @@ id: index
 			<div class="u-subtitle">{{ labels.subtitle }}</div>
 		</div>
 	</div>
-	<div class="container clearfix">
-		<div class="u-logo-container"></div>
-		<div class="u-summaries pull-right">
-			<ul class="unstyled compact">
+	<div class="container">
+		<div class="u-logo-container clearfix">
+			<ul class="u-summaries pull-right unstyled compact">
 				{% for p in labels.products %}
 					{% assign cnt = p[1] %}
 				<li class="u-product">
-					<span class="u-title">{{ cnt.title }}</span>
+					<div class="u-title">{{ cnt.title }}</div>
 					<div class="u-summary">{{ cnt.summary }}</div>
 				</li>
 				{% endfor %}
