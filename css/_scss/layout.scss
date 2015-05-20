@@ -19,6 +19,10 @@ body {
 }
 #body {
 	padding-top: $header-height;
+	
+	@media #{$media-w-mobile-minus} {
+		padding-top: $header-height-mobile;
+	}
 }
 #header {
 	margin-bottom: 0 !important;

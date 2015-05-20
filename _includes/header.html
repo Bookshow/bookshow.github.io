@@ -1,6 +1,6 @@
 <div class="navbar-header">
 	<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-		<i class="fa fa-bars"></i>
+		<i class="md md-menu"></i>
 	</button>
 	<a href="/" class="navbar-brand"></a>
 </div>
@@ -11,7 +11,7 @@
 				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
 					服務<span class="caret"></span>
 				</a>
-				<ul class="dropdown-menu" role="menu">
+				<ul class="dropdown-menu clearfix" role="menu">
 					{% for p in site.data.labels.products %}
 						{% assign id = p[0] %}
 						{% assign title = p[1].title %}
@@ -40,7 +40,7 @@
 				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
 					關於<span class="caret"></span>
 				</a>
-				<ul class="dropdown-menu" role="menu">
+				<ul class="dropdown-menu clearfix" role="menu">
 					<li>{% include menu-link.html type="header" title="關於我們" url="/about" name="about" %}</li>
 					<li>{% include menu-link.html type="header" title="部落格"   url="http://blog.bookshow.tw" name="blog" %}</li>
 					<!--
