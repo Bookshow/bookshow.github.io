@@ -2,6 +2,7 @@ body.index {
 	
 	section.heading {
 		$section-padding: 56px;
+		$section-padding-xxs: 28px;
 		
 		padding-top: $section-padding;
 		padding-bottom: $section-padding;
@@ -27,6 +28,19 @@ body.index {
 				bottom: $section-padding;
 				right: 0;
 				border-left: 200px solid transparent;
+			}
+		}
+		@media (max-width: 400px) {
+			padding-top: $section-padding-xxs;
+			padding-bottom: $section-padding-xxs;
+			
+			h1 {
+				line-height: 80px;
+				
+				&::before,
+				&::after {
+					display: none;
+				}
 			}
 		}
 	}

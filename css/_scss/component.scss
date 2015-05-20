@@ -141,8 +141,6 @@ section.cta {
 		padding: 8px 48px;
 	}
 }
-.gallery {
-}
 section.heading {
 	text-align: center;
 	color: $color-turquoise;
@@ -150,6 +148,13 @@ section.heading {
 	h1 {
 		font-size: 48px;
 	}
+	@media (max-width: 400px) {
+		h1 {
+			font-size: 36px;
+		}
+	}
+}
+.gallery {
 }
 /*
 .video-container {
