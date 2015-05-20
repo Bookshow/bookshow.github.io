@@ -30,7 +30,7 @@ body.index {
 			}
 		}
 	}
-	section#entrance {
+	#entrance {
 		background: #000;
 		
 		.u-video-container {
@@ -49,7 +49,7 @@ body.index {
 			background: linear-gradient(to bottom, rgba(15, 30, 40, 0), rgb(15, 30, 40));
 		}
 	}
-	section#introduction {
+	#introduction {
 		color: #FFF;
 		background: linear-gradient(to bottom, rgb(15, 30, 40), #2E7485);
 		z-index: 0; // for the large logo
@@ -103,7 +103,7 @@ body.index {
 			}
 		}
 	}
-	section#differentiators {
+	#differentiators {
 		$icon-size: 150px;
 		$spacing: 48px;
 		
@@ -245,6 +245,30 @@ body.index {
 				}
 				&.next {
 					right: 16px;
+				}
+			}
+		}
+		@media (min-width: 601px) {
+			.nav-tabs > li {
+				display: table-cell;
+				width: 1%;
+			}
+		}
+		@media (max-width: 600px) {
+			.nav-tabs {
+				display: none;
+			}
+			.tab-pane {
+				display: block;
+				
+				.u-block {
+					position: static;
+				}
+				.container {
+					height: auto;
+				}
+				.navigator {
+					display: none;
 				}
 			}
 		}
