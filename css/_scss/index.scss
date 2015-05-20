@@ -90,16 +90,63 @@ body.index {
 		}
 	}
 	section#differentiators {
-		li {
-			text-align: center;
+		.container {
+			position: relative;
+		}
+		.u-background {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: 0;
 			
-			.u-title {
-				font-size: 24px;
+			> * {
+				&, .u-item {
+					height: 100%;
+				}
+				.u-item {
+					&.profession {
+						background: linear-gradient(37.5deg, #064660, #206E9A);
+					}
+					&.quality {
+						background: linear-gradient(37.5deg, #064660, #206E9A);
+					}
+					&.efficiency {
+						background: linear-gradient(37.5deg, #064660, #206E9A);
+					}
+				}
 			}
-			.u-description {
-				padding: 16px;
-				font-size: 16px;
-				text-align: left;
+		}
+		.u-content {
+			.u-item {
+				padding: 48px;
+				text-align: center;
+				color: #FFF;
+				
+				.u-icon {
+					margin: 0 auto;
+					width: 150px;
+					height: 150px;
+					border: 2px solid #034569;
+					border-radius: 50%;
+					background: #FFF;
+				}
+				&.profession .u-icon {
+				}
+				&.quality .u-icon {
+				}
+				&.efficiency .u-icon {
+				}
+				.u-title {
+					margin-top: 48px;
+					font-size: 24px;
+				}
+				.u-description {
+					margin-top: 20px;
+					font-size: 18px;
+					text-align: left;
+				}
 			}
 		}
 	}
