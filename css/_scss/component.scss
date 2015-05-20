@@ -134,11 +134,32 @@ section.push {
 	margin-bottom: 64px;
 }
 section.cta {
-	padding: 56px 0;
+	padding: 56px 0; // TODO: may sync with heading section padding?
 	
+	.u-left {
+		text-align: right;
+	}
+	.u-right {
+		text-align: left;
+	}
 	.btn {
-		margin: 0px 32px;
+		margin: 0px 16px;
 		padding: 8px 48px;
+	}
+	@media (max-width: 500px) {
+		padding: 28px 0;
+		
+		.u-left {
+			padding-left: 28px;
+		}
+		.u-right {
+			padding-right: 28px;
+		}
+		.btn {
+			margin: 0;
+			padding: 8px 0;
+			width: 100%;
+		}
 	}
 }
 section.heading {
