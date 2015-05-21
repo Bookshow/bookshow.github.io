@@ -191,7 +191,7 @@ var PricingForm = function (element, model) {
 	});
 	
 	function updateTotal(value) {
-		totalElem.innerHTML = '' + value;
+		totalElem.innerHTML = '' + (value || '');
 	}
 	
 	model
@@ -200,6 +200,7 @@ var PricingForm = function (element, model) {
 		if (!elem)
 			return;
 		$(elem)[data.value ? 'addClass' : 'removeClass']('selected');
+		updateTotal();
 	})
 	.on('value', function (data) {
 		var elem = valueElems[data.key];
@@ -207,6 +208,7 @@ var PricingForm = function (element, model) {
 			return;
 		elem.innerHTML = '' + data.value;
 		$(criterionElems[data.key])[data.value == 1 ? 'addClass' : 'removeClass']('min');
+		updateTotal();
 	})
 	.on('total', updateTotal);
 	

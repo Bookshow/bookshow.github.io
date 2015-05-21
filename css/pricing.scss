@@ -75,6 +75,10 @@ body.pricing {
 				line-height: 48px;
 				
 				&::after {
+					white-space: pre;
+					content: ' ';
+				}
+				&::before {
 					content: '';
 					position: absolute;
 					display: block;
