@@ -1,6 +1,7 @@
 body.traffic {
 	
-	#address {
+	#address,
+	#landmarks {
 		text-align: center;
 	}
 	#map {
@@ -11,5 +12,9 @@ body.traffic {
 				pointer-events: none;
 			}
 		}
+	}
+	#landmarks {
+	}
+	#methods {
 	}
 }

@@ -130,10 +130,7 @@
 		background: linear-gradient(to right, rgba(0, 0, 0, 0), #000);
 	}
 }
-section.push {
-	margin-bottom: 64px;
-}
-section.cta {
+section.cta { // TODO: refactor
 	padding: 56px 0; // TODO: may sync with heading section padding?
 	
 	.u-left {
@@ -162,19 +159,30 @@ section.cta {
 		}
 	}
 }
-section.heading {
-	text-align: center;
-	color: $color-turquoise;
-	margin-top: 48px;
-	margin-bottom: 16px;
-	
-	h1 {
-		font-size: 48px;
-		margin: 0;
+section {
+	&.continuous {
+		margin-top: 0;
 	}
-	@media (max-width: 400px) {
+	&:last-child {
+		margin-bottom: 48px;
+		
+		&.no-bottom {
+			margin-bottom: 0;
+		}
+	}
+	&.heading {
+		text-align: center;
+		color: $color-turquoise;
+		margin-top: 48px;
+		
 		h1 {
-			font-size: 36px;
+			font-size: 48px;
+			margin: 0;
+		}
+		@media (max-width: 400px) {
+			h1 {
+				font-size: 36px;
+			}
 		}
 	}
 }
