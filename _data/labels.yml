@@ -1,28 +1,28 @@
-value: "[tagline]"
-subtitle: "[subtitle]"
+value: 貼近觀眾，引發共鳴
+subtitle: 用網路影音流通知識、溝通社群｜打造您的自媒體
 products:
   livestream: 
     title: 網路直播
     abbreviation: 直播
-    summary: 擺脫場地限制，讓更多人一起聽講提問。
+    summary: 擺脫場地限制，讓更多人一起聽講提問
     description: xx
   conference: 
     title: 會議演講
     abbreviation: 講座
-    summary: 秀出清晰簡報、講者神采，百分百傳達。
+    summary: 秀出清晰簡報、講者神采，百分百傳達
     description: xx
   webcourse: 
     title: 數位課程
     abbreviation: 課程
-    summary: 提升學習、銷售成效的知識影音化服務。
+    summary: 提升學習、銷售成效的知識影音化服務
     description: xx
   interview: 
     title: 人物訪談
     abbreviation: 訪談
-    summary: 分享動人故事經驗，宣揚您的創新理念。
+    summary: 分享動人故事經驗，宣揚您的創新理念
     description: xx
   space: 
     title: 場地租用
     abbreviation: 場地
-    summary: 專為「錄影直播」精心打造的舒適空間。
+    summary: 專為「錄影直播」精心打造的舒適空間
     description: xx
