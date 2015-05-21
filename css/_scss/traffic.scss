@@ -14,6 +14,28 @@ body.traffic {
 		}
 	}
 	#landmarks {
+		.u-images {
+			margin: 16px 0 0 0;
+			
+			 > li {
+			 	padding: 0;
+			 }
+		 	.u-image {
+		 		width: 100%;
+		 		height: auto;
+		 		cursor: pointer;
+		 	}
+		 	.u-caption {
+		 		position: absolute;
+		 		left: 0;
+		 		right: 0;
+		 		bottom: 0;
+		 		text-align: center;
+		 		color: #FFF;
+		 		text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+		 		font-size: 24px;
+		 	}
+		}
 	}
 	#methods {
 	}
