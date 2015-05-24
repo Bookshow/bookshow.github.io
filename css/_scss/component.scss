@@ -10,6 +10,10 @@
 	top: 0;
 	bottom: 0;
 }
+.subtitle-text {
+	color: #FFF;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
 // TODO: rename
 .center-aligned {
 	text-align: center;
@@ -28,10 +32,9 @@
 			position: relative;
 		}
 		&.md {
+			@extend .subtitle-text;
 			overflow: hidden;
 			font-size: 108px;
-			color: #FFF;
-			text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
 			
 			&::before {
 				position: absolute;

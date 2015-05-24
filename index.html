@@ -105,7 +105,7 @@ id: index
 				<div role="tab" class="u-btn" data-toggle="tab" data-target="#video-effective" aria-controls="video-effective"></div>
 			</li>
 		</ul>
-		<div class="u-description">
+		<div class="u-description subtitle-text">
 			<div class="compact left-aligned">
 				我們講究影音質感，不惜吹毛求疵；不斷追求更可靠、全方位的軟硬體支援——<br>但吾愛技術，吾更愛內容：讓「有溫度的知識」即時分享、永續流傳，讓「群眾<br>溝通」無所不在、如實而深刻，才是我們創辦 Bookshow 的初衷。
 			</div>
@@ -137,8 +137,8 @@ id: index
 		<div role="tabpanel" class="tab-pane{% if forloop.first %} active{% endif %}" id="{{ p[0] }}">
 			<div class="container">
 				<div class="u-block">
-					<div class="u-title">{{ cnt.title }}</div>
-					<div class="u-description">{{ cnt.description }}</div>
+					<div class="u-title subtitle-text">{{ cnt.title }}</div>
+					<div class="u-description subtitle-text">{{ cnt.description }}</div>
 					<a href="/{{ p[0] }}" class="btn btn-ghost">瞭解更多</a>
 				</div>
 				<i class="navigator previous md md-chevron-left" role="navigator" data-toggle="previous" data-target="#product-tabs"></i>
