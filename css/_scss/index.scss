@@ -236,7 +236,8 @@ body.index {
 		}
 	}
 	#videos {
-		$background-extension-size: 128px;
+		$background-extension-size: 80px;
+		$background-gradient-size: 120px;
 		
 		z-index: 0;
 		color: #FFF;
@@ -246,7 +247,7 @@ body.index {
 		}
 		.background-container {
 			position: absolute;
-			top: -$background-extension-size;
+			top: -($background-extension-size + $background-gradient-size);
 			bottom: 0;
 			left: $container-padding;
 			right: $container-padding;
@@ -261,7 +262,7 @@ body.index {
 				display: block;
 				position: absolute;
 				z-index: 1;
-				height: $background-extension-size / 2;
+				height: $background-gradient-size;
 				left: 0;
 				right: 0;
 			}
@@ -288,20 +289,30 @@ body.index {
 			}
 			.u-btn {
 				display: inline-block;
+				position: relative;
 				width: 160px;
 				height: 90px;
 				cursor: pointer;
+				
+				&::before {
+					@extend .full;
+					content: '';
+					background: rgba(0, 0, 0, 0.3);
+				}
 			}
 			.u-tab {
-				 &.video-reliable {
-					.u-btn {
-						background: #FFF;
+				&.active .u-btn {
+					cursor: default;
+					
+					&::before {
+						display: none;
 					}
 				}
-				&.video-effective {
-					.u-btn {
-						background: #FFF;
-					}
+				&.video-reliable .u-btn {
+					background: #FFF;
+				}
+				&.video-effective .u-btn {
+					background: #FFF;
 				}
 			}
 		}
@@ -309,7 +320,8 @@ body.index {
 			margin-top: 32px;
 		}
 		.u-cta {
-			margin: 32px 0 $background-extension-size 0;
+			margin: 32px 0;
+			margin-bottom: 32px + $background-gradient-size;
 		}
 		@media #{$media-w-992-minus} {
 			.u-description br {

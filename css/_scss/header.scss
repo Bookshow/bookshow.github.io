@@ -27,13 +27,8 @@
 			margin-left: 8px;
 		}
 		&::before {
+			@extend .full;
 			content: ' ';
-			display: block;
-			position: absolute;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			left: 0;
 			background: right center transparent no-repeat;
 			background-image: url('/img/title@2x.png');
 			background-size: auto 24px;

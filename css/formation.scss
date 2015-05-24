@@ -36,12 +36,8 @@ body.dragging {
 	height: 268px;
 	
 	&::before {
+		@extend .full;
 		content: ' ';
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
 		border: 2px dashed rgba(0, 0, 0, 0.5);
 	}
 	> * {
