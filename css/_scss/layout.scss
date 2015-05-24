@@ -11,6 +11,8 @@ $media-w-716-minus: "(max-width: 715px)";
 $header-height: 72px;
 $header-height-mobile: 64px;
 
+$container-padding: 15px; // must sync with Bootstrap
+
 html, body {
 	height: 100%;
 }

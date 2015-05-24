@@ -129,6 +129,8 @@ body.index {
 		$icon-size: 150px;
 		$spacing: 48px;
 		
+		z-index: 5; // to cover #video section background
+		
 		.container {
 			position: relative;
 		}
@@ -230,6 +232,88 @@ body.index {
 						display: none;
 					}
 				}
+			}
+		}
+	}
+	#videos {
+		$background-extension-size: 128px;
+		
+		z-index: 0;
+		color: #FFF;
+		
+		.container {
+			position: relative;
+		}
+		.background-container {
+			position: absolute;
+			top: -$background-extension-size;
+			bottom: 0;
+			left: $container-padding;
+			right: $container-padding;
+			z-index: -1;
+			background: center center no-repeat transparent;
+			background-size: cover;
+			background-image: url('/img/cat/apollo.blurred.jpg');
+			
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				z-index: 1;
+				height: $background-extension-size / 2;
+				left: 0;
+				right: 0;
+			}
+			&::before {
+				top: 0;
+				background: linear-gradient(to bottom, #FFF, rgba(255, 255, 255, 0));
+			}
+			&::after {
+				bottom: 0;
+				background: linear-gradient(to top, #FFF, rgba(255, 255, 255, 0));
+			}
+		}
+		.tab-pane {
+			padding: 32px 64px;
+		}
+		.u-tabs {
+			margin: 16px 0 0 0;
+			
+			.u-left {
+				text-align: right;
+			}
+			.u-right {
+				text-align: left;
+			}
+			.u-btn {
+				display: inline-block;
+				width: 160px;
+				height: 90px;
+				cursor: pointer;
+			}
+			.u-tab {
+				 &.video-reliable {
+					.u-btn {
+						background: #FFF;
+					}
+				}
+				&.video-effective {
+					.u-btn {
+						background: #FFF;
+					}
+				}
+			}
+		}
+		.u-description {
+			margin-top: 32px;
+		}
+		.u-cta {
+			margin: 32px 0 $background-extension-size 0;
+		}
+		@media #{$media-w-992-minus} {
+			.u-description br {
+				display: none;
 			}
 		}
 	}
