@@ -363,8 +363,9 @@ body.index {
 		}
 		.tab-pane {
 			position: relative;
-			background: #000;
-			height: 500px;
+			background: center center no-repeat transparent;
+			background-size: cover;
+			height: 600px;
 			
 			.u-block {
 				position: absolute;
@@ -397,6 +398,21 @@ body.index {
 				&.next {
 					right: 32px;
 				}
+			}
+			&#livestream {
+				background-image: url('/img/cat/apollo.jpg');
+			}
+			&#conference {
+				background-image: url('/img/cat/midnight.jpg');
+			}
+			&#webcourse {
+				background-image: url('/img/cat/apollo.jpg');
+			}
+			&#interview {
+				background-image: url('/img/cat/midnight.jpg');
+			}
+			&#space {
+				background-image: url('/img/cat/apollo.jpg');
 			}
 		}
 		@media (min-width: 601px) {
