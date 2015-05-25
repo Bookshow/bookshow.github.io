@@ -69,56 +69,74 @@
 .btn {
 	font-size: 18px;
 }
+.btn-default,
+.btn-secondary,
+.btn-primary {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	
+	&.active,
+	&:active {
+		margin-top: 1px !important;
+		margin-bottom: -1px !important;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	}
+}
 .btn-ghost {
 	&,
-	&.active,
 	&.focus,
-	&:active,
-	&:focus,
-	&:hover,
-	&:focus:hover {
+	&:focus {
 		border-color: #FFF;
 		color: #FFF;
 		background: none;
 	}
+	&:hover,
+	&:focus:hover {
+		border-color: #FFF;
+		color: #FFF;
+		background: rgba(255, 255, 255, 0.2);
+	}
 }
-.btn-plain {
+.btn-default {
 	&,
-	&.active,
 	&.focus,
-	&:active,
-	&:focus,
+	&:focus {
+		border-color: $color-turquoise;
+		color: $color-turquoise;
+		background: #FFF;
+	}
 	&:hover,
 	&:focus:hover {
 		border-color: $color-turquoise;
 		color: $color-turquoise;
-		background: #FFF;
+		background: #F5F5F5;
 	}
 }
 .btn-secondary {
 	&,
-	&.active,
 	&.focus,
-	&:active,
-	&:focus,
-	&:hover,
-	&:focus:hover {
+	&:focus {
 		border-color: $color-turquoise;
 		color: $color-turquoise;
 		background: #FFF;
 	}
+	&:hover,
+	&:focus:hover {
+		border-color: $color-turquoise;
+		color: $color-turquoise;
+		background: #F5F5F5;
+	}
 }
 .btn-primary {
 	&,
-	&.active,
 	&.focus,
-	&:active,
-	&:focus,
-	&:hover,
-	&:focus:hover {
+	&:focus {
 		border-color: transparent;
 		color: #FFF;
-		background: $color-turquoise;
+		background: radial-gradient(circle, #3D7EA3, $color-turquoise);
+	}
+	&:hover,
+	&:focus:hover {
+		background: radial-gradient(circle, #306483, #1A4C69);
 	}
 }
 .black-out {
@@ -153,7 +171,8 @@ section.cta { // TODO: refactor
 		text-align: left;
 	}
 	.btn {
-		margin: 0px 16px;
+		margin-left: 16px;
+		margin-right: 16px;
 		padding: 8px 48px;
 	}
 	@media (max-width: 500px) {

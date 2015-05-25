@@ -54,6 +54,10 @@ body.pricing {
 			.u-note {
 				font-size: 15px;
 				text-align: center;
+				margin-top: 4px;
+			}
+			.u-criterion.disabled + .u-note {
+				margin-top: 0;
 			}
 			.u-block-title {
 				display: block;
