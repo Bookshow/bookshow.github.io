@@ -30,7 +30,17 @@
 //@import "icons/_file";
 //@import "icons/_hardware";
 //@import "icons/_image";
+
 //@import "icons/_maps";
+.#{$md-css-prefix}-directions-bus:before {
+	content: "\f25e";
+}
+.#{$md-css-prefix}-directions-car:before {
+	content: "\f25f";
+}
+.#{$md-css-prefix}-directions-subway:before {
+	content: "\f261";
+}
 
 //@import "icons/_navigation";
 .#{$md-css-prefix}-check:before {

@@ -1,8 +1,17 @@
 body.traffic {
 	
+	a.u-external-info {
+		font-size: 16px;
+		margin-left: 16px;
+	}
 	#address,
 	#landmarks {
 		text-align: center;
+	}
+	#address {
+		.u-address {
+			line-height: 38px;
+		}
 	}
 	#map {
 		iframe {
@@ -36,5 +45,31 @@ body.traffic {
 		}
 	}
 	#methods {
+		$icon-size: 120px;
+		
+		.u-method {
+			position: relative;
+			padding-left: $icon-size + 24px;
+			min-height: $icon-size - 32px;
+			margin-top: 32px;
+			
+			.u-icon {
+				position: absolute;
+				left: 0;
+				right: 0;
+				width: $icon-size;
+				height: $icon-size;
+				line-height: $icon-size;
+				text-align: center;
+				font-size: 96px;
+			}
+			.u-title {
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.u-details {
+				margin-top: 16px;
+			}
+		}
 	}
 }
