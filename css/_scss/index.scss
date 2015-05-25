@@ -1,6 +1,6 @@
 body.index {
 	
-	#body section {
+	section {
 		margin: 0;
 	}
 	section.heading {
@@ -73,9 +73,6 @@ body.index {
 		background: linear-gradient(to bottom, rgb(15, 30, 40), #2E7485);
 		z-index: 0; // for the large logo
 		
-		.container {
-			position: relative;
-		}
 		.u-logo-container {
 			position: relative;
 			
@@ -131,9 +128,6 @@ body.index {
 		
 		z-index: 5; // to cover #video section background
 		
-		.container {
-			position: relative;
-		}
 		.u-item {
 			&.profession {
 				background: linear-gradient(-45deg, #216F9B, #0A4760);
@@ -242,9 +236,6 @@ body.index {
 		z-index: 0;
 		color: #FFF;
 		
-		.container {
-			position: relative;
-		}
 		.background-container {
 			position: absolute;
 			top: -($background-extension-size + $background-gradient-size);
@@ -330,23 +321,70 @@ body.index {
 		}
 	}
 	#products {
-		.nav-tabs > li > a {
-			border-color: transparent;
+		#product-tabs {
+			> li {
+				&.active > a {
+					color: $color-turquoise;
+					
+					&::before {
+						display: block;
+					}
+				}
+				> a {
+					$height: 80px;
+					$bar-height: 6px;
+					
+					height: $height;
+					line-height: $height - $bar-height;
+					padding: $bar-height 0 0 0;
+					border: none;
+					border-radius: 0;
+					background: #F7F7F7;
+					color: #9B9B9B;
+					font-size: 22px;
+					
+					&:hover {
+						background: #FFF;
+					}
+					&:active,
+					&:focus {
+						background: #F2F2F2;
+					}
+					&::before {
+						@extend .full;
+						bottom: auto;
+						height: $bar-height;
+						content: '';
+						background: $color-turquoise;
+						display: none;
+					}
+				}
+			}
 		}
 		.tab-pane {
+			position: relative;
 			background: #000;
+			height: 500px;
 			
-			.container {
-				position: relative;
-				height: 600px;
-			}
 			.u-block {
 				position: absolute;
 				right: 0;
 				bottom: 0;
-				min-width: 300px;
-				width: 40%;
+				max-width: 600px;
+				width: 100%;
 				padding: 64px;
+			}
+			.u-title {
+				display: inline-block;
+				font-size: 52px;
+				border-bottom: 4px solid #FFF;
+			}
+			.u-description {
+				padding-left: 32px;
+			}
+			.u-description,
+			.btn {
+				margin-top: 16px;
 			}
 			.navigator {
 				position: absolute;
@@ -354,10 +392,10 @@ body.index {
 				margin-top: -32px;
 				
 				&.previous {
-					left: 16px;
+					left: 32px;
 				}
 				&.next {
-					right: 16px;
+					right: 32px;
 				}
 			}
 		}
@@ -387,55 +425,5 @@ body.index {
 		}
 	}
 }
-/*
-body.home {
-	position: relative;
-	
-	#header {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		z-index: 5;
-		background: none;
-	}
-	section {
-		position: relative;
-		overflow: hidden;
-		margin: 0;
-		//padding: 50px 0;
-		
-		&.container {
-			padding: 0;
-		}
-		&:not(.container) {
-			width: 100%;
-		}
-        &.full {
-			height: 100vh;
-        }
-		&.vertical-center {
-			> div {
-				height: 100%;
-				width: 100%;
-				
-				> div {
-					height: 100%;
-					vertical-align: middle;
-				}
-			}
-		}
-	}
-	#first {
-		background: no-repeat center center transparent;
-		//background-image: url("/img/photo/space_00_1920.jpg");
-		background-size: cover;
-	}
-}
-#other-pages .menu-link {
-	margin-right: 10px;
-	margin-bottom: 17px;
-}
-*/
 
 

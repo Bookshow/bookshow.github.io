@@ -129,13 +129,11 @@ id: index
 			</li>
 			{% endfor %}
 		</ul>
-	</div>
-	<div class="tab-content">
-		{% for p in labels.products %}
-			{% capture path %}panels/{{ p[0] }}.html{% endcapture %}
-			{% assign cnt = p[1] %}
-		<div role="tabpanel" class="tab-pane{% if forloop.first %} active{% endif %}" id="{{ p[0] }}">
-			<div class="container">
+		<div class="tab-content">
+			{% for p in labels.products %}
+				{% capture path %}panels/{{ p[0] }}.html{% endcapture %}
+				{% assign cnt = p[1] %}
+			<div role="tabpanel" class="tab-pane{% if forloop.first %} active{% endif %}" id="{{ p[0] }}">
 				<div class="u-block">
 					<div class="u-title subtitle-text">{{ cnt.title }}</div>
 					<div class="u-description subtitle-text">{{ cnt.description }}</div>
@@ -144,8 +142,8 @@ id: index
 				<i class="navigator previous md md-chevron-left" role="navigator" data-toggle="previous" data-target="#product-tabs"></i>
 				<i class="navigator next md md-chevron-right" role="navigator" data-toggle="next" data-target="#product-tabs"></i>
 			</div>
+			{% endfor %}
 		</div>
-		{% endfor %}
 	</div>
 </section>
 

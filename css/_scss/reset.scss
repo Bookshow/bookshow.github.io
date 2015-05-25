@@ -5,9 +5,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 body, 
 #header {
-	background: #FFF center 0 repeat;
-	//background-image: url('/img/bg_fabric_plaid_@2X.png');
-	//background-size: 200px auto;
+	background: #FFF;
 }
 body {
 	font-size: 20px;
@@ -43,6 +41,9 @@ iframe {
 }
 hr {
 	border-color: #CCC;
+}
+.container {
+	position: relative;
 }
 .table {
 	// lazy way, as we don't put table inside table
