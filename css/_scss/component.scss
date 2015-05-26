@@ -21,6 +21,12 @@
 .left-aligned {
 	text-align: left;
 }
+.push-par {
+	margin-top: $paragraph-space;
+}
+.push-sec {
+	margin-top: $section-space;
+}
 // TODO: refactor .u-left, .u-right
 .tab-pane {
 	.navigator {
@@ -141,6 +147,43 @@
 		background: radial-gradient(circle, #306483, #1A4C69);
 	}
 }
+h1.fancy {
+	$h1-margin: 56px;
+	$h1-margin-xxs: 28px;
+	
+	position: relative;
+	margin: $h1-margin 0;
+	line-height: 160px;
+	
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		height: 1px;
+		width: 50%;
+		background-clip: padding-box;
+		background-color: #A2A2A2;
+	}
+	&::before {
+		top: 0;
+		left: 0;
+		border-right: 200px solid transparent;
+	}
+	&::after {
+		bottom: 0;
+		right: 0;
+		border-left: 200px solid transparent;
+	}
+	@media (max-width: 400px) {
+		margin: $h1-margin-xxs 0;
+		line-height: 80px;
+		
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
 .black-out {
 	position: relative;
 	
@@ -190,33 +233,6 @@ section.cta { // TODO: refactor
 			margin: 0;
 			padding: 8px 0;
 			width: 100%;
-		}
-	}
-}
-section {
-	&.continuous {
-		margin-top: 0;
-	}
-	&:last-child {
-		margin-bottom: 48px;
-		
-		&.no-bottom {
-			margin-bottom: 0;
-		}
-	}
-	&.heading {
-		text-align: center;
-		color: $color-turquoise;
-		margin-top: 48px;
-		
-		h1 {
-			font-size: 48px;
-			margin: 0;
-		}
-		@media (max-width: 400px) {
-			h1 {
-				font-size: 36px;
-			}
 		}
 	}
 }

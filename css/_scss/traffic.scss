@@ -9,7 +9,7 @@ body.traffic {
 		text-align: center;
 	}
 	#address {
-		.u-address {
+		.u-description {
 			line-height: 38px;
 		}
 	}
@@ -24,7 +24,8 @@ body.traffic {
 	}
 	#landmarks {
 		.u-images {
-			margin: 16px 0 0 0;
+			margin-left: 0;
+			margin-right: 0;
 			
 			 > li {
 			 	padding: 0;

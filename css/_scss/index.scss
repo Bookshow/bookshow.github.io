@@ -3,52 +3,6 @@ body.index {
 	section {
 		margin: 0;
 	}
-	section.heading {
-		$section-margin: 56px;
-		$section-margin-xxs: 28px;
-		
-		margin-top: $section-margin;
-		margin-bottom: $section-margin;
-		
-		h1 {
-			position: relative;
-			margin: 0 auto;
-			line-height: 160px;
-			
-			&::before,
-			&::after {
-				content: '';
-				position: absolute;
-				height: 1px;
-				width: 50%;
-				background-clip: padding-box;
-				background-color: #A2A2A2;
-			}
-			&::before {
-				top: 0;
-				left: 0;
-				border-right: 200px solid transparent;
-			}
-			&::after {
-				bottom: 0;
-				right: 0;
-				border-left: 200px solid transparent;
-			}
-		}
-		@media (max-width: 400px) {
-			margin-top: $section-margin-xxs;
-			margin-bottom: $section-margin-xxs;
-			
-			h1 {
-				line-height: 80px;
-				
-				&::before,
-				&::after {
-					display: none;
-				}
-			}
-		}
-	}
 	#entrance {
 		background: #000;
 		
@@ -439,6 +393,9 @@ body.index {
 				}
 			}
 		}
+	}
+	#footer {
+		margin-top: 0;
 	}
 }
 
