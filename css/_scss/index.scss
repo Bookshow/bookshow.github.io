@@ -75,6 +75,10 @@ body.index {
 				font-size: 16px;
 			}
 		}
+		@media (min-width: 500px) {
+			// TODO: tagline & subtitle
+			// TODO: summary icons removal
+		}
 	}
 	#differentiators {
 		$icon-size: 150px;
@@ -235,21 +239,32 @@ body.index {
 			.u-btn {
 				display: inline-block;
 				position: relative;
-				width: 160px;
-				height: 90px;
+				width: 100%;
+				max-width: 160px;
 				cursor: pointer;
 				
 				&::before {
+					@extend .ratio-16x9;
+					content: '';
+					display: block;
+				}
+				&::after {
 					@extend .full;
 					content: '';
 					background: rgba(0, 0, 0, 0.3);
 				}
 			}
 			.u-tab {
+				&:first-child {
+					padding-left: 32px;
+				}
+				&:last-child {
+					padding-right: 32px;
+				}
 				&.active .u-btn {
 					cursor: default;
 					
-					&::before {
+					&::after {
 						display: none;
 					}
 				}
@@ -263,6 +278,7 @@ body.index {
 		}
 		.u-description {
 			margin-top: 32px;
+			padding: 0px 32px;
 		}
 		.u-cta {
 			margin: 32px 0;
@@ -384,13 +400,21 @@ body.index {
 				
 				.u-block {
 					position: static;
+					padding: 32px;
+					padding-top: 96px;
 				}
+				&,
 				.container {
 					height: auto;
 				}
 				.navigator {
 					display: none;
 				}
+			}
+		}
+		@media (max-width: 400px) {
+			.tab-pane .u-title {
+				font-size: 36px;
 			}
 		}
 	}

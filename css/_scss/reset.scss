@@ -9,17 +9,21 @@ body,
 }
 body {
 	font-size: 20px;
+	letter-spacing: 1px;
 }
 h1, h2, h3 {
 	font-weight: bold;
 }
 h1 {
 	text-align: center;
-	font-size: 48px;
+	font-size: 48px; // can keep up to 7 characters
 	color: $color-turquoise;
 	margin-top: $section-space;
 	margin-bottom: 0;
-	// TODO: RWD
+	
+	@media (max-width: 400px) {
+		font-size: 40px; // can keep up to 7 characters
+	}
 }
 h2 {
 	
@@ -42,7 +46,8 @@ a {
 		cursor: pointer;
 	}
 }
-section {
+section,
+.container {
 	position: relative;
 }
 iframe {
@@ -51,9 +56,6 @@ iframe {
 }
 hr {
 	border-color: #CCC;
-}
-.container {
-	position: relative;
 }
 .table {
 	// lazy way, as we don't put table inside table

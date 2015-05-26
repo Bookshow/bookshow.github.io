@@ -5,6 +5,9 @@
 
 body.pricing {
 	
+	hr {
+		border-color: #AAA;
+	}
 	.u-left,
 	.u-right {
 		padding-left: 48px;
@@ -40,7 +43,7 @@ body.pricing {
 			padding-top: 24px;
 			
 			.u-note {
-				margin: 0 -16px;
+				margin: 0 -24px;
 			}
 		}
 	}
@@ -54,7 +57,7 @@ body.pricing {
 			.u-note {
 				font-size: 15px;
 				text-align: center;
-				margin-top: 4px;
+				margin: 4px -4px 0px;
 			}
 			.u-criterion.disabled + .u-note {
 				margin-top: 0;
@@ -162,8 +165,11 @@ body.pricing {
 			width: 100%;
 			text-align: center;
 		}
-		.u-block.continued {
-			padding-top: 0;
+		.u-block {
+			&.continued,
+			&.u-submit-container {
+				padding-top: 0;
+			}
 		}
 	}
 }
