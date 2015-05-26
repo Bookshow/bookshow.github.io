@@ -4,7 +4,7 @@
 	 viewBox="-400 -300 800 600" xml:space="preserve">
 <g>
 	<g>
-		<path fill="#236C93" d="
+		<path fill="#216F9B" d="
 			M -335,-236
 			V 205
 			C -127,191, 0,255, 0,255
@@ -47,7 +47,7 @@
 			</g>
 		</defs>
 		<g transform="scale(0.57735)">
-			<circle fill="#072F46" cx="0" cy="0" r="100" />
+			<circle fill="#0B3048" cx="0" cy="0" r="100" />
 			<use x="0" y="0" xlink:href="#pedal" />
 			<use x="0" y="0" xlink:href="#pedal" transform="rotate(120)" />
 			<use x="0" y="0" xlink:href="#pedal" transform="rotate(240)" />
