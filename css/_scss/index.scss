@@ -293,33 +293,20 @@ body.index {
 	#products {
 		#product-tabs {
 			> li {
-				&.active > a {
-					color: $color-turquoise;
-					
-					&::before {
-						display: block;
-					}
-				}
+				$height: 80px;
+				$bar-height: 6px;
+				
 				> a {
-					$height: 80px;
-					$bar-height: 6px;
-					
+					position: relative;
 					height: $height;
 					line-height: $height - $bar-height;
 					padding: $bar-height 0 0 0;
 					border: none;
 					border-radius: 0;
-					background: #F7F7F7;
+					background: #F2F2F2;
 					color: $color-gray;
 					font-size: 22px;
 					
-					&:hover {
-						background: #FFF;
-					}
-					&:active,
-					&:focus {
-						background: #F2F2F2;
-					}
 					&::before {
 						@extend .full;
 						bottom: auto;
@@ -329,13 +316,31 @@ body.index {
 						display: none;
 					}
 				}
+				&.active > a {
+					color: $color-turquoise;
+					background: #FFF;
+					
+					&::before {
+						display: block;
+					}
+				}
+				&:not(.active) > a {
+					&:hover {
+						background: #F7F7F7;
+					}
+					&:active {
+						top: 2px;
+						height: $height - 2px;
+						box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.125);
+					}
+				}
 			}
 		}
 		.tab-pane {
 			position: relative;
 			background: center center no-repeat transparent;
 			background-size: cover;
-			height: 600px;
+			height: 500px; // for narrower windows
 			
 			.u-block {
 				position: absolute;
