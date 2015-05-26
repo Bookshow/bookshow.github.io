@@ -108,43 +108,55 @@
 	&,
 	&.focus,
 	&:focus {
-		border-color: $color-turquoise;
-		color: $color-turquoise;
+		//border-color: $color-gray;
+		border-color: transparent;
+		color: $color-gray;
 		background: #FFF;
 	}
 	&:hover,
 	&:focus:hover {
-		border-color: $color-turquoise;
-		color: $color-turquoise;
-		background: #F5F5F5;
+		//border-color: $color-gray;
+		border-color: transparent;
+		color: $color-gray;
+		background: #F2F2F2;
 	}
 }
 .btn-secondary {
 	&,
 	&.focus,
 	&:focus {
-		border-color: $color-turquoise;
+		//border-color: $color-turquoise;
+		border-color: transparent;
 		color: $color-turquoise;
 		background: #FFF;
 	}
 	&:hover,
 	&:focus:hover {
-		border-color: $color-turquoise;
+		//border-color: $color-turquoise;
+		border-color: transparent;
 		color: $color-turquoise;
-		background: #F5F5F5;
+		background: #F2F2F2;
 	}
 }
 .btn-primary {
+	$color-stop-1: #3D7EA3;
+	$color-stop-2: $color-turquoise;
+	
+	//$color-stop-1-hover: darken($color-stop-1, 5%);
+	//$color-stop-2-hover: darken($color-stop-2, 5%);
+	$color-stop-1-hover: mix(#000, $color-stop-1, 20%);
+	$color-stop-2-hover: mix(#000, $color-stop-2, 20%);
+	
 	&,
 	&.focus,
 	&:focus {
 		border-color: transparent;
 		color: #FFF;
-		background: radial-gradient(circle, #3D7EA3, $color-turquoise);
+		background: radial-gradient(circle, $color-stop-1, $color-stop-2);
 	}
 	&:hover,
 	&:focus:hover {
-		background: radial-gradient(circle, #306483, #1A4C69);
+		background: radial-gradient(circle, $color-stop-1-hover, $color-stop-2-hover);
 	}
 }
 h1.fancy {
