@@ -26,10 +26,15 @@ h1 {
 	}
 }
 h2 {
-	
+	margin-top: $section-space;
+	margin-bottom: 0;
 }
 h3 {
-	
+	margin-top: 32px;
+	margin-bottom: 0;
+}
+p {
+	margin: $paragraph-space 0 0;
 }
 a {
 	color: $color-link;

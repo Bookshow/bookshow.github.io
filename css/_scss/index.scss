@@ -8,6 +8,7 @@ body.index {
 		
 		.u-video-container {
 			max-width: 1920px;
+			min-height: 180px; // 320 * 9/16
 			max-height: 540px;
 			margin: 0 auto;
 			overflow: hidden;
