@@ -57,6 +57,7 @@ iframe {
 hr {
 	border-color: #CCC;
 }
+/*
 .table {
 	// lazy way, as we don't put table inside table
 	th,
@@ -64,22 +65,6 @@ hr {
 		border-color: #BBB !important;
 	}
 }
-.table-like {
-	display: table;
-	
-	> * {
-		display: table-cell;
-	}
-}
-.nowrap {
-	display: inline-block; // nowrap doesn't work in WebKit
-}
-ul.unstyled {
-	list-style: none;
-	padding: 0;
-}
-body.scrolling .void-on-scrolling {
-	pointer-events: none;
-}
+*/
 
 

@@ -7,13 +7,12 @@ id: index
 {% assign labels = site.data.labels %}
 
 <section id="entrance">
-	<div class="container">
-		<div class="u-video-container black-out">
-			<video autoplay loop>
-				<source src="/img/soapbox.ogg" type="video/ogg">
-				<source src="/img/soapbox.mp4" type="video/ogg">
-			</video>
-		</div>
+	<div class="u-video-container object-fit black-out">
+		<div class="ratio-16x9"></div>
+		<video class="taller intangible" autoplay loop muted>
+			<source src="/img/soapbox.ogg" type="video/ogg">
+			<source src="/img/soapbox.mp4" type="video/ogg">
+		</video>
 	</div>
 </section>
 

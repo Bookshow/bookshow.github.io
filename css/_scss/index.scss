@@ -7,9 +7,20 @@ body.index {
 		background: #000;
 		
 		.u-video-container {
-			height: 600px;
+			max-width: 1920px;
+			max-height: 540px;
+			margin: 0 auto;
 			overflow: hidden;
-			background: #FFF;	
+			
+			video {
+				width: 100%;
+			}
+			@media (max-width: 1920px) {
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
 		}
 		&::after {
 			content: '';

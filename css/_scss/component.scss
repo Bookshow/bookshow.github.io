@@ -1,6 +1,9 @@
+.nowrap {
+	display: inline-block; // nowrap doesn't work in WebKit
+}
 .compact {
-	margin: 0 auto;
 	display: inline-block;
+	margin: 0 auto;
 }
 .full {
 	display: block;
@@ -10,9 +13,19 @@
 	top: 0;
 	bottom: 0;
 }
-.subtitle-text {
-	color: #FFF;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+.intangible {
+	pointer-events: none;
+}
+.table-like {
+	display: table;
+	
+	> * {
+		display: table-cell;
+	}
+}
+ul.unstyled {
+	list-style: none;
+	padding: 0;
 }
 // TODO: rename
 .center-aligned {
@@ -20,6 +33,37 @@
 }
 .left-aligned {
 	text-align: left;
+}
+.object-fit {
+	position: relative;
+	
+	> .taller,
+	> .wider {
+		position: absolute;
+		left: -100%;
+		right: -100%;
+		top: -100%;
+		bottom: -100%;
+		margin: auto;
+		//max-width: none;
+		//max-height: none;
+	}
+	> .taller {
+		width: 100%;
+		height: auto;
+		//max-width: none;
+	}
+	> .wider {
+		width: auto;
+		height: 100%;
+	}
+}
+
+
+
+.subtitle-text {
+	color: #FFF;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 .push-par {
 	margin-top: $paragraph-space;
