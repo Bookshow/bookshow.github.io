@@ -240,7 +240,7 @@ h1.fancy {
 		}
 	}
 }
-.black-out {
+@mixin side-curtains($color, $size) {
 	position: relative;
 	
 	&::before,
@@ -249,17 +249,17 @@ h1.fancy {
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		width: 48px;
+		width: $size;
 		z-index: 50;
 		pointer-events: none;
 	}
 	&::before {
 		left: 0;
-		background: linear-gradient(to left, rgba(0, 0, 0, 0), #000);
+		background: linear-gradient(to left, rgba($color, 0), $color);
 	}
 	&::after {
 		right: 0;
-		background: linear-gradient(to right, rgba(0, 0, 0, 0), #000);
+		background: linear-gradient(to right, rgba($color, 0), $color);
 	}
 }
 section.cta { // TODO: refactor

@@ -4,9 +4,11 @@ body.index {
 		margin: 0;
 	}
 	#entrance {
-		background: #000;
+		background: #070F14;
 		
 		.u-video-container {
+			@include side-curtains(#070F14, 48px);
+			
 			max-width: 1920px;
 			min-height: 180px; // 320 * 9/16
 			max-height: 540px;
@@ -313,6 +315,7 @@ body.index {
 					height: $height;
 					line-height: $height - $bar-height;
 					padding: $bar-height 0 0 0;
+					margin: 0 !important;
 					border: none;
 					border-radius: 0;
 					background: #F2F2F2;
