@@ -24,6 +24,9 @@
 .#{$md-css-prefix}-remove:before {
 	content: "\f111";
 }
+.#{$md-css-prefix}-clear:before {
+	content: "\f102";
+}
 
 //@import "icons/_device";
 //@import "icons/_editor";

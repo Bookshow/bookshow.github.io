@@ -51,6 +51,9 @@ a {
 		cursor: pointer;
 	}
 }
+textarea {
+	resize: none;
+}
 section,
 .container {
 	position: relative;
@@ -61,6 +64,10 @@ iframe {
 }
 hr {
 	border-color: #CCC;
+}
+.form-control:focus {
+	border-color: #CCC;
+	box-shadow: none;
 }
 /*
 .table {

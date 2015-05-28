@@ -1,21 +1,46 @@
 #contact-us-form {
 	padding: 0;
 	
+	h1 {
+		margin: 0;
+	}
 	.u-header {
+		position: relative;
+		padding: 20px 0 14px;
 		border-bottom: 1px solid #CCC;
+		
+		.u-cancel {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			font-size: 24px;
+			color: $color-gray;
+			cursor: pointer;
+		}
 	}
 	.u-body {
 		padding: 16px 32px;
 		
+		@media (max-width: 400px) {
+			padding: 16px;
+		}
+		@media (max-width: 350px) {
+			padding: 12px;
+		}
+		
 		.u-field {
 			width: 100%;
-			max-width: 360px;
+			max-width: 420px;
 			text-align: left;
 		}
+		.u-options {
+			margin: 0 -6px;
+		}
 		.u-option {
-			width: 50%;
+			width: 128px;
 			float: left;
-			margin-bottom: 6px;
+			margin: 6px;
+			margin-top: 0;
 			
 			.u-check,
 			input[type=checkbox] {
@@ -37,10 +62,10 @@
 				}
 			}
 		}
-		.u-submit, 
-		.u-cancel {
-			width: 100%;
+		.u-submit {
 			font-size: 16px;
+			max-width: 140px;
+			width: 100%;
 		}
 	}
 }
