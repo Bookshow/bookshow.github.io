@@ -152,13 +152,17 @@ id: index
 	<h1 class="fancy">我們的合作夥伴</h1>
 </section>
 
-<section id="customers">
-	<ul class="unstyled">
-		{% for p in labels.partners %}
-		<li>
-		</li>
-		{% endfor %}
-	</ul>
+<section id="partners">
+	<div class="container">
+		<ul class="unstyled u-partners">
+			{% for p in labels.partners %}
+				{% assign cnt = p[1] %}
+			<li class="u-partner">
+				<img src="/img/partner/{% if cnt.uri %}{{ cnt.uri }}{% else %}{{ p[0] }}.png{% endif %}">
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
 </section>
 
 <section class="cta">

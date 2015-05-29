@@ -26,3 +26,26 @@ products:
     abbreviation: 場地
     summary: 專為「錄影直播」精心打造的舒適空間
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+partners:
+  flyingV:
+  JCConf:
+  Readmoo:
+  vTaiwan:
+  萌典:
+    uri: moedict.png
+  一宇數位:
+    uri: learning-digital.png
+  內政部:
+    uri: moi.png
+  全國能源會議:
+    uri: 2014energy.png
+  行政院青創沙龍:
+    uri: youthdream.png
+  長照松:
+    uri: careth0n.png
+  前程文化:
+    uri: fcmc.png
+  國發會:
+    uri: ndc.png
+  經濟部:
+    uri: moea.png

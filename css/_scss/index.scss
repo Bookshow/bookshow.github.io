@@ -497,6 +497,18 @@ body.index {
 			}
 		}
 	}
+	#partners {
+		background-image: linear-gradient(to bottom, #FFF, #F2F2F2);
+		
+		.u-partners {
+			text-align: justify;
+			margin: -60px -16px;
+		}
+		.u-partner {
+			display: inline-block;
+			margin: 60px 16px;
+		}
+	}
 	#footer {
 		margin-top: 0;
 	}
