@@ -41,6 +41,19 @@ body.index {
 		background: linear-gradient(to bottom, rgb(15, 30, 40), #2E7485);
 		z-index: 0; // for the large logo
 		
+		.u-taglines {
+			padding-top: 24px;
+			padding-bottom: 24px;
+			text-align: center;
+			
+			.u-value {
+				margin: 8px -4px;
+				font-size: 48px;
+			}
+			.u-subtitle {
+				margin: 8px 0;
+			}
+		}
 		.u-logo-container {
 			position: relative;
 			
@@ -58,30 +71,38 @@ body.index {
 				// TODO: IE 8 fallback
 				background: 0 center no-repeat transparent;
 				background-size: auto 640px;
-				background-image: url('/img/logo-ext.svg');
+				background-image: url('/img/logo.ext.svg');
 				
 				@media #{$media-w-992-minus} {
 					opacity: 0.25;
 				}
 			}
 		}
-		.u-taglines {
-			padding-top: 24px;
-			padding-bottom: 24px;
-			text-align: center;
-			
-			.u-value {
-				font-size: 48px;
-			}
-			.u-subtitle {
-				
-			}
-		}
 		.u-summaries {
 			padding: 32px 0;
+			min-height: 96px;
 			
 			.u-product {
 				padding: 32px;
+				padding-left: 144px;
+				background: 0 center no-repeat transparent;
+				text-align: left;
+				
+				&.livestream {
+					background-image: url('/img/product.livestream.icon.svg');
+				}
+				&.conference {
+					background-image: url('/img/product.conference.icon.svg');
+				}
+				&.webcourse {
+					background-image: url('/img/product.webcourse.icon.svg');
+				}
+				&.interview {
+					background-image: url('/img/product.interview.icon.svg');
+				}
+				&.space {
+					background-image: url('/img/product.space.icon.svg');
+				}
 			}
 			.u-title {
 			}
@@ -89,9 +110,34 @@ body.index {
 				font-size: 16px;
 			}
 		}
-		@media (min-width: 500px) {
-			// TODO: tagline & subtitle
-			// TODO: summary icons removal
+		@media (max-width: 500px) {
+			.u-taglines {
+				.u-value {
+					font-size: 40px;
+				}
+				.u-subtitle {
+				}
+			}
+			.u-logo-container {
+				text-align: center;
+			}
+			.u-summaries {
+				float: none !important;
+				
+				.u-product {
+					padding-left: 32px;
+					background-image: none !important;
+				}
+			}
+		}
+		@media (max-width: 400px) {
+			.u-taglines {
+				.u-value {
+					font-size: 32px;
+				}
+				.u-subtitle {
+				}
+			}
 		}
 	}
 	#differentiators {
@@ -151,13 +197,13 @@ body.index {
 					text-align: left;
 				}
 				&.profession .u-icon {
-					background-image: url('/img/profession.svg');
+					background-image: url('/img/differentiator.profession.svg');
 				}
 				&.quality .u-icon {
-					background-image: url('/img/quality.svg');
+					background-image: url('/img/differentiator.quality.svg');
 				}
 				&.effectiveness .u-icon {
-					background-image: url('/img/effectiveness.svg');
+					background-image: url('/img/differentiator.effectiveness.svg');
 				}
 			}
 		}

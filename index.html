@@ -20,7 +20,9 @@ id: index
 	<div class="container">
 		<div class="u-taglines">
 			<div class="u-value">{{ labels.value }}</div>
-			<div class="u-subtitle">{{ labels.subtitle }}</div>
+			<div class="u-subtitle">
+				{% for s in labels.subtitle %}<span class="nowrap">{{ s }}</span>{% endfor %}
+			</div>
 		</div>
 	</div>
 	<div class="container">
@@ -28,7 +30,7 @@ id: index
 			<ul class="u-summaries pull-right unstyled compact">
 				{% for p in labels.products %}
 					{% assign cnt = p[1] %}
-				<li class="u-product">
+				<li class="u-product {{ p[0] }}">
 					<div class="u-title">{{ cnt.title }}</div>
 					<div class="u-summary">{{ cnt.summary }}</div>
 				</li>
