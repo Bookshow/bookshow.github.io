@@ -302,6 +302,8 @@ body.index {
 				width: 100%;
 				max-width: 160px;
 				cursor: pointer;
+				background: center 0 no-repeat transparent;
+				background-size: cover;
 				
 				&::before {
 					@extend .ratio-16x9;
@@ -311,7 +313,18 @@ body.index {
 				&::after {
 					@extend .full;
 					content: '';
-					background: rgba(0, 0, 0, 0.3);
+					background: rgba(0, 0, 0, 0.5);
+				}
+			}
+			:not(.active) > .u-btn {
+				&:hover {
+					&::after {
+						background: rgba(0, 0, 0, 0.25);
+					}
+				}
+				&:active {
+					background-position: center 1px;
+					box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.125);
 				}
 			}
 			.u-tab {
@@ -329,10 +342,10 @@ body.index {
 					}
 				}
 				&.video-reliable .u-btn {
-					background: #FFF;
+					background-image: url('/img/cat/apollo.16x9.jpg');
 				}
 				&.video-effective .u-btn {
-					background: #FFF;
+					background-image: url('/img/cat/midnight.16x9.jpg');
 				}
 			}
 		}
