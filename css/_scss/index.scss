@@ -107,7 +107,7 @@ body.index {
 			&.quality {
 				background: linear-gradient(-45deg, #0A4760, #216F9B);
 			}
-			&.efficiency {
+			&.effectiveness {
 				background: linear-gradient(-45deg, #0A4760, #216F9B);
 			}
 		}
@@ -138,11 +138,8 @@ body.index {
 					height: $icon-size;
 					border: 2px solid #034569;
 					border-radius: 50%;
-					background: #FFF;
-					
-					&::before {
-						
-					}
+					background: center center no-repeat #FFF;
+					background-size: $icon-size * 0.8 auto;
 				}
 				.u-title {
 					margin-top: $spacing;
@@ -153,11 +150,14 @@ body.index {
 					font-size: 18px;
 					text-align: left;
 				}
-				&.profession .u-icon::before {
+				&.profession .u-icon {
+					background-image: url('/img/profession.svg');
 				}
-				&.quality .u-icon::before {
+				&.quality .u-icon {
+					background-image: url('/img/quality.svg');
 				}
-				&.efficiency .u-icon::before {
+				&.effectiveness .u-icon {
+					background-image: url('/img/effectiveness.svg');
 				}
 			}
 		}
