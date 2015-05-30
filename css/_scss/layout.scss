@@ -8,8 +8,7 @@ $media-w-992-minus: "(max-width: 991px)";
 $media-w-mobile-minus: "(max-width: 767px)";
 $media-w-716-minus: "(max-width: 715px)";
 
-$header-height: 72px;
-$header-height-mobile: 64px;
+$header-height: 55px;
 
 $container-padding: 15px; // must sync with Bootstrap
 
@@ -21,18 +20,11 @@ body {
 }
 #body {
 	padding-top: $header-height;
-	
-	@media #{$media-w-mobile-minus} {
-		padding-top: $header-height-mobile;
-	}
 }
 #header {
 	margin-bottom: 0 !important;
 	height: $header-height;
 	
-	@media #{$media-w-mobile-minus} {
-		height: $header-height-mobile;
-	}
 	> .container {
 		height: 100%;
 	}
