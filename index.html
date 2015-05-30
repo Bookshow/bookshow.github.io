@@ -158,7 +158,7 @@ id: index
 			{% for p in labels.partners %}
 				{% assign cnt = p[1] %}
 			<li class="u-partner">
-				<img src="/img/partner/{% if cnt.uri %}{{ cnt.uri }}{% else %}{{ p[0] }}.png{% endif %}">
+				<img class="{{ cnt.class }}" src="/img/partner/{% if cnt.uri %}{{ cnt.uri }}{% else %}{{ p[0] }}.png{% endif %}">
 			</li>
 			{% endfor %}
 		</ul>

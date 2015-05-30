@@ -27,25 +27,38 @@ products:
     summary: 專為「錄影直播」精心打造的舒適空間
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
 partners:
-  flyingV:
-  JCConf:
-  Readmoo:
   vTaiwan:
-  萌典:
-    uri: moedict.png
-  一宇數位:
-    uri: learning-digital.png
-  內政部:
-    uri: moi.png
+    class: square
   全國能源會議:
+    class: square
     uri: 2014energy.png
   行政院青創沙龍:
+    class: square
     uri: youthdream.png
-  長照松:
-    uri: careth0n.png
-  前程文化:
-    uri: fcmc.png
   國發會:
+    class: square
     uri: ndc.png
+  內政部:
+    class: square
+    uri: moi.png
+  萌典:
+    class: rectangular
+    uri: moedict.png
+  長照松:
+    class: square
+    uri: careth0n.png
+  JCConf:
+    class: rectangular
+  Readmoo:
+    class: bar
+  flyingV:
+    class: rectangular
+  一宇數位:
+    class: rectangular
+    uri: learning-digital.png
   經濟部:
+    class: rectangular
     uri: moea.png
+  前程文化:
+    class: bar
+    uri: fcmc.png

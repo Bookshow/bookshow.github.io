@@ -498,7 +498,7 @@ body.index {
 		}
 	}
 	#partners {
-		background-image: linear-gradient(to bottom, #FFF, #F2F2F2);
+		background: #F2F2F2;
 		
 		.u-partners {
 			text-align: justify;
@@ -506,7 +506,21 @@ body.index {
 		}
 		.u-partner {
 			display: inline-block;
-			margin: 60px 16px;
+			margin: 40px 16px;
+			
+			img {
+				display: inline-block;
+				
+				&.square {
+					max-width: 80px;
+				}
+				&.rectangular {
+					max-width: 100px;
+				}
+				&.bar {
+					max-width: 240px;
+				}
+			}
 		}
 	}
 	#footer {
