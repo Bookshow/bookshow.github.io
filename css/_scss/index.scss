@@ -48,7 +48,7 @@ body.index {
 			
 			.u-value {
 				margin: 8px -4px;
-				font-size: 48px;
+				font-size: 40px;
 			}
 			.u-subtitle {
 				margin: 8px 0;
@@ -104,20 +104,11 @@ body.index {
 					background-image: url('/img/product.space.icon.svg');
 				}
 			}
-			.u-title {
-			}
 			.u-summary {
 				font-size: 16px;
 			}
 		}
 		@media (max-width: 500px) {
-			.u-taglines {
-				.u-value {
-					font-size: 40px;
-				}
-				.u-subtitle {
-				}
-			}
 			.u-logo-container {
 				text-align: center;
 			}
@@ -131,12 +122,8 @@ body.index {
 			}
 		}
 		@media (max-width: 400px) {
-			.u-taglines {
-				.u-value {
-					font-size: 32px;
-				}
-				.u-subtitle {
-				}
+			.u-taglines > .u-value {
+				font-size: 32px;
 			}
 		}
 	}
