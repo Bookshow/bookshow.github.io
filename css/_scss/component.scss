@@ -205,12 +205,12 @@ ul.unstyled {
 	}
 }
 h1.fancy {
-	$h1-margin: 56px;
-	$h1-margin-xxs: 28px;
+	$h1-margin: 72px;
+	$h1-margin-xxs: 36px;
 	
 	position: relative;
 	margin: $h1-margin 0;
-	line-height: 160px;
+	line-height: 120px;
 	
 	&::before,
 	&::after {
@@ -224,12 +224,12 @@ h1.fancy {
 	&::before {
 		top: 0;
 		left: 0;
-		border-right: 200px solid transparent;
+		border-right: 120px solid transparent;
 	}
 	&::after {
 		bottom: 0;
 		right: 0;
-		border-left: 200px solid transparent;
+		border-left: 120px solid transparent;
 	}
 	@media (max-width: 400px) {
 		margin: $h1-margin-xxs 0;

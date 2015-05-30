@@ -16,14 +16,10 @@ h1, h2, h3 {
 }
 h1 {
 	text-align: center;
-	font-size: 48px; // can keep up to 7 characters
+	font-size: 32px;
 	color: $color-turquoise;
 	margin-top: $section-space;
 	margin-bottom: 0;
-	
-	@media (max-width: 400px) {
-		font-size: 40px; // can keep up to 7 characters
-	}
 }
 h2 {
 	margin-top: $section-space;
