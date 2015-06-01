@@ -155,13 +155,30 @@ body.index {
 			bottom: 0;
 			margin: 0;
 			
-			> * {
-				&, .u-item {
-					height: 100%;
+			> *, 
+			.u-item {
+				height: 100%;
+			}
+			.u-item {
+				position: relative;
+				cursor: pointer;
+				
+				&::before {
+					@extend .full;
+					content: '';
+					display: none;
+					top: auto;
+					height: 10px;
+					background: $color-cyan;
+				}
+				&:hover::before {
+					display: block;
 				}
 			}
 		}
 		.u-content {
+			pointer-events: none;
+			
 			.u-item {
 				position: relative;
 				padding: $spacing;
