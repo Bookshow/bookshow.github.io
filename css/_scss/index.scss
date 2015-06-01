@@ -366,6 +366,29 @@ body.index {
 		.u-cta {
 			margin: 32px 0;
 			margin-bottom: 32px + $background-gradient-size;
+			
+			.u-btn { // TODO: ad-hoc
+				padding: 12px 24px;
+				
+				.u-text,
+				&::after {
+					line-height: 24px;
+					height: 24px;
+					float: left;
+				}
+				.u-text {
+					position: relative;
+					top: 1px;
+				}
+				&::after {
+					content: '';
+					display: block;
+					width: 116px;
+					background: right center no-repeat transparent;
+					background-image: url('/img/title-white.png');
+					background-size: auto 18px;
+				}
+			}
 		}
 		@media #{$media-w-992-minus} {
 			.u-description br {
