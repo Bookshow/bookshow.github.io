@@ -76,6 +76,9 @@ body.index {
 				@media #{$media-w-992-minus} {
 					opacity: 0.25;
 				}
+				@media #{$media-w-1200-plus} {
+					left: -300px;
+				}
 			}
 		}
 		.u-summaries {

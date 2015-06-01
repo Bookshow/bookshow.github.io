@@ -9,16 +9,10 @@ $media-w-mobile-minus: "(max-width: 767px)";
 $media-w-716-minus: "(max-width: 715px)";
 
 $header-height: 55px;
-
 $container-padding: 15px; // must sync with Bootstrap
 
-html, body {
-	height: 100%;
-}
-body {
-	margin: 0 auto;
-}
 #body {
+	position: relative;
 	padding-top: $header-height;
 }
 #header {
@@ -32,6 +26,10 @@ body {
 #footer {
 	position: relative;
 	margin-top: $section-space;
+}
+.page-edge {
+	max-width: 1700px;
+	margin: 0 auto;
 }
 .modal {
 	> .table-like {

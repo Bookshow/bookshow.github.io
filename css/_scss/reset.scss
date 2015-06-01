@@ -3,8 +3,15 @@
 body, h1, h2, h3, h4, h5, h6 {
 	font-family: Arial, Helvetica, FreeSans, "蘋果儷中黑", "微軟正黑體", sans-serif;
 }
-body, 
-#header {
+body {
+	background: center center repeat transparent;
+}
+.page-edge {
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+}
+#header,
+#body,
+#footer {
 	background: #FFF;
 }
 body {
