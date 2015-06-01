@@ -41,6 +41,7 @@
 		}
 	}
 	.menu-link {
+		position: relative;
 		display: block;
 		padding: 0 10px;
 		font-size: 16px;
@@ -59,6 +60,18 @@
 		&.disabled {
 			cursor: default;
 			color: $color-turquoise !important;
+			
+			/*
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 10px;
+				height: 2px;
+				background-color: $color-turquoise;
+			}
+			*/
 		}
 		.caret {
 			margin-left: 4px;
@@ -90,7 +103,7 @@
 			@extend .full;
 			content: '';
 			display: block;
-			top: -12px;
+			top: -10px;
 			bottom: 100%;
 			background-color: #FFF;
 			pointer-events: none;
