@@ -7,11 +7,11 @@ body {
 	background: center center repeat transparent;
 }
 .page-edge {
+	background: center 0 repeat transparent;
+	background-image: url('/img/noise.png');
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 }
-#header,
-#body,
-#footer {
+#header {
 	background: #FFF;
 }
 body {
