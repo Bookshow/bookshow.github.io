@@ -55,6 +55,12 @@
 .#{$md-css-prefix}-chevron-right:before {
 	content: "\f29c";
 }
+.#{$md-css-prefix}-expand-less:before {
+	content: "\f29d";
+}
+.#{$md-css-prefix}-expand-more:before {
+	content: "\f29e";
+}
 .#{$md-css-prefix}-menu:before {
 	content: "\f2a1";
 }

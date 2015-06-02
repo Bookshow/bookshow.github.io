@@ -1,8 +1,10 @@
 /* jshint ignore:start */
+{% include js/data-model.js %}
 {% include js/browser.js %}
 {% include js/scrolling.js %}
-{% comment %}{% include js/window-size.js %}{% endcomment %}
+{% include js/window-size.js %}
 {% include js/gallery.js %}
 {% include js/contact-us.js %}
 {% include js/tab-ext.js %}
+{% include js/index.js %}
 /* jshint ignore:end */
