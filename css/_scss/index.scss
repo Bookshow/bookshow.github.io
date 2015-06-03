@@ -11,6 +11,12 @@ body.index {
 			max-height: 540px;
 			margin: 0 auto;
 			overflow: hidden;
+			
+			&::before {
+				@extend .ratio-16x9;
+				content: '';
+				display: block;
+			}
 		}
 		&::after {
 			@extend .full;
