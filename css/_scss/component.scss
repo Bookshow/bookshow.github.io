@@ -241,6 +241,7 @@ h1.fancy {
 		}
 	}
 }
+/*
 @mixin side-curtains($color, $size) {
 	position: relative;
 	
@@ -263,6 +264,7 @@ h1.fancy {
 		background: linear-gradient(to right, rgba($color, 0), $color);
 	}
 }
+*/
 section.cta { // TODO: refactor
 	padding: 56px 0; // TODO: may sync with heading section padding?
 	
