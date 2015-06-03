@@ -1,14 +1,14 @@
 <section class="cta {% if include.type %}{{ include.type }}{% else %}two-button{% endif %} {% if include.color %}{{ include.color }}{% else %}light{% endif %}">
 	<div class="container">
 		{% if include.type == 'one-button' %}
-		<a class="btn btn-primary" data-function="contact-us">聯絡我們</a>
+		<a class="btn btn-primary" data-toggle="contact-us">聯絡我們</a>
 		{% else %}
 		<div class="row">
 			<div class="col-xs-6 u-left">
 				<a href="/pricing" class="btn btn-secondary">價格試算</a>
 			</div>
 			<div class="col-xs-6 u-right">
-				<a class="btn btn-primary" data-function="contact-us">聯絡我們</a>
+				<a class="btn btn-primary" data-toggle="contact-us">聯絡我們</a>
 			</div>
 		</div>
 		{% endif %}

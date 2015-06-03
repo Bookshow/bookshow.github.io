@@ -86,7 +86,7 @@ $(function () {
 		modal.show();
 	};
 	
-	$(window.document).on('click', '[data-function="contact-us"]', function (e) {
+	$(window.document).on('click', '[data-toggle="contact-us"]', function (e) {
 		modal.show();
 		e.preventDefault();
 	});

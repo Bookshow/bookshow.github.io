@@ -16,23 +16,30 @@
 .intangible {
 	pointer-events: none;
 }
+.align-center {
+	text-align: center;
+}
+.align-left {
+	text-align: left;
+}
+.align-right {
+	text-align: right;
+}
+.no-margin-top {
+	margin-top: 0;
+}
+.sm-margin-top {
+	margin-top: $sm-space;
+}
+.lg-margin-top {
+	margin-top: $lg-space;
+}
 .table-like {
 	display: table;
 	
 	> * {
 		display: table-cell;
 	}
-}
-ul.unstyled {
-	list-style: none;
-	padding: 0;
-}
-// TODO: rename
-.center-aligned {
-	text-align: center;
-}
-.left-aligned {
-	text-align: left;
 }
 .object-fit {
 	position: relative;
@@ -61,15 +68,22 @@ ul.unstyled {
 
 
 
-.subtitle-text {
-	color: #FFF;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+[data-toggle="gallery"] {
+	cursor: pointer;
 }
-.sm-margin-top {
+.image {
+	display: block;
+	max-width: 100%;
+	margin: 0px auto;
 	margin-top: $sm-space;
 }
-.lg-margin-top {
-	margin-top: $lg-space;
+ul.unstyled {
+	list-style: none;
+	padding: 0;
+}
+.subtitle-text { // TODO: refactor
+	color: #FFF;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
 // TODO: refactor .u-left, .u-right
 .tab-pane {
@@ -241,6 +255,11 @@ h1.fancy {
 		}
 	}
 }
+.subtitle {
+	margin: 8px 0;
+	text-align: center;
+	color: $color-turquoise;
+}
 /*
 @mixin side-curtains($color, $size) {
 	position: relative;
@@ -265,43 +284,6 @@ h1.fancy {
 	}
 }
 */
-section.cta { // TODO: refactor
-	padding: 56px 0; // TODO: may sync with heading section padding?
-	
-	.u-left {
-		text-align: right;
-	}
-	.u-right {
-		text-align: left;
-	}
-	.btn {
-		margin-left: 16px;
-		margin-right: 16px;
-		padding: 8px 48px;
-	}
-	@media (max-width: 500px) {
-		padding: 28px 0;
-		
-		.u-left {
-			padding-left: 28px;
-		}
-		.u-right {
-			padding-right: 28px;
-		}
-		.btn {
-			margin: 0;
-			padding: 8px 0;
-			width: 100%;
-		}
-	}
-	
-	&.two-button {
-		
-	}
-	&.one-button {
-		text-align: center;
-	}
-}
 .ratio-16x9 {
 	position: relative;
 	padding-bottom: 56.25%;
@@ -392,4 +374,61 @@ section.cta { // TODO: refactor
 }
 */
 
+#entrance {
+	.u-container {
+		@extend .object-fit;
+		min-height: 180px; // 320 * 9/16
+		max-height: 540px;
+		margin: 0 auto;
+		overflow: hidden;
+		background: center center no-repeat transparent;
+		background-size: cover;
+		
+		&::before {
+			@extend .ratio-16x9;
+			content: '';
+			display: block;
+		}
+		video {
+			@extend .intangible;
+		}
+	}
+}
+section.cta { // TODO: refactor
+	padding: 56px 0; // TODO: may sync with heading section padding?
+	
+	.u-left {
+		text-align: right;
+	}
+	.u-right {
+		text-align: left;
+	}
+	.btn {
+		margin-left: 16px;
+		margin-right: 16px;
+		padding: 8px 48px;
+	}
+	@media (max-width: 500px) {
+		padding: 28px 0;
+		
+		.u-left {
+			padding-left: 28px;
+		}
+		.u-right {
+			padding-right: 28px;
+		}
+		.btn {
+			margin: 0;
+			padding: 8px 0;
+			width: 100%;
+		}
+	}
+	
+	&.two-button {
+		
+	}
+	&.one-button {
+		text-align: center;
+	}
+}
 

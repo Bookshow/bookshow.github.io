@@ -54,7 +54,7 @@ $(function () {
 	var display = new PhotoDisplay('#gallery-display-modal');
 	
 	// intercept thumbnail image click
-	$(window.document).on('click', '[data-function="gallery"]', function (e) {
+	$(window.document).on('click', '[data-toggle="gallery"]', function (e) {
 		display.show(e.currentTarget);
 		e.preventDefault();
 	});
