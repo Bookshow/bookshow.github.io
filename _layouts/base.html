@@ -27,6 +27,16 @@
 	{{ content }}
 	{% include ga.html %}
 	{% include gallery-display-modal.html %}
-	{% include contact-us-modal.html %}
+	<div id="contact-us-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="table-like">
+			<div>
+				<div class="modal-dialog">
+					<div class="modal-content flipper">
+						{% include contact-us-form.html %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

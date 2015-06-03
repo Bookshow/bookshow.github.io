@@ -18,16 +18,15 @@ function ContactUsModal(modal) {
 	var self = this,
 		$elem = this.$elem = $(modal);
 	
+	this.$flipper = $elem.find('.flipper');
+	
 	$elem
-	.on('click', 'u-submit', function (e) {
+	.on('click', '.u-submit', function (e) {
 		post(self);
 		e.preventDefault();
-		// TODO: effect
-		setTimeout(function () {
-			self.hide();
-		}, 500);
+		flip(self, true);
 	})
-	.on('click', '.u-cancel', function (e) {
+	.on('click', '.u-close', function (e) {
 		e.stopPropagation();
 		self.hide();
 	})
@@ -66,12 +65,17 @@ function post(modal) {
 	$.post(POST_URL, data);
 }
 
+function flip(modal, value) {
+	modal.$flipper[value ? 'addClass' : 'removeClass']('flipped');
+}
+
 ContactUsModal.prototype.show = function () {
 	this.$elem.modal('show');
 };
 
 ContactUsModal.prototype.hide = function () {
 	this.$elem.modal('hide');
+	flip(this, false);
 };
 
 $(function () {

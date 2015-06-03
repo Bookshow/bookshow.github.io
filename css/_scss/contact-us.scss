@@ -1,3 +1,6 @@
+.modal-dialog {
+	perspective: 2000px;
+}
 #contact-us-form {
 	padding: 0;
 	
@@ -9,7 +12,7 @@
 		padding: 20px 0 14px;
 		border-bottom: 1px solid #CCC;
 		
-		.u-cancel {
+		.u-close {
 			position: absolute;
 			top: 16px;
 			right: 16px;
@@ -71,4 +74,6 @@
 			width: 100%;
 		}
 	}
+}
+#contact-us-response {
 }

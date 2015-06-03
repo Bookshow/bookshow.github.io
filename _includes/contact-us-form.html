@@ -1,46 +1,54 @@
-<div class="u-header">
-	<h1>聯絡我們</h1>
-	<a class="u-cancel">
-		<i class="md md-clear"></i>
-	</a>
+<div id="contact-us-form" class="modal-body u-front">
+	<div class="u-header">
+		<h1>聯絡我們</h1>
+		<a class="u-close">
+			<i class="md md-clear"></i>
+		</a>
+	</div>
+	<div class="u-body">
+		<div class="u-field form-group">
+			<label class="u-title">您對哪些服務有興趣*</label>
+			<ul class="unstyled clearfix u-options">
+				{% for p in site.data.labels.products %}
+					{% assign i = forloop.index0 %}
+					{% assign cnt = p[1] %}
+				<li class="u-option">
+					<input id="p-{{ i }}" name="products" type="checkbox" value="{{ cnt.abbreviation }}">
+					<label for="p-{{ i }}" class="btn btn-default">{{ cnt.title }}</label>
+					<i class="u-check md md-check turquoise-text"></i>
+				</li>
+				{% endfor %}
+				<li class="u-option">
+					<input id="p-x" name="products" type="checkbox" value="其他">
+					<label for="p-x" class="btn btn-default">其他</label>
+					<i class="u-check md md-check turquoise-text"></i>
+				</li>
+			</ul>
+		</div>
+		<div class="u-field form-group">
+			<label class="u-title">單位/姓名*</label>
+			<input class="form-control" name="title" type="text">
+		</div>
+		<div class="u-field form-group">
+			<label class="u-title">信箱</label>
+			<input class="form-control" name="email" type="email">
+		</div>
+		<div class="u-field form-group">
+			<label class="u-title">電話</label>
+			<input class="form-control" name="phone" type="text">
+		</div>
+		<div class="u-field form-group">
+			<label class="u-title">想問的問題</label>
+			<textarea class="form-control" name"question" type="textarea" rows="5"></textarea>
+		</div>
+		<div>
+			<button class="btn btn-primary u-submit">送出</button>
+		</div>
+	</div>
 </div>
-<div class="u-body">
-	<div class="u-field form-group">
-		<label class="u-title">您對哪些服務有興趣*</label>
-		<ul class="unstyled clearfix u-options">
-			{% for p in site.data.labels.products %}
-				{% assign i = forloop.index0 %}
-				{% assign cnt = p[1] %}
-			<li class="u-option">
-				<input id="p-{{ i }}" name="products" type="checkbox" value="{{ cnt.abbreviation }}">
-				<label for="p-{{ i }}" class="btn btn-default">{{ cnt.title }}</label>
-				<i class="u-check md md-check turquoise-text"></i>
-			</li>
-			{% endfor %}
-			<li class="u-option">
-				<input id="p-x" name="products" type="checkbox" value="其他">
-				<label for="p-x" class="btn btn-default">其他</label>
-				<i class="u-check md md-check turquoise-text"></i>
-			</li>
-		</ul>
-	</div>
-	<div class="u-field form-group">
-		<label class="u-title">單位/姓名*</label>
-		<input class="form-control" name="title" type="text">
-	</div>
-	<div class="u-field form-group">
-		<label class="u-title">信箱</label>
-		<input class="form-control" name="email" type="email">
-	</div>
-	<div class="u-field form-group">
-		<label class="u-title">電話</label>
-		<input class="form-control" name="phone" type="text">
-	</div>
-	<div class="u-field form-group">
-		<label class="u-title">想問的問題</label>
-		<textarea class="form-control" name"question" type="textarea" rows="5"></textarea>
-	</div>
+<div id="contact-us-response" class="modal-body u-back full">
+	Thank you!
 	<div>
-		<button class="btn btn-primary u-submit">送出</button>
+		<button class="btn btn-default u-close">確定</button>
 	</div>
 </div>
