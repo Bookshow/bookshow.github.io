@@ -11,16 +11,9 @@ body.pricing {
 	hr {
 		border-color: #AAA;
 	}
-	.u-left,
-	.u-right {
+	.twin-columns > * {
 		padding-left: 48px;
 		padding-right: 48px;
-	}
-	.u-left {
-		text-align: right;
-	}
-	.u-right {
-		text-align: left;
 	}
 	.u-block {
 		display: inline-block;
@@ -164,8 +157,7 @@ body.pricing {
 		}	
 	}
 	@media #{$media-w-716-minus} {
-		.u-left,
-		.u-right {
+		.twin-columns > * {
 			width: 100%;
 			text-align: center;
 		}
