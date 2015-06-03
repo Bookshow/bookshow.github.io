@@ -25,14 +25,17 @@ _scheme = {
 		multiplier: -0.05
 	}, 
 	'標付': {
-		exclusives: ['預付', '後付']
+		exclusives: ['預付', '後付'],
+		defaultsTo: '標付'
 	}, 
 	'預付': {
 		exclusives: ['標付', '後付'],
+		defaultsTo: '標付',
 		multiplier: -0.05
 	}, 
 	'後付': {
 		exclusives: ['標付', '預付'],
+		defaultsTo: '標付',
 		multiplier: 0.1
 	}, 
 	'檢勘': {
@@ -115,20 +118,33 @@ PricingModel.prototype.toggle = function (key) {
 	this.setSwitch(key, !this.switches[key]);
 };
 
-PricingModel.prototype.setSwitch = function (key, value) {
+PricingModel.prototype.setSwitch = function (key, value, escapeSideEffect) {
 	if (keys.indexOf(key) < 0 || value == this.switches[key])
 		return;
+	var scheme = PricingModel.scheme[key],
+		defaultsTo = scheme.defaultsTo;
+	if (!escapeSideEffect && !value && defaultsTo == key)
+		return;
+	
 	this.switches[key] = value;
 	this.trigger('switch', { key: key, value: value });
 	
-	if (!value)
+	if (escapeSideEffect)
 		return;
-	var exclusives = PricingModel.scheme[key].exclusives,
-		self = this;
-	if (exclusives) {
-		exclusives.forEach(function (d) {
-			self.setSwitch(d, false);
-		});
+	
+	// side effects
+	if (value) {
+		var exclusives = scheme.exclusives,
+			self = this;
+		if (exclusives) {
+			exclusives.forEach(function (d) {
+				self.setSwitch(d, false, true);
+			});
+		}
+	} else {
+		if (defaultsTo) {
+			this.setSwitch(defaultsTo, true, true);
+		}
 	}
 	//this.recalculate();
 };
