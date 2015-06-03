@@ -65,11 +65,11 @@ ul.unstyled {
 	color: #FFF;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
-.push-par {
-	margin-top: $paragraph-space;
+.sm-margin-top {
+	margin-top: $sm-space;
 }
-.push-sec {
-	margin-top: $section-space;
+.lg-margin-top {
+	margin-top: $lg-space;
 }
 // TODO: refactor .u-left, .u-right
 .tab-pane {

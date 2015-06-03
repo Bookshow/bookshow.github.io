@@ -5,18 +5,18 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 body {
 	background: center center repeat transparent;
-}
-.page-edge {
-	background: center 0 repeat transparent;
-	background-image: url('/img/noise.png');
-	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-}
-#header {
-	background: #FFF;
-}
-body {
 	font-size: 20px;
 	letter-spacing: 1px;
+}
+.page-edge {
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+	background-color: #4A4A4A; // for footer extension
+}
+#body {
+	background: center 0 repeat transparent;
+	background-image: url('/img/noise.png');
+}
+body {
 }
 h1, h2, h3 {
 	font-weight: bold;
@@ -25,11 +25,11 @@ h1 {
 	text-align: center;
 	font-size: 32px;
 	color: $color-turquoise;
-	margin-top: $section-space;
+	margin-top: $lg-space;
 	margin-bottom: 0;
 }
 h2 {
-	margin-top: $section-space;
+	margin-top: $lg-space;
 	margin-bottom: 0;
 }
 h3 {
@@ -37,7 +37,7 @@ h3 {
 	margin-bottom: 0;
 }
 p {
-	margin: $paragraph-space 0 0;
+	margin: $sm-space 0 0;
 }
 a {
 	color: $color-link;

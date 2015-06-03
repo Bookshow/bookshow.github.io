@@ -5,6 +5,9 @@
 
 body.pricing {
 	
+	#body {
+		padding-bottom: $lg-space;
+	}
 	hr {
 		border-color: #AAA;
 	}
@@ -31,7 +34,7 @@ body.pricing {
 			width: 100%;
 		}
 		&.continued {
-			padding-top: 48px;
+			padding-top: 48px; // TODO: use margin
 		}
 		&.u-submit-container {
 			padding-top: 45px; // TODO: ad-hoc

@@ -1,10 +1,7 @@
 body.index {
 	
-	.page-edge {
-		background: #FFF;
-	}
-	section {
-		margin: 0;
+	#body {
+		background: #FFF; // overriding noise background
 	}
 	#entrance {
 		background: #070F14;
@@ -603,9 +600,6 @@ body.index {
 				}
 			}
 		}
-	}
-	#footer {
-		margin-top: 0;
 	}
 }
 

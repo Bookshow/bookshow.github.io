@@ -11,6 +11,10 @@ $media-w-716-minus: "(max-width: 715px)";
 $header-height: 55px;
 $container-padding: 15px; // must sync with Bootstrap
 
+html, 
+body {
+	height: 100%; // for .page-edge min-height: 100%
+}
 #body {
 	position: relative;
 	padding-top: $header-height;
@@ -25,10 +29,10 @@ $container-padding: 15px; // must sync with Bootstrap
 }
 #footer {
 	position: relative;
-	margin-top: $section-space;
 }
 .page-edge {
 	max-width: 1700px;
+	min-height: 100%;
 	margin: 0 auto;
 }
 .modal {
