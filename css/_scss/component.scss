@@ -292,6 +292,13 @@ section.cta { // TODO: refactor
 			width: 100%;
 		}
 	}
+	
+	&.two-button {
+		
+	}
+	&.one-button {
+		text-align: center;
+	}
 }
 .ratio-16x9 {
 	position: relative;
