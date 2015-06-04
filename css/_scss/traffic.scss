@@ -33,18 +33,12 @@ body.traffic {
 			 > li {
 			 	padding: 0;
 			 }
-		 	.u-image {
-		 		width: 100%;
-		 		height: auto;
-		 		cursor: pointer;
-		 	}
-		 	.u-caption {
-		 		position: absolute;
-		 		left: 0;
-		 		right: 0;
-		 		bottom: 0;
-		 		text-align: center;
+		 	.caption {
+		 		@extend .full;
+		 		top: auto;
 		 		font-size: 24px;
+				color: #FFF;
+				text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 		 	}
 		}
 	}

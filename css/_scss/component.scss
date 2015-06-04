@@ -85,6 +85,9 @@
 	margin: 0px auto;
 	margin-top: $sm-space;
 }
+.caption {
+	text-align: center;
+}
 ul.unstyled {
 	list-style: none;
 	padding: 0;
@@ -93,7 +96,6 @@ ul.unstyled {
 	color: #FFF;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 }
-// TODO: refactor .u-left, .u-right
 .tab-pane {
 	.navigator {
 		cursor: pointer;

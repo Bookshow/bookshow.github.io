@@ -30,6 +30,8 @@ PhotoDisplay.prototype = {
 		if (this.$elem.is(':visible'))
 			return;
 		this.image.src = getOriginalURL(elem);
+		// TODO: caption
+		// TODO: group
 		this.$elem.modal('show');
 	},
 	hide: function () {
@@ -59,6 +61,29 @@ $(function () {
 		e.preventDefault();
 	});
 	
+});
+
+})(this);
+
+
+
+// caption //
+(function (window) {
+
+'use strict';
+var $ = window.jQuery;
+
+$.fn.extend({
+	caption: function (text) {
+		return this.each(function () {
+			$(this).after('<div class="caption">' + 
+				(text || $(this).data('caption')) + '</div>');
+		});
+	}
+});
+
+$(function () {
+	$('[data-caption]').caption();
 });
 
 })(this);
