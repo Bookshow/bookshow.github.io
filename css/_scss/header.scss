@@ -126,6 +126,7 @@
 	}
 	.navbar-right {
 		padding-top: ($header-height - $contact-us-btn-height - 1px) / 2;
+		margin-right: 0;
 		
 		.contact-us-btn {
 			font-size: 16px;
