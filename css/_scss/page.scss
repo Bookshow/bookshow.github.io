@@ -1,0 +1,32 @@
+body.index,
+body.type-product,
+body.type-blog {
+	h1 {
+		@extend h1.fancy;
+	}
+}
+body.type-product,
+body.type-blog {
+	#body .container {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+body.type-product {
+	
+}
+body.demo {
+	#entrance > .u-container {
+		background-image: url('/img/cat/apollo.jpg');
+	}
+}
+body.type-blog {
+	
+	//section,
+	h2 {
+		margin-top: 64px;
+	}
+	h3 {
+		margin-top: 32px;
+	}
+}
