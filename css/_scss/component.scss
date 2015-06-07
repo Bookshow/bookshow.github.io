@@ -151,7 +151,7 @@ ul.unstyled {
 	&:active:not(.disabled) {
 		margin-top: 1px !important;
 		margin-bottom: -1px !important;
-		box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 	}
 }
 .btn-secondary,
