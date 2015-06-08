@@ -143,6 +143,11 @@ ul.unstyled {
 .btn {
 	font-size: 18px;
 	outline: none !important;
+	
+	&.btn-small {
+		font-size: 15px;
+		padding: 5px 10px;
+	}
 }
 .btn-default {
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);

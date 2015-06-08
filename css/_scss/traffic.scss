@@ -4,7 +4,6 @@ body.traffic {
 		padding-bottom: $lg-space;
 	}
 	a.u-external-info {
-		font-size: 16px;
 		margin-left: 16px;
 	}
 	#address,
@@ -13,7 +12,7 @@ body.traffic {
 	}
 	#address {
 		.u-description {
-			line-height: 38px;
+			line-height: 34px; // TODO: ad-hoc, need better way
 		}
 	}
 	#map {
@@ -36,7 +35,7 @@ body.traffic {
 		 	.caption {
 		 		@extend .full;
 		 		top: auto;
-		 		font-size: 24px;
+		 		font-size: 20px; // TODO: check
 				color: #FFF;
 				text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 		 	}
@@ -62,7 +61,7 @@ body.traffic {
 				font-size: 96px;
 			}
 			.u-title {
-				font-size: 28px;
+				line-height: 34px; // TODO: ad-hoc, need better way
 				font-weight: bold;
 			}
 			.u-details {

@@ -30,10 +30,11 @@ body.index {
 			
 			.u-value {
 				margin: 8px -4px;
-				font-size: 40px;
+				font-size: 46px;
 			}
 			.u-subtitle {
 				margin: 8px 0;
+				font-size: 24px;
 			}
 		}
 		.u-logo-container {
@@ -89,11 +90,14 @@ body.index {
 					background-image: url('/img/product.space.icon.svg');
 				}
 			}
+			.u-title {
+				font-size: 24px;
+			}
 			.u-summary {
-				font-size: 16px;
+				font-size: 20px;
 			}
 		}
-		@media (max-width: 500px) {
+		@media (max-width: 600px) {
 			.u-logo-container {
 				text-align: center;
 			}
@@ -106,9 +110,24 @@ body.index {
 				}
 			}
 		}
+		@media (max-width: 500px) {
+			.u-taglines {
+				.u-value {
+					font-size: 40px;
+				}
+				.u-subtitle {
+					font-size: 22px;
+				}
+			}
+		}
 		@media (max-width: 400px) {
-			.u-taglines > .u-value {
-				font-size: 32px;
+			.u-taglines {
+				.u-value {
+					font-size: 32px;
+				}
+				.u-subtitle {
+					font-size: 20px;
+				}
 			}
 		}
 	}
@@ -389,7 +408,6 @@ body.index {
 				border: none;
 				border-radius: 0;
 				color: $color-gray;
-				font-size: 20px;
 				
 				&::before {
 					@extend .full;
@@ -450,8 +468,8 @@ body.index {
 			}
 			.u-title {
 				display: inline-block;
-				font-size: 52px;
-				border-bottom: 4px solid #FFF;
+				font-size: 30px;
+				border-bottom: 3px solid #FFF;
 			}
 			.u-description {
 				padding-left: 32px;
@@ -504,11 +522,6 @@ body.index {
 				.navigator {
 					display: none;
 				}
-			}
-		}
-		@media (max-width: 400px) {
-			.tab-pane .u-title {
-				font-size: 36px;
 			}
 		}
 	}

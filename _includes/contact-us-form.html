@@ -14,13 +14,13 @@
 					{% assign cnt = p[1] %}
 				<li class="u-option">
 					<input id="p-{{ i }}" name="products" type="checkbox" value="{{ cnt.abbreviation }}">
-					<label for="p-{{ i }}" class="btn btn-default">{{ cnt.title }}</label>
+					<label for="p-{{ i }}" class="btn btn-default btn-small">{{ cnt.title }}</label>
 					<i class="u-check md md-check turquoise-text"></i>
 				</li>
 				{% endfor %}
 				<li class="u-option">
 					<input id="p-x" name="products" type="checkbox" value="其他">
-					<label for="p-x" class="btn btn-default">其他</label>
+					<label for="p-x" class="btn btn-default btn-small">其他</label>
 					<i class="u-check md md-check turquoise-text"></i>
 				</li>
 			</ul>

@@ -134,28 +134,6 @@
 			padding: 0 18px;
 		}
 	}
-	/*
-	#social-icons {
-		text-align: center;
-		
-		@media #{$media-w-mobile-minus} {
-			text-align: left;
-		}
-		> .menu-link {
-			display: inline-block;
-			font-size: 28px;
-		}
-		a.facebook {
-			color: #3A589B;
-		}
-		a.google-plus {
-			color: #D6492F;
-		}
-		a.youtube {
-			color: #CF3427;
-		}
-	}
-	*/
 	@media #{$media-w-mobile-plus} {
 		.nav > li {
 			> .menu-link,
