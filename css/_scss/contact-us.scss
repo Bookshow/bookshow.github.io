@@ -52,8 +52,9 @@
 				display: none;
 			}
 			.u-check {
-				padding: 4px 0;
+				padding: 2px 0;
 				font-size: 20px;
+				color: $color-turquoise;
 			}
 			input:checked {
 				& + label {
