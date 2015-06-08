@@ -1,4 +1,4 @@
-{% if page.id == include.id %}
+{% if page.class contains include.id %}
 <span class="menu-link disabled {{ include.id }}">{{ include.title }}</span>
 {% else %}
 <a{% if include.url %} href="{{ include.url }}"{% endif %} class="menu-link {{ include.id }}">{{ include.title }}</a>

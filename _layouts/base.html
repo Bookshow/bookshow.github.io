@@ -23,7 +23,7 @@
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/js/{% if page.js %}{{ page.js }}{% else %}standard.js{% endif %}" type="text/javascript"></script>
 </head>
-<body class="{{ page.id }}{% if page.type %} type-{{ page.type }}{% endif %}">
+<body class="{{ page.class | join: ' ' }}">
 	{{ content }}
 	{% include ga.html %}
 	{% include gallery-display-modal.html %}
