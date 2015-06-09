@@ -4,8 +4,9 @@
 #contact-us-form {
 	padding: 0;
 	
-	h1 {
+	h2 {
 		margin: 0;
+		color: $color-turquoise;
 	}
 	.u-header {
 		position: relative;
@@ -19,6 +20,10 @@
 			font-size: 24px;
 			color: $color-gray;
 			cursor: pointer;
+			
+			.md {
+				font-weight: bold;
+			}
 		}
 	}
 	.u-body {
@@ -31,9 +36,6 @@
 			padding: 12px;
 		}
 		
-		.u-title {
-			font-size: 18px;
-		}
 		.u-field {
 			width: 100%;
 			max-width: 420px;
@@ -45,7 +47,7 @@
 		.u-option {
 			width: 128px;
 			float: left;
-			margin: 6px;
+			margin: 5px 6px;
 			
 			.u-check,
 			input[type=checkbox] {

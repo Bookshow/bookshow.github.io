@@ -1,13 +1,13 @@
 <div id="contact-us-form" class="modal-body u-front">
 	<div class="u-header">
-		<h1>聯絡我們</h1>
+		<h2>聯絡我們</h2>
 		<a class="u-close">
 			<i class="md md-clear"></i>
 		</a>
 	</div>
 	<div class="u-body">
 		<div class="u-field form-group">
-			<label class="u-title">您對哪些服務有興趣*</label>
+			<label class="u-title note">您對哪些服務有興趣*</label>
 			<ul class="unstyled clearfix u-options">
 				{% for p in site.data.labels.products %}
 					{% assign i = forloop.index0 %}
@@ -26,19 +26,19 @@
 			</ul>
 		</div>
 		<div class="u-field form-group">
-			<label class="u-title">單位/姓名*</label>
+			<label class="u-title note">單位/姓名*</label>
 			<input class="form-control" name="title" type="text">
 		</div>
 		<div class="u-field form-group">
-			<label class="u-title">信箱</label>
+			<label class="u-title note">信箱</label>
 			<input class="form-control" name="email" type="email">
 		</div>
 		<div class="u-field form-group">
-			<label class="u-title">電話</label>
+			<label class="u-title note">電話</label>
 			<input class="form-control" name="phone" type="text">
 		</div>
 		<div class="u-field form-group">
-			<label class="u-title">想問的問題</label>
+			<label class="u-title note">想問的問題</label>
 			<textarea class="form-control" name"question" type="textarea" rows="5"></textarea>
 		</div>
 		<div>
