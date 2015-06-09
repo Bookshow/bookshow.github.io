@@ -12,9 +12,12 @@ body {
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 	background-color: #4A4A4A; // for footer extension
 }
-#body {
+.noise-background {
 	background: center 0 repeat transparent;
 	background-image: url('/img/noise.png');
+}
+#body {
+	@extend .noise-background;
 }
 body {
 }
