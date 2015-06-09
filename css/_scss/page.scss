@@ -5,6 +5,12 @@ body.article {
 	}
 }
 body.article {
+	section.heading + section {
+		margin-top: $sm-space;
+	}
+	#entrance {
+		margin-top: 0;
+	}
 	section {
 		margin-top: 96px;
 		
@@ -20,6 +26,7 @@ body.article {
 			img,
 			video {
 				max-width: 640px;
+				width: 100%;
 			}
 		}
 		&.wide {
@@ -50,11 +57,13 @@ body.article {
 			}
 		}
 	}
-	section.heading + section {
-		margin-top: $sm-space;
-	}
-	#entrance {
-		margin-top: 0;
+	@media #{$media-w-992-minus} {
+		section > .container.two-column {
+			> * {
+				float: none !important;
+				width: auto !important;
+			}
+		}
 	}
 }
 
