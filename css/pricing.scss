@@ -42,7 +42,7 @@ body.pricing #body {
 		display: block;
 		margin-left: -24px;
 		margin-top: 32px;
-		font-size: 24px;
+		font-weight: normal;
 		color: $color-gray;
 	}
 	.u-check {
@@ -62,7 +62,7 @@ body.pricing #body {
 		display: inline-block;
 		width: 90px;
 		line-height: 40px;
-		font-size: 16px;
+		font-size: 15px;
 		text-align: right;
 		color: $color-gray;
 		
