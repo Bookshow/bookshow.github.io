@@ -322,11 +322,14 @@ h1.dark {
 	}
 }
 */
-.ratio-16x9 {
+.ratio-16x9-base {
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
 	overflow: hidden;
+}
+.ratio-16x9 {
+	@extend .ratio-16x9-base;
 	
 	> * {
 		position: absolute;
@@ -388,7 +391,7 @@ h1.dark {
 		background-size: cover;
 		
 		&::before {
-			@extend .ratio-16x9;
+			@extend .ratio-16x9-base;
 			content: '';
 			display: block;
 		}

@@ -15,9 +15,16 @@ body.article {
 		margin-top: 96px;
 		
 		img,
-		video {
+		video,
+		.video {
 			display: block;
 			margin: $sm-space auto 0;
+		}
+		video {
+			width: 100%;
+		}
+		.video {
+			@extend .ratio-16x9;
 		}
 		&.narrow {
 			> .container {

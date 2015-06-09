@@ -298,7 +298,7 @@ body.index {
 				background-size: cover;
 				
 				&::before {
-					@extend .ratio-16x9;
+					@extend .ratio-16x9-base;
 					content: '';
 					display: block;
 				}
