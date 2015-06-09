@@ -23,20 +23,6 @@ body.index {
 		background: linear-gradient(to bottom, rgb(15, 30, 40), #2E7485);
 		z-index: 0; // for the large logo
 		
-		.u-taglines {
-			padding-top: 24px;
-			padding-bottom: 24px;
-			text-align: center;
-			
-			.u-value {
-				margin: 8px -4px;
-				font-size: 46px;
-			}
-			.u-subtitle {
-				margin: 8px 0;
-				font-size: 24px;
-			}
-		}
 		.u-logo-container {
 			position: relative;
 			

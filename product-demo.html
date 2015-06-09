@@ -11,51 +11,51 @@ class: [demo, article]
 			<source src="/img/soapbox.mp4" type="video/mp4">
 		</video>
 		-->
+		<div class="taglines">
+			<div class="u-title">這裡是主標題</div>
+			<div class="u-subtitle">這裡是副標題，通常比較長</div>
+		</div>
 	</div>
 </section>
 
-<!--
-<section>
-	<h1>這是主標題</h1>
-	<div class="subtitle">這裡是副標題，通常比較長</div>
+<section class="narrow">
+	<div class="container">
+		<p>
+			單欄的窄段落，max-width: 735px (不計 padding)。
+		</p>
+		<img src="/img/cat/midnight.16x9.jpg">
+		<p>
+			文字、影片、圖片都可以放，但影片和圖片 max-width: 640px。
+		</p>
+	</div>
 </section>
--->
 
-<section>
+<section class="heading">
 	<h1>普通的第一級標題</h1>
 </section>
 
-<section>
+<section class="wide">
 	<div class="container">
 		<p>
-			普通的段落。
+			單欄的寬段落，max-width: 906px (不計 padding)。一樣文字、影片、圖片都可以放，不限制。
 		</p>
+		<img class="image" data-toggle="gallery" data-caption="這裡是圖下方的小字" src="/img/cat/apollo.16x9.jpg" data-uri="/img/cat/apollo.16x9.jpg" />
 	</div>
 </section>
 
-<section>
+<section class="heading">
 	<h1 class="dark">反白的第一級標題</h1>
 </section>
 
-<section>
+<section class="narrow">
 	<div class="container">
 		<p>
 			普通的段落。
 		</p>
-	</div>
-</section>
-
-<section>
-	<div class="container">
 		<h2>普通的第二級標題</h2>
 		<p>
 			普通的段落。
 		</p>
-	</div>
-</section>
-
-<section>
-	<div class="container">
 		<h3>普通的第三級標題</h3>
 		<p>
 			普通的段落。
@@ -92,24 +92,45 @@ class: [demo, article]
 
 {% include cta.html color="dark" %}
 
-<section>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-6">
-				<img class="image" data-toggle="gallery" src="/img/cat/midnight.s.jpg" data-uri="/img/cat/midnight.jpg" />
-			</div>
-			<div class="col-xs-6">
-				<p>
-					左文右圖。右文左圖就自己反過來。
-				</p>
-			</div>
+<section class="wide">
+	<div class="container two-column">
+		<div class="narrow">
+			<p>
+				左窄右寬。也不限制左右邊放什麼，反正窄的 360px，寬的 560px。
+			</p>
+		</div>
+		<div class="wide">
+			<img class="image" src="/img/cat/midnight.16x9.jpg" />
 		</div>
 	</div>
 </section>
 
-<section>
+<section class="wide">
+	<div class="container two-column">
+		<div class="wide">
+			<img class="image" src="/img/cat/apollo.16x9.jpg" />
+		</div>
+		<div class="narrow">
+			<p>
+				概念同上。
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="wide">
+	<div class="container two-column">
+		<div class="medium">
+			<img class="image" src="/img/cat/midnight.16x9.jpg" />
+		</div>
+		<div class="medium">
+			<img class="image" src="/img/cat/apollo.16x9.jpg" />
+		</div>
+	</div>
 	<div class="container">
-		<img class="image" data-toggle="gallery" data-caption="這裡是圖下方的小字" src="/img/cat/apollo.s.jpg" data-uri="/img/cat/apollo.jpg" />
+		<p>
+			左右同寬，都是 465px。一個 section 裡可以放多個 container。
+		</p>
 	</div>
 </section>
 

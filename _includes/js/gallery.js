@@ -76,7 +76,7 @@ var $ = window.jQuery;
 $.fn.extend({
 	caption: function (text) {
 		return this.each(function () {
-			$(this).after('<div class="caption">' + 
+			$(this).after('<div class="caption note">' + 
 				(text || $(this).data('caption')) + '</div>');
 		});
 	}

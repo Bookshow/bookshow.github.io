@@ -363,6 +363,20 @@ h1.dark {
 
 
 
+.taglines {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	text-align: center;
+	
+	.u-title {
+		margin: 8px -4px;
+		font-size: 46px;
+	}
+	.u-subtitle {
+		margin: 8px 0;
+		font-size: 24px;
+	}
+}
 #entrance {
 	.u-container {
 		@extend .object-fit;
@@ -381,6 +395,13 @@ h1.dark {
 		video {
 			@extend .intangible;
 		}
+	}
+	.taglines {
+		@extend .full;
+		@extend .subtitle-text;
+		top: auto;
+		background: center center no-repeat transparent;
+		background-image: linear-gradient(to bottom, rgba(#000, 0), #000);
 	}
 }
 section.cta {
