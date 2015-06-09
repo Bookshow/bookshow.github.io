@@ -88,11 +88,10 @@
 		border-color: #CCC;
 		border-top-color: #FFF;
 		box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.176);
-		
-		&::before,
-		.menu-link.disabled::after {
-			@extend .full;
-		}
+	}
+	.dropdown-menu::before,
+	.menu-link.disabled::after {
+		@extend .full;
 	}
 	.navbar-right {
 		padding-top: ($header-height - $contact-us-btn-height - 1px) / 2;
@@ -105,21 +104,19 @@
 		}
 	}
 	@media #{$media-w-mobile-plus} {
+		.menu-link.disabled::after {
+			content: '';
+			display: block;
+			background-color: $color-turquoise;
+		}
 		.nav > li {
 			> .menu-link,
 			> .dropdown > .menu-link {
 				line-height: $header-height - 1 !important;
 			}
-			> .menu-link.disabled {
-				&::after {
-					content: '';
-					position: absolute;
-					left: 0;
-					right: 0;
-					bottom: 10px;
-					height: 2px;
-					background-color: $color-turquoise;
-				}
+			> .menu-link.disabled::after {
+				height: 4px;
+				bottom: auto;
 			}
 		}
 		.dropdown-menu {
@@ -134,14 +131,9 @@
 			.menu-link {
 				padding: 0 (10px + 4px);
 				
-				&.disabled {
-					&::after {
-						content: '';
-						display: block;
-						width: 4px;
-						right: auto;
-						background-color: $color-turquoise;
-					}
+				&.disabled::after {
+					width: 4px;
+					right: auto;
 				}
 			}
 		}
