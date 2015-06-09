@@ -283,7 +283,7 @@ h1.fancy {
 	}
 }
 h1.dark {
-	background: #0B2637;
+	background: $color-turquoise-dark;
 	color: #FFF;
 	
 	&.fancy {
@@ -393,6 +393,13 @@ section.cta {
 	}
 	&.one-button {
 		text-align: center;
+	}
+	&.dark {
+		background: $color-turquoise-dark;
+		
+		.btn-primary { // TODO: may introduce .btn-primary-dark
+			border-color: #FFF;
+		}
 	}
 	@media (max-width: 500px) {
 		&.two-button {
