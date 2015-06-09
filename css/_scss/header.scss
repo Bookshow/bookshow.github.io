@@ -61,18 +61,6 @@
 		&.disabled {
 			cursor: default;
 			color: $color-turquoise !important;
-			
-			/*
-			&::after {
-				content: '';
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: 10px;
-				height: 2px;
-				background-color: $color-turquoise;
-			}
-			*/
 		}
 		.caret {
 			margin-left: 4px;
@@ -96,33 +84,15 @@
 	.dropdown-menu {
 		border-radius: 0;
 		margin: 0;
+		left: -1px - 4px;
 		border-color: #CCC;
 		border-top-color: #FFF;
 		box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.176);
 		
-		&::before {
+		&::before,
+		.menu-link.disabled::after {
 			@extend .full;
-			content: '';
-			display: block;
-			top: -10px;
-			bottom: 100%;
-			background-color: #FFF;
-			pointer-events: none;
-			
-			@media #{$media-w-mobile-minus} {
-				display: none;
-			}
 		}
-		/*
-		hr {
-			margin: 8px;
-			border-color: $color-gray;
-			
-			@media #{$media-w-mobile-minus} {
-				display: none;
-			}
-		}
-		*/
 	}
 	.navbar-right {
 		padding-top: ($header-height - $contact-us-btn-height - 1px) / 2;
@@ -139,6 +109,40 @@
 			> .menu-link,
 			> .dropdown > .menu-link {
 				line-height: $header-height - 1 !important;
+			}
+			> .menu-link.disabled {
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 10px;
+					height: 2px;
+					background-color: $color-turquoise;
+				}
+			}
+		}
+		.dropdown-menu {
+			&::before {
+				content: '';
+				display: block;
+				top: -10px;
+				bottom: 100%;
+				background-color: #FFF;
+				pointer-events: none;
+			}
+			.menu-link {
+				padding: 0 (10px + 4px);
+				
+				&.disabled {
+					&::after {
+						content: '';
+						display: block;
+						width: 4px;
+						right: auto;
+						background-color: $color-turquoise;
+					}
+				}
 			}
 		}
 	}
