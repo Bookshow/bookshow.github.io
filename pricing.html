@@ -7,16 +7,16 @@ css: pricing.css
 ---
 
 <section>
-	<h1>請點選您需要的服務</h1>
+	<h1><span class="nowrap">請點選</span><span class="nowrap">您需要的服務</span></h1>
 </section>
 <section id="form">
 	<div class="container">
-		<div class="row twin-columns">
+		<div class="row">
 			<div class="col-xs-6">
 				<div class="u-block">
-					<span class="u-block-title">影音服務</span>
+					<span class="u-heading">影音服務</span>
 					{% include pricing-criterion.html key="單機" title="標準單機錄影" disabled="true" selected="true" %}
-					<div class="u-note">
+					<div class="u-note note">
 						<span class="nowrap">大台北市區外拍</span><span class="nowrap">或使用 Bookshow 場地</span><br>
 						<span class="nowrap">錄影 4 小時內，</span><span class="nowrap">含燈光收音及技術人員</span>
 					</div>
@@ -27,7 +27,7 @@ css: pricing.css
 			</div>
 			<div class="col-xs-6">
 				<div class="u-block">
-					<span class="u-block-title">週邊服務</span>
+					<span class="u-heading">週邊服務</span>
 					{% include pricing-criterion.html key="檢勘" title="實地勘測與系統規劃" %}
 					{% include pricing-criterion.html key="網路" title="申辦臨時網路" %}
 					{% include pricing-criterion.html key="順稿" title="逐字稿文件" unit="小時" value="1" %}
@@ -35,57 +35,58 @@ css: pricing.css
 				</div>
 			</div>
 		</div>
-		<div class="row twin-columns">
+		<div class="row">
 			<div class="col-xs-6">
 				<div class="u-block">
-					<span class="u-block-title">交付條件</span>
+					<span class="u-heading">交付條件</span>
 					{% include pricing-criterion.html key="標付" title="標準付款規則" %}
-					<div class="u-note">
+					<div class="u-note note">
 						預約檔期時支付全案50%<br>
 						確認定稿交件時結清尾款
 					</div>
 					{% include pricing-criterion.html key="預付" title="全額預付優惠" %}
 					{% include pricing-criterion.html key="後付" title="驗收後再付款" %}
-					<div class="u-note">
+					<div class="u-note note">
 						須於交件後 30 日內完成付款
 					</div>
 				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="u-block continued">
+				<div class="u-block continuous">
 					{% include pricing-criterion.html key="五場" title="同規格滿五場" %}
 					{% include pricing-criterion.html key="十場" title="同規格滿十場" %}
 				</div>
 			</div>
 		</div>
-		<hr>
-		<div class="row twin-columns">
+	</div>
+</section>
+<section id="submit">
+	<div class="container">
+		<div class="row">
 			<div class="col-xs-6">
-				<div class="u-block u-submit-container">
-					<button class="u-submit btn btn-secondary">試算</button>
+				<div class="u-block u-submit">
+					<button class="btn btn-secondary">試算</button>
 				</div>
 			</div>
 			<div class="col-xs-6">
 				<div class="u-block u-total-container">
-					<span class="u-block-title">NTD</span>
+					<span class="u-prefix note">NTD</span>
 					<div class="u-total"></div>
-					<span class="u-suffix">元起</span>
+					<span class="u-suffix note">元起</span>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
-<section>
-	<div class="container">
-		<div class="row twin-columns">
+	<div id="cta" class="container">
+		<div class="row">
 			<div class="col-xs-6">
 				<div class="u-block u-contact-us-container">
 					<button class="btn btn-primary contact-us-btn" data-toggle="contact-us">聯絡我們</button>
 				</div>
 			</div>
 			<div class="col-xs-6">
-				<div class="u-block u-contact-us-container">
-					<div class="u-note">
+				<div class="u-block">
+					<div class="u-contact-note note-large">
 						我們將竭誠說明，在目標預算內為您客製最佳服務方案。
 					</div>
 				</div>

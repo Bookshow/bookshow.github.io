@@ -235,7 +235,7 @@ var PricingForm = function (element, model) {
 
 $(function () {
 	var model = window.pricingModel = new PricingModel();
-	new PricingForm('#form', model);
+	new PricingForm('#body', model);
 });
 
 })(this);

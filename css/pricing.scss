@@ -5,164 +5,187 @@
 
 body.pricing {
 	
-	#body {
-		padding-bottom: $lg-space;
+	#form {
+		padding-bottom: 32px;
+		border-bottom: 1px solid #979797;
+		//box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 	}
-	hr {
-		border-color: #AAA;
+	#submit {
+		background: #F7F7F7;
+		padding: 32px 0;
 	}
-	.twin-columns > * {
+	.btn {
+		width: 100%;
+	}
+	.btn-default {
+		color: #333 !important;
+	}
+	.row > * {
 		padding-left: 48px;
 		padding-right: 48px;
+		
+		&:first-child .u-block {
+			margin-left: auto;
+		}
+		&:last-child .u-block {
+			margin-right: auto;
+		}
+	}
+	.u-heading {
+		display: block;
+		margin-left: -24px;
+		margin-top: 32px;
+		font-size: 24px;
+		color: $color-gray;
+	}
+	.u-check {
+		position: absolute;
+		left: 100%;
+		top: 0;
+		bottom: 0;
+		width: 40px;
+		padding: 6px 12px;
+		color: $color-turquoise;
+		display: none;
+	}
+	.u-intbox {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: inline-block;
+		width: 90px;
+		line-height: 40px;
+		font-size: 16px;
+		text-align: right;
+		color: $color-gray;
+		
+		.u-minus,
+		.u-plus {
+			cursor: pointer;
+		}
+	}
+	.u-note,
+	.u-contact-note {
+		margin-left: -24px;
+		margin-right: -24px;
+	}
+	.u-note {
+		text-align: center;
+		margin-top: 4px;
+	}
+	.contact-us-btn,
+	.u-contact-note {
+		margin-top: 24px;
 	}
 	.u-block {
-		display: inline-block;
 		position: relative;
 		width: 100%;
 		max-width: 270px;
-		padding-top: 24px;
 		text-align: left;
 		
-		.btn {
-			width: 100%;
-		}
-		&.continued {
-			padding-top: 48px; // TODO: use margin
-		}
-		&.u-submit-container {
-			padding-top: 45px; // TODO: ad-hoc
-		}
-		&.u-total-container {
-			padding-top: 5px;
-		}
-		&.u-contact-us-container {
-			padding-top: 24px;
-			
-			.u-note {
-				margin: 0 -24px;
-			}
-		}
-	}
-	#form { // TODO: pull some rules out of this
-		.u-block {
-			.u-block-title,
-			.u-suffix,
-			.u-note,
-			.u-intbox {
-				color: $color-gray;
-			}
-			.u-note {
-				font-size: 15px;
-				text-align: center;
-				margin: 4px -4px 0px;
-			}
-			.u-criterion.disabled + .u-note {
-				margin-top: 0;
-			}
-			.u-block-title {
-				display: block;
-				height: 24px;
-				margin-left: -18px;
-				font-size: 18px;
-			}
-			.u-suffix {
-				position: absolute;
-				left: 100%;
-				bottom: -4px;
-				padding-left: 12px;
-				font-size: 15px;
-			}
-			.u-total {
-				font-size: 48px;
-				padding-bottom: 8px;
-				padding-left: 14px;
-				line-height: 48px;
-				
-				&::after {
-					white-space: pre;
-					content: ' ';
-				}
-				&::before {
-					content: '';
-					position: absolute;
-					display: block;
-					height: 15px;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					border: 2px solid #979797;
-					border-top: none;
-				}
-			}
-		}
-		.u-criterion {
-			position: relative;
-			margin-top: 12px;
-			
-			.u-check {
-				position: absolute;
-				left: 100%;
-				top: 0;
-				bottom: 0;
-				width: 40px;
-				padding: 6px 12px;
-				color: $color-turquoise;
-				display: none;
-			}
-			.u-intbox {
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				display: inline-block;
-				width: 90px;
-				line-height: 40px;
-				font-size: 16px;
-				text-align: right;
-				
-				.u-minus,
-				.u-plus {
-					cursor: pointer;
-				}
-			}
-			&.per-unit {
-				padding-right: 90px;
-			}
-			&.disabled {
-				.u-button {
-					background: none !important;
-					border-color: transparent;
-					box-shadow: none !important;
-					cursor: default;
-				}
-				.u-minus,
-				.u-plus {
-					visibility: hidden;
-				}
-			}
-			&.selected {
-				.u-button {
-					background: #F5F5F5;
-				}
-				.u-check {
-					display: inline-block;
-				}
-			}
-			&.min .u-minus,
-			&.max .u-plus {
+		&.continuous {
+			&::before {
+				@extend .u-heading;
+				content: '.';
 				visibility: hidden;
 			}
-		}	
+		}
+	}
+	.u-criterion {
+		position: relative;
+		margin-top: 12px;
+		
+		&.per-unit {
+			padding-right: 90px;
+		}
+		&.disabled {
+			.u-minus,
+			.u-plus {
+				visibility: hidden;
+			}
+		}
+		&.selected {
+			.u-button { // TODO
+				background: #F7F7F7;
+				
+				&:hover {
+					background: #EEE;
+				}
+			}
+			.u-check {
+				display: inline-block;
+			}
+		}
+		&.min .u-minus,
+		&.max .u-plus {
+			visibility: hidden;
+		}
+	}	
+	.u-prefix {
+		position: absolute;
+		right: 100%;
+		bottom: -4px;
+		padding-right: 12px;
+	}
+	.u-suffix {
+		position: absolute;
+		left: 100%;
+		bottom: -4px;
+		padding-left: 12px;
+		width: 60px; // TODO: ad-hoc
+	}
+	
+	$total-font-size: 48px;
+	$total-padding-bottom: 8px;
+	.u-submit {
+		height: $total-font-size + $total-padding-bottom;
+		
+		.btn {
+			@extend .full;
+			top: auto;
+			height: auto;
+		}
+	}
+	.u-total {
+		font-size: $total-font-size;
+		padding-bottom: $total-padding-bottom;
+		padding-left: 14px;
+		line-height: $total-font-size;
+		
+		&::after {
+			white-space: pre;
+			content: ' ';
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 15px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			border: 2px solid #979797;
+			border-top: none;
+		}
 	}
 	@media #{$media-w-716-minus} {
-		.twin-columns > * {
+		.row > * {
 			width: 100%;
-			text-align: center;
 		}
 		.u-block {
-			&.continued,
-			&.u-submit-container {
-				padding-top: 0;
+			margin-left: auto;
+			margin-right: auto;
+			
+			&.continuous::before {
+				display: none;
 			}
+		}
+		.u-submit .btn {
+			position: relative;
+			bottom: auto;
+			left: auto;
+			right: auto;
+			height: auto;
 		}
 	}
 }
