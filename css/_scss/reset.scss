@@ -5,6 +5,8 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 body {
 	background: center center repeat transparent;
+	background-image: linear-gradient(to bottom, #030303 0%, #070F14 32%, #215573 61%, #458F9B 100%);
+	background-attachment: fixed;
 	font-size: 20px;
 	letter-spacing: 1px;
 }
