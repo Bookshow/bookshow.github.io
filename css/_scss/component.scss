@@ -402,6 +402,10 @@ h1.dark {
 		}
 		video {
 			@extend .intangible;
+			
+			@media #{$media-smartphone} {
+				display: none;
+			}
 		}
 	}
 	.taglines {
