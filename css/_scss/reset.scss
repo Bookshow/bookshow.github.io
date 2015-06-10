@@ -84,6 +84,8 @@ hr {
 }
 .dropup,
 .navbar-fixed-bottom .dropdown {
+	// TODO: can remove this after 3.3.5
+	// https://github.com/twbs/bootstrap/pull/16614
 	.caret {
 		border-top: 0;
 		border-bottom-width: 4px;
