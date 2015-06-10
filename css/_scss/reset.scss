@@ -82,5 +82,14 @@ hr {
 .table-striped > tbody > tr:nth-of-type(2n+1) {
 	background-color: #F2F2F2;
 }
+.dropup,
+.navbar-fixed-bottom .dropdown {
+	.caret {
+		border-top: 0;
+		border-bottom-width: 4px;
+		border-bottom-style: dashed;
+		content: "";
+	}
+}
 
 

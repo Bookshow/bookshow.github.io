@@ -62,7 +62,7 @@ body.pricing #body {
 		right: 0;
 		bottom: 0;
 		display: inline-block;
-		width: 90px;
+		width: 80px;
 		line-height: 40px;
 		font-size: 15px;
 		text-align: right;
@@ -70,7 +70,32 @@ body.pricing #body {
 		
 		.u-minus,
 		.u-plus {
+			display: block;
+			position: relative;
+			height: 20px;
+			width: 16px;
 			cursor: pointer;
+			
+			.caret {
+				position: absolute;
+				left: 4px;
+			}
+		}
+		.u-plus {
+			.caret {
+				bottom: 4px;
+			}
+			&:hover .caret {
+				border-bottom-color: #555;
+			}
+		}
+		.u-minus {
+			.caret {
+				top: 4px;
+			}
+			&:hover .caret {
+				border-top-color: #555;
+			}
 		}
 	}
 	.u-note,
@@ -105,11 +130,10 @@ body.pricing #body {
 		margin-top: 12px;
 		
 		&.per-unit {
-			padding-right: 90px;
+			padding-right: 80px;
 		}
 		&.disabled {
-			.u-minus,
-			.u-plus {
+			.u-control {
 				visibility: hidden;
 			}
 		}

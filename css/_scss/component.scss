@@ -16,6 +16,11 @@
 .intangible {
 	pointer-events: none;
 }
+.unselectable {
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
 .align-center {
 	text-align: center;
 }

@@ -46,6 +46,12 @@
 }
 
 //@import "icons/_navigation";
+.#{$md-css-prefix}-arrow-drop-down:before {
+	content: "\f295";
+}
+.#{$md-css-prefix}-arrow-drop-up:before {
+	content: "\f296";
+}
 .#{$md-css-prefix}-check:before {
 	content: "\f299";
 }
