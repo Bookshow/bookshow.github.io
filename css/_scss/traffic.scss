@@ -75,7 +75,21 @@ body.traffic {
 		}
 		.u-details {
 			margin-top: 16px;
-			padding-left: 100px;
+			padding-left: 100px !important;
+		}
+		@media #{$media-w-mobile-minus} {
+			.u-method {
+				padding-left: 0;
+				
+				&::before {
+					display: none;
+				}
+			}
+		}
+		@media (max-width: 500px) {
+			.u-details {
+				padding-left: 50px !important;
+			}
 		}
 	}
 }
