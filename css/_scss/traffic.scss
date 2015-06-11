@@ -46,16 +46,27 @@ body.traffic {
 			position: relative;
 			padding-left: 124px;
 			margin-top: 32px;
-			background: 0 0 no-repeat transparent;
 			
-			&.mrt {
-				background-image: url('/img/traffic.mrt.svg');
+			&::before {
+				@extend .full;
+				content: '';
+				display: block;
+				width: 100px;
+				height: 40px;
+				right: auto;
+				bottom: auto;
+				background: 0 0 no-repeat transparent;
+				background-image: url('/img/traffic.icon.png');
+				background-size: 100px auto;
 			}
-			&.car {
-				background-image: url('/img/traffic.car.svg');
+			&.mrt::before {
+				background-position: 0 0;
 			}
-			&.bus {
-				background-image: url('/img/traffic.bus.svg');
+			&.car::before {
+				background-position: 0 -40px;
+			}
+			&.bus::before {
+				background-position: 0 -80px;
 			}
 		}
 		.u-title {
