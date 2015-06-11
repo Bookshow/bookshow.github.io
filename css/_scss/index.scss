@@ -124,9 +124,13 @@ body.index {
 	#differentiators {
 		$icon-size: 150px;
 		$spacing: 48px;
+		$card-padding: 10px;
 		
 		z-index: 5; // to cover #video section background
 		
+		.row > * {
+			padding: 0 $card-padding;
+		}
 		.u-item {
 			&.profession {
 				background: linear-gradient(-45deg, #216F9B, #0A4760);
@@ -140,8 +144,8 @@ body.index {
 		}
 		.u-background {
 			position: absolute;
-			left: 0;
-			right: 0;
+			left: $container-padding - $card-padding;
+			right: $container-padding - $card-padding;
 			top: 0;
 			bottom: 0;
 			margin: 0;
@@ -168,6 +172,7 @@ body.index {
 			}
 		}
 		.u-content {
+			margin: 0 -$card-padding;
 			pointer-events: none;
 			
 			.u-item {
