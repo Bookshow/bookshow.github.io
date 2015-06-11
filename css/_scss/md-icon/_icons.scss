@@ -21,8 +21,14 @@
 .#{$md-css-prefix}-add:before {
 	content: "\f0fb";
 }
+.#{$md-css-prefix}-add-circle-outline:before {
+	content: "\f0fe";
+}
 .#{$md-css-prefix}-remove:before {
 	content: "\f111";
+}
+.#{$md-css-prefix}-remove-circle-outline:before {
+	content: "\f113";
 }
 .#{$md-css-prefix}-clear:before {
 	content: "\f102";
