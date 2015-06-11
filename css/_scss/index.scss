@@ -466,9 +466,6 @@ body.index {
 				font-size: 30px;
 				border-bottom: 3px solid #FFF;
 			}
-			.u-description {
-				padding-left: 32px;
-			}
 			.u-description,
 			.btn {
 				margin-top: 16px;
@@ -479,10 +476,10 @@ body.index {
 				margin-top: -32px;
 				
 				&.previous {
-					left: 32px;
+					left: 24px;
 				}
 				&.next {
-					right: 32px;
+					right: 24px;
 				}
 			}
 			&#livestream {
