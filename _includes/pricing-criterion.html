@@ -1,17 +1,10 @@
 <div class="u-criterion{% if include.disabled %} disabled{% endif %}{% if include.selected %} selected{% endif %}{% if include.unit %} per-unit min{% endif %}" data-value="{{ include.key }}">
 	<span class="btn btn-default u-button{% if include.disabled %} active intangible{% endif %}">{{ include.title }}</span>
 	{% if include.unit %}
-	<span class="u-intbox clearfix unselectable">
-		<span class="u-control pull-right">
-			<div class="u-plus dropup">
-				<span class="caret"></span>
-			</div>
-			<div class="u-minus">
-				<span class="caret"></span>
-			</div>
-		</span>
-		<span class="u-unit pull-right">{{ include.unit }}</span>
-		<span class="u-value pull-right">{{ include.value }}</span>
+	<span class="u-intbox unselectable">
+		<span class="md md-remove u-minus"></span>
+		<span class="u-value">{{ include.value }}</span><span class="u-unit">{{ include.unit }}</span>
+		<span class="md md-add u-plus"></span>
 	</span>
 	{% endif %}
 	<i class="u-check md md-check"></i>

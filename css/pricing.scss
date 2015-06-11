@@ -62,40 +62,20 @@ body.pricing #body {
 		right: 0;
 		bottom: 0;
 		display: inline-block;
-		width: 80px;
+		width: 90px;
 		line-height: 40px;
 		font-size: 15px;
 		text-align: right;
 		color: $color-gray;
 		
+		.u-value,
+		.u-unit {
+			display: inline-block;
+			line-height: inherit;
+		}
 		.u-minus,
 		.u-plus {
-			display: block;
-			position: relative;
-			height: 20px;
-			width: 16px;
 			cursor: pointer;
-			
-			.caret {
-				position: absolute;
-				left: 4px;
-			}
-		}
-		.u-plus {
-			.caret {
-				bottom: 3px;
-			}
-			&:hover .caret {
-				border-bottom-color: #555;
-			}
-		}
-		.u-minus {
-			.caret {
-				top: 3px;
-			}
-			&:hover .caret {
-				border-top-color: #555;
-			}
 		}
 	}
 	.u-note,
@@ -130,10 +110,11 @@ body.pricing #body {
 		margin-top: 12px;
 		
 		&.per-unit {
-			padding-right: 80px;
+			padding-right: 90px;
 		}
 		&.disabled {
-			.u-control {
+			.u-minus,
+			.u-plus {
 				visibility: hidden;
 			}
 		}

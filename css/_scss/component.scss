@@ -17,9 +17,10 @@
 	pointer-events: none;
 }
 .unselectable {
-	-ms-user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .align-center {
 	text-align: center;
