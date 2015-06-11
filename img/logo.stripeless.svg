@@ -3,43 +3,13 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-400 -300 800 600" xml:space="preserve">
 <g>
 	<g>
-		<defs>
-			<linearGradient id="left-page">
-				<stop offset="0" stop-color="#00364A" />
-				<stop offset="0.15" stop-color="#00364A" />
-				<stop offset="0.25" stop-color="#053E56" />
-				<stop offset="0.375" stop-color="#0E4D6B" />
-				<stop offset="0.625" stop-color="#21709B" />
-				<stop offset="1" stop-color="#21709B" />
-			</linearGradient>
-		</defs>
-		<path fill="#101B22" d="
-			M -323, 0
-			V 238
-			C -115,207, 0,255, 0,255
-			z"/>
-		<path fill="#00364A" d="
-			M -329, 0
-			V 222
-			C -121,199, 0,255, 0,255
-			z"/>
-		<path fill="url(#left-page)" d="
+		<path fill="#21709B" d="
 			M -335,-236
 			V 205
 			C -127,191, 0,255, 0,255
 			V -187
 			C -18,-198, -124,-289, -335,-236
 			L -335,-236
-			z"/>
-		<path fill="#101B22" d="
-			M 323, 0
-			V 238
-			C 115,207, 0,255, 0,255
-			z"/>
-		<path fill="#00364A" d="
-			M 329, 0
-			V 222
-			C 121,199, 0,255, 0,255
 			z"/>
 		<path fill="#00445D" d="
 			M 335,-236
@@ -49,8 +19,6 @@
 			C 18,-198, 124,-289, 335,-236
 			L 335,-236
 			z"/>
-		<polygon fill="#ECD5B9" points="-320,204.5 -316,204 -316,-241 -320,-240"/>
-		<polygon fill="#ECD5B9" points="320,204.5 316,204 316,-241 320,-240"/>
 	</g>
 	<g transform="translate(0, 14)">
 		<defs>

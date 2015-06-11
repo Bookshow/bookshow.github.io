@@ -15,9 +15,9 @@
 		width: 154px;
 		margin-right: 0;
 		margin-left: 0;
-		background: 0 center transparent no-repeat;
-		background-image: url('/img/logo@2x.png');
-		background-size: auto 38px;
+		background: -2px center transparent no-repeat;
+		background-image: url('/img/logo.s.png');
+		background-size: auto 39px;
 		
 		&::before {
 			@extend .full;
