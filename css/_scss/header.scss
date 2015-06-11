@@ -12,7 +12,7 @@
 	.navbar-brand {
 		position: relative;
 		height: 100%;
-		width: 154px;
+		width: 152px;
 		margin-right: 0;
 		margin-left: 0;
 		background: -2px center transparent no-repeat;
@@ -23,8 +23,8 @@
 			@extend .full;
 			content: ' ';
 			background: right center transparent no-repeat;
-			background-image: url('/img/title@2x.png');
-			background-size: auto 18px;
+			background-image: url('/img/title.s.png');
+			background-size: auto 16px;
 		}
 	}
 	.navbar-toggle {
