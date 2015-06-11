@@ -79,12 +79,15 @@ body.pricing #body {
 	}
 	.u-note,
 	.u-contact-note {
-		margin-left: -24px;
-		margin-right: -24px;
+		margin-left: -28px;
+		margin-right: -28px;
 	}
 	.u-note {
 		text-align: center;
 		margin-top: 4px;
+	}
+	.u-contact-note {
+		color: #333;
 	}
 	.contact-us-btn,
 	.u-contact-note {
@@ -133,23 +136,11 @@ body.pricing #body {
 		&.max .u-plus {
 			visibility: hidden;
 		}
-	}	
-	.u-prefix {
-		position: absolute;
-		right: 100%;
-		bottom: -4px;
-		padding-right: 12px;
-	}
-	.u-suffix {
-		position: absolute;
-		left: 100%;
-		bottom: -4px;
-		padding-left: 12px;
-		width: 60px; // TODO: ad-hoc
 	}
 	
 	$total-font-size: 48px;
 	$total-padding-bottom: 8px;
+	$total-inner-indent: 16px;
 	.u-submit {
 		height: $total-font-size + $total-padding-bottom;
 		
@@ -159,17 +150,22 @@ body.pricing #body {
 			height: auto;
 		}
 	}
+	.u-total-container {
+		padding: 0 $total-inner-indent;
+	}
 	.u-total {
+		position: relative;
 		font-size: $total-font-size;
 		padding-bottom: $total-padding-bottom;
-		padding-left: 14px;
+		padding-right: 12px;
+		text-align: right;
 		line-height: $total-font-size;
 		
-		&::after {
+		&::before {
 			white-space: pre;
 			content: ' ';
 		}
-		&::before {
+		&::after {
 			content: '';
 			position: absolute;
 			display: block;
@@ -180,6 +176,18 @@ body.pricing #body {
 			border: 2px solid #979797;
 			border-top: none;
 		}
+	}
+	.u-prefix {
+		position: absolute;
+		left: -27px;
+		bottom: -4px;
+	}
+	.u-suffix {
+		position: absolute;
+		right: -27px;
+		bottom: -4px;
+		width: 60px; // TODO: ad-hoc
+		text-align: right;
 	}
 	@media #{$media-w-716-minus} {
 		.row > * {
