@@ -42,31 +42,29 @@ body.traffic {
 		}
 	}
 	#methods {
-		$icon-size: 120px;
-		
 		.u-method {
 			position: relative;
-			padding-left: $icon-size + 24px;
-			min-height: $icon-size - 32px;
+			padding-left: 124px;
 			margin-top: 32px;
+			background: 0 0 no-repeat transparent;
 			
-			.u-icon {
-				position: absolute;
-				left: 0;
-				right: 0;
-				width: $icon-size;
-				height: $icon-size;
-				line-height: $icon-size;
-				text-align: center;
-				font-size: 96px;
+			&.mrt {
+				background-image: url('/img/traffic.mrt.svg');
 			}
-			.u-title {
-				line-height: 34px; // TODO: ad-hoc, need better way
-				font-weight: bold;
+			&.car {
+				background-image: url('/img/traffic.car.svg');
 			}
-			.u-details {
-				margin-top: 16px;
+			&.bus {
+				background-image: url('/img/traffic.bus.svg');
 			}
+		}
+		.u-title {
+			line-height: 34px; // TODO: ad-hoc, need better way
+			font-weight: bold;
+		}
+		.u-details {
+			margin-top: 16px;
+			padding-left: 100px;
 		}
 	}
 }
