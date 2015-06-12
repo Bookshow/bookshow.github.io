@@ -172,7 +172,7 @@ body.index {
 			}
 		}
 		.u-content {
-			margin: 0 -$card-padding;
+			margin: 0 (-$card-padding);
 			pointer-events: none;
 			
 			.u-item {
