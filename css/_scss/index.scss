@@ -58,25 +58,37 @@ body.index {
 			min-height: 96px;
 			
 			.u-product {
+				$icon-size: 100px;
+				
+				position: relative;
 				padding: 32px;
 				padding-left: 144px;
-				background: 0 center no-repeat transparent;
 				text-align: left;
 				
-				&.livestream {
-					background-image: url('/img/product.livestream.icon.svg');
+				&::before {
+					@extend .full;
+					content: '';
+					display: block;
+					width: $icon-size;
+					right: auto;
+					background: 0 center no-repeat transparent;
+					background-size: auto $icon-size;
+					background-image: url('/img/products.png');
 				}
-				&.conference {
-					background-image: url('/img/product.conference.icon.svg');
+				&.livestream::before {
+					background-position: 0 center;
 				}
-				&.webcourse {
-					background-image: url('/img/product.webcourse.icon.svg');
+				&.conference::before {
+					background-position: (-$icon-size) center;
 				}
-				&.interview {
-					background-image: url('/img/product.interview.icon.svg');
+				&.webcourse::before {
+					background-position: (-$icon-size * 2) center;
 				}
-				&.space {
-					background-image: url('/img/product.space.icon.svg');
+				&.interview::before {
+					background-position: (-$icon-size * 3) center;
+				}
+				&.space::before {
+					background-position: (-$icon-size * 4) center;
 				}
 			}
 			.u-title {
@@ -176,6 +188,8 @@ body.index {
 			pointer-events: none;
 			
 			.u-item {
+				$icon-border-width: 2px;
+				
 				position: relative;
 				padding: $spacing;
 				text-align: center;
@@ -185,10 +199,11 @@ body.index {
 					margin: 0 auto;
 					width: $icon-size;
 					height: $icon-size;
-					border: 2px solid #034569;
+					border: $icon-border-width solid #034569;
 					border-radius: 50%;
 					background: center center no-repeat #FFF;
-					background-size: $icon-size * 0.8 auto;
+					background-image: url('/img/differentiators.png');
+					background-size: $icon-size auto;
 				}
 				.u-title {
 					margin-top: $spacing;
@@ -200,13 +215,13 @@ body.index {
 					text-align: justify;
 				}
 				&.profession .u-icon {
-					background-image: url('/img/differentiator.profession.svg');
+					background-position: center (-$icon-border-width);
 				}
 				&.quality .u-icon {
-					background-image: url('/img/differentiator.quality.svg');
+					background-position: center (-$icon-size -$icon-border-width);
 				}
 				&.effectiveness .u-icon {
-					background-image: url('/img/differentiator.effectiveness.svg');
+					background-position: center (-$icon-size * 2 -$icon-border-width);
 				}
 			}
 		}
