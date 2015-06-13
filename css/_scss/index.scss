@@ -140,9 +140,14 @@ body.index {
 		$icon-size: 150px;
 		$spacing: 48px;
 		$card-padding: 10px;
+		$extra-container-padding: 15px;
 		
 		z-index: 5; // to cover #video section background
 		
+		.container {
+			padding-left: $container-padding + $extra-container-padding;
+			padding-right: $container-padding + $extra-container-padding;
+		}
 		.row > * {
 			padding: 0 $card-padding;
 		}
@@ -159,8 +164,8 @@ body.index {
 		}
 		.u-background {
 			position: absolute;
-			left: $container-padding - $card-padding;
-			right: $container-padding - $card-padding;
+			left: $container-padding - $card-padding + $extra-container-padding;
+			right: $container-padding - $card-padding + $extra-container-padding;
 			top: 0;
 			bottom: 0;
 			margin: 0;
