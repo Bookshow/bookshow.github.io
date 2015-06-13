@@ -108,7 +108,10 @@ body.index {
 				
 				.u-product {
 					padding-left: 32px;
-					background-image: none !important;
+					
+					&::before {
+						background-image: none !important;
+					}
 				}
 			}
 		}
