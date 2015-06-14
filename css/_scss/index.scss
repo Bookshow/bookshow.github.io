@@ -280,11 +280,8 @@ body.index {
 		color: #FFF;
 		
 		.background-container {
-			position: absolute;
+			@extend .full;
 			top: -($background-extension-size + $background-gradient-size);
-			bottom: 0;
-			left: $container-padding;
-			right: $container-padding;
 			z-index: -1;
 			background: center center no-repeat transparent;
 			background-size: cover;
