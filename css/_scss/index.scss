@@ -140,134 +140,125 @@ body.index {
 		$icon-size: 150px;
 		$spacing: 48px;
 		$card-padding: 10px;
+		$icon-border-width: 2px;
 		
 		z-index: 5; // to cover #video section background
 		
-		.row > * {
+		.u-col {
 			padding: 0 $card-padding;
 		}
-		.u-item {
-			&.profession {
-				background: linear-gradient(-45deg, #216F9B, #0A4760);
-			}
-			&.quality {
-				background: linear-gradient(-45deg, #0A4760, #216F9B);
-			}
-			&.effectiveness {
-				background: linear-gradient(-45deg, #0A4760, #216F9B);
-			}
+		.row {
+			margin: 0 (-$card-padding);
 		}
-		.u-background {
-			position: absolute;
-			left: $container-padding - $card-padding;
-			right: $container-padding - $card-padding;
-			top: 0;
-			bottom: 0;
-			margin: 0;
+		.u-icon {
+			margin: 0 auto;
+			width: $icon-size;
+			height: $icon-size;
+			border: $icon-border-width solid #034569;
+			border-radius: 50%;
+			background: center center no-repeat #FFF;
+			background-image: url('/img/differentiators.png');
+			background-size: $icon-size auto;
+		}
+		.u-title {
+			margin-top: $spacing;
+			font-size: 24px;
+		}
+		.u-description {
+			margin-top: 20px;
+			font-size: 18px;
+			text-align: justify;
+		}
+		.u-item {
+			display: block;
+			position: relative;
+			padding: $spacing;
+			text-align: center;
+			color: #FFF;
+			cursor: pointer;
+			text-decoration: none;
+			transition: -webkit-transform 0.5s ease;
+			//transition: transform 0.5s ease;
 			
-			> *, 
-			.u-item {
-				height: 100%;
+			&::before {
+				@extend .full;
+				content: '';
+				display: none;
+				top: auto;
+				height: 10px;
+				background: $color-cyan;
 			}
-			.u-item {
-				position: relative;
-				cursor: pointer;
+			&:hover {
+				box-shadow: 0 3px 6px 1px rgba(#000, 0.5);
+				transform: translate(0, -3px);
 				
 				&::before {
-					@extend .full;
-					content: '';
-					display: none;
-					top: auto;
-					height: 10px;
-					background: $color-cyan;
-				}
-				&:hover::before {
 					display: block;
 				}
 			}
+			&.profession {
+				background: linear-gradient(-45deg, #216F9B, #0A4760);
+			}
+			&.quality,
+			&.effectiveness {
+				background: linear-gradient(-45deg, #0A4760, #216F9B);
+			}
+			&.profession .u-icon {
+				background-position: center (-$icon-border-width);
+			}
+			&.quality .u-icon {
+				background-position: center (-$icon-size -$icon-border-width);
+			}
+			&.effectiveness .u-icon {
+				background-position: center (-$icon-size * 2 -$icon-border-width);
+			}
 		}
-		.u-content {
-			margin: 0 (-$card-padding);
-			pointer-events: none;
+		.u-fullheight {
+			@extend .full;
 			
-			.u-item {
-				$icon-border-width: 2px;
-				
-				position: relative;
-				padding: $spacing;
-				text-align: center;
-				color: #FFF;
-				
-				.u-icon {
-					margin: 0 auto;
-					width: $icon-size;
-					height: $icon-size;
-					border: $icon-border-width solid #034569;
-					border-radius: 50%;
-					background: center center no-repeat #FFF;
-					background-image: url('/img/differentiators.png');
-					background-size: $icon-size auto;
-				}
-				.u-title {
-					margin-top: $spacing;
-					font-size: 24px;
-				}
-				.u-description {
-					margin-top: 20px;
-					font-size: 18px;
-					text-align: justify;
-				}
-				&.profession .u-icon {
-					background-position: center (-$icon-border-width);
-				}
-				&.quality .u-icon {
-					background-position: center (-$icon-size -$icon-border-width);
-				}
-				&.effectiveness .u-icon {
-					background-position: center (-$icon-size * 2 -$icon-border-width);
-				}
+			.u-fh {
+				height: 100%;
 			}
 		}
 		@media #{$media-w-992-plus} {
-			.u-content .u-item {
-				background: none !important;
+			.u-static {
+				visibility: hidden;
+				pointer-events: none;
 			}
 		}
 		@media #{$media-w-992-minus} {
-			.u-background {
+			.u-fullheight {
 				display: none;
 			}
-			.u-content {
-				> :nth-child(n+2) {
+			.u-static {
+				.u-col:nth-child(n+2) {
 					margin-top: 24px;
 				}
-				.u-item {
-					padding-left: $spacing * 2 + $icon-size;
-					
-					.u-icon {
-						position: absolute;
-						left: $spacing;
-						top: 50%;
-						margin-top: -$icon-size / 2;
-					}
-					.u-title {
-						margin-top: 0;
-						text-align: left;
-					}
+			}
+			.u-item {
+				padding-left: $spacing * 2 + $icon-size;
+				
+				.u-icon {
+					position: absolute;
+					left: $spacing;
+					top: 50%;
+					margin-top: -$icon-size / 2;
+				}
+				.u-title {
+					margin-top: 0;
+					text-align: left;
 				}
 			}
 		}
 		@media (max-width: 560px) {
-			.u-content {
-				.u-item {
-					padding-left: $spacing;
-					
-					.u-icon {
-						display: none;
-					}
-					.u-title {
-						text-align: center;
-					}
+			.u-item {
+				padding-left: $spacing;
+				
+				.u-icon {
+					display: none;
+				}
+				.u-title {
+					text-align: center;
 				}
 			}
 		}
