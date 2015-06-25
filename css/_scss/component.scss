@@ -1,3 +1,8 @@
+@mixin transform($value) {
+	transform: $value;
+	-ms-transform: $value;
+	-webkit-transform: $value;
+}
 .nowrap {
 	display: inline-block; // nowrap doesn't work in WebKit
 }
@@ -168,8 +173,7 @@ ul.unstyled {
 	
 	&.active:not(.disabled),
 	&:active:not(.disabled) {
-		margin-top: 1px !important;
-		margin-bottom: -1px !important;
+		@include transform(translateY(1px));
 		box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 	}
 }
@@ -179,8 +183,7 @@ ul.unstyled {
 	
 	&.active:not(.disabled),
 	&:active:not(.disabled) {
-		margin-top: 1px !important;
-		margin-bottom: -1px !important;
+		@include transform(translateY(1px));
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 	}
 }
@@ -363,13 +366,13 @@ h1.dark {
 		backface-visibility: hidden;
 	}
 	.u-front {
-		transform: rotateY(0);
+		@include transform(rotateY(0));
 	}
 	.u-back {
-		transform: rotateY(180deg);
+		@include transform(rotateY(180deg));
 	}
 	&.flipped {
-		transform: rotateY(180deg);
+		@include transform(rotateY(180deg));
 	}
 }
 

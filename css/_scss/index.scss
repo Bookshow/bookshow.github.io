@@ -190,7 +190,7 @@ body.index {
 			}
 			&:hover {
 				box-shadow: 0 3px 6px 1px rgba(#000, 0.5);
-				transform: translate(0, -3px);
+				@include transform(translateY(-3px));
 				
 				&::before {
 					display: block;
