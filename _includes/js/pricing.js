@@ -16,14 +16,6 @@ _scheme = {
 	'直播': {
 		base: 10000
 	}, 
-	'十場': {
-		exclusives: ['五場'],
-		multiplier: -0.1
-	}, 
-	'五場': {
-		exclusives: ['十場'],
-		multiplier: -0.05
-	}, 
 	'標付': {
 		exclusives: ['預付', '後付'],
 		defaultsTo: '標付'
