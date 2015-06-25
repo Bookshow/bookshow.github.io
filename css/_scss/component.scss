@@ -360,6 +360,7 @@ h1.dark {
 	position: relative;
 	transition: 0.6s;
 	transform-style: preserve-3d;
+	will-change: transform;
 	
 	.u-front,
 	.u-back {
