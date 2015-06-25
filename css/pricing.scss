@@ -56,27 +56,6 @@ body.pricing #body {
 		color: $color-turquoise;
 		display: none;
 	}
-	.u-intbox {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		display: inline-block;
-		width: 90px;
-		line-height: 40px;
-		font-size: 15px;
-		text-align: right;
-		color: $color-gray;
-		
-		.u-value,
-		.u-unit {
-			display: inline-block;
-			line-height: inherit;
-		}
-		.u-minus,
-		.u-plus {
-			cursor: pointer;
-		}
-	}
 	.u-note,
 	.u-contact-note {
 		margin-left: -28px;
@@ -107,13 +86,39 @@ body.pricing #body {
 			}
 		}
 	}
-	.u-criterion {
+	.u-option, 
+	.u-intbox {
 		position: relative;
 		margin-top: 12px;
+	}
+	.u-intbox {
+		$size: 29px;
 		
-		&.per-unit {
-			padding-right: 90px;
+		line-height: $size;
+		font-size: 15px;
+		
+		.u-title,
+		.u-value,
+		.u-unit {
+			display: inline-block;
+			line-height: inherit;
 		}
+		.u-minus,
+		.u-plus {
+			display: inline-block;
+			width: $size;
+			height: $size;
+			padding: 0;
+			text-align: center;
+			cursor: pointer;
+		}
+		&.min .u-minus,
+		&.max .u-plus {
+			pointer-events: none;
+			opacity: 0.25;
+		}
+	}
+	.u-option {
 		&.disabled {
 			.u-minus,
 			.u-plus {
@@ -132,9 +137,9 @@ body.pricing #body {
 				display: inline-block;
 			}
 		}
-		&.min .u-minus,
-		&.max .u-plus {
-			visibility: hidden;
+		&:not(.selected) + .u-intbox.attached > * {
+			pointer-events: none;
+			opacity: 0.3;
 		}
 	}
 	

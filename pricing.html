@@ -15,33 +15,44 @@ css: pricing.css
 			<div class="col-xs-6">
 				<div class="u-block">
 					<div class="u-heading note-large">影音服務</div>
-					{% include pricing-criterion.html key="單機" title="標準單機錄影" disabled="true" selected="true" %}
+					{% include pricing-option.html key="基本" title="標準套裝方案" disabled="true" selected="true" %}
+					{% include pricing-intbox.html key="拍攝" title="拍攝時間：" unit="小時" %}
 					<div class="u-note note">
 						<span class="nowrap">大台北市區外拍</span><span class="nowrap">或使用 Bookshow 場地</span><br>
 						<span class="nowrap">錄影 4 小時內，</span><span class="nowrap">含燈光收音及技術人員</span>
 					</div>
-					{% include pricing-criterion.html key="副機" title="增加副攝影機畫面" %}
-					{% include pricing-criterion.html key="擷取" title="增加投影電腦畫面" %}
-					{% include pricing-criterion.html key="直播" title="網路直播導播" %}
+					{% include pricing-option.html key="雙主" title="升級為雙主機" %}
+					{% include pricing-option.html key="加副" title="追加副攝影機" %}
+					{% include pricing-option.html key="投影" title="側錄電腦投影" %}
+				</div>
+				<div class="u-block" data-group="courses">
+					<div class="u-heading note-large">服務類別</div>
+					{% include pricing-option.html key="剪輯" title="紀錄型多機剪輯" %}
+					{% include pricing-option.html key="精剪" title="節目型後製剪輯" %}
+					{% include pricing-option.html key="直播" title="多機型網路直播" %}
+					{% include pricing-option.html key="直播+剪輯" title="網路直播 + 紀錄型剪輯" %}
+					{% include pricing-option.html key="直播+精剪" title="網路直播 + 節目型剪輯" %}
 				</div>
 			</div>
 			<div class="col-xs-6">
 				<div class="u-block">
 					<div class="u-heading note-large">週邊服務</div>
-					{% include pricing-criterion.html key="檢勘" title="實地勘測與系統規劃" %}
-					{% include pricing-criterion.html key="網路" title="申辦臨時網路" %}
-					{% include pricing-criterion.html key="順稿" title="逐字稿文件" unit="小時" value="1" %}
-					{% include pricing-criterion.html key="字幕" title="字幕壓制" unit="小時" value="1" %}
+					{% include pricing-option.html key="檢勘" title="實地勘測與系統規劃" %}
+					{% include pricing-option.html key="網路" title="申辦臨時網路" %}
+					{% include pricing-option.html key="順稿" title="逐字稿文件" %}
+					{% include pricing-intbox.html key="順稿" unit="小時" attached="true" %}
+					{% include pricing-option.html key="字幕" title="字幕壓制" %}
+					{% include pricing-intbox.html key="字幕" unit="小時" attached="true" %}
 				</div>
-				<div class="u-block">
+				<div class="u-block" data-group="payments">
 					<div class="u-heading note-large">交付條件</div>
-					{% include pricing-criterion.html key="標付" title="標準付款規則" %}
+					{% include pricing-option.html key="標付" title="標準付款規則" %}
 					<div class="u-note note">
 						預約檔期時支付全案50%<br>
 						確認定稿交件時結清尾款
 					</div>
-					{% include pricing-criterion.html key="預付" title="全額預付優惠" %}
-					{% include pricing-criterion.html key="後付" title="驗收後再付款" %}
+					{% include pricing-option.html key="預付" title="全額預付優惠" %}
+					{% include pricing-option.html key="後付" title="驗收後再付款" %}
 					<div class="u-note note">
 						須於交件後 30 日內完成付款
 					</div>
