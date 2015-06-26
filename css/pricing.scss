@@ -19,7 +19,7 @@ body.pricing #body {
 	}
 	#submit {
 		background: #F7F7F7;
-		padding: 32px 0;
+		padding: 16px 0 32px;
 	}
 	.btn {
 		width: 100%;
@@ -67,10 +67,6 @@ body.pricing #body {
 	}
 	.u-contact-note {
 		color: #333;
-	}
-	.contact-us-btn,
-	.u-contact-note {
-		margin-top: 24px;
 	}
 	.u-block {
 		position: relative;
@@ -143,28 +139,21 @@ body.pricing #body {
 		}
 	}
 	
-	$total-font-size: 48px;
-	$total-padding-bottom: 8px;
-	$total-inner-indent: 16px;
-	.u-submit {
-		height: $total-font-size + $total-padding-bottom;
-		
-		.btn {
-			@extend .full;
-			top: auto;
-			height: auto;
-		}
+	#cta .u-block {
+		margin-top: 24px;
 	}
 	.u-total-container {
-		padding: 0 $total-inner-indent;
+		padding: 0 16px;
 	}
 	.u-total {
+		$font-size: 48px;
+		
 		position: relative;
-		font-size: $total-font-size;
-		padding-bottom: $total-padding-bottom;
+		font-size: $font-size;
+		padding-bottom: 8px;
 		padding-right: 12px;
 		text-align: right;
-		line-height: $total-font-size;
+		line-height: $font-size;
 		
 		&::before {
 			white-space: pre;

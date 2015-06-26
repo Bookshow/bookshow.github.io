@@ -24,19 +24,15 @@ _scheme = {
 	},
 	modules: {
 		'基本': {
-			base: 17000,
 			step: 3400
 		},
 		'直播': {
-			base: 13000,
 			step: 2600
 		}, 
 		'剪輯': {
-			base: 8000,
 			step: 1600
 		}, 
 		'精剪': {
-			base: 18000,
 			step: 3600
 		}
 	},
@@ -54,13 +50,13 @@ _scheme = {
 	},
 	options: {
 		'雙主': {
-			base: 6000
+			step: 1200
 		}, 
 		'加副': {
-			base: 4000
+			step: 800
 		}, 
 		'投影': {
-			base: 5000
+			step: 1000
 		}, 
 		'檢勘': {
 			external: 12000
@@ -121,23 +117,26 @@ PricingModel.prototype.recalculate = function (options) {
 		val = this.values,
 		hrs = val['拍攝'],
 		base = 0,
+		step = 0,
 		multipliers = sch.payments[this.payment] || 1,
 		externals = 0,
 		m, total;
 	
 	(sch.courses[this.course] || []).forEach(function (c) {
 		m = mds[c];
-		base += (m.base || 0) + (m.step || 0) * (hrs + 2);
+		base += m.base || 0;
+		step += m.step || 0;
 	});
 	optionKeys.forEach(function (k) {
 		m = ops[k];
 		if (!sw[k])
 			return;
-		base += (m.base || 0);
+		base += m.base || 0;
+		step += m.step || 0;
 		externals += (m.external || 0) * (m.incremental ? val[k] : 1);
 	});
 	
-	total = Math.round(base * multipliers + externals);
+	total = Math.round((base + step * (hrs + 2)) * multipliers + externals);
 	
 	this.confirmedCriteriaSummary = summarize(this);
 	/*
