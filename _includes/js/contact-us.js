@@ -2,16 +2,18 @@
 
 'use strict';
 var $ = window.jQuery,
-	POST_URL = 'https://docs.google.com/forms/d/1z-40GH2UeMEyx8koeGtv-rdTc_pmEZ1dk-JOJUC4I28/formResponse';
+	_keys,
+	_url = 'https://docs.google.com/forms/d/1z-40GH2UeMEyx8koeGtv-rdTc_pmEZ1dk-JOJUC4I28/formResponse';
 
-var keys = {
+_keys = {
 	products: 'entry.522962378',
 	title: 'entry.1085887891',
 	email: 'entry.114982204',
 	phone: 'entry.2139636067',
 	question: 'entry.1779758370',
 	spec: 'entry.2022360728',
-	price: 'entry.2112899564'
+	price: 'entry.2112899564',
+	id: 'entry.2135626992'
 };
 
 function ContactUsModal(modal) {
@@ -38,8 +40,16 @@ function ContactUsModal(modal) {
 	});
 }
 
+window.ContactUsModal = ContactUsModal;
+
+ContactUsModal.prototype.config = {
+	url: _url,
+	keys: _keys
+};
+
 function post(modal) {
 	var pricing = window.pricingModel,
+		keys = modal.config.keys,
 		products = [],
 		data = {};
 	
@@ -57,12 +67,15 @@ function post(modal) {
 	if (products.length)
 		data[keys.products] = products.join();
 	
-	if (pricing) {
+	if (pricing && pricing._total) {
 		data[keys.spec] = pricing.confirmedCriteriaSummary;
 		data[keys.price] = pricing._total;
 	}
+	if (window.appid) {
+		data[keys.id] = window.appid;
+	}
 	
-	$.post(POST_URL, data);
+	$.post(modal.config.url, data);
 }
 
 function flip(modal, value) {

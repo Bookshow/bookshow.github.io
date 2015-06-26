@@ -15,3 +15,13 @@ $(function () {
 });
 
 })(this);
+
+
+
+(function (window) {
+
+'use strict';
+
+window.appid = Math.floor(Math.random() * 100000);
+
+})(this);

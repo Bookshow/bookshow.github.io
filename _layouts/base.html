@@ -22,6 +22,9 @@
 	<script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/js/{% if page.js %}{{ page.js }}{% else %}standard.js{% endif %}" type="text/javascript"></script>
+{% for p in site.data.local.js %}
+	<script src="{{ p }}" type="text/javascript"></script>	
+{% endfor %}
 </head>
 <body class="{{ page.class | join: ' ' }}">
 	{{ content }}
