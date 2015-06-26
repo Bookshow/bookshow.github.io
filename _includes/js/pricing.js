@@ -95,18 +95,12 @@ function summarize(model) {
 		ops = sch.options,
 		sw = model.switches,
 		val = model.values,
-		crs = [], 
-		v;
+		crs = [model.course];
 	optionKeys.forEach(function (k) {
-		if (ops[k].incremental) {
-			if (sw[k] && (v = val[k]) > 0)
-				crs.push(k + 'x' + v);
-		} else {
-			if (sw[k])
-				crs.push(k);
-		}
+		if (sw[k])
+			crs.push(ops[k].incremental ? (k + 'x' + val[k]) : k);
 	});
-	return crs.join();
+	return '[' + val['拍攝'] + 'hrs] ' + crs.join() + ' (' + model.payment + ')';
 }
 
 PricingModel.prototype.recalculate = function (options) {

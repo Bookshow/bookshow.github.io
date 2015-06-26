@@ -3,17 +3,17 @@
 'use strict';
 var $ = window.jQuery,
 	_keys,
-	_url = 'https://docs.google.com/forms/d/1z-40GH2UeMEyx8koeGtv-rdTc_pmEZ1dk-JOJUC4I28/formResponse';
+	_url = 'https://docs.google.com/forms/d/1sI8tiy27t7zhtEWxjBl0UW4_GxPwnDXS1lQKC2aIqQg/formResponse';
 
 _keys = {
-	products: 'entry.522962378',
-	title: 'entry.1085887891',
-	email: 'entry.114982204',
-	phone: 'entry.2139636067',
-	question: 'entry.1779758370',
-	spec: 'entry.2022360728',
-	price: 'entry.2112899564',
-	id: 'entry.2135626992'
+	interests: 'entry.1838500567',
+	title: 'entry.127812295',
+	email: 'entry.1647649882',
+	phone: 'entry.1584983621',
+	question: 'entry.1625641888',
+	spec: 'entry.917982981',
+	price: 'entry.1145397837',
+	id: 'entry.1123496740'
 };
 
 function ContactUsModal(modal) {
@@ -50,7 +50,7 @@ ContactUsModal.prototype.config = {
 function post(modal) {
 	var pricing = window.pricingModel,
 		keys = modal.config.keys,
-		products = [],
+		interests = [],
 		data = {};
 	
 	modal.$elem.find('[name]').each(function () {
@@ -58,14 +58,16 @@ function post(modal) {
 			key = keys[name];
 		if (!key)
 			return;
-		if (name == 'products' && this.checked) {
-			products.push(this.value);
+		if (name == 'interests' && this.checked) {
+			interests.push(this.value);
 		} else {
 			data[key] = this.value;
+			window.console.log(this.value);
+			window.console.log(this.innerHTML);
 		}
 	});
-	if (products.length)
-		data[keys.products] = products.join();
+	if (interests.length)
+		data[keys.interests] = interests.join();
 	
 	if (pricing && pricing._total) {
 		data[keys.spec] = pricing.confirmedCriteriaSummary;
