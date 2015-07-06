@@ -28,6 +28,7 @@ products:
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
 differentiators:
   profession:
+    link: tech
     title: 專業穩妥
     description: 從現場打光收音、EFP 多機直播，到後製剪輯、網路應用……放心把所有技術環節交給我們，讓您專注於創作內容、辦好活動。
   quality:
