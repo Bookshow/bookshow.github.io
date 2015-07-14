@@ -32,7 +32,19 @@ body.article {
 				max-width: 735px + (15px * 2);
 				margin: $sm-space auto 0;
 			}
-			> h2 {text-align:center;}
+			h2 {
+				border-bottom: 1px solid $color-gray;
+				padding-bottom: 5px;
+				margin-left: -16px;
+				&::before {
+					content: "";
+					border-left: 6px solid $color-turquoise;
+					margin-right: 10px;
+				}
+			}
+			> h2 {
+				text-align:center;
+			}
 			> img, video {
 				max-width: 640px;
 				width: 100%;
@@ -45,6 +57,7 @@ body.article {
 				> :first-child {
 					float: left;
 					width: 520px;
+
 				}
 				> :last-child {
 					float: right;
