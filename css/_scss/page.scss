@@ -28,30 +28,49 @@ body.article {
 		}
 		> .container {
 			max-width: 960px +(15px * 2);
-			&.narrow {
+			> * {
 				max-width: 735px + (15px * 2);
-				img,
-				video {
-					max-width: 640px;
-					width: 100%;
-				}
+				margin: $sm-space auto 0;
 			}
-			&.two-column {
-				> :first-child {
+			> h2 {text-align:center;}
+			> img, video {
+				max-width: 640px;
+				width: 100%;
+				&.wide {
+				max-width: 960px;
+				width: 100%;						
+				}				
+			}
+			&.left {
+				> div:first-of-type {
 					float: left;
-				}
-				> :last-child {
-					float: right;
-				}
-				> .narrow {
-					width: 380px;
-				}
-				> .medium {
-					width: 450px; // TODO: may be just 460?
-				}
-				> .wide {
 					width: 520px;
 				}
+				> div:last-of-type {
+					float: right;
+					width: 380px;
+				}
+			}
+			&.right {
+				> div:first-of-type{
+					float: right;
+					width: 520px;
+				}
+				> div:last-of-type {
+					float: left;
+					width: 380px;
+				}
+			}
+			&.two div {
+				float: left;
+				width: 442px;
+				&:first-of-type {margin-right: 76px;}
+			}
+			&.three div {
+				float: left;
+				width: 280px;
+				margin-right: 60px;
+				&:last-of-type {margin-right:0;}
 			}
 			&::before {
 				display: none; // let margin goes through
