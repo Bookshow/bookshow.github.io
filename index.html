@@ -51,7 +51,7 @@ class: index
 				{% for d in labels.differentiators %}
 					{% assign cnt = d[1] %}
 				<div class="col-md-4 u-col u-fh">
-					<a class="u-item u-fh {{ d[0] }}" href="{{ cnt.link }}">
+					<a class="u-item u-fh {{ d[0] }}" href="{{ d[0] }}">
 						<div class="u-icon"></div>
 						<div class="u-title">{{ cnt.title }}</div>
 						<div class="u-description">{{ cnt.description }}</div>

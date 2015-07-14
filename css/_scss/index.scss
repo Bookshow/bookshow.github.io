@@ -201,7 +201,7 @@ body.index {
 				background: linear-gradient(-45deg, #216F9B, #0A4760);
 			}
 			&.quality,
-			&.effectiveness {
+			&.effect {
 				background: linear-gradient(-45deg, #0A4760, #216F9B);
 			}
 			&.profession .u-icon {
@@ -210,7 +210,7 @@ body.index {
 			&.quality .u-icon {
 				background-position: center (-$icon-size -$icon-border-width);
 			}
-			&.effectiveness .u-icon {
+			&.effect .u-icon {
 				background-position: center (-$icon-size * 2 -$icon-border-width);
 			}
 		}
