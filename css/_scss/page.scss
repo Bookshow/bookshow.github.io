@@ -19,6 +19,8 @@ body.article {
 		.video {
 			display: block;
 			margin: $sm-space auto 0;
+			border: 1px solid $color-gray;
+			box-shadow: 3px 2px 10px $color-gray;
 		}
 		video {
 			width: 100%;
