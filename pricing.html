@@ -18,41 +18,47 @@ css: pricing.css
 					{% include pricing-option.html key="基本" title="標準套裝方案" disabled="true" selected="true" %}
 					{% include pricing-intbox.html key="拍攝" title="拍攝時間：" unit="小時" %}
 					<div class="u-note note">
-						<span class="nowrap">含主副雙機、獨立燈光收音、技術人員</span>
+						<span class="nowrap">包含主副雙攝影機、兩組獨立燈光收音</span>
 						<span class="nowrap">大台北市區或 BOOKSHOW 棚內拍攝</span><br>
 					</div>
 					{% include pricing-option.html key="雙主" title="升級為雙主機" %}
 					{% include pricing-option.html key="加副" title="追加副攝影機" %}
-					{% include pricing-option.html key="投影" title="嵌入電腦投影" %}
+					{% include pricing-option.html key="投影" title="合成投影畫面" %}
 				</div>
 				<div class="u-block" data-group="courses">
 					<div class="u-heading note-large">交件類型</div>
-					{% include pricing-option.html key="剪輯" title="紀錄型多機剪輯" %}
-					{% include pricing-option.html key="精剪" title="節目型精緻剪輯" %}
-					{% include pricing-option.html key="直播" title="網路直播及導播" %}
-					{% include pricing-option.html key="直播+剪輯" title="網路直播 + 紀錄型剪輯" %}
-					{% include pricing-option.html key="直播+精剪" title="網路直播 + 節目型剪輯" %}
+					{% include pricing-option.html key="剪輯" title="多機紀錄剪輯" %}
+					{% include pricing-option.html key="精剪" title="精緻節目剪輯" %}
+					{% include pricing-option.html key="直播" title="網路直播導播" %}
+					{% include pricing-option.html key="直播+剪輯" title="網路直播＋紀錄剪輯" %}
+					{% include pricing-option.html key="直播+精剪" title="網路直播＋節目剪輯" %}
 				</div>
 			</div>
 			<div class="col-xs-6">
 				<div class="u-block">
 					<div class="u-heading note-large">週邊服務</div>
-					{% include pricing-option.html key="檢勘" title="現場勘測與系統規劃" %}
-					{% include pricing-option.html key="網路" title="申裝與架設臨時網路" %}
-					{% include pricing-option.html key="順稿" title="逐字文稿" %}
+					{% include pricing-option.html key="檢勘" title="現場勘測規劃" %}
+					{% include pricing-option.html key="網路" title="申裝臨時網路" %}
+					{% include pricing-option.html key="順稿" title="通順逐字文稿" %}
 					{% include pricing-intbox.html key="順稿" unit="小時" attached="true" %}
-					{% include pricing-option.html key="字幕" title="字幕壓製" %}
+					{% include pricing-option.html key="字幕" title="影片字幕壓製" %}
 					{% include pricing-intbox.html key="字幕" unit="小時" attached="true" %}
 				</div>
 				<div class="u-block" data-group="payments">
 					<div class="u-heading note-large">付款方式</div>
-					{% include pricing-option.html key="標付" title="標準付款方式" %}
+					{% include pricing-option.html key="標付" title="標準訂金尾款制" %}
 					<div class="u-note note">
-						預約檔期時支付全案50%<br>
-						確認定稿交件時結清尾款
+						預約檔期時，支付 1/2 為訂金<br>
+						確認定稿後，結清尾款再交件
 					</div>
-					{% include pricing-option.html key="預付" title="全額預付優惠　-5%" %}
-					{% include pricing-option.html key="後付" title="先交件後付款 +10%" %}
+					{% include pricing-option.html key="預付" title="全額預付　-5%" %}
+					<div class="u-note note">
+						預約時付訂，拍攝前結清全款
+					</div>
+					{% include pricing-option.html key="後付" title="事後請款 +10%" %}
+					<div class="u-note note">
+						應於拍攝後 45 日內結清全款
+					</div>
 				</div>
 			</div>
 		</div>
@@ -60,31 +66,25 @@ css: pricing.css
 </section>
 <section id="submit">
 	<div id="cta" class="container">
-		<div class="row">
-			<div class="col-xs-6">
-				<div class="u-block u-submit">
-					<button class="btn btn-secondary">試算</button>
-				</div>
-				<div class="u-block u-total-container">
-					<span class="u-prefix note">NTD</span>
-					<div class="u-total"></div>
-					<span class="u-suffix note">元起</span>
-				</div>
-				<div class="u-block">
-					<div class="u-contact-note note-large">
-						大量簽約、公益贊助、品牌合作另有優惠，歡迎洽詢。
-					</div>
-				</div>
+		<div class="u-block u-submit">
+			<button class="btn btn-primary">估價試算</button>
+		</div>
+		<div class="u-block u-total-container">
+			<span class="u-prefix note">NTD</span>
+			<div class="u-total"></div>
+			<span class="u-suffix note">元起</span>
+		</div>
+		<div class="u-block">
+			<div class="u-submit-note note-large">
+				多場簽約、品牌合作、公益贊助<br/>另有優惠，歡迎洽詢
 			</div>
-			<div class="col-xs-6">
-				<div class="u-block u-contact-us-container">
-					<button class="btn btn-primary contact-us-btn" data-toggle="contact-us">聯絡我們</button>
-				</div>
-				<div class="u-block">
-					<div class="u-contact-note note-large">
-						我們將竭誠說明，依據您的應用需求，在預算範圍內為您規劃最佳服務方案。
-					</div>
-				</div>
+		</div>
+		<div class="u-block u-contact-us-container">
+			<button class="btn btn-primary contact-us-btn" data-toggle="contact-us">聯絡我們</button>
+		</div>
+		<div class="u-block">
+			<div class="u-contact-note note-large">
+				我們將竭誠說明，依據您的應用需求<br/>在預算範圍內為您規劃最佳服務方案
 			</div>
 		</div>
 	</div>

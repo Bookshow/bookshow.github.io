@@ -56,24 +56,27 @@ body.pricing #body {
 		color: $color-turquoise;
 		display: none;
 	}
-	.u-note,
-	.u-contact-note {
-		margin-left: -28px;
+	.u-note {
+		margin-left:  -28px;
 		margin-right: -28px;
+	}
+	.u-submit-note,
+	.u-contact-note {
+		text-align: center;
+		color: #333;
+		margin-left:  -20px;
+		margin-right: -20px;
 	}
 	.u-note {
 		text-align: center;
 		margin-top: 4px;
-	}
-	.u-contact-note {
-		color: #333;
 	}
 	.u-block {
 		position: relative;
 		width: 100%;
 		max-width: 270px;
 		text-align: left;
-		
+
 		&.continuous {
 			&::before {
 				@extend .u-heading;
@@ -140,10 +143,10 @@ body.pricing #body {
 	}
 	
 	#cta .u-block {
-		margin-top: 24px;
+		margin: 24px auto 0;
 	}
 	.u-total-container {
-		padding: 0 16px;
+		padding: 0 20px;
 	}
 	.u-total {
 		$font-size: 48px;
@@ -152,7 +155,7 @@ body.pricing #body {
 		font-size: $font-size;
 		padding-bottom: 8px;
 		padding-right: 12px;
-		text-align: right;
+		text-align: center;
 		line-height: $font-size;
 		
 		&::before {
@@ -173,12 +176,12 @@ body.pricing #body {
 	}
 	.u-prefix {
 		position: absolute;
-		left: -27px;
+		left: -20px;
 		bottom: -4px;
 	}
 	.u-suffix {
 		position: absolute;
-		right: -27px;
+		right: -20px;
 		bottom: -4px;
 		width: 60px; // TODO: ad-hoc
 		text-align: right;
