@@ -149,7 +149,7 @@ class: index
 	<h1>告別爛燈光破音響慢網路，我們為你蓋了直播錄影棚！</h1>
 </section>
 
-<section id="product-tabs">
+<section id="studio-tabs">
 	<div class="container">
 		<ul class="nav nav-tabs nav-justified">
 			{% for p in labels.studio %}
@@ -173,8 +173,8 @@ class: index
 					<div class="u-description subtitle-text">{{ cnt.description }}</div>
 					<a href="/{% if cnt.link %}{{ cnt.link }}/#{% endif %}{{ p[0] }}" class="btn btn-ghost">瞭解更多</a>
 				</div>
-				<i class="navigator previous md md-chevron-left" role="navigator" data-toggle="previous" data-target="#product-tabs .nav"></i>
-				<i class="navigator next md md-chevron-right" role="navigator" data-toggle="next" data-target="#product-tabs .nav"></i>
+				<i class="navigator previous md md-chevron-left" role="navigator" data-toggle="previous" data-target="#studio-tabs .nav"></i>
+				<i class="navigator next md md-chevron-right" role="navigator" data-toggle="next" data-target="#studio-tabs .nav"></i>
 			</div>
 		</div>
 		{% endfor %}
