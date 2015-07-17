@@ -9,7 +9,22 @@
 		<li>
 			<div class="dropdown">
 				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
-					服務<span class="caret"></span>
+					Why?<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu clearfix" role="menu">
+					{% for p in site.data.labels.differentiators %}
+						{% assign id = p[0] %}
+						{% assign title = p[1].title %}
+						{% capture url %}/{{ id }}{% endcapture %}
+					<li>{% include menu-link.html type="header" title=title url=url id=id %}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
+					錄製<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu clearfix" role="menu">
 					{% for p in site.data.labels.products %}
@@ -21,8 +36,23 @@
 				</ul>
 			</div>
 		</li>
-		<li>{% include menu-link.html type="header" title="價格" url="/pricing" id="pricing" %}</li>
-		<li>{% include menu-link.html type="header" title="交通" url="/traffic" id="traffic" %}</li>
+		<li>
+			<div class="dropdown">
+				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
+					影棚<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu clearfix" role="menu">
+					<li>{% include menu-link.html type="header" title="交通位置" url="/traffic" id="traffic" %}</li>
+					{% for p in site.data.labels.studio %}
+						{% assign id = p[0] %}
+						{% assign title = p[1].title %}
+						{% capture url %}/{{ id }}{% endcapture %}
+					<li>{% include menu-link.html type="header" title=title url=url id=id %}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</li>
+		<li>{% include menu-link.html type="header" title="估價" url="/pricing" id="pricing" %}</li>
 		<li>
 			<div class="dropdown">
 				<a class="menu-link dropdown-toggle" data-toggle="dropdown">

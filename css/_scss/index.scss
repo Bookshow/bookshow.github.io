@@ -457,7 +457,8 @@ body.index {
 			}
 		}
 	}
-	#products {
+	#products,
+	#studio {
 		.tab-pane {
 			position: relative;
 			background: center center no-repeat transparent;
@@ -495,21 +496,33 @@ body.index {
 					right: 24px;
 				}
 			}
-			&#livestream {
+
+			&#conference {
+				background-image: url('/img/cat/midnight.jpg');
+			}
+			&#interview {
 				background-image: url('/img/cat/apollo.jpg');
 			}
-			&#conference {
+			&#advertisement {
 				background-image: url('/img/cat/midnight.jpg');
 			}
 			&#webcourse {
 				background-image: url('/img/cat/apollo.jpg');
 			}
-			&#interview {
-				background-image: url('/img/cat/midnight.jpg');
-			}
-			&#space {
+
+			&#livestream {
 				background-image: url('/img/cat/apollo.jpg');
 			}
+			&#space {
+				background-image: url('/img/cat/midnight.jpg');
+			}
+			&#turnkey {
+				background-image: url('/img/cat/apollo.jpg');
+			}
+			&#out-support {
+				background-image: url('/img/cat/midnight.jpg');
+			}
+
 		}
 		@media (max-width: 600px) {
 			.tab-pane {

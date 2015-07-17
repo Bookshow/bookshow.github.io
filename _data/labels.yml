@@ -1,5 +1,9 @@
-value: 貼近觀眾，引發共鳴
-subtitle: ['用網路影音流通知識、', '溝通社群，', '打造您的自媒體']
+value: 引人注目，誘發共鳴
+subtitle: ['為您打造網路影音自媒體，', '分享知識理念、', '凝聚社群支持']
+
+# value: 貼近觀眾，引發共鳴
+# subtitle: ['用網路影音流通知識、', '溝通社群，', '打造您的自媒體']
+
 products:
   livestream: 
     title: 網路直播
@@ -11,20 +15,37 @@ products:
     abbreviation: 講座
     summary: 秀出清晰簡報、講者神采，百分百傳達
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
-  webcourse: 
-    title: 數位課程
-    abbreviation: 課程
-    summary: 提升學習、銷售成效的知識影音化服務
-    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
   interview: 
     title: 人物訪談
     abbreviation: 訪談
     summary: 分享動人故事經驗，宣揚您的創新理念
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+  advertisement: 
+    title: 宣傳短片
+    abbreviation: 短片
+    summary: 宣傳短片
+    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+  webcourse: 
+    title: 數位課程
+    abbreviation: 課程
+    summary: 提升學習、銷售成效的知識影音化服務
+    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+studio: 
   space: 
     title: 活動場地
     abbreviation: 場地
     summary: 專為「錄影直播」精心打造的舒適空間
+    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+  turnkey: 
+    title: 影棚規劃
+    abbreviation: 規劃
+    summary: 台北市政府捷運站兩百公尺，有停車場
+    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+  out-support: 
+    link: profession
+    title: 外場支援
+    abbreviation: 場勘
+    summary: 進行實地技術勘測、規劃影音網路支援
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
 differentiators:
   profession:
@@ -72,17 +93,3 @@ partners:
   前程文化:
     class: bar
     uri: fcmc.png
-
-livestream: 
-  value: 不在現場，勝似現場
-  subtitle: 網路直播，第一時間傳播、擴大互動共鳴
-  sec1: 
-    type: left
-    title: 
-    summary: 異地零時差同步觀看，不受交通地點遠近、場地容納人數、實物成本限制，一二三四五六七八九，一二三四五六七八九，一二三四五六七八九，
-    img: ['adsf', '']
-  sec2: 
-    type: 
-    title: 
-    summary: 
-    img: ['adsf', '']
