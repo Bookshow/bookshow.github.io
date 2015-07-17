@@ -5,6 +5,12 @@ body.index {
 	}
 	h1 {
 		margin-top: 0 !important;
+		transition: 1s;
+		
+		&.out {
+			opacity: 0;
+			@include transform(translateX(20px));
+		}
 	}
 	#entrance {
 		background: #070F14;
