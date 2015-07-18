@@ -116,10 +116,15 @@ body.article {
 		}
 	}
 	@media #{$media-w-992-minus} {
-		section > .container.two-column {
-			> * {
-				float: none !important;
-				width: auto !important;
+		section > .container {
+			&.left,
+			&.right,
+			&.two,
+			&.three {
+				> * {
+					float: none !important;
+					width: auto !important;
+				}
 			}
 		}
 	}
