@@ -34,8 +34,7 @@ var $ = window.jQuery,
 
 window.events.on('size', function () {
 	if (!init) {
-		var className = window.document.body.className;
-		if (className && className.contains('index')) {
+		if (window.document.body.className.indexOf('index') > -1) {
 			($h1 = $('h1')).addClass('out');
 			$(window.document).on('scroll', onScroll);
 		}
