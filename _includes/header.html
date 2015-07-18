@@ -9,21 +9,6 @@
 		<li>
 			<div class="dropdown">
 				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
-					Why?<span class="caret"></span>
-				</a>
-				<ul class="dropdown-menu clearfix" role="menu">
-					{% for p in site.data.labels.differentiators %}
-						{% assign id = p[0] %}
-						{% assign title = p[1].title %}
-						{% capture url %}/{{ id }}{% endcapture %}
-					<li>{% include menu-link.html type="header" title=title url=url id=id %}</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</li>
-		<li>
-			<div class="dropdown">
-				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
 					錄製<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu clearfix" role="menu">
@@ -36,6 +21,7 @@
 				</ul>
 			</div>
 		</li>
+		<li>{% include menu-link.html type="header" title="估價" url="/pricing" id="pricing" %}</li>
 		<li>
 			<div class="dropdown">
 				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
@@ -52,14 +38,19 @@
 				</ul>
 			</div>
 		</li>
-		<li>{% include menu-link.html type="header" title="估價" url="/pricing" id="pricing" %}</li>
 		<li>
 			<div class="dropdown">
 				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
-					關於<span class="caret"></span>
+					About<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu clearfix" role="menu">
 					<li>{% include menu-link.html type="header" title="關於我們" url="/about" id="about" %}</li>
+					{% for p in site.data.labels.differentiators %}
+						{% assign id = p[0] %}
+						{% assign title = p[1].title %}
+						{% capture url %}/{{ id }}{% endcapture %}
+					<li>{% include menu-link.html type="header" title=title url=url id=id %}</li>
+					{% endfor %}
 					<li>{% include menu-link.html type="header" title="部落格" url="http://blog.bookshow.tw" id="blog" %}</li>
 				</ul>
 			</div>
