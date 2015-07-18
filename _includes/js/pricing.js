@@ -131,7 +131,6 @@ PricingModel.prototype.recalculate = function (options) {
 	});
 	
 	total = Math.round((base + step * (hrs + 2)) * multipliers + externals);
-	
 	this.confirmedCriteriaSummary = summarize(this);
 	/*
 	if (total == this._total)
@@ -140,7 +139,7 @@ PricingModel.prototype.recalculate = function (options) {
 	if (!options || options.ga !== false) {
 		// TODO: GA
 	}
-	this.trigger('total', this._total = total);
+	this.trigger('total', this._total = total.toLocaleString());
 };
 
 PricingModel.prototype.setCourse = function (course) {
