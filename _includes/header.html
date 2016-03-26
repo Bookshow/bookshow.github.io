@@ -6,6 +6,7 @@
 </div>
 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 	<ul class="nav navbar-nav">
+{% comment %}
 		<li>
 			<div class="dropdown">
 				<a class="menu-link dropdown-toggle" data-toggle="dropdown">
@@ -21,6 +22,7 @@
 				</ul>
 			</div>
 		</li>
+{% endcomment %}
 		<li>{% include menu-link.html type="header" title="估價" url="/pricing" id="pricing" %}</li>
 		<li>
 			<div class="dropdown">
@@ -29,12 +31,14 @@
 				</a>
 				<ul class="dropdown-menu clearfix" role="menu">
 					<li>{% include menu-link.html type="header" title="交通位置" url="/traffic" id="traffic" %}</li>
+{% comment %}
 					{% for p in site.data.labels.studio %}
 						{% assign id = p[0] %}
 						{% assign title = p[1].title %}
 						{% capture url %}/{{ id }}{% endcapture %}
 					<li>{% include menu-link.html type="header" title=title url=url id=id %}</li>
 					{% endfor %}
+{% endcomment %}
 				</ul>
 			</div>
 		</li>
@@ -45,12 +49,14 @@
 				</a>
 				<ul class="dropdown-menu clearfix" role="menu">
 					<li>{% include menu-link.html type="header" title="關於我們" url="/about" id="about" %}</li>
+{% comment %}
 					{% for p in site.data.labels.differentiators %}
 						{% assign id = p[0] %}
 						{% assign title = p[1].title %}
 						{% capture url %}/{{ id }}{% endcapture %}
 					<li>{% include menu-link.html type="header" title=title url=url id=id %}</li>
 					{% endfor %}
+{% endcomment %}
 					<li>{% include menu-link.html type="header" title="部落格" url="http://blog.bookshow.tw" id="blog" %}</li>
 				</ul>
 			</div>

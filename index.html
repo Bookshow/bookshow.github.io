@@ -58,7 +58,7 @@ class: index
 				{% for d in labels.differentiators %}
 					{% assign cnt = d[1] %}
 				<div class="col-md-4 u-col u-fh">
-					<a class="u-item u-fh {{ d[0] }}" href="{{ d[0] }}">
+					<a class="u-item u-fh {{ d[0] }}">
 						<div class="u-icon"></div>
 						<div class="u-title">{{ cnt.title }}</div>
 						<div class="u-description">{{ cnt.description }}</div>
@@ -135,7 +135,9 @@ class: index
 				<div class="u-block">
 					<div class="u-title subtitle-text">{{ cnt.title }}</div>
 					<div class="u-description subtitle-text">{{ cnt.description }}</div>
+{% comment %}
 					<a href="/{% if cnt.link %}{{ cnt.link }}/#{% endif %}{{ p[0] }}" class="btn btn-ghost">瞭解更多</a>
+{% endcomment %}
 				</div>
 				<i class="navigator previous md md-chevron-left" role="navigator" data-toggle="previous" data-target="#product-tabs .nav"></i>
 				<i class="navigator next md md-chevron-right" role="navigator" data-toggle="next" data-target="#product-tabs .nav"></i>
@@ -145,6 +147,7 @@ class: index
 	</div>
 </section>
 
+{% comment %}
 <section>
 	<h1>告別爛燈光破音響慢網路，我們為你蓋了直播錄影棚！</h1>
 </section>
@@ -180,6 +183,7 @@ class: index
 		{% endfor %}
 	</div>
 </section>
+{% endcomment %}
 
 <section>
 	<h1>我們的合作夥伴</h1>

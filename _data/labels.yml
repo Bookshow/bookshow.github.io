@@ -20,33 +20,33 @@ products:
     abbreviation: 訪談
     summary: 分享動人故事經驗，宣揚您的創新理念
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
-  advertisement: 
-    title: 宣傳短片
-    abbreviation: 短片
-    summary: 宣傳短片
-    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+#  advertisement: 
+#    title: 宣傳短片
+#    abbreviation: 短片
+#    summary: 宣傳短片
+#    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
   webcourse: 
     title: 數位課程
     abbreviation: 課程
     summary: 提升學習、銷售成效的知識影音化服務
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
-studio: 
+#studio: 
   space: 
     title: 活動場地
     abbreviation: 場地
     summary: 專為「錄影直播」精心打造的舒適空間
     description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
-  turnkey: 
-    title: 影棚規劃
-    abbreviation: 規劃
-    summary: 台北市政府捷運站兩百公尺，有停車場
-    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
-  out-support: 
-    link: profession
-    title: 外場支援
-    abbreviation: 場勘
-    summary: 進行實地技術勘測、規劃影音網路支援
-    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+#  turnkey: 
+#    title: 影棚規劃
+#    abbreviation: 規劃
+#    summary: 台北市政府捷運站兩百公尺，有停車場
+#    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
+#  out-support: 
+#    link: profession
+#    title: 外場支援
+#    abbreviation: 場勘
+#    summary: 進行實地技術勘測、規劃影音網路支援
+#    description: 這裡是文案前十個字。這裡是文案前二十字。這裡是文案前三十字。這裡是文案前四十字。這裡是文案五十字了。這裡是文案準備收尾。
 differentiators:
   profession:
     title: 穩妥可靠
