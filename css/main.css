@@ -316,7 +316,7 @@ body.home #footer {
 	padding: 0;
 	padding-top: 100px;
 	border-radius: 15px;
-	background: #C8C0B8 0 0 no-repeat;
+	background: #DFD4D0 0 0 no-repeat;
 	background-image: url('/img/menu-icon.png');
 	text-align: center;
 	font-weight: bold;
@@ -351,7 +351,7 @@ body.home #footer {
 }
 .menu-panel {
 	position: relative;
-	background: #C8C0B8 0 0 no-repeat;
+	background: #DFD4D0 0 0 no-repeat;
 	border-radius: 15px;
 	padding: 15px 0;
 }
@@ -363,7 +363,7 @@ body.home #footer {
 }
 .menu-desc {
 	margin: 0 15px 15px 140px;
-	background: #DDD 0 0 no-repeat;
+	background: #F8F6FA 0 0 no-repeat;
 	border-radius: 10px;
 	padding: 10px 15px;
 	line-height: 32px;
