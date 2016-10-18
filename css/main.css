@@ -14,14 +14,14 @@ h1, h2, h3 {
 	font-weight: bold;
 }
 a {
-	color: #AA1919;
+	color: #882020;
 }
 a:hover, 
 a:focus:hover {
-	color: #CC3333;
+	color: #C44020;
 }
 a:focus {
-	color: #AA1919;
+	color: #005090;
 	text-decoration: none;
 }
 iframe {
