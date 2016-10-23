@@ -4,6 +4,7 @@ category_dir: /
 permalink: pretty
 exclude: [README.md, _tool, _ignored]
 encoding: UTF-8
+highlighter: rouge
 
 sass:
   sass_dir: css/_scss
