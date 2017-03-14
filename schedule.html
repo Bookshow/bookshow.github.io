@@ -5,17 +5,16 @@ class: schedule
 ---
 
 <div class="page-section">
-	<iframe id="google-calendar" src="{{ site.google_calendar_url }}">載入中...</iframe>
-</div>
-
-<div class="page-section">
 	<h2>開放時段（採預約制）</h2>
 	<ul class="fa-cus-ul small">
 		<li class="fa-cus-check-circle">
-			場地、錄影：週一～日 09:00~22:00
+			場地錄影：週一～日 08:00~22:00，依早╱午╱晚時段預約
 		</li>
 		<li class="fa-cus-check-circle">
-			參觀、洽談：週一～五 10:00~18:00
+			場勘量測：週一～五 12:00~13:00；17:00~18:00
+		</li>
+		<li class="fa-cus-check-circle">
+			業務洽談：週一～五 10:00~18:00
 		</li>
 		 <li class="fa-cus-check-circle">
 		 	公休時間請參考日曆；颱風天災，依台北市政府公告
@@ -30,10 +29,13 @@ class: schedule
 	<h2>預約服務流程</h2>
 	<ul class="fa-cus-ul small">
 		<li class="fa-cus-check-circle">
-			場地及錄影時段預約，在訂金到款後生效。
+			請先與我們洽詢您有興趣的服務時段，取得報價
 		</li>
 		<li class="fa-cus-check-circle">
-			有疑問嗎？歡迎在右下角直接諮詢客服、電話詢問、或 <a href="mailto:hello@bookshow.tw">e-mail</a>、<a href="http://www.facebook.com/bookshow.tw" target="_blank">facebook</a> 留言，我們會 24 小時內回覆！
+			在確認到款後，為您保留場地及錄影檔期
+		</li>
+		<li class="fa-cus-check-circle">
+			有疑問嗎？歡迎在右下角直接諮詢客服、電話詢問、或 <a href="mailto:hello@bookshow.tw">e-mail</a>、<a href="http://www.facebook.com/bookshow.tw" target="_blank">facebook</a> 留言，我們會在第一時間回覆！
 		</li>
 	</ul>
 	<div id="business-flow">
@@ -52,7 +54,7 @@ class: schedule
 		</div>
 		<div class="row">
 			<div class="col-xs-4 box visit">
-				<div>參觀洽談</div>
+				<div>業務洽談</div>
 			</div>
 			<div class="col-xs-4 box event">
 				<div>活動場地</div>
@@ -61,10 +63,13 @@ class: schedule
 				<div>錄影製作</div>
 			</div>
 		</div>
+		<div class="row box all">
+			<div><span class="nowrap">詢問檔期時段、服務方案、取得報價</span></div>
+		</div>
 		<div class="row">
 			<div class="col-xs-offset-4 col-xs-8 box payment">
 				<div>
-					支付訂金（總價 1/2）到<br>
+					支付報價單所列金額到<br>
 					<span class="nowrap">[808] 玉山銀行</span>
 					<span class="nowrap">忠孝分行</span><br>
 					0875-940-103159<br>
@@ -72,19 +77,14 @@ class: schedule
 				</div>
 			</div>
 		</div>
-		<div class="row box all">
-			<div><span class="nowrap">填寫下方表單：預約時間、</span><span class="nowrap">服務方案、對帳資訊</span></div>
-		</div>
-		<div class="row box all">
-			<div><span class="nowrap">24 小時內收到 e-mail / 簡訊回覆，</span><span class="nowrap">確認預約完成！</span></div>
-		</div>
 		<div class="row">
 			<div class="col-xs-offset-4 col-xs-8 box payment">
-				<div>
-					<span class="nowrap">10 天前可改期</span><span class="nowrap">或取消預約</span><br>
-					<span class="nowrap">扣除 1,000 元手續費後</span><span class="nowrap">退還訂金</span>
+				<div><span class="nowrap">確認對帳資訊、保留檔期</span>
 				</div>
 			</div>
+		</div>
+		<div class="row box all">
+			<div><span class="nowrap">24 小時內收到 e-mail / 訊息回覆，</span><span class="nowrap">確認預約完成！</span></div>
 		</div>
 		<div class="row">
 			<div class="col-xs-4 box visit">
@@ -92,7 +92,7 @@ class: schedule
 			</div>
 			<div class="col-xs-4 box event">
 				<div>準時抵達<br>
-				會後結清場租</div>
+				會後結清延時場租</div>
 			</div>
 			<div class="col-xs-4 box studio">
 				<div>準時抵達<br>
@@ -106,8 +106,4 @@ class: schedule
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="page-section">
-	<iframe id="google-form" src="{{ site.google_form_url }}">載入中...</iframe>
 </div>
