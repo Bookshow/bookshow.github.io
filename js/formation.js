@@ -7,14 +7,19 @@ var catalog = {
 	desk: {
 		cost: { desk: 1 }
 	},
+	/*
+	desk3: {
+		cost: { desk3: 1 }
+	},
+	*/
 	chair: {
 		cost: { chair: 1 }
 	},
 	d1c2: {
 		subs: [
-			{ type: 'desk', x: -10 },
-			{ type: 'chair', x: 15, y: 15 },
-			{ type: 'chair', x: 15, y: -15 }
+			{ type: 'desk', x: 10 },
+			{ type: 'chair', x: -15, y: 15 },
+			{ type: 'chair', x: -15, y: -15 }
 		],
 		cost: { desk: 1, chair: 2 }
 	},
@@ -27,8 +32,8 @@ var catalog = {
 	},
 	d2c4: {
 		subs: [
-			{ type: 'd1c2', y: -20, rotation: -90 },
-			{ type: 'd1c2', y: 20, rotation: 90 }
+			{ type: 'd1c2', y: 20, rotation: -90 },
+			{ type: 'd1c2', y: -20, rotation: 90 }
 		],
 		cost: { desk: 2, chair: 4 }
 	},
@@ -46,8 +51,9 @@ var catalog = {
 var types = Object.keys(catalog);
 
 var storage = {
-	desk: 16,
-	chair: 50
+	desk: 24,
+	//desk3: 4,
+	chair: 110
 };
 
 
@@ -61,8 +67,9 @@ function setElementRotation(elem, degree) {
 }
 
 function updateCount(elem, value) {
-	if (!elem)
+	if (!elem) {
 		return;
+	}
 	elem.innerHTML = value;
 	$(elem)[value < 0 ? 'addClass' : 'removeClass']('negative');
 }
@@ -107,7 +114,9 @@ Warehouse.prototype.rotate = function (type, degree, add) {
 
 // TODO: may also take care of rotation
 Warehouse.prototype.create = function (type, classes) {
-	if (classes && typeof classes !== 'string') classes = classes.join(' ');
+	if (classes && typeof classes !== 'string') {
+		classes = classes.join(' ');
+	}
 	classes = !classes || !classes.length ? '' : ' ' + classes;
 	var elem = $('<span class="' + type + classes + '"></span>')[0],
 		subs = (this.catalog[type] && this.catalog[type].subs) || [];
@@ -118,18 +127,21 @@ Warehouse.prototype.create = function (type, classes) {
 			left: (sub.x || 0) + 'px',
 			top: (sub.y || 0) + 'px'
 		});
-		if (sub.rotation)
+		if (sub.rotation) {
 			setElementRotation(c, sub.rotation);
+		}
 		elem.appendChild(c);
 	}
 	return elem;
 };
 
 Warehouse.prototype.addCount = function (desk, chair) {
-	if (desk)
+	if (desk) {
 		updateCount(this.counts.desk, this.storage.desk = this.storage.desk + desk);
-	if (chair)
+	}
+	if (chair) {
 		updateCount(this.counts.chair, this.storage.chair = this.storage.chair + chair);
+	}
 };
 
 
@@ -172,8 +184,9 @@ Room.prototype.set = function (obj) {
 Room.prototype.remove = function (obj) {
 	var i = this.objects.indexOf(obj = normalize(obj)),
 		elem;
-	if (i < 0)
+	if (i < 0) {
 		return;
+	}
 	this.objects.splice(i, 1);
 	// jshint boss: true
 	if (elem = this.elems[obj._id]) {
@@ -229,18 +242,21 @@ function Dragger() {
 			return _dragging;
 		},
 		set: function (value) {
-			if (value == _dragging)
+			if (value == _dragging) {
 				return;
+			}
 			_dragging = value;
-			if (self.onState)
+			if (self.onState) {
 				self.onState(value);
+			}
 		}
 	});
 	
 	$(window.document)
 	.on('mousedown', '.draggable', function (e) {
-		if (self.dragging)
+		if (self.dragging) {
 			return;
+		}
 		if (self.onStart) {
 			var pass = self.onStart(e);
 			// jshint eqnull: true
@@ -250,17 +266,21 @@ function Dragger() {
 		self.dragging = true;
 	})
 	.on('mousemove', function (e) {
-		if (!self.dragging)
+		if (!self.dragging) {
 			return;
-		if (self.onMove)
+		}
+		if (self.onMove) {
 			self.onMove(e);
+		}
 	})
 	.on('mouseup', function (e) {
-		if (!self.dragging)
+		if (!self.dragging) {
 			return;
+		}
 		self.dragging = false;
-		if (self.onStop)
+		if (self.onStop) {
 			self.onStop(e);
+		}
 	});
 }
 
@@ -318,8 +338,9 @@ function decodeURL(url) {
 	var m = /[?&]f=([^&]+)/.exec(url),
 		str = m && m[1],
 		state = [];
-	if (!str || str.length % 5 !== 0)
+	if (!str || str.length % 5 !== 0) {
 		return [];
+	}
 	for (var i = 0, j, obj; i < str.length; i += 5) {
 		obj = {};
 		j = window.Radix64.toNumber(str.substring(i, i + 5));
@@ -350,11 +371,24 @@ $(function () {
 		dragged, 
 		gridSize = 5,
 		fromPool, 
-		ghost;
+		ghost,
+		$toolboxRoot = $('.tb-root');
 	
 	$(window.document).on('click', 'a.preset', function (e) {
 		manager.push(decodeURL(e.currentTarget.href));
 		e.preventDefault();
+	});
+	
+	$('.tb-root')
+	.on('click', '.tb-right-btn', function (e) {
+		if ($toolboxRoot.hasClass('open')) {
+			$toolboxRoot.removeClass('open').addClass('closed');
+		}
+	})
+	.on('click', '.tb-front', function (e) {
+		if (!$toolboxRoot.hasClass('open')) {
+			$toolboxRoot.removeClass('closed').addClass('open');
+		}
 	});
 	
 	manager.onChangeState = function (state) {
@@ -426,8 +460,9 @@ $(function () {
 		dragged.y = pos.y - roomRect.top;
 		room.set(dragged);
 		manager.push(room.objects, true);
-		if (fromPool)
+		if (fromPool) {
 			warehouse.addCount(-cost.desk, -cost.chair);
+		}
 	};
 	
 	manager.ready();

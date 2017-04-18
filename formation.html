@@ -16,29 +16,52 @@ css: [
 	<div class="room-container clearfix">
 		<div id="room"></div>
 	</div>
-	<div id="presets">
-		<div>
-			<a class="preset" href=".">空</a>
+	<div id="toolbox" class="tb-root open">
+		<div class="tb-bottom clearfix">
+			<div class="tb-right-btn">元件</div>
+			<div id="warehouse" class="tb-right-body"></div>
 		</div>
-		<div>
-			<a class="preset" href="?f=CEOYWCEPX0CImYWCInX0CN8YWCRWYWCVuYWCaGYWCN9X0CRXX0CVvX0CaHX02hmpW2hnHW">講座 48 人</a>
+		<div class="tb-front clearfix">
+			<div class="tb-left-btn">組合</div>
+			<div id="presets" class="tb-left-body">
+				<a class="preset" href=".">空</a>
+				<a class="preset" href="?f=CEOYWCEPX0CImYWCInX0CN8YWCRWYWCVuYWCaGYWCN9X0CRXX0CVvX0CaHX02hmpW2hnHW">講座 48 人</a>
+				<a class="preset" href="?f=6DmR06Dnh06K0R06K1306K1h06QGR06QH306QHh06WWR06WX306WXh06cmR06cn306Dn302bXgW8efgW">課程 30 人</a>
+				<a class="preset" href="?f=AD9ZWAD8YWAKfZWAS9ZWAKeYWAS8YWAZeYW2hnUW6YPUW">黑客松 30 人</a>
+			</div>
 		</div>
-		<div>
-			<a class="preset" href="?f=6DmR06Dnh06K0R06K1306K1h06QGR06QH306QHh06WWR06WX306WXh06cmR06cn306Dn302bXgW8efgW">課程 30 人</a>
-		</div>
-		<div>
-			<a class="preset" href="?f=AD9ZWAD8YWAKfZWAS9ZWAKeYWAS8YWAZeYW2hnUW6YPUW">黑客松 30 人</a>
-		</div>
-
-<!--
-		<div>
-			<a class="preset" href="?f=CDmY0CDnWWCImY0CInWWCNmY0CSmY0CXmY0CcmY0CNnWWCSnWWCXnWWCcnWW">48講座</a>
-		</div>
-		<div>
-			<a class="preset" href="?f=6EP306EOR06EPh06LGR06LH306LHh06S8R06S9306S9h06Z0R06Z1306Z1h02hmq02hnI0">24課程</a>
-		</div>
--->
-
 	</div>
-	<div id="warehouse"></div>
+	<!--
+	<div class="panel-group panel-group-horizontal clearfix" id="toolbox" role="tablist" aria-multiselectable="true">
+		<div class="panel panel-default panel-left">
+			<div class="panel-heading" role="tab">
+				<h4 class="panel-title">
+					<a role="button" data-toggle="collapse" data-parent="#toolbox" href="#presets-panel">
+						組合
+					</a>
+				</h4>
+			</div>
+			<div id="presets-panel" class="panel-collapse collapse width in" role="tabpanel">
+				<div id="presets" class="panel-body">
+					<a class="preset" href=".">空</a>
+					<a class="preset" href="?f=CEOYWCEPX0CImYWCInX0CN8YWCRWYWCVuYWCaGYWCN9X0CRXX0CVvX0CaHX02hmpW2hnHW">講座 48 人</a>
+					<a class="preset" href="?f=6DmR06Dnh06K0R06K1306K1h06QGR06QH306QHh06WWR06WX306WXh06cmR06cn306Dn302bXgW8efgW">課程 30 人</a>
+					<a class="preset" href="?f=AD9ZWAD8YWAKfZWAS9ZWAKeYWAS8YWAZeYW2hnUW6YPUW">黑客松 30 人</a>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default panel-right">
+			<div class="panel-heading" role="tab">
+				<h4 class="panel-title">
+					<a class="collapsed" role="button" data-toggle="collapse" data-parent="#toolbox" href="#warehouse-panel">
+						元件
+					</a>
+				</h4>
+			</div>
+			<div id="warehouse-panel" class="panel-collapse collapse width" role="tabpanel">
+				<div id="warehouse" class="panel-body"></div>
+			</div>
+		</div>
+	</div>
+	-->
 </div>
