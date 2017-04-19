@@ -16,26 +16,10 @@ var catalog = {
 	d1c2: {
 		subs: [
 			{ type: 'desk', x: 10 },
-			{ type: 'chair', x: -15, y: 15 },
-			{ type: 'chair', x: -15, y: -15 }
+			{ type: 'chair', x: -15, y: 14 },
+			{ type: 'chair', x: -15, y: -14 }
 		],
 		cost: { desk: 1, chair: 2 }
-	},
-	l1c3: {
-		subs: [
-			{ type: 'longdesk', x: 10 },
-			{ type: 'chair', x: -15, y: 30 },
-			{ type: 'chair', x: -15, y: 0 },
-			{ type: 'chair', x: -15, y: -30 }
-		],
-		cost: { longdesk: 1, chair: 3 }
-	},
-	c2: {
-		subs: [
-			{ type: 'chair', y: 15 },
-			{ type: 'chair', y: -15 }
-		],
-		cost: { chair: 2 }
 	},
 	d2c4: {
 		subs: [
@@ -44,14 +28,33 @@ var catalog = {
 		],
 		cost: { desk: 2, chair: 4 }
 	},
+	l1c3: {
+		subs: [
+			{ type: 'longdesk', x: 10 },
+			{ type: 'chair', x: -15, y: 28 },
+			{ type: 'chair', x: -15, y: 0 },
+			{ type: 'chair', x: -15, y: -28 }
+		],
+		cost: { longdesk: 1, chair: 3 }
+	},
 	c4: {
 		subs: [
-			{ type: 'chair', y:  33 },
-			{ type: 'chair', y:  11 },
-			{ type: 'chair', y: -11 },
-			{ type: 'chair', y: -33 }
+			{ type: 'chair', y:  40 },
+			{ type: 'chair', y:  15 },
+			{ type: 'chair', y: -10 },
+			{ type: 'chair', y: -35 }
 		],
 		cost: { chair: 4 }
+	},
+	c5: {
+		subs: [
+			{ type: 'chair', y:  50 },
+			{ type: 'chair', y:  25 },
+			{ type: 'chair', y:  0 },
+			{ type: 'chair', y: -25 },
+			{ type: 'chair', y: -50 }
+		],
+		cost: { chair: 5 }
 	}
 };
 
