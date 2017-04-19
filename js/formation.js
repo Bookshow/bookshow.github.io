@@ -4,14 +4,12 @@
 var $ = window.jQuery;
 
 var catalog = {
+	longdesk: {
+		cost: { longdesk: 1 }
+	},
 	desk: {
 		cost: { desk: 1 }
 	},
-	/*
-	desk3: {
-		cost: { desk3: 1 }
-	},
-	*/
 	chair: {
 		cost: { chair: 1 }
 	},
@@ -22,6 +20,15 @@ var catalog = {
 			{ type: 'chair', x: -15, y: -15 }
 		],
 		cost: { desk: 1, chair: 2 }
+	},
+	l1c3: {
+		subs: [
+			{ type: 'longdesk', x: 10 },
+			{ type: 'chair', x: -15, y: 30 },
+			{ type: 'chair', x: -15, y: 0 },
+			{ type: 'chair', x: -15, y: -30 }
+		],
+		cost: { longdesk: 1, chair: 3 }
 	},
 	c2: {
 		subs: [
@@ -52,7 +59,7 @@ var types = Object.keys(catalog);
 
 var storage = {
 	desk: 24,
-	//desk3: 4,
+	longdesk: 4,
 	chair: 110
 };
 
@@ -77,6 +84,7 @@ function updateCount(elem, value) {
 function Warehouse(element, catalog, storage) {
 	this.catalog = catalog;
 	this.storage = {
+		longdesk: storage.longdesk,
 		desk: storage.desk,
 		chair: storage.chair
 	};
@@ -103,6 +111,7 @@ function Warehouse(element, catalog, storage) {
 }
 
 Warehouse.prototype.updateCounts = function () {
+	updateCount(this.counts.longdesk, this.storage.longdesk);
 	updateCount(this.counts.desk, this.storage.desk);
 	updateCount(this.counts.chair, this.storage.chair);
 };
@@ -135,7 +144,10 @@ Warehouse.prototype.create = function (type, classes) {
 	return elem;
 };
 
-Warehouse.prototype.addCount = function (desk, chair) {
+Warehouse.prototype.addCount = function (longdesk, desk, chair) {
+	if (longdesk) {
+		updateCount(this.counts.longdesk, this.storage.longdesk = this.storage.longdesk + longdesk);
+	}
 	if (desk) {
 		updateCount(this.counts.desk, this.storage.desk = this.storage.desk + desk);
 	}
@@ -393,14 +405,17 @@ $(function () {
 	
 	manager.onChangeState = function (state) {
 		room.load(state);
-		var desk = storage.desk,
+		var longdesk = storage.longdesk,
+			desk = storage.desk,
 			chair = storage.chair,
 			cost;
 		state.forEach(function (obj) {
 			cost = catalog[obj.type].cost;
+			longdesk -= cost.longdesk || 0;
 			desk -= cost.desk || 0;
 			chair -= cost.chair || 0;
 		});
+		warehouse.storage.longdesk = longdesk;
 		warehouse.storage.desk = desk;
 		warehouse.storage.chair = chair;
 		warehouse.updateCounts();
@@ -451,7 +466,7 @@ $(function () {
 			if (!fromPool) {
 				room.remove(dragged);
 				manager.push(room.objects, true);
-				warehouse.addCount(cost.desk, cost.chair);
+				warehouse.addCount(cost.longdesk, cost.desk, cost.chair);
 			}
 			return;
 		}
@@ -461,7 +476,7 @@ $(function () {
 		room.set(dragged);
 		manager.push(room.objects, true);
 		if (fromPool) {
-			warehouse.addCount(-cost.desk, -cost.chair);
+			warehouse.addCount(-cost.longdesk, -cost.desk, -cost.chair);
 		}
 	};
 	
