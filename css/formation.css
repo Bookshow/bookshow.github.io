@@ -134,6 +134,9 @@ body.dragging {
 	padding-left: 36px;
 	cursor: pointer;
 }
+.tb-root.open .tb-right-body {
+	overflow: hidden;
+}
 .tb-left-body {
 	overflow: hidden;
 	width: 0;
@@ -181,6 +184,29 @@ body.dragging {
 #warehouse {
 	padding: 2px;
 }
+.rotate-btn-container {
+	position: relative;
+	width: 40px;
+}
+.rotate-btn {
+	position: absolute;
+	left: 8px;
+	right: 0px;
+	height: 32px;
+	font-size: 32px;
+	color: #999;
+	cursor: pointer;
+}
+.rotate-btn:hover {
+	color: #666;
+}
+.rotate-btn.clockwise {
+	top: 8px;
+}
+.rotate-btn.counter-clockwise {
+	top: 48px;
+	transform: scaleX(-1);
+}
 .pool {
 	display: inline-block;
 	float: right;
@@ -214,7 +240,7 @@ body.dragging {
 .pool .count {
 	position: absolute;
 	bottom: 0;
-	right: -5px;
+	right: 0;
 	width: 40px;
 	height: 40px;
 	line-height: 40px;

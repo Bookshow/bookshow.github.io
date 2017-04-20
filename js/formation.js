@@ -71,8 +71,7 @@ var storage = {
 function setElementRotation(elem, degree) {
 	var r = 'rotate(' + (degree || 0) + 'deg)';
 	$(elem).css({
-		transform: r,
-		'-webkit-transform': r
+		transform: r
 	});
 }
 
@@ -93,7 +92,7 @@ function Warehouse(element, catalog, storage) {
 	};
 	this.$element = $(element);
 	this.element = this.$element[0];
-	this.rotations = {};
+	this.rotation = 0;
 	this.trays = {};
 	this.counts = {};
 	
@@ -105,7 +104,7 @@ function Warehouse(element, catalog, storage) {
 		pool = $('<div data-type="' + type + '" class="pool"></div>')[0];
 		self.trays[type] = tray = $('<div class="tray draggable"></div>')[0];
 		self.counts[type] = count = $('<div class="count"></div>')[0];
-		$(tray).tooltip({ placement: 'bottom', title: 'Scroll to rotate.' });
+		$(tray).tooltip({ placement: 'bottom', title: '拖曳進虛線區域' });
 		tray.appendChild(self.create(type, 'symbol'));
 		pool.appendChild(tray);
 		pool.appendChild(count);
@@ -119,9 +118,12 @@ Warehouse.prototype.updateCounts = function () {
 	updateCount(this.counts.chair, this.storage.chair);
 };
 
-Warehouse.prototype.rotate = function (type, degree, add) {
-	setElementRotation(this.trays[type], this.rotations[type] = 
-		(360 + degree + ((add && this.rotations[type]) || 0)) % 360);
+Warehouse.prototype.rotate = function (degree) {
+	var r = this.rotation = (this.rotation + 360 + degree) % 360,
+		trays = this.trays;
+	Object.keys(trays).forEach(function (k) {
+		setElementRotation(trays[k], r);
+	});
 };
 
 // TODO: may also take care of rotation
@@ -424,12 +426,20 @@ $(function () {
 		warehouse.updateCounts();
 	};
 	
+	/*
 	warehouse.$element.on('mousewheel DOMMouseScroll', '.tray',  function (e) {
 		// each tick is 15 degrees
 		var oe = e.originalEvent,
 			delta = oe.wheelDelta ? oe.wheelDelta / 8 : -5 * oe.detail;
 		warehouse.rotate($(e.currentTarget.parentNode).data('type'), delta, true);
 		e.preventDefault();
+	});
+	*/
+	$('.rotate-btn.clockwise').on('click', function (e) {
+		warehouse.rotate(45);
+	});
+	$('.rotate-btn.counter-clockwise').on('click', function (e) {
+		warehouse.rotate(-45);
 	});
 	
 	dragger.onState = function (value) {
@@ -447,7 +457,7 @@ $(function () {
 		
 		if (fromPool) {
 			var type = $(target.parentNode).data('type');
-			dragged = { type: type, rotation: warehouse.rotations[type] || 0 };
+			dragged = { type: type, rotation: warehouse.rotation || 0 };
 		} else {
 			dragged = target._obj;
 			room.hide(dragged);
