@@ -27,7 +27,8 @@ body.dragging {
 	display: inline-block;
 	position: relative;
 	float: left;
-	width: 565px;
+	left:20px;
+	width: 555px;
 	height: 355px;
 }
 #room::before {
