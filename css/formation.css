@@ -20,7 +20,7 @@ body.dragging {
 	display: inline-block;
 	padding: 10px 150px 55px 265px;
 	background: no-repeat bottom right transparent;
-	background-image: url('/img/room-layout-wide.png');
+	background-image: url('/img/room-layout-wide2.png');
 	background-size: 980px 420px;
 }
 #room {
