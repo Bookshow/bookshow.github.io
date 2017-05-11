@@ -18,7 +18,7 @@ body.dragging {
 }
 .room-container {
 	display: inline-block;
-	padding: 10px 150px 55px 265px;
+	padding: 10px 160px 55px 265px;
 	background: no-repeat bottom right transparent;
 	background-image: url('/img/room-layout-wide2.png');
 	background-size: 980px 420px;
@@ -27,14 +27,14 @@ body.dragging {
 	display: inline-block;
 	position: relative;
 	float: left;
-	width: 565px;
+	width: 555px;
 	height: 355px;
 }
 #room::before {
 	content: ' ';
 	position: absolute;
 	left: 0;
-	right: 10px;
+	right: 0;
 	top: 0;
 	bottom: 0;
 	border: 2px dashed rgba(0, 0, 0, 0.5);
