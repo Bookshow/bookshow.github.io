@@ -46,15 +46,15 @@ var catalog = {
 		],
 		cost: { chair: 4 }
 	},
-	c5: {
+	d1c4: {
 		subs: [
-			{ type: 'chair', y:  50 },
-			{ type: 'chair', y:  25 },
-			{ type: 'chair', y:  0 },
-			{ type: 'chair', y: -25 },
-			{ type: 'chair', y: -50 }
+			{ type: 'desk', x:0,y:0},
+			{ type: 'chair', x: -25, y: 14 },
+			{ type: 'chair', x: -25, y: -14 },
+			{ type: 'chair', x: 25, y: 14 },
+			{ type: 'chair', x: 25, y: -14 }
 		],
-		cost: { chair: 5 }
+		cost: { desk: 1, chair: 4 }
 	}
 };
 
