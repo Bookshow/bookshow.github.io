@@ -51,8 +51,8 @@ var catalog = {
 			{ type: 'desk', x:0,y:0},
 			{ type: 'chair', x: -25, y: 14 },
 			{ type: 'chair', x: -25, y: -14 },
-			{ type: 'chair', x: 25, y: 14 },
-			{ type: 'chair', x: 25, y: -14 }
+			{ type: 'chair', x: 25, y: 14, rotation: 180 },
+			{ type: 'chair', x: 25, y: -14, rotation: 180 }
 		],
 		cost: { desk: 1, chair: 4 }
 	}
