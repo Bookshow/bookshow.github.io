@@ -20,6 +20,13 @@ h2 {
 	padding:0.5em 0.5em 0.5em 0.5em;
 	background:#ffffcc;
 }
+h3 {
+	text-decoration: underline;
+}
+h4 {
+	font-size:20px;
+	font-weight:bold;
+}
 p {
 	margin-top:1em;
 }
