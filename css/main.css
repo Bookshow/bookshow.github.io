@@ -52,6 +52,18 @@ a:focus {
 	color: #005090;
 	text-decoration: none;
 }
+a.tooltip-text,
+a:focus.tooltip-text,
+a:focus:hover.tooltip-text {
+	color:black;
+	text-decoration: none;
+	border-bottom:2px dotted grey;
+}
+
+th {
+	text-align:center;
+}
+
 iframe {
 	border: none;
 	width: 100%;
