@@ -57,12 +57,21 @@ a:focus.tooltip-text,
 a:focus:hover.tooltip-text {
 	color:black;
 	text-decoration: none;
-	border-bottom:2px dotted grey;
+	border-bottom:2px dotted #882020;
 }
-
-th {
+table.plan-features,
+table.plan-features th,
+table.plan-features td {
 	text-align:center;
 }
+table.plan-features > thead > tr > th,
+table.plan-features > tbody > tr > th {
+	vertical-align:middle;
+}
+table.plan-features > tbody > tr > td {
+	font-size:16px;
+}
+
 
 iframe {
 	border: none;
