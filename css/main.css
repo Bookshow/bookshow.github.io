@@ -64,13 +64,20 @@ table.plan-features th,
 table.plan-features td {
 	text-align:center;
 }
+table.plan-features tbody tr.sm td {
+	line-height:1.6;
+}
 table.plan-features > thead > tr > th,
 table.plan-features > tbody > tr > th {
 	vertical-align:middle;
 }
-table.plan-features > tbody > tr > td {
+table.plan-features > tbody > tr.sm > td {
 	font-size:16px;
 }
+table.plan-features p {
+	margin:0.6em 0 1em 0;
+}
+
 
 
 iframe {
