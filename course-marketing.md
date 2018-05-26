@@ -118,13 +118,13 @@ title: 【線上課程：行銷製作】常用方案
 				選用服務</a>
 			</th>
 			<td colspan="3" class="clearfix">
-				<ul style="float:left;text-align:left;margin:0 4% 0 3%;">
+				<ul style="float:left;text-align:left;margin:0 3% 0 3%;">
 					<li>顧問服務，選平台、經營行銷</li>
 					<li>延長時間，追求更完美的表現</li>
 					<li>增加副機，拍攝不同輔助視角</li>
 					<li>課堂花絮，拍攝現場課程畫面</li>
 				</ul>
-				<ul style="float:left;text-align:left;margin:0;">
+				<ul style="float:left;text-align:left;margin:0 3% 0 3%;">
 					<li>外景拍攝，呈現不同情境氛圍</li>
 					<li>用藍綠幕，合成數位虛擬背景</li>
 					<li>用提詞機，需要自行事先練習</li>

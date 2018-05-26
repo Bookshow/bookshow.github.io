@@ -84,12 +84,12 @@ table.plan-features tr.price ins {
 table.plan-features tr.plan-choice {
 	border:2px solid #BBBBBB;
 }
-table.plan-features .bg-light-green	{background-color:#EEFFEE;}
-table.plan-features .bg-light-yellow	{background-color:#FFFFEE;}
-table.plan-features .bg-light-red		{background-color:#FFEEEE;}
-table.plan-features .bg-green		{background-color:#CCFFCC;}
-table.plan-features .bg-yellow		{background-color:#FFFFCC;}
-table.plan-features .bg-red		{background-color:#FFCCCC;}
+table.plan-features .bg-light-green	{background:#EEFFEE;}
+table.plan-features .bg-light-yellow	{background:#FFFFEE;}
+table.plan-features .bg-light-red		{background:#FFEEEE;}
+table.plan-features .bg-green		{background:#CCFFCC;}
+table.plan-features .bg-yellow		{background:#FFFFCC;}
+table.plan-features .bg-red		{background:#FFCCCC;}
 
 
 
