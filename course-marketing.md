@@ -21,8 +21,7 @@ title: 【線上課程：行銷製作】常用方案
 	<thead style="vertical-align:middle;">
 		<tr>
 			<th onclick="$('.plan-choice').toggleClass('hidden');" >
-				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="點選打開方案選擇說明。">選方案 <img src="/img/icon_info_noun_5745_cc.png" style="height:16px;position:relative;left:-3px;top:-2px;" /></a>
+				<a href="javascript:void(0);" class="tooltip-text">選方案 <img src="/img/icon_info_noun_5745_cc.png" style="height:16px;position:relative;left:-3px;top:-2px;" /></a>
 			</th>
 			<!-- <th data-container="body" data-toggle="popover" data-placement="top" title="titles" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
 				Ａ啟動 <img src="/img/icon_info_noun_5745_cc.png" style="height:20px;position:relative;top:-2px;" /> -->
