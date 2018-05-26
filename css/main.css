@@ -64,19 +64,33 @@ table.plan-features th,
 table.plan-features td {
 	text-align:center;
 }
-table.plan-features tbody tr.sm td {
-	line-height:1.6;
-}
 table.plan-features > thead > tr > th,
 table.plan-features > tbody > tr > th {
 	vertical-align:middle;
 }
 table.plan-features > tbody > tr.sm > td {
 	font-size:16px;
+	line-height:1.6;
 }
 table.plan-features p {
 	margin:0.6em 0 1em 0;
 }
+table.plan-features tr.optional-service td {
+	background-color: #EEEEFF;
+}
+table.plan-features tr.price ins {
+	font-size:16px;
+}
+table.plan-features tr.plan-choice {
+	border:2px solid #BBBBBB;
+}
+table.plan-features .bg-light-green	{background-color:#EEFFEE;}
+table.plan-features .bg-light-yellow	{background-color:#FFFFEE;}
+table.plan-features .bg-light-red		{background-color:#FFEEEE;}
+table.plan-features .bg-green		{background-color:#CCFFCC;}
+table.plan-features .bg-yellow		{background-color:#FFFFCC;}
+table.plan-features .bg-red		{background-color:#FFCCCC;}
+
 
 
 
