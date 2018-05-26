@@ -30,9 +30,11 @@ title: 【線上課程：行銷製作】常用方案
 			<th class="bg-red"	>Ｃ商務</th>
 			<!--	<th>Ｃ商務</th> -->
 		</tr>
+	</thead>
+	<tbody>
 		<tr class="plan-choice hidden">
 			<th>	<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="在不同方案中，我們將為您創造的最主要價值。">
+				title="在不同方案中，將積極為您創造的最主要價值。">
 				方案精神</a>
 			</th>
 			<td class="bg-green"	>預算先決<br/>優良影音品質<br/>舒適觀看體驗<br/></td>
@@ -42,7 +44,7 @@ title: 【線上課程：行銷製作】常用方案
 		</tr>
 		<tr class="plan-choice hidden">
 			<th>	<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="考慮您的需求情境，若大致符合其中任一項描述，該製作方案很可能就是您的最佳選擇。">
+				title="考慮您的需求情境，如果大致符合「其中任何一項」描述，該方案很可能就是您的最佳選擇。">
 				適用情境</a>
 			</th>
 			<td class="bg-green"	>先求有，再求好<br/>低成本解決問題<br/>內部同事夥伴看<br/>測試市場接受度<br/></td>
@@ -50,24 +52,22 @@ title: 【線上課程：行銷製作】常用方案
 			<td class="bg-red"	>配合廣告、宣傳<br/>盡全力提昇成效<br/>客群多或價值高<br/>長銷熱議高轉換<br/></td>
 			<!--	<td>按需求量身設計<br/>為商務目標服務<br/>客群多或價值高<br/></td> -->
 		</tr>
-	</thead>
-	<tbody>
 		<tr class="price">
 			<th>	<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="以 5,000 元為單位設定預算，可提昇規格品質數量、追加選用服務、應變修改彈性。">
 				客製預算</a>
 			</th>
-			<td>20,000 起</td>
+			<td>20,000 起<br/><ins>包含下列規格</ins></td>
 			<td>35,000 起<br/><ins>包含Ａ啟動方案</ins></td>
 			<td>50,000 起<br/><ins>包含Ｂ專業方案</ins></td>
 		</tr>
 		<tr>
 			<th>	<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="">
-				主要成品</a>
+				title="您將會收到的各種檔案。">
+				完稿成品</a>
 			</th>
-			<td>課程介紹影片<br/>音檔、字幕檔</td>
-			<td>精緻介紹影片<br/>課程封面圖檔</td>
+			<td>課程介紹影片<br/>聲音、字幕檔</td>
+			<td>精緻介紹影片<br/>課程封面圖片</td>
 			<td>廣告宣傳影片<br/>銷售試看影片</td>
 		</tr>
 		<tr class="sm">
@@ -85,7 +85,7 @@ title: 【線上課程：行銷製作】常用方案
 				影音後製、調光調聲修片<br/>
 				分鏡剪輯、加字幕投影片<br/>
 				完稿修改、<a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="預設通用影片格式：*.mp4 / Full HD 1920x1080p H.264 AVC / 2ch 48kHz 16-bit aac">符合技術格式</a><br/>
+				title="預設通用影片格式：*.mp4 / Full HD 1920x1080p H.264 AVC / 2ch 48kHz 16-bit aac">符合格式需求</a><br/>
 			</td>
 			<td>
 				腳本修改，口語順暢自然<br/>

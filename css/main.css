@@ -81,9 +81,6 @@ table.plan-features tr.optional-service td {
 table.plan-features tr.price ins {
 	font-size:16px;
 }
-table.plan-features tr.plan-choice {
-	border:2px solid #BBBBBB;
-}
 table.plan-features .bg-light-green	{background:#EEFFEE;}
 table.plan-features .bg-light-yellow	{background:#FFFFEE;}
 table.plan-features .bg-light-red		{background:#FFEEEE;}
