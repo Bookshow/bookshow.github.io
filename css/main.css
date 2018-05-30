@@ -31,10 +31,18 @@ p {
 	margin-top:1em;
 }
 p.video-iframe {
+	width:90%;
+	margin:20px auto 40px auto;
+	padding:10px;
+
+	background:#ffffff;
+	border:1px solid grey;
+	border-radius:5px;
+
 	font-size:16px;
 	line-height:1.5em;
+	color:#666666;
 	text-align:center;
-	margin-bottom:40px;
 }
 li.multiline {
 	margin-top:0.5em;
@@ -68,8 +76,12 @@ table.plan-features > thead > tr > th,
 table.plan-features > tbody > tr > th {
 	vertical-align:middle;
 }
+table.plan-features > tbody > tr > th > a.tooltip-text {
+	color:#666666;
+}
 table.plan-features > tbody > tr.sm > td {
-	font-size:16px;
+	padding:12px 5px;
+	font-size:15px;
 	line-height:1.6;
 }
 table.plan-features p {
@@ -78,8 +90,12 @@ table.plan-features p {
 table.plan-features tr.optional-service td {
 	background-color: #EEEEFF;
 }
-table.plan-features tr.price ins {
-	font-size:16px;
+table.plan-features tr.plans td, 
+table.plan-features tr.budget .price {
+	padding:15px 0;
+	font-size:30px;
+	font-weight:bold;
+	line-height:1;
 }
 table.plan-features .bg-light-green	{background:#EEFFEE;}
 table.plan-features .bg-light-yellow	{background:#FFFFEE;}
@@ -87,9 +103,6 @@ table.plan-features .bg-light-red		{background:#FFEEEE;}
 table.plan-features .bg-green		{background:#CCFFCC;}
 table.plan-features .bg-yellow		{background:#FFFFCC;}
 table.plan-features .bg-red		{background:#FFCCCC;}
-
-
-
 
 iframe {
 	border: none;
