@@ -67,42 +67,64 @@ a:focus:hover.tooltip-text {
 	text-decoration: none;
 	border-bottom:2px dotted #882020;
 }
-table.plan-features,
-table.plan-features th,
-table.plan-features td {
+
+.page table.plan-features,
+.page table.plan-features td {
 	text-align:center;
-}
-table.plan-features > thead > tr > th,
-table.plan-features > tbody > tr > th {
-	vertical-align:middle;
-}
-table.plan-features > tbody > tr > th > a.tooltip-text {
-	color:#666666;
-}
-table.plan-features > tbody > tr.sm > td {
-	padding:12px 5px;
 	font-size:15px;
 	line-height:1.6;
+	padding:12px 0;
 }
-table.plan-features p {
-	margin:0.6em 0 1em 0;
+.page table.plan-features th {
+	vertical-align:middle;
+	text-align:center;
+	font-size:20px;
+	padding:12px 0;
 }
-table.plan-features tr.optional-service td {
-	background-color: #EEEEFF;
+.page table.plan-features .tb-md td {
+	font-size:20px;
+	line-height:1.4;
 }
-table.plan-features tr.plans td, 
-table.plan-features tr.budget .price {
-	padding:15px 0;
+.page table.plan-features tr.pd-0 td {
+	padding:0;
+}
+.page table.plan-features tr.pd-x-12 td {
+	padding-left :12px;
+	padding-right:12px;
+}
+.page table.plan-features p {
+	margin:0.8em 0;
+}
+.page table.plan-features .tx-md {
+	font-size:20px;
+}
+.page table.plan-features .tx-lg {
 	font-size:30px;
 	font-weight:bold;
 	line-height:1;
 }
+.page table.plan-features > tbody > tr > th > a.tooltip-text {
+	color:#666666;
+}
+/*.page table.plan-features tr.sm > td p {
+	margin:0.8em 0 0.8em 0;
+	border:1px solid red; 
+}
+*/
+.page table.plan-features tr.optional-service td {
+	background-color: #EEEEFF;
+}
+.page table.plan-features tr.optional-service td .fl-left {
+	float:left;
+	text-align:left;
+	margin:0.5em 4% 0.5em 4%;
+}
 table.plan-features .bg-light-green	{background:#EEFFEE;}
-table.plan-features .bg-light-yellow	{background:#FFFFEE;}
-table.plan-features .bg-light-red		{background:#FFEEEE;}
+table.plan-features .bg-light-yellow{background:#FFFFEE;}
+table.plan-features .bg-light-red	{background:#FFEEEE;}
 table.plan-features .bg-green		{background:#CCFFCC;}
 table.plan-features .bg-yellow		{background:#FFFFCC;}
-table.plan-features .bg-red		{background:#FFCCCC;}
+table.plan-features .bg-red			{background:#FFCCCC;}
 
 iframe {
 	border: none;
