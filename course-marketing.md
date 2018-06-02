@@ -9,7 +9,7 @@ class: course-marketing
 
 <p class="video-iframe"><iframe width="640" height="360" src="https://www.youtube.com/embed/9iYhUHf3a3w?rel=0&amp;showinfo=0" frameborder="0" 
 	allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	方案範例：Ａ～Ｂ之間，含課程介紹影片、封面設計、加購影音素材。<br/>
+	方案範例：Ａ～Ｂ之間。含課程介紹影片、封面設計、加購影音素材。<br/>
 	可按右下角齒輪，設定為 1080p 並使用耳機，以最嚴格標準檢驗影音品質。</p>
 
 <table class="table table-bordered plan-features">
@@ -33,7 +33,7 @@ class: course-marketing
 		</tr>
 	</thead>
 	<tbody>
-		<tr class="tb-md">
+		<tr class="finish tb-md">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="方案中的最重要產出目標，您將會收到相關的完稿檔案。">
@@ -47,9 +47,9 @@ class: course-marketing
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="以 1,000 元為單位設定預算，將用於提昇規格品質數量、追加選用服務、應變修改彈性。">
-				客製預算</a>
+				基本預算</a>
 			</th>
-			<td><em><span class="tx-lg">20,000</span> 起</em><br/>含下列規格</td>
+			<td><em><span class="tx-lg">20,000</span> 起</em></td>
 			<td><em><span class="tx-lg">35,000</span> 起</em><br/><ins>包含Ａ方案</ins></td>
 			<td><em><span class="tx-lg">50,000</span> 起</em><br/><ins>包含Ｂ方案</ins></td>
 		</tr>
@@ -59,7 +59,7 @@ class: course-marketing
 				<button class="btn btn-info btn-block" type="submit" style="font:20px bold;" onclick="$('.plan-choice').toggleClass('hidden');">方案怎麼選？</button>
 			</td>
 		</tr>
-		<tr class="plan-choice tb-md">
+		<tr class="spirit plan-choice tb-md">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="我們在各階方案中，設定不同製作目標，積極為您以及觀眾，創造以下主要價值。">
@@ -70,17 +70,17 @@ class: course-marketing
 			<td class="bg-red"		>高商業價值<br/>行銷包裝配套<br/>平台版本優化<br/>助您達成目標<br/></td>
 			<!-- <td>顧問工作會議<br/>協同創作內容<br/>規劃應用流程<br/></td> -->
 		</tr>
-		<tr class="plan-choice tb-md">
+		<tr class="scenario plan-choice tb-md">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="考慮您的需求情境，如果大致符合「其中任何一項」描述，該方案很可能就是您的最佳選擇。">
 				適用情境</a>
 			</th>
-			<td class="bg-green"	>低成本解決問題<br/>先求有，再求好<br/>測試市場接受度<br/>內部同事朋友看<br/></td>
-			<td class="bg-yellow"	>妥善地完成影音<br/>按經典範式製作<br/>長久使用或銷售<br/>外部夥伴客戶看<br/></td>
+			<td class="bg-green"	>高效率符合標準<br/>先求有，還不錯<br/>測試市場接受度<br/>內部同事朋友看<br/></td>
+			<td class="bg-yellow"	>妥善地完成影音<br/>按經典通用範式<br/>長久使用或銷售<br/>外部夥伴客戶看<br/></td>
 			<td class="bg-red"		>盡全力提昇成效<br/>積極廣告、宣傳<br/>長銷熱議高轉換<br/>客群多或價值高<br/></td>
 		</tr>
-		<tr class="pd-0">
+		<tr class="features pd-0">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="基本預算即可使用所有規格項目，BOOKSHOW 會視總預算與專案需求，彈性調整規格品質或數量。">
@@ -92,7 +92,7 @@ class: course-marketing
 			<td>
 				<p>
 					腳本建議，提供參考範本<br/>
-					影棚設定錄製<ins>共一小時半</ins>
+					影棚設定、錄製<ins>一小時半</ins>
 				</p>
 				<p>
 					４Ｋ拍攝、導演燈光收音<br/>
@@ -105,7 +105,7 @@ class: course-marketing
 			<td>
 				<p>
 					腳本修改，口語順暢自然<br/>
-					影棚設定錄製<ins>共兩小時整</ins>
+					影棚設定、錄製<ins>共兩小時</ins>
 				</p>
 				<p>
 					封面片頭、形象或商品照<br/>
@@ -116,7 +116,7 @@ class: course-marketing
 			<td>
 				<p>
 					三種影片腳本建議與修改<br/>
-					影棚設定錄製<ins>共三小時整</ins>
+					影棚設定、錄製<ins>共三小時</ins>
 				</p>
 				<p>
 					廣告投放，短秒數宣傳片<br/>
@@ -135,7 +135,28 @@ class: course-marketing
 			<td><a href="#">Ｃ方案製作流程</a></td>	
 		</tr>
 -->
-		<tr class="optional-service pd-0" >
+		<tr class="opt-srv pd-0" >
+			<th>
+				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
+				title="以下僅列出較常見的項目，其它需求歡迎直接洽詢。">
+				製作服務</a>
+			</th>
+			<td colspan="3" class="clearfix">
+				<ul class="fl-left">
+					<li>可以選用<ins>進階方案的彈性規格</ins></li>
+					<li>延長錄製時間，追求更佳表現</li>
+					<li>增加副錄影機，拍攝輔助視角</li>
+					<li>現場課程花絮影片、活動攝影</li>
+				</ul>
+				<ul class="fl-left">
+					<li>外景拍攝，呈現不同情境氛圍</li>
+					<li>用藍綠幕，合成數位虛擬背景</li>
+					<li>用提詞機，需要自行事先練習</li>
+					<li>用採訪機，不需自行事先練習</li>
+				</ul>
+			</td>	
+		</tr>
+		<tr class="opt-srv pd-0" >
 			<th>
 				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="以下僅列出較常見的項目，其它需求歡迎直接洽詢。">
@@ -155,26 +176,6 @@ class: course-marketing
 					<li>規模化降成本、提昇品質效益</li>
 					<li>自建簡易影棚團隊、難題外包</li>
 					<li>自建獨立課程平台、串接金流</li>
-				</ul>
-			</td>	
-		</tr>
-		<tr class="optional-service pd-0" >
-			<th>
-				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="以下僅列出較常見的項目，其它需求歡迎直接洽詢。">
-				製作服務</a>
-			</th>
-			<td colspan="3" class="clearfix">
-				<ul class="fl-left">
-					<li>延長錄製時間，追求更佳表現</li>
-					<li>增加副錄影機，拍攝輔助視角</li>
-					<li>現場課程花絮影片、活動攝影</li>
-				</ul>
-				<ul class="fl-left">
-					<li>外景拍攝，呈現不同情境氛圍</li>
-					<li>用藍綠幕，合成數位虛擬背景</li>
-					<li>用提詞機，需要自行事先練習</li>
-					<li>用採訪機，不需自行事先練習</li>
 				</ul>
 			</td>	
 		</tr>

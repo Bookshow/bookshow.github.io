@@ -111,10 +111,10 @@ a:focus:hover.tooltip-text {
 	border:1px solid red; 
 }
 */
-.page table.plan-features tr.optional-service td {
+.page table.plan-features tr.opt-srv td {
 	background-color: #EEEEFF;
 }
-.page table.plan-features tr.optional-service td .fl-left {
+.page table.plan-features tr.opt-srv td .fl-left {
 	float:left;
 	text-align:left;
 	margin:0.5em 4% 0.5em 4%;

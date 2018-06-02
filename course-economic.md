@@ -1,15 +1,15 @@
 ---
 layout: subpage
-title: 【線上課程：經濟型簡易製作】常用方案
+title: 【線上課程：經濟型影片製作】常用方案
 class: course-economic
 ---
 
-# 【線上課程：經濟型簡易製作】常用方案
+# 【線上課程：經濟型影片製作】常用方案
 
 
-<p class="video-iframe"><iframe width="640" height="360" src="https://www.youtube.com/embed/GsScs1ozOWg?rel=0&amp;showinfo=0" frameborder="0" 
+<p class="video-iframe"><iframe width="640" height="360" src="https://www.youtube.com/embed/jy2Yw7R70Pg?rel=0&amp;showinfo=0" frameborder="0" 
 	allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	方案範例：Ｂ專業，BOOKSHOW 課堂影棚內錄製，台下坐有數十位收費學員。<br/>
+	方案範例：Ｃ後製剪輯。客戶於小會議室，自行用手機拍攝介紹素材，<br/>課程試看部份以 BOOKSHOW 自助影棚拍攝，台下坐有數十位收費學員。<br/>
 	可按右下角齒輪，設定為 1080p 並使用耳機，以最嚴格標準檢驗影音品質。</p>
 
 <table class="table table-bordered plan-features">
@@ -26,31 +26,31 @@ class: course-economic
 				title="可按需求客製，先選擇初步方案，再向上增加預算與服務。">
 				常用方案</a>
 			</th>
-			<td class="bg-green"	><span class="tx-lg">Ａ簡易製作</span></td>
-			<td class="bg-yellow"	><span class="tx-lg">Ｂ自助介紹</span></td>
-			<td class="bg-red"		><span class="tx-lg">Ｃ自助課程</span></td>
+			<td class="bg-green"	><span class="tx-lg">Ａ微課銷售</span></td>
+			<td class="bg-yellow"	><span class="tx-lg">Ｂ現場轉製</span></td>
+			<td class="bg-red"		><span class="tx-lg">Ｃ後製剪輯</span></td>
 		</tr>
 	</thead>
 	<tbody>
-		<tr class="tb-md">
+		<tr class="produce pd-0">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="方案中的最重要產出目標，您將會收到相關的完稿檔案。">
 				製作方式</a>
 			</th>
-			<td>課堂現場錄製<br/>定點拍攝、不重講<br/>適演講、軟體操作</td><!--畫面角度選擇受限<br/>-->
-			<td>您自行錄素材<br/>我們後製剪輯完稿</td>
-			<td>您自行錄素材<br/>我們後製剪輯完稿</td>
+			<td><p><span class="tx-md">進棚導演錄製</span><br/>連續拍攝介紹影片、課程</p><p>面向鏡頭、對話感介紹片<br/>符合各平台上架標準建議</p></td>
+			<td><p><span class="tx-md">課堂現場錄製</span><br/>將介紹內容作為課程開頭</p><p>面向台下、簡報式介紹片<br/>可先向平台確認符合要求</p></td><!--畫面角度選擇受限<br/>-->
+			<td><p><span class="tx-md">您自行錄素材<br/>（或用自助影棚）</span></p><p>我們為您後製、提昇品質<br/>按照應用形式剪輯、完稿</p></td>
 		</tr>
 		<tr class="prices">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="以 1,000 元為單位設定預算，將用於提昇規格品質數量、追加選用服務、應變修改彈性。">
-				客製預算</a>
+				基本預算</a>
 			</th>
-			<td><em><span class="tx-lg">30,000</span> 起</em      ><br/><ins>介紹影片＋１小時課程</ins></td>
-			<td><em><span class="tx-lg">10,000</span> 起／支</em  ><br/><ins>Ｂ＋Ｃ 15,000 元起</ins></td>
-			<td><em><span class="tx-lg" >5,000</span> 起／小時</em><br/><ins>Ｂ＋Ｃ 15,000 元起</ins></td>
+			<td class="align-middle"><em><span class="tx-lg">30,000</span> 起</em ><br/><ins>３分鐘介紹＋１小時課程</ins></td>
+			<td class="align-middle"><em><span class="tx-lg">30,000</span> 起</em ><br/><ins>２小時課程，含介紹短片</ins></td>
+			<td><em><span class="tx-lg" >6,000</span> 起／介紹<br/><span class="tx-lg" >3,000</span> 起／課時</em><br/><ins>合計 15,000 元起</ins></td>
 		</tr>
 		<tr class="plan-choice hidden pd-x-12">
 			<th></th>
@@ -64,9 +64,9 @@ class: course-economic
 				title="我們在各階方案中，設定不同製作目標，積極為您以及觀眾，創造以下主要價值。">
 				方案精神</a>
 			</th>
-			<td class="bg-green"	>預算先決<br  />補救技術瑕疵<br/>提昇影音品質<br/>無痛製作流程</td>
-			<td class="bg-yellow"	>高性價比<br  />優良影音品質<br/>專業演講形象<br/>貼心專案管理<br/></td>
-			<td class="bg-red"		>高商業價值<br/>自由風格形式<br/>追求完美表演<br/>助您達成目標<br/></td>
+			<td class="bg-green"	>微型課程<br/>平台銷售基本組<br/>舒適觀看品質<br/>無痛製作流程<br/></td>
+			<td class="bg-yellow"	>高產出比<br/>適合現場課轉製<br/>舒適觀看品質<br/>無痛製作流程<br/></td>
+			<td class="bg-red"		>後製剪輯<br/>活化數位舊資產<br/>補救技術瑕疵<br/>提昇影音品質<br/></td>
 			<!-- <td>顧問工作會議<br/>協同創作內容<br/>規劃應用流程<br/></td> -->
 		</tr>
 		<tr class="plan-choice tb-md">
@@ -75,11 +75,12 @@ class: course-economic
 				title="考慮您的需求情境，如果大致符合「其中任何一項」描述，該方案很可能就是您的最佳選擇。">
 				適用情境</a>
 			</th>
-			<td class="bg-green"	>先求有，再求好<br/>低成本解決問題<br/>測試市場接受度<br/>內部同事朋友看<br/></td>
-			<td class="bg-yellow"	>按經典範式製作<br/>妥善地完成影音<br/>長久使用或銷售<br/>外部夥伴客戶看<br/></td>
-			<td class="bg-red"		>積極廣告、宣傳<br/>盡全力提昇成效<br/>長銷熱議高轉換<br/>客群多或價值高<br/></td>
+			<td class="bg-green"	>高效率符合標準<br/>多種影片一次拍完<br/>先求有、再求好用<br/>測試市場接受程度<br/></td>
+			<td class="bg-yellow"	>低成本跨過門檻<br/>多種影片一次拍完<br/>先求有、可用就好<br/>滿足客戶立即需求<br/></td>
+			<td class="bg-red"		>低成本解決問題<br/>手機ＤＶ側拍紀錄<br/>簡單批量轉製課程<br/>滿足客戶立即需求<br/></td>
+<!--			<td class="bg-red"		>積極廣告、宣傳<br/>盡全力提昇成效<br/>長銷熱議高轉換<br/>客群多或價值高<br/></td> -->
 		</tr>
-		<tr class="pd-0">
+		<tr class="features pd-0">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="基本預算即可使用所有規格項目，BOOKSHOW 會視總預算與專案需求，彈性調整規格品質或數量。">
@@ -133,7 +134,7 @@ class: course-economic
 				</p>
 			</td>
 		</tr>
-		<tr class="optional-service pd-0" >
+		<tr class="opt-srv pd-0" >
 			<th>
 				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="以下僅列出較常見的項目，其它需求歡迎直接洽詢。">
@@ -177,7 +178,7 @@ class: course-economic
 			<td><a href="#">Ｃ方案製作流程</a></td>	
 		</tr>
 -->
-		<tr class="optional-service pd-0" >
+		<tr class="opt-srv pd-0" >
 			<th>
 				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="以下僅列出較常見的項目，其它需求歡迎直接洽詢。">
@@ -200,7 +201,7 @@ class: course-economic
 				</ul>
 			</td>	
 		</tr>
-		<tr class="optional-service pd-0">
+		<tr class="opt-srv pd-0">
 			<th>
 				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="以下僅列出較常見的項目，其它需求歡迎直接洽詢。">
