@@ -9,7 +9,7 @@ class: course-marketing
 
 <p class="video-iframe"><iframe width="640" height="360" src="https://www.youtube.com/embed/9iYhUHf3a3w?rel=0&amp;showinfo=0" frameborder="0" 
 	allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	方案範例：Ａ～Ｂ之間。含課程介紹影片、封面設計、加購影音素材。<br/>
+	方案範例：啟動Ａ<sup>+</sup>，追加選用精緻封面設計、美化影音素材。<br/>
 	可按右下角齒輪，設定為 1080p 並使用耳機，以最嚴格標準檢驗影音品質。</p>
 
 <table class="table table-bordered plan-features">
@@ -39,9 +39,9 @@ class: course-marketing
 				title="方案中的最重要產出目標，您將會收到相關的完稿檔案。">
 				主要產出</a>
 			</th>
-			<td>課程介紹影片<br/>封面、字幕檔</td>
-			<td>精緻介紹影片<br/>精緻封面圖片</td>
-			<td>廣告宣傳短片<br/>銷售試看影片</td>
+			<td>課程介紹影片<br/>簡易封面、字幕</td>
+			<td>精緻介紹片、封面<br/>試看片、銷售文案</td>
+			<td>多支廣告宣傳短片<br/>廣告用圖片、文案</td>
 		</tr>
 		<tr class="prices">
 			<th>
@@ -49,9 +49,9 @@ class: course-marketing
 				title="以 1,000 元為單位設定預算，將用於提昇規格品質數量、追加選用服務、應變修改彈性。">
 				基本預算</a>
 			</th>
-			<td><em><span class="tx-lg">20,000</span> 起</em></td>
-			<td><em><span class="tx-lg">35,000</span> 起</em><br/><ins>包含Ａ方案</ins></td>
-			<td><em><span class="tx-lg">50,000</span> 起</em><br/><ins>包含Ｂ方案</ins></td>
+			<td><em><span class="tx-lg">20,000</span> 起</em><br/><ins>常用 30,000 元以下</ins></td>
+			<td><em><span class="tx-lg">40,000</span> 起</em><br/><ins>包含Ａ方案</ins></td>
+			<td><em><span class="tx-lg">60,000</span> 起</em><br/><ins>包含Ｂ方案</ins></td>
 		</tr>
 		<tr class="plan-choice hidden pd-x-12">
 			<th></th>
@@ -65,9 +65,9 @@ class: course-marketing
 				title="我們在各階方案中，設定不同製作目標，積極為您以及觀眾，創造以下主要價值。">
 				方案精神</a>
 			</th>
-			<td class="bg-green"	>預算先決<br  />優良影音品質<br/>舒適觀看體驗<br/>無痛製作流程<br/></td>
-			<td class="bg-yellow"	>高性價比<br  />視覺風格設計<br/>專業品牌形象<br/>貼心專案管理<br/></td>
-			<td class="bg-red"		>高商業價值<br/>行銷包裝配套<br/>平台版本優化<br/>助您達成目標<br/></td>
+			<td class="bg-green"	>預算先決<br  />優良影音品質<br/>符合課程上架標準<br/>零經驗無痛製作<br/></td>
+			<td class="bg-yellow"	>高性價比<br  />專業形象視覺<br/>提昇平台銷售轉換<br/>超貼心專案管理<br/></td>
+			<td class="bg-red"		>高商業價值<br/>行銷包裝配套<br/>提昇廣告觸及到達<br/>有感推動業務目標<br/></td>
 			<!-- <td>顧問工作會議<br/>協同創作內容<br/>規劃應用流程<br/></td> -->
 		</tr>
 		<tr class="scenario plan-choice tb-md">
@@ -76,52 +76,67 @@ class: course-marketing
 				title="考慮您的需求情境，如果大致符合「其中任何一項」描述，該方案很可能就是您的最佳選擇。">
 				適用情境</a>
 			</th>
-			<td class="bg-green"	>高效率符合標準<br/>先求有，還不錯<br/>測試市場接受度<br/>內部同事朋友看<br/></td>
-			<td class="bg-yellow"	>妥善地完成影音<br/>按經典通用範式<br/>長久使用或銷售<br/>外部夥伴客戶看<br/></td>
-			<td class="bg-red"		>盡全力提昇成效<br/>積極廣告、宣傳<br/>長銷熱議高轉換<br/>客群多或價值高<br/></td>
+			<td class="bg-green"	>高效率符合標準<br/>按基本通用範式<br/>小專案展示銷售<br/>測試市場接受度<br/></td>
+			<td class="bg-yellow"	>妥善地完成影音<br/>按經典通用範式<br/>商業化展示銷售<br/>長久使用不過時<br/></td>
+			<td class="bg-red"		>盡全力追求成效<br/>火力支援廣告投放<br/>提昇產品價值感<br/>觸及銷售高轉換<br/></td>
 		</tr>
 		<tr class="features pd-0">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="基本預算即可使用所有規格項目，BOOKSHOW 會視總預算與專案需求，彈性調整規格品質或數量。">
-				製作規格</a><br/>
+				title="基本預算即可使用以下服務內容，BOOKSHOW 會視總預算與專案特性，彈性調整規格、品質、數量。">
+				服務內容</a><br/>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="當然您也可以提出「比較重視、可以刪減」的項目，讓預算更準確分配到刀口上。">
+				title="您可以提出「比較重視、可以節省」的項目，讓預算更準確分配到刀口上。">
 				彈性調整</a>
 			</th>
 			<td>
 				<p>
-					腳本建議，提供參考範本<br/>
 					影棚設定、錄製<ins>一小時半</ins>
 				</p>
 				<p>
-					４Ｋ拍攝、導演燈光收音<br/>
+					協助您符合課程上架標準<br/>
+					腳本建議、提供參考範本<br/>
+					現場導演，調整口語表演<br/>
+					<a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
+					title="配合講者習慣、呈現風格，再選擇使用提詞機、採訪機、側螢幕…等輔助設備">提詞設備</a>，控制對話視線<br/>
+					段落之間可休息看稿重講<br/>
+					剪接表現最佳的段落版本<br/>
+				</p>
+				<p>
+					４Ｋ拍攝、場景燈光收音<br/>
+					講師遠近畫面切換、合成<br/>
 					影音後製、調光調聲修片<br/>
-					分鏡剪輯、加字幕投影片<br/>
+					合成商標、投影片、字幕<br/>
 					修改校對、<a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 					title="預設通用影片格式：*.mp4 / Full HD 1920x1080p H.264 AVC / 2ch 48kHz 16-bit aac">按照格式完稿</a>
 				</p>
 			</td>
 			<td>
 				<p>
-					腳本修改，口語順暢自然<br/>
 					影棚設定、錄製<ins>共兩小時</ins>
 				</p>
 				<p>
+					<ins>包含Ａ方案內容</ins><br/>
+					腳本修改，口語順暢易演<br/>
 					封面片頭、形象或商品照<br/>
 					動作鏡頭、動態特效字卡<br/>
 					影音圖庫、特殊外購素材<br/>
 				</p>
+				<p>
+					提昇信賴、需求用試看片<br/>
+					課程網頁用銷售說明圖文<br/>
+				</p>
 			</td>
 			<td>
 				<p>
-					三種影片腳本建議與修改<br/>
 					影棚設定、錄製<ins>共三小時</ins>
 				</p>
 				<p>
-					廣告投放，短秒數宣傳片<br/>
-					銷售轉換，喚需求試看片<br/>
-					網頁銷售、廣告投放文案<br/>
+					<ins>包含Ｂ方案內容</ins><br/>
+					多種影片腳本建議與修改<br/>
+					針對不同客群、接觸情境<br/>
+					製作多版本廣告投放素材<br/>
+					短秒數宣傳片、圖片文案<br/>
 				</p>
 			</td>
 		</tr>
@@ -187,7 +202,7 @@ class: course-marketing
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
-$('.plan-choice').toggleClass('hidden');
+/* $('.plan-choice').toggleClass('hidden'); */
 </script>
 
 

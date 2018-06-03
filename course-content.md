@@ -1,15 +1,16 @@
 ---
 layout: subpage
-title: 【線上課程：課程內容影片製作】常用方案
+title: 【線上課程：內容製作】常用方案
 class: course-content
 ---
 
-# 【線上課程：課程內容影片製作】常用方案
+# 【線上課程：內容製作】常用方案
 
 
 <p class="video-iframe"><iframe width="640" height="360" src="https://www.youtube.com/embed/GsScs1ozOWg?rel=0&amp;showinfo=0" frameborder="0" 
 	allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	方案範例：Ａ專業。BOOKSHOW 課堂影棚內錄製，台下坐有數十位收費學員。<br/>
+	方案範例：Ａ課堂簡報。<br/>
+	在 BOOKSHOW 課堂影棚內進行錄製，台下坐有數十位收費學員。<br/>
 	可按右下角齒輪，設定為 1080p 並使用耳機，以最嚴格標準檢驗影音品質。</p>
 
 
@@ -27,9 +28,9 @@ class: course-content
 				title="可按需求客製，先選擇初步方案，再向上增加預算與服務。">
 				常用方案</a>
 			</th>
-			<td class="bg-green"	><span class="tx-lg">Ａ專業</span></td>
-			<td class="bg-yellow"	><span class="tx-lg">Ｂ商務</span></td>
-			<td class="bg-red"		><span class="tx-lg">Ｃ客製</span></td>
+			<td class="bg-green"	><span class="tx-lg">Ａ課堂簡報</span></td>
+			<td class="bg-yellow"	><span class="tx-lg">Ｂ導演對話</span></td>
+			<td class="bg-red"		><span class="tx-lg">Ｃ專案客製</span></td>
 		</tr>
 	</thead>
 	<tbody>
@@ -39,9 +40,9 @@ class: course-content
 				title="方案中的最重要產出目標，您將會收到相關的完稿檔案。">
 				製作方式</a>
 			</th>
-			<td><span class="tx-md">課堂現場錄製</span><br/>僅定點拍攝、不中斷重講<br/>較適合演講、軟體類教學<br/></td>
-			<td><span class="tx-md">進棚導演錄製</span><br/>可控制視線、可看稿重講<br/>可佈景擺拍、坐站式表演<br/></td>
-			<td><span class="tx-md">按照需求客製</span><br/>複雜動作需設計鏡頭視角<br/>走動式或大場景多人共演<br/></td>
+			<td><span class="tx-md">課堂現場錄製</span><br/>定點拍攝、不宜中斷重講<br/>講師口述＋投影畫面為主<br/></td>
+			<td><span class="tx-md">進棚導演錄製</span><br/>可直視鏡頭、可看稿重講<br/>可佈景擺拍、小動作表演<br/></td>
+			<td><span class="tx-md">按照需求客製</span><br/>複雜動作需設計鏡頭視角<br/>走動式大場景、多人共演<br/></td>
 		</tr>
 		<tr class="prices">
 			<th>
@@ -65,9 +66,9 @@ class: course-content
 				title="我們在各階方案中，設定不同製作目標，積極為您以及觀眾，創造以下主要價值。">
 				方案精神</a>
 			</th>
-			<td class="bg-green"	>高性價比<br  />優良影音品質<br/>舒適觀看體驗<br/>無痛製作流程<br/></td>
-			<td class="bg-yellow"	>高商業價值<br/>清楚內容表達<br/>專業品牌形象<br/>貼心專案管理<br/></td>
-			<td class="bg-red"		>高完成度<br  />自由創意呈現<br/>追求完美表演<br/>助您達成目標<br/></td>
+			<td class="bg-green"	>高性價比<br  />優良影音品質<br/>舒適觀看體驗<br/>零經驗無痛製作<br/></td>
+			<td class="bg-yellow"	>高商業價值<br/>專業品牌形象<br/>有效內容傳達<br/>超貼心專案管理<br/></td>
+			<td class="bg-red"		>高完成度<br  />自由創意呈現<br/>內容多元應用<br/>為商務目標規劃<br/></td>
 		</tr>
 		<tr class="scenario plan-choice tb-md">
 			<th>
@@ -75,9 +76,9 @@ class: course-content
 				title="考慮您的需求情境，如果大致符合「其中任何一項」描述，該方案很可能就是您的最佳選擇。">
 				適用情境</a>
 			</th>
-			<td class="bg-green"	>妥善地完成影音<br/>按經典通用範式<br/>長久使用或銷售<br/>外部夥伴客戶看<br/></td>
-			<td class="bg-yellow"	>盡全力提昇成效<br/>積極廣宣、銷售<br/>提昇學習完成率<br/>觀眾多或價值高<br/></td>
-			<td class="bg-red"		>打造經典代表作<br/>高度創意化風格<br/>仿知名節目範式<br/>長銷熱議高轉換<br/></td>
+			<td class="bg-green"	>妥善地完成影音<br/>按經典通用範式<br/>商業化展示銷售<br/>長久使用不過時<br/></td>
+			<td class="bg-yellow"	>盡全力追求成效<br/>鏡頭對話互動感<br/>學習效果更深刻<br/>易轉製行銷素材<br/></td>
+			<td class="bg-red"		>打造經典代表作<br/>高度創意化風格<br/>仿知名節目範式<br/>觸及銷售高轉換<br/></td>
 		</tr>
 		<tr class="key-features pd-0">
 			<th>
@@ -88,9 +89,9 @@ class: course-content
 			<td>
 				<p>
 					按「<ins>錄製啟動時數</ins>」計費<br/>
-					附贈進場、設定<ins>一小時整</ins><br/>
+					附贈進場、設定一小時整<br/>
 					延長設定、誤餐等待另計<br/>
-				</p>
+					<ins><strong>產出時長與錄製時數相近</strong></ins></p>
 				<p>
 					可<ins>免費使用平日課堂影棚</ins><br/>
 					或外出到指定的教室拍攝<br/>
@@ -100,12 +101,12 @@ class: course-content
 			<td>
 				<p>
 					按「<ins>錄製啟動時數</ins>」計費<br/>
-					附贈進場、設定<ins>一小時整</ins><br/>
+					附贈進場、設定一小時整<br/>
 					延長設定、誤餐等待另計<br/>
-				</p>
+					<ins><strong>講稿熟練度影響品質時長</strong></ins></p>
 				<p>
 					可<ins>免費使用平日影棚</ins>錄製<br/>
-					外出勘景、拍攝費用另計<br/>
+					外景器材、交通費用另計<br/>
 					可選用綠幕合成數位背景<br/>
 				</p>
 			</td>
@@ -128,40 +129,44 @@ class: course-content
 		<tr class="features pd-0">
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-				title="您可以提出「比較重視、可以刪減」的項目，讓預算更準確分配到刀口上。">
-				彈性規格</a>
+				title="基本預算即可使用以下服務內容，BOOKSHOW 會視總預算與專案特性，彈性調整規格、品質、數量。">
+				服務內容</a><br/>
+				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
+				title="您可以提出「比較重視、可以節省」的項目，讓預算更準確分配到刀口上。">
+				彈性調整</a>
 			</th>
 			<td>
 				<p>
-					技師設定影棚或外拍設備<br/>
+					設定影棚或外場燈光音響<br/>
 					接電腦收錄清晰投影畫面<br/>
-					４Ｋ收錄舞台上講師畫面<br/>
-					合成雙畫面、標題、商標<br/>
+					單４Ｋ收錄舞台講師畫面<br/>
+					合成講師、投影兩種畫面<br/>
 				</p>
 				<p>
 					影音後製、調光調聲修片<br/>
 					按章節、投影片分段剪輯<br/>
-					切除岔題、不宜公開段落<br/>
+					合成商標水印、章節標題<br/>
 					修改校對、<a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 					title="預設通用影片格式：*.mp4 / Full HD 1920x1080p H.264 AVC / 2ch 48kHz 16-bit aac">按照格式完稿</a>
 				</p>
 			</td>
 			<td>
 				<p>
-					技師架設影棚或外拍場景<br/>
-					收錄講師遠近、投影畫面<br/>
+					架設影棚或外拍場景器材<br/>
+					收錄講師遠近、電腦螢幕<br/>
 					切換、合成三種不同畫面<br/>
 				</p>
 				<p>
-					<ins>包含Ａ方案規格</ins><br/>
+					<ins>包含Ａ方案內容</ins><br/>
+					投影片、講稿、架構建議<br/>
+					現場導演，調整口語表演<br/>
 					<a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-					title="配合講者習慣、呈現風格，再選擇使用提詞機、採訪機、側螢幕…等輔助設備">用提詞機</a>，控制對話視線<br/>
-					導演協助調整口語、講演<br/>
+					title="配合講者習慣、呈現風格，再選擇使用提詞機、採訪機、側螢幕…等輔助設備">提詞設備</a>，控制對話視線<br/>
 					段落之間可休息看稿重講<br/>
 					剪接表現最佳的段落版本<br/>
 				</p>
 			</td>
-			<td rowspan="2">
+			<td rowspan="3">
 				<p>
 					<ins>客製情境範例：</ins><br/>
 				</p>
@@ -181,49 +186,60 @@ class: course-content
 				<p>
 					加特效字卡、加動作音效<br/>
 					食材採買、挑選過程外景<br/>
-					節目包裝風格素材、模板<br/>
+					節目風格包裝模板、素材<br/>
 				</p>
 				<p>
 					行銷、觀看情境應用設計<br/>
-					採購清單、app 分段示範<br/>
+					採購清單、app 按步示範<br/>
 					導購食材組合、調理餐包<br/>
 					導購體驗餐券、現場課程<br/>
 				</p>
 			</td>
 		</tr>
 		<tr class="opt-srv pd-0" >
-			<th>
+			<th rowspan="2">
 				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="以下僅列出較常見的項目，其它需求歡迎直接洽詢。">
 				製作服務</a>
 			</th>
 			<td>
 				<p>
-					延長時間，追求完美表演<br/>
-					追加副機，拍攝輔助視角<br/>
-					現場課程花絮錄影、攝影<br/>
-				</p>
-				<p>
 					講師、投影，全螢幕切換<br/>
-					課程最重點製作特效字卡<br/>
-					字幕檔製作、壓進影片中<br/>
-					課程轉製行銷用影音素材<br/>
+					鬆散演講剪輯為課程架構<br/>
+					重點投影片轉製特效字卡<br/>
 				</p>
 			</td>
 			<td>
 				<p>
-					<ins>包含Ａ方案項目</ins><br/>
-					動作、商品簡易鏡頭設計<br/>
 					綠幕拍攝，合成數位背景<br/>
+					動作、商品簡易鏡頭設計<br/>
+					轉製多種行銷用影音素材<br/>
 				</p>
 				<p>
-					從舊課逐字建立備忘講稿<br/>
+				</p>
+			</td>
+		</tr>
+		<tr class="opt-srv pd-0" >
+			<td style="border-right:0px;">
+				<p>
+					<ins>課程內容、前製準備</ins><br/>
+					舊課錄音轉投影片備忘稿<br/>
 					按線上課程架構重整內容<br/>
 					優化投影片檔以突顯重點<br/>
 					調整備忘講稿使表達順暢<br/>
 				</p>
 			</td>
+			<td style="border-left:0px;">
+				<p>
+					<ins>現場拍攝、後製服務</ins><br/>
+					延長時間，錄製更多內容<br/>
+					追加副機拍主持人、學員<br/>
+					現場課程花絮錄影、攝影<br/>
+					製作影片字幕、通順文稿<br/>
+				</p>
+			</td>
 		</tr>
+
 <!--
 		<tr class="sm">
 			<th><a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" title="工具提示文字">
@@ -267,7 +283,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
 
-$('.plan-choice').toggleClass('hidden');
+/* $('.plan-choice').toggleClass('hidden'); */
 </script>
 
 
