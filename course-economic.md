@@ -1,5 +1,5 @@
 ---
-layout: subpage
+layout: subpage-2
 title: 【線上課程】經濟型製作方案
 class: course-economic
 ---
@@ -76,10 +76,10 @@ class: course-economic
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="考慮您的需求情境，如果大致符合「其中任何一項」描述，該方案很可能就是您的最佳選擇。">
-				適用情境</a>
+				需求情境</a>
 			</th>
-			<td class="bg-green"	>高效率符合標準<br/>多種影片一次拍完<br/>先可用、再求好用<br/>測試市場接受程度<br/></td>
-			<td class="bg-yellow"	>低成本跨過門檻<br/>多種影片一次拍完<br/>不出錯、再求可用<br/>滿足客戶立即需求<br/></td>
+			<td class="bg-green"	>高效率符合標準<br/>多影片一次拍完<br/>從可用追求好用<br/>測試市場接受程度<br/></td>
+			<td class="bg-yellow"	>低成本跨過門檻<br/>多影片一次拍完<br/>先求可用不出錯<br/>滿足客戶立即需求<br/></td>
 			<td class="bg-red"		>低成本解決問題<br/>手機ＤＶ側拍紀錄<br/>簡單批量轉製課程<br/>滿足客戶立即需求<br/></td>
 <!--			<td class="bg-red"		>積極廣告、宣傳<br/>盡全力提昇成效<br/>長銷熱議高轉換<br/>客群多或價值高<br/></td> -->
 		</tr>

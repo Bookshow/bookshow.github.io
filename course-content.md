@@ -1,5 +1,5 @@
 ---
-layout: subpage
+layout: subpage-2
 title: 【線上課程：內容製作】常用方案
 class: course-content
 ---
@@ -30,7 +30,7 @@ class: course-content
 			</th>
 			<td class="bg-green"	><span class="tx-lg">Ａ課堂簡報</span></td>
 			<td class="bg-yellow"	><span class="tx-lg">Ｂ導演對話</span></td>
-			<td class="bg-red"		><span class="tx-lg">Ｃ專案客製</span></td>
+			<td class="bg-red"		><span class="tx-lg">Ｃ商務客製</span></td>
 		</tr>
 	</thead>
 	<tbody>
@@ -74,10 +74,10 @@ class: course-content
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="考慮您的需求情境，如果大致符合「其中任何一項」描述，該方案很可能就是您的最佳選擇。">
-				適用情境</a>
+				需求情境</a>
 			</th>
-			<td class="bg-green"	>妥善地完成影音<br/>按經典通用範式<br/>商業化展示銷售<br/>長久使用不過時<br/></td>
-			<td class="bg-yellow"	>盡全力追求成效<br/>鏡頭對話互動感<br/>學習效果更深刻<br/>易轉製行銷素材<br/></td>
+			<td class="bg-green"	>妥善地完成影音<br/>按經典通用範式<br/>勝過現場第一排<br/>商業化展示銷售<br/></td>
+			<td class="bg-yellow"	>盡全力追求成效<br/>眼神對話互動感<br/>學習效果更深刻<br/>易轉製行銷素材<br/></td>
 			<td class="bg-red"		>打造經典代表作<br/>高度創意化風格<br/>仿知名節目範式<br/>觸及銷售高轉換<br/></td>
 		</tr>
 		<tr class="key-features pd-0">
@@ -94,8 +94,8 @@ class: course-content
 					<ins><strong>產出時長與錄製時數相近</strong></ins></p>
 				<p>
 					可<ins>免費使用平日課堂影棚</ins><br/>
+					台下可坐達百位收費學員<br/>
 					或外出到指定的教室拍攝<br/>
-					場勘、交通、住宿等另計<br/>
 				</p>
 			</td>
 			<td>
@@ -140,7 +140,7 @@ class: course-content
 					設定影棚或外場燈光音響<br/>
 					接電腦收錄清晰投影畫面<br/>
 					單４Ｋ收錄舞台講師畫面<br/>
-					合成講師、投影兩種畫面<br/>
+					<ins><strong>合成講師、投影兩種畫面</strong></ins><br/>
 				</p>
 				<p>
 					影音後製、調光調聲修片<br/>
@@ -153,15 +153,15 @@ class: course-content
 			<td>
 				<p>
 					架設影棚或外拍場景器材<br/>
-					收錄講師遠近、電腦螢幕<br/>
-					切換、合成三種不同畫面<br/>
+					錄講師遠近景、電腦螢幕<br/>
+					<ins><strong>切換、合成所有收錄畫面</strong></ins><br/>
 				</p>
 				<p>
 					<ins>包含Ａ方案內容</ins><br/>
 					投影片、講稿、架構建議<br/>
 					現場導演，調整口語表演<br/>
 					<a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-					title="配合講者習慣、呈現風格，再選擇使用提詞機、採訪機、側螢幕…等輔助設備">提詞設備</a>，控制對話視線<br/>
+					title="配合講者習慣、呈現風格，再選擇使用提詞機、採訪機、側螢幕…等輔助設備">提詞設備</a>，引導對話視線<br/>
 					段落之間可休息看稿重講<br/>
 					剪接表現最佳的段落版本<br/>
 				</p>
@@ -204,16 +204,16 @@ class: course-content
 			</th>
 			<td>
 				<p>
-					講師、投影，全螢幕切換<br/>
-					鬆散演講剪輯為課程架構<br/>
-					重點投影片轉製特效字卡<br/>
+					講師、投影，多畫面切換<br/>
+					網路直播導播、遠距講堂<br/>
+					鬆散演講剪輯為課程架構<br/><!-- 重點投影片轉製特效字卡<br/> -->
 				</p>
 			</td>
 			<td>
 				<p>
 					綠幕拍攝，合成數位背景<br/>
 					動作、商品簡易鏡頭設計<br/>
-					轉製多種行銷用影音素材<br/>
+					轉製多種行銷、廣告素材<br/>
 				</p>
 				<p>
 				</p>

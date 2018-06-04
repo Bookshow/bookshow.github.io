@@ -1,5 +1,5 @@
 ---
-layout: subpage
+layout: subpage-2
 title: 【線上課程：介紹影片、行銷製作】常用方案
 class: course-marketing
 ---
@@ -74,11 +74,11 @@ class: course-marketing
 			<th>
 				<a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
 				title="考慮您的需求情境，如果大致符合「其中任何一項」描述，該方案很可能就是您的最佳選擇。">
-				適用情境</a>
+				需求情境</a>
 			</th>
-			<td class="bg-green"	>高效率符合標準<br/>按基本通用範式<br/>小專案展示銷售<br/>測試市場接受度<br/></td>
-			<td class="bg-yellow"	>妥善地完成影音<br/>按經典通用範式<br/>商業化展示銷售<br/>長久使用不過時<br/></td>
-			<td class="bg-red"		>盡全力追求成效<br/>火力支援廣告投放<br/>提昇產品價值感<br/>觸及銷售高轉換<br/></td>
+			<td class="bg-green"	>高效率符合標準<br/>按基本通用範式<br/>測試市場接受度<br/>小專案展示銷售<br/></td>
+			<td class="bg-yellow"	>妥善地完成影音<br/>按經典通用範式<br/>提昇產品價值感<br/>商業化展示銷售<br/><!--長久使用不過時<br/>--></td>
+			<td class="bg-red"		>盡全力追求成效<br/>創建廣告用軍火<br/>擴大潛在客戶群<br/>導購產品、服務</td>
 		</tr>
 		<tr class="features pd-0">
 			<th>
@@ -94,11 +94,14 @@ class: course-marketing
 					影棚設定、錄製<ins>一小時半</ins>
 				</p>
 				<p>
-					協助您符合課程上架標準<br/>
+					符合介紹片上架建議標準<br/>
+					協助講師對鏡頭表現良好<br/>
+				</p>
+				<p>
 					腳本建議、提供參考範本<br/>
 					現場導演，調整口語表演<br/>
 					<a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
-					title="配合講者習慣、呈現風格，再選擇使用提詞機、採訪機、側螢幕…等輔助設備">提詞設備</a>，控制對話視線<br/>
+					title="配合講者習慣、呈現風格，再選擇使用提詞機、採訪機、側螢幕…等輔助設備">提詞設備</a>，引導對話視線<br/>
 					段落之間可休息看稿重講<br/>
 					剪接表現最佳的段落版本<br/>
 				</p>
@@ -133,10 +136,14 @@ class: course-marketing
 				</p>
 				<p>
 					<ins>包含Ｂ方案內容</ins><br/>
-					多種影片腳本建議與修改<br/>
 					針對不同客群、接觸情境<br/>
 					製作多版本廣告投放素材<br/>
+					導購相關課程、產品服務<br/>
+				</p>
+				<p>
+					多種影片腳本建議與修改<br/>
 					短秒數宣傳片、圖片文案<br/>
+					為廣告播放平台優化版本<br/>
 				</p>
 			</td>
 		</tr>
@@ -158,7 +165,7 @@ class: course-marketing
 			</th>
 			<td colspan="3" class="clearfix">
 				<ul class="fl-left">
-					<li>可以選用<ins>進階方案的彈性規格</ins></li>
+					<li>可以選用<ins>進階方案的服務內容</ins></li>
 					<li>延長錄製時間，追求更佳表現</li>
 					<li>增加副錄影機，拍攝輔助視角</li>
 					<li>現場課程花絮影片、活動攝影</li>

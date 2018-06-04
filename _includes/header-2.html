@@ -1,0 +1,66 @@
+<div class="navbar-header">
+	<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+		<i class="fa fa-bars"></i>
+	</button>
+	<a href="/" class="navbar-brand"></a>
+	<!--
+	<div id="social-menu">
+		<a class="fa fa-youtube-square youtube" href="http://www.youtube.com/BookshowTW" target="_blank"></a>
+		<a class="fa fa-google-plus-square google-plus" href="https://plus.google.com/111710980865588117648/posts" target="_blank"></a>
+		<a class="fa fa-facebook-square facebook" href="http://www.facebook.com.tw/Bookshow.tw" target="_blank"></a>
+	</div>
+	-->
+</div>
+<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+	<ul class="nav navbar-nav">
+		<li>
+			<div class="dropdown">
+				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+					服務<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<li>{% include page-menu-item.html type="header" title="活動場地" url="/space" name="space" %}</li>
+					<li>{% include page-menu-item.html type="header" title="活動錄影" url="/studio" name="studio" %}</li>
+					<li>{% include page-menu-item.html type="header" title="簡報錄影" url="/presentation" name="presentation" %}</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+					線上課程<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<li>{% include page-menu-item.html type="header" title="課程製作概念" 	url="/course-concept" 	name="course-concept" 	%}</li>
+					<li>{% include page-menu-item.html type="header" title="課程介紹、行銷" url="/course-marketing" name="course-marketing" %}</li>
+					<li>{% include page-menu-item.html type="header" title="課程內容、客製" url="/course-content" 	name="course-content" 	%}</li>
+					<li>{% include page-menu-item.html type="header" title="經濟型方案組合" url="/course-economic" 	name="course-economic" 	%}</li>
+				</ul>
+			</div>
+		</li>
+		<li>{% include page-menu-item.html type="header" title="預約" url="/schedule" name="schedule" %}</li>
+		<li>{% include page-menu-item.html type="header" title="交通" url="/traffic" name="traffic" %}</li>
+		<li style="font-size: 14px; line-height:150%;">　立即與我們聯繫<br/>　(02) 2763-9627</li>
+
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li>
+			<div class="dropdown">
+				<a class="header-menu-link dropdown-toggle" data-toggle="dropdown">
+					關於<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					<li>{% include page-menu-item.html type="header" title="關於我們" url="/about" name="about" %}</li>
+					<li>{% include page-menu-item.html type="header" title="部落格"   url="http://blog.bookshow.tw" name="blog" %}</li>
+					<hr>
+					<li id="social-icons">
+						<a class="header-menu-link fa fa-youtube-square youtube" href="http://www.youtube.com/BookshowTW" target="_blank"></a>
+						<a class="header-menu-link fa fa-google-plus-square google-plus" href="https://plus.google.com/111710980865588117648/posts" target="_blank"></a>
+						<a class="header-menu-link fa fa-facebook-square facebook" href="http://www.facebook.com.tw/Bookshow.tw" target="_blank"></a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		
+	</ul>
+</nav>
