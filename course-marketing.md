@@ -1,5 +1,5 @@
 ---
-layout: subpage-2
+layout: subpage
 title: 【線上課程：介紹影片、行銷製作】常用方案
 class: course-marketing
 ---
@@ -209,7 +209,7 @@ class: course-marketing
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
-/* $('.plan-choice').toggleClass('hidden'); */
+$('.plan-choice').toggleClass('hidden');
 </script>
 
 

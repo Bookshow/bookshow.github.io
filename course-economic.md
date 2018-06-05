@@ -1,5 +1,5 @@
 ---
-layout: subpage-2
+layout: subpage
 title: 【線上課程】經濟型製作方案
 class: course-economic
 ---
@@ -70,7 +70,6 @@ class: course-economic
 			<td class="bg-green"	>微型課程<br/>平台銷售基本組<br/>優良影音品質<br/>零經驗無痛製作<br/></td>
 			<td class="bg-yellow"	>高產出量<br/>適合現場課轉製<br/>優良影音品質<br/>零經驗無痛製作<br/></td>
 			<td class="bg-red"		>後製剪輯<br/>活化數位舊資產<br/>補救技術瑕疵<br/>提昇影音品質<br/></td>
-			<!-- <td>顧問工作會議<br/>協同創作內容<br/>規劃應用流程<br/></td> -->
 		</tr>
 		<tr class="plan-choice tb-md">
 			<th>
@@ -81,7 +80,6 @@ class: course-economic
 			<td class="bg-green"	>高效率符合標準<br/>多影片一次拍完<br/>從可用追求好用<br/>測試市場接受程度<br/></td>
 			<td class="bg-yellow"	>低成本跨過門檻<br/>多影片一次拍完<br/>先求可用不出錯<br/>滿足客戶立即需求<br/></td>
 			<td class="bg-red"		>低成本解決問題<br/>手機ＤＶ側拍紀錄<br/>簡單批量轉製課程<br/>滿足客戶立即需求<br/></td>
-<!--			<td class="bg-red"		>積極廣告、宣傳<br/>盡全力提昇成效<br/>長銷熱議高轉換<br/>客群多或價值高<br/></td> -->
 		</tr>
 		<tr class="features pd-0">
 			<th>
@@ -119,6 +117,7 @@ class: course-economic
 				</p>
 			</td>
 		</tr>
+<!--
 		<tr class="opt-srv pd-0" >
 			<th>
 				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
@@ -153,7 +152,6 @@ class: course-economic
 				網頁銷售、廣告投放文案<br/>
 			</td>
 		</tr>
-<!--
 		<tr class="sm">
 			<th><a href="#" class="tooltip-text" data-placement="right" data-toggle="tooltip" title="工具提示文字">
 				製作流程</a>
@@ -162,7 +160,6 @@ class: course-economic
 			<td><a href="#">Ｂ方案製作流程</a></td>	
 			<td><a href="#">Ｃ方案製作流程</a></td>	
 		</tr>
--->
 		<tr class="opt-srv pd-0" >
 			<th>
 				選用<br/><a href="javascript:void(0);" class="tooltip-text" data-placement="right" data-toggle="tooltip" 
@@ -206,6 +203,7 @@ class: course-economic
 				</ul>
 			</td>	
 		</tr>
+-->
 	</tbody>
 </table>
 

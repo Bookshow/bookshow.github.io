@@ -1,5 +1,5 @@
 ---
-layout: subpage-2
+layout: subpage
 title: 【線上課程：內容製作】常用方案
 class: course-content
 ---
@@ -283,7 +283,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 });
 
-/* $('.plan-choice').toggleClass('hidden'); */
+$('.plan-choice').toggleClass('hidden');
 </script>
 
 
