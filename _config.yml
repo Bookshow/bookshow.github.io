@@ -7,9 +7,12 @@ encoding: UTF-8
 
 root_url: bookshow.tw
 google_map_url:      https://www.google.com.tw/maps/place/BOOKSHOW+%E8%AA%AA%E6%9B%B8%E6%9C%83/@25.041131,121.569899,17z/data=!3m1!4b1!4m2!3m1!1s0x3442abbc1f24d8eb:0xb4bfa644abe0e598
+google_street_url:   https://goo.gl/maps/y5aP6y7mfgM2
 google_map_embedded: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7924579522!2d121.5705265870429!3d25.04111640333426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbc1f24d8eb%3A0xb4bfa644abe0e598!2zQk9PS1NIT1cg6Kqq5pu45pyD!5e0!3m2!1szh-TW!2stw!4v1455508214297
 google_calendar_url: https://www.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=coe5fa4p225l8p087r6eof4ta8%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=Asia%2FTaipei
 google_form_url:     https://docs.google.com/forms/d/1pBnEsLkPB_ANrAWtLTBvude4QA03PmUI1CHnfNFaaG0/viewform?embedded=true
+
+
 
 fb: {
 	image: /img/photo/space_00_l.jpg,
